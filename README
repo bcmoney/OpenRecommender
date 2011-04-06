@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+  ____                ___                                       __       
+ / __ \___  ___ ___  / _ \___ _______  __ _  __ _  ___ ___  ___/ /__ ____
+/ /_/ / _ \/ -_) _ \/ , _/ -_) __/ _ \/  ' \/  ' \/ -_) _ \/ _  / -_) __/
+\____/ .__/\__/_//_/_/|_|\__/\__/\___/_/_/_/_/_/_/\__/_//_/\_,_/\__/_/   
+    /_/                                                                  
+
+OpenRecommender is a project aiming to build the world's leading open source Recommendation Engine.
+
+In each installation you should find the following directory structure:
+
+_
+ |- algorithm       All algorithms are in here
+ |
+ |- data            All raw data (SQL, RDF, etc) contained here
+ |
+ |- lib             All external (distributable) dependencies available here
+ |
+ |- schema          Contains schemas and data definitions (DTD, RDF Schema, etc)
+ 
+-------------------------------------------------------------------------------
+For more information, please refer to the project's website and community at:
+http://openrecommender.org
