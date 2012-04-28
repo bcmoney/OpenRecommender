@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2007/rif#" targetNamespace="http://www.w3.org/2007/rif#" elementFormDefault="qualified" version="Id: CoreRule.xsd, v. 1.5, 2010-05-08, hboley/apaschke">
+ 
+  <xs:annotation>
+    <xs:documentation>
+    This is the XML schema for the Rule Language as defined by
+    the RIF-Core dialect.
+    
+    The schema is based on the following EBNF for the RIF-Core Rule Language
+    (prepared for generalization to the RIF-BLD and RIF-PRD Rule Languages):
+  
+  Document       ::= IRIMETA? 'Document' '(' Base? Prefix* Import* Group? ')'
+  Base           ::= 'Base' '(' ANGLEBRACKIRI ')'
+  Prefix         ::= 'Prefix' '(' NCName ANGLEBRACKIRI ')'
+  Import         ::= IRIMETA? 'Import' '(' LOCATOR PROFILE? ')'
+  Group          ::= IRIMETA? 'Group' '(' (RULE | Group)* ')'
+  RULE           ::= (IRIMETA? 'Forall' Var+ '(' CLAUSE ')') | CLAUSE
+  CLAUSE         ::= Implies | ATOMIC
+  Implies        ::= IRIMETA? (ATOMIC | 'And' '(' ATOMIC* ')') ':-' FORMULA
+  LOCATOR        ::= ANGLEBRACKIRI
+  PROFILE        ::= ANGLEBRACKIRI
+      
+    Note that this is an extension of the syntax for the RIF-Core Condition Language (CoreCond.xsd).
+    </xs:documentation>
+  </xs:annotation>
+ 
+  <!-- The Rule Language includes the Condition Language from the same directory -->
+  <xs:include schemaLocation="CoreCond.xsd"/>
+ 
+  <xs:element name="Document">
+    <!--
+  Document  ::= IRIMETA? 'Document' '(' Base? Prefix* Import* Group? ')'
+    -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="IRIMETA" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="directive" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="payload" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="directive">
+    <!--
+  Base and Prefix represented directly in XML
+    -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Import"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="payload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Group"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="Import">
+    <!--
+  Import    ::= IRIMETA? 'Import' '(' LOCATOR PROFILE? ')'
+  LOCATOR   ::= ANGLEBRACKIRI
+  PROFILE   ::= ANGLEBRACKIRI
+    -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="IRIMETA" minOccurs="0" maxOccurs="1"/> 
+        <xs:element ref="location"/>
+        <xs:element ref="profile" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="location" type="xs:anyURI"/>
+ 
+  <xs:element name="profile" type="xs:anyURI"/>
+
+  <xs:element name="Group">
+    <!--
+  Group     ::= IRIMETA? 'Group' '(' (RULE | Group)* ')'
+    -->
+    <xs:complexType>
+     <xs:sequence>
+      <xs:group ref="Group.content"/>
+      </xs:sequence> 
+    </xs:complexType>
+  </xs:element>
+ 
+ <xs:group name="Group.content">
+     <xs:sequence>
+        <xs:group ref="IRIMETA" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="sentence" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+ </xs:group>
+
+ <xs:element name="sentence">
+   <xs:complexType>
+     <xs:choice>
+       <xs:group ref="RULE"/>
+       <xs:element ref="Group"/>
+     </xs:choice>
+   </xs:complexType>
+ </xs:element>
+  
+  <xs:group name="RULE">
+    <!--
+  RULE      ::= (IRIMETA? 'Forall' Var+ '(' CLAUSE ')') | CLAUSE
+    -->
+    <xs:choice>
+      <xs:element ref="Forall"/>
+      <xs:group ref="CLAUSE"/>
+    </xs:choice>
+  </xs:group>
+ 
+  <xs:element name="Forall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="Forall.content"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:group name="Forall.content">  
+      <xs:sequence>
+        <xs:group ref="IRIMETA" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="declare" minOccurs="1" maxOccurs="unbounded"/>
+        <!-- different from formula in And, Or and Exists -->
+        <xs:element name="formula">
+          <xs:complexType>
+            <xs:group ref="CLAUSE"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+  </xs:group>
+ 
+  <xs:group name="CLAUSE">  
+    <!--
+  CLAUSE   ::= Implies | ATOMIC
+    -->
+    <xs:choice>
+      <xs:element ref="Implies"/>
+      <xs:group ref="ATOMIC"/>
+    </xs:choice>
+  </xs:group>
+  
+  <xs:element name="Implies">
+    <!--
+  Implies   ::= IRIMETA? (ATOMIC | 'And' '(' ATOMIC* ')') ':-' FORMULA
+    -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="IRIMETA" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="if"/>
+        <xs:element ref="then"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="if">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="FORMULA"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="then">
+    <xs:complexType>
+     <xs:sequence>
+       <xs:group ref="then.content"/>
+     </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:group name="then.content">  
+     <xs:choice>
+       <xs:group ref="ATOMIC"/>
+       <xs:element name="And" type="And-then.type"/>
+     </xs:choice>
+  </xs:group>
+
+ 
+  <xs:complexType name="And-then.type">
+    <!-- sensitive to then (ATOMIC) context-->
+    <xs:sequence>
+      <xs:element name="formula" type="formula-then.type" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="formula-then.type">
+    <!-- sensitive to then (ATOMIC) context-->
+    <xs:sequence>
+      <xs:group ref="ATOMIC"/>
+    </xs:sequence>
+  </xs:complexType>
+
+ </xs:schema>

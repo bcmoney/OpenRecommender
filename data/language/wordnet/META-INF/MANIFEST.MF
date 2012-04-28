@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 14.2-b01 (Sun Microsystems Inc.)
+
+Name: wordnet/sql/data
+Specification-Title: SQL-mysql-wn
+Implementation-Title: SQL-mysql-wn
+Specification-Version: 2.6.0
+Implementation-Version: 2.6.0-20091019
+Specification-Vendor: Bernard Bou, bbou@ac-toulouse.fr
+Implementation-Vendor: Bernard Bou, bbou@ac-toulouse.fr
+Built-By: Bernard Bou, bbou@ac-toulouse.fr
+

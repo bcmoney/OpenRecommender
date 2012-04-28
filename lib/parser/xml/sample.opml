@@ -1,0 +1,21 @@
+<?xml version='1.0' standalone='yes'?>
+<opml xmlns:opml='http://opml.org/spec2' version='2.0'>
+     <head>
+           <docs>http://www.opml.org/spec2</docs>
+           <title>bryan's OPML Reading List on BCmoney MobileTV</title>
+           <dateCreated>2008-08-28 21:45:57</dateCreated>
+           <dateModified>2008-09-17 18:47:12</dateModified>
+           <ownerName>Bryan Copeland</ownerName>
+           <ownerEmail>8a8652d842b699b688557e03031e25635457addf</ownerEmail>
+           <link>http://bcmoney-mobiletv.com/bryan/opml/</link>
+		   <expansionState></expansionState>
+		   <vertScrollState>1</vertScrollState>
+		   <windowTop>61</windowTop>
+		   <windowLeft>304</windowLeft>
+		   <windowBottom>562</windowBottom>
+		   <windowRight>842</windowRight>		   
+     </head>
+     <body>
+		<outline text="CNET News.com" description="Tech news and business reports by CNET News.com. Focused on information technology, core topics include computers, hardware, software, networking, and Internet media." htmlUrl="http://news.com.com/" language="unknown" title="CNET News.com" type="rss" version="RSS2" xmlUrl="http://news.com.com/2547-1_3-0-5.xml"/>
+    </body>
+</opml>

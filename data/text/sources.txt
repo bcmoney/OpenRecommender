@@ -1,0 +1,34 @@
+-- Book/Journal sources: --
+
+---FULL---
+Project Gutenberg
+Bartleby
+dailylit
+WikiSource: http://en.wikisource.org
+
+---TRADE---
+PaperbackSwap
+
+---REVIEWS/BUY---
+Goodreads
+Amazon
+Chapters-Indigo
+Barnes & Noble
+
+---SEARCH---
+Google Books
+Google Scholar
+Google PDF searches
+
+
+-- AUDIO BOOKS --
+Books Should Be Free
+NewFiction
+ThoughtAudio
+LibriVox
+Podiobooks
+OpenCulture
+LearnOutLoud
+Librophile
+StoryNory
+Audible

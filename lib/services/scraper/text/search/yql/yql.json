@@ -1,0 +1,37 @@
+{
+    "query": {
+        "count": 20,
+        "created": "2011-05-10T23:38:08Z",
+        "lang": "en-US",
+        "results": {
+            "item": [
+                {
+                    "title": "Mississippi Delta braces for historic flood \n    (AP)\n",
+                    "link": "http://us.rd.yahoo.com/dailynews/rss/topstories/*http://news.yahoo.com/s/ap/20110510/ap_on_re_us/us_mississippi_river_flooding",
+                    "guid": {
+                        "isPermaLink": "false",
+                        "content": "ap/20110510/us_mississippi_river_flooding"
+                    },
+                    "source": "AP",
+                    "category": "us",
+                    "pubDate": "Tue, 10 May 2011 23:25:31 GMT",
+                    "description": "<p><a href=\"http://us.rd.yahoo.com/dailynews/rss/topstories/*http://news.yahoo.com/s/ap/20110510/ap_on_re_us/us_mississippi_river_flooding\"><img src=\"http://d.yimg.com/a/p/ap/20110510/capt.befc0a29863a46c4b86e4e0b0927fc95-befc0a29863a46c4b86e4e0b0927fc95-0.jpg?x=130&y=91&q=85&sig=aG4cxhBW5CXnacCe_G_g6Q--\" align=\"left\" height=\"91\" width=\"130\" alt=\"Inmates fill sand bags for residents in Butte LaRose, La., Tuesday, May 10, 2011, in advance of possible flooding brought on by the planned opening of the Morganza Spillway. The Army Corps of Engineers received permission to open the Old River Control Structure north of Baton Rouge, which will divert water from the Mississippi River to the spillway in order to alleviate pressure on river levees. (AP Photo/Patrick Semansky)\" border=\"0\" /></a>AP - The bulging Mississippi River rolled into the fertile Mississippi Delta on Tuesday, threatening to swamp antebellum mansions, wash away shotgun shacks, and destroy fields of cotton, rice and corn in a flood of historic proportions.</p><br clear=\"all\"/>",
+                    "content": {
+                        "height": "91",
+                        "type": "image/jpeg",
+                        "url": "http://d.yimg.com/a/p/ap/20110510/capt.befc0a29863a46c4b86e4e0b0927fc95-befc0a29863a46c4b86e4e0b0927fc95-0.jpg?x=130&y=91&q=85&sig=aG4cxhBW5CXnacCe_G_g6Q--",
+                        "width": "130"
+                    },
+                    "text": {
+                        "type": "html",
+                        "content": "<p><a href=\"http://us.rd.yahoo.com/dailynews/rss/topstories/*http://news.yahoo.com/s/ap/20110510/ap_on_re_us/us_mississippi_river_flooding\"><img src=\"http://d.yimg.com/a/p/ap/20110510/capt.befc0a29863a46c4b86e4e0b0927fc95-befc0a29863a46c4b86e4e0b0927fc95-0.jpg?x=130&y=91&q=85&sig=aG4cxhBW5CXnacCe_G_g6Q--\" align=\"left\" height=\"91\" width=\"130\" alt=\"photo\" title=\"Inmates fill sand bags for residents in Butte LaRose, La., Tuesday, May 10, 2011, in advance of possible flooding brought on by the planned opening of the Morganza Spillway. The Army Corps of Engineers received permission to open the Old River Control Structure north of Baton Rouge, which will divert water from the Mississippi River to the spillway in order to alleviate pressure on river levees. (AP Photo/Patrick Semansky)\" border=\"0\"/></a></p><br clear=\"all\"/>"
+                    },
+                    "credit": {
+                        "role": "publishing company",
+                        "content": "(AP)"
+                    }
+                }
+            ]
+        }
+    }
+}

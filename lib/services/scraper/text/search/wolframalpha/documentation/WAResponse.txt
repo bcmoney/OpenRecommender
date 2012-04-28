@@ -1,0 +1,66 @@
+DESCRIPTION:
+============
+
+This is the main response object that is returned when an API request is parsed.
+
+ACCESSOR VARIABLES:
+===================
+
+The following variables contain information about the result that can be used
+to display more information.
+
+Accessor vairables are called by using:
+$object->ACCESSOR_NAME
+
+* attributes: a hash array of the attributes of this result object. The has
+array can contain the following keys:
+  - success
+  - error
+  - numpods
+  - datatypes
+  - timedout
+  - timing
+  - parsetiming
+
+* error: a has array containing the error details if this result errored out.
+The array can contain the following keys:
+  - code
+  - msg
+
+* rawXML: contains the rawXML of the full API result. This is if you need
+direct access to the results without using the parsed information in the
+response object.
+
+* script: If the result is requested in html format it will contain a <script>
+section. This variable holds the text data of that section.
+
+* css: If the result is requested in html format it will contain a <style>
+section. This variable holds the text data of that section.
+
+
+PUBLIC FUNCTIONS:
+=================
+
+* bool isError()
+returns a true if the API call failed with an error or a false if all is fine.
+
+* array( WAPod ) getPod()
+Returns an array of all the pods found in this result.
+
+* array( WAAssumption ) getAssumptions()
+Returns an array of all the assumptions found in this result. The
+assumption are a hash array of arrays. The hash array key is the type of
+assumptions. In other words, all assumptions are bundled together by type.
+If this pod contained 4 assumptions of type "Clash" then getAssumptions
+will return the following structure:
+  array(
+      Clash => array (
+                   WAAssumption,
+                   WAAssumption,
+                   WAAssumption,
+                   WAAssumption
+               );
+  );
+
+
+

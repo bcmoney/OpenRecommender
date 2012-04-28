@@ -1,0 +1,59 @@
+
+.section{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: large;
+}
+
+.sectiontable{
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	color:#000000;
+	background-color:#999999;
+}
+
+.trow{
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	background-color:#808080;
+}
+
+.frow{
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	background-color:#FFFFFF;
+}
+
+.table1{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-collapse: collapse;
+	color:#000000;
+}
+
+.table2{
+	color:#FFFFFF;
+}
+
+.field1{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-collapse: collapse;
+	color:#808080;
+}
+
+.field2{
+	color:#000000;
+}
+
+.header{
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	background-color:#BBBBBB;
+	color:#000000;
+}
+

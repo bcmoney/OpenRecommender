@@ -1,0 +1,674 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">LINKS</DIV>
+<DIV class="sqlcomment">get words lexically-linked to "horse"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT ssensenum,sw.lemma,link,dw.lemma AS linkedlemma,SUBSTRING(sdefinition FROM 1 FOR 60) FROM sensesXsemlinksXsenses AS l LEFT JOIN words AS sw ON l.swordid = sw.wordid LEFT JOIN words AS dw ON l.dwordid = dw.wordid LEFT JOIN linktypes USING (linkid) WHERE sw.lemma = 'horse'  ORDER BY linkid,ssensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>ssensenum</TH><TH>lemma</TH><TH>link</TH><TH>linkedlemma</TH><TH>SUBSTRING(sdefinition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">cater</TD><TD class="sqlfield">provide with a horse or horses</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">ply</TD><TD class="sqlfield">provide with a horse or horses</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">equid</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">provide</TD><TD class="sqlfield">provide with a horse or horses</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">equine</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">supply</TD><TD class="sqlfield">provide with a horse or horses</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">gymnastic apparatus</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">exerciser</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">soldiery</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">troops</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">military personnel</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">4</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">framework</TD><TD class="sqlfield">a framework for holding wood that is being sawed</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">5</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">chess piece</TD><TD class="sqlfield">a chessman shaped to resemble the head of a horse; can move </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">5</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hypernym</TD><TD class="sqlfield">chessman</TD><TD class="sqlfield">a chessman shaped to resemble the head of a horse; can move </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">poster</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">hack</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">gee-gee</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">chestnut</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">plug</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">protohippus</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">palomino</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">racehorse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">remount</TD><TD class="sqlfield">provide with a horse or horses</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">mare</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">workhorse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">pony</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">roan</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">pacer</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">hack</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">dawn horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">liver chestnut</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">pony</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">pinto</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">steeplechaser</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">mount</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">post-horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">polo pony</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">stable companion</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">high stepper</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">jade</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">eohippus</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">bay</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">bangtail</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">male horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">stalking-horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">riding horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">post horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">wild horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">stablemate</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">stepper</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">nag</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">mesohippus</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">sorrel</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">race horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">female horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">harness horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">saddle horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">buck</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">long horse</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">pommel horse</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">vaulting horse</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">side horse</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">4</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hyponym</TD><TD class="sqlfield">trestle</TD><TD class="sqlfield">a framework for holding wood that is being sawed</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">part holonym</TD><TD class="sqlfield">poll</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">part holonym</TD><TD class="sqlfield">encolure</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">part holonym</TD><TD class="sqlfield">horseflesh</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">part holonym</TD><TD class="sqlfield">withers</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">part holonym</TD><TD class="sqlfield">horseback</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">part holonym</TD><TD class="sqlfield">horsemeat</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">part holonym</TD><TD class="sqlfield">gaskin</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">part holonym</TD><TD class="sqlfield">horse's foot</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">member holonym</TD><TD class="sqlfield">foal</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">member holonym</TD><TD class="sqlfield">trooper</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">member holonym</TD><TD class="sqlfield">cavalryman</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">member meronym</TD><TD class="sqlfield">genus equus</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">member meronym</TD><TD class="sqlfield">equus</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">domain category</TD><TD class="sqlfield">military</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">domain category</TD><TD class="sqlfield">military machine</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">domain category</TD><TD class="sqlfield">armed forces</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">domain category</TD><TD class="sqlfield">war machine</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">domain category</TD><TD class="sqlfield">armed services</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">5</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">domain category</TD><TD class="sqlfield">chess</TD><TD class="sqlfield">a chessman shaped to resemble the head of a horse; can move </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">5</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">domain category</TD><TD class="sqlfield">chess game</TD><TD class="sqlfield">a chessman shaped to resemble the head of a horse; can move </TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get hypernyms for "horse"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT ssensenum,sw.lemma,dw.lemma AS hypernym,SUBSTRING(sdefinition FROM 1 FOR 60) FROM sensesXsemlinksXsenses AS l LEFT JOIN words AS sw ON l.swordid = sw.wordid LEFT JOIN words AS dw ON l.dwordid = dw.wordid WHERE sw.lemma = 'horse' AND linkid=1 AND spos='n' ORDER BY ssensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>ssensenum</TH><TH>lemma</TH><TH>hypernym</TH><TH>SUBSTRING(sdefinition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">equid</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">equine</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">exerciser</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">gymnastic apparatus</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">military personnel</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">soldiery</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">troops</TD><TD class="sqlfield">troops trained to fight on horseback</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">4</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">framework</TD><TD class="sqlfield">a framework for holding wood that is being sawed</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">5</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">chess piece</TD><TD class="sqlfield">a chessman shaped to resemble the head of a horse; can move </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">5</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">chessman</TD><TD class="sqlfield">a chessman shaped to resemble the head of a horse; can move </TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get hyponyms for "horse"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT ssensenum,sw.lemma,dw.lemma AS hyponym,SUBSTRING(sdefinition FROM 1 FOR 60) FROM sensesXsemlinksXsenses AS l LEFT JOIN words AS sw ON l.swordid = sw.wordid LEFT JOIN words AS dw ON l.dwordid = dw.wordid WHERE sw.lemma = 'horse' AND linkid=2 AND spos='n' ORDER BY ssensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>ssensenum</TH><TH>lemma</TH><TH>hyponym</TH><TH>SUBSTRING(sdefinition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">roan</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">stable companion</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">stablemate</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">gee-gee</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">dawn horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">eohippus</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">mesohippus</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">protohippus</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">male horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">female horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">mare</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">mount</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">riding horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">saddle horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">pony</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">polo pony</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">wild horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hack</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">hack</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">jade</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">nag</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">plug</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">pony</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">bangtail</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">race horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">racehorse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">steeplechaser</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">stalking-horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">harness horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">workhorse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">post-horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">post horse</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">poster</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">pacer</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">high stepper</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">stepper</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">chestnut</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">liver chestnut</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">bay</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">sorrel</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">palomino</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">pinto</TD><TD class="sqlfield">solid-hoofed herbivorous quadruped domesticated since prehis</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">pommel horse</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">side horse</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">buck</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">long horse</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">vaulting horse</TD><TD class="sqlfield">a padded gymnastic apparatus on legs</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">4</TD><TD class="sqlfield">horse</TD><TD class="sqlfield">trestle</TD><TD class="sqlfield">a framework for holding wood that is being sawed</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get words lexically-linked to "black"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT ssensenum,sw.lemma,link,dw.lemma AS linked,SUBSTRING(sdefinition FROM 1 FOR 60) FROM sensesXlexlinksXsenses AS l LEFT JOIN words AS sw ON l.swordid = sw.wordid LEFT JOIN words AS dw ON l.dwordid = dw.wordid LEFT JOIN linktypes USING (linkid) WHERE sw.lemma = 'black' ORDER BY linkid,ssensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>ssensenum</TH><TH>lemma</TH><TH>link</TH><TH>linked</TH><TH>SUBSTRING(sdefinition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">black</TD><TD class="sqlfield">antonym</TD><TD class="sqlfield">white</TD><TD class="sqlfield">being of the achromatic color of maximum darkness; having li</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">black</TD><TD class="sqlfield">antonym</TD><TD class="sqlfield">white</TD><TD class="sqlfield">the quality or state of the achromatic color of least lightn</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">black</TD><TD class="sqlfield">antonym</TD><TD class="sqlfield">white</TD><TD class="sqlfield">of or belonging to a racial group having dark skin especiall</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">6</TD><TD class="sqlfield">black</TD><TD class="sqlfield">antonym</TD><TD class="sqlfield">white</TD><TD class="sqlfield">(board games) the darker pieces</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">black</TD><TD class="sqlfield">derivation</TD><TD class="sqlfield">black</TD><TD class="sqlfield">the quality or state of the achromatic color of least lightn</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">black</TD><TD class="sqlfield">derivation</TD><TD class="sqlfield">blackness</TD><TD class="sqlfield">being of the achromatic color of maximum darkness; having li</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">black</TD><TD class="sqlfield">derivation</TD><TD class="sqlfield">black</TD><TD class="sqlfield">make or become black</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">8</TD><TD class="sqlfield">black</TD><TD class="sqlfield">derivation</TD><TD class="sqlfield">blackness</TD><TD class="sqlfield">extremely dark</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">13</TD><TD class="sqlfield">black</TD><TD class="sqlfield">derivation</TD><TD class="sqlfield">blackness</TD><TD class="sqlfield">(of coffee) without cream or sugar</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">14</TD><TD class="sqlfield">black</TD><TD class="sqlfield">derivation</TD><TD class="sqlfield">blackness</TD><TD class="sqlfield">soiled with dirt or soot</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get antonyms for "black"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT ssensenum,sw.lemma,dw.lemma AS antonym,SUBSTRING(sdefinition FROM 1 FOR 60) FROM sensesXlexlinksXsenses AS l LEFT JOIN words AS sw ON l.swordid = sw.wordid LEFT JOIN words AS dw ON l.dwordid = dw.wordid WHERE sw.lemma = 'black' AND linkid=30 AND spos='a' ORDER BY ssensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>ssensenum</TH><TH>lemma</TH><TH>antonym</TH><TH>SUBSTRING(sdefinition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">black</TD><TD class="sqlfield">white</TD><TD class="sqlfield">being of the achromatic color of maximum darkness; having li</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">black</TD><TD class="sqlfield">white</TD><TD class="sqlfield">of or belonging to a racial group having dark skin especiall</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get synsetids "option" is member of</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,sensenum,synsetid FROM wordsXsenses WHERE lemma='option' ORDER BY sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>sensenum</TH><TH>synsetid</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">option</TD><TD class="sqlfield">1</TD><TD class="sqlfield">113241600</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">option</TD><TD class="sqlfield">2</TD><TD class="sqlfield">105790944</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">option</TD><TD class="sqlfield">3</TD><TD class="sqlfield">100161243</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get synsets "option" is member of</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,sensenum,synsetid,pos,SUBSTRING(definition FROM 1 FOR 60) FROM wordsXsensesXsynsets WHERE lemma='option' ORDER BY sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>sensenum</TH><TH>synsetid</TH><TH>pos</TH><TH>SUBSTRING(definition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">option</TD><TD class="sqlfield">1</TD><TD class="sqlfield">113241600</TD><TD class="sqlfield">n</TD><TD class="sqlfield">the right to buy or sell property at an agreed price; the ri</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">option</TD><TD class="sqlfield">2</TD><TD class="sqlfield">105790944</TD><TD class="sqlfield">n</TD><TD class="sqlfield">one of a number of things from which only one can be chosen</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">option</TD><TD class="sqlfield">3</TD><TD class="sqlfield">100161243</TD><TD class="sqlfield">n</TD><TD class="sqlfield">the act of choosing or selecting</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get synset members</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT synsetid,lemma FROM wordsXsensesXsynsets WHERE synsetid = 100161243</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>synsetid</TH><TH>lemma</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">choice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">option</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">pick</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">selection</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get comma-separated list of synset members</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT synsetid,GROUP_CONCAT(lemma) FROM wordsXsensesXsynsets WHERE synsetid = 100161243 GROUP BY synsetid</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>synsetid</TH><TH>GROUP_CONCAT(lemma)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">choice,option,pick,selection</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get synsets</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT synsetid,lemma FROM wordsXsensesXsynsets WHERE lemma = 'option'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>synsetid</TH><TH>lemma</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">option</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">105790944</TD><TD class="sqlfield">option</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">113241600</TD><TD class="sqlfield">option</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synonyms</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT synsetid,dest.lemma,SUBSTRING(src.definition FROM 1 FOR 60) FROM wordsXsensesXsynsets AS src  INNER JOIN wordsXsensesXsynsets AS dest USING(synsetid) WHERE src.lemma = 'option' AND dest.lemma &lt;&gt; 'option'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>synsetid</TH><TH>lemma</TH><TH>SUBSTRING(src.definition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">choice</TD><TD class="sqlfield">the act of choosing or selecting</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">pick</TD><TD class="sqlfield">the act of choosing or selecting</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">selection</TD><TD class="sqlfield">the act of choosing or selecting</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">105790944</TD><TD class="sqlfield">alternative</TD><TD class="sqlfield">one of a number of things from which only one can be chosen</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">105790944</TD><TD class="sqlfield">choice</TD><TD class="sqlfield">one of a number of things from which only one can be chosen</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synonyms (alternative)</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT synsetid,lemma,SUBSTRING(definition FROM 1 FOR 60) FROM wordsXsensesXsynsets WHERE synsetid IN (  SELECT synsetid  FROM wordsXsensesXsynsets  WHERE lemma = 'option') AND lemma &lt;&gt; 'option' ORDER BY synsetid</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>synsetid</TH><TH>lemma</TH><TH>SUBSTRING(definition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">choice</TD><TD class="sqlfield">the act of choosing or selecting</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">selection</TD><TD class="sqlfield">the act of choosing or selecting</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100161243</TD><TD class="sqlfield">pick</TD><TD class="sqlfield">the act of choosing or selecting</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">105790944</TD><TD class="sqlfield">alternative</TD><TD class="sqlfield">one of a number of things from which only one can be chosen</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">105790944</TD><TD class="sqlfield">choice</TD><TD class="sqlfield">one of a number of things from which only one can be chosen</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

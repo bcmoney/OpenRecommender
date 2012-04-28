@@ -1,0 +1,15 @@
+DESCRIPTION:
+============
+
+This is the main info object that is returned when an API request is parsed.
+
+ACCESSOR VARIABLES:
+===================
+
+The following variables contain information about the result that can be used
+to display more information.
+
+Accessor vairables are called by using:
+$object->ACCESSOR_NAME
+
+* text: the text of the info.

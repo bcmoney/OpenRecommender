@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='6'
+    datatypes='Country'
+    timedout=''
+    timing='3.197'
+    parsetiming='0.224'
+    parsetimedout='false'
+    recalculate=''
+    id='MSP33219ibic8eadb3hdfd00005f358h7e90e13c6a&amp;s=45'
+    related='http://www4d.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSP33319ibic8eadb3hdfd000051a390d52baaiih9&amp;s=45'
+    version='2.1'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <markup><![CDATA[<div id="pod_0100" class="pod "><hr class="top" /><h2>Input interpretation:</h2><ul class="h"></ul><div id="subpod_0100_1" class="sub "width="142"width="142"><div class="output pnt" id="scannerresult_0100_1"><img  height="23"width="142" src="http://www4d.wolframalpha.com/Calculate/MSP/MSP33619ibic8eadb3hdfd00002c0ie324dca27acc?MSPStoreType=image/gif&s=45&amp;w=142&amp;h=23" id="i_0100_1" alt="Japan | population" title="Japan | population"  rel="" /></div><div class="annotpod">
+    </div></div>
+
+<b id="pod_0100_button" class="pt fish"><a class="saveAsImg" href="#">Save as image &raquo;</a><a class="copyablept" href="#">Copyable plaintext &raquo;</a><a href="javascript:showmathpop('CountryData[&quot;Japan&quot;, &quot;Population&quot;]');" id="mathsource" ><i>Mathematica</i> form &raquo;</a></b><hr class="bot" /></div>]]></markup>
+  <subpod title=''>
+   <plaintext>Japan | population</plaintext>
+   <img src='http://www4d.wolframalpha.com/Calculate/MSP/MSP33719ibic8eadb3hdfd000043d36cc55iiegb0a?MSPStoreType=image/gif&amp;s=45'
+       alt='Japan | population'
+       title='Japan | population'
+       width='142'
+       height='23' />
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='Data'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <markup><![CDATA[<div id="pod_0200" class="pod "><hr class="top" /><h2>Result:</h2><div id="subpod_0200_1" class="sub "width="311"width="311"><div class="output pnt" id="scannerresult_0200_1"><img  height="18"width="311" src="http://www4d.wolframalpha.com/Calculate/MSP/MSP34019ibic8eadb3hdfd00006184g0b0g0g72d89?MSPStoreType=image/gif&s=45&amp;w=311&amp;h=18" id="i_0200_1" alt="127 million people  (world rank: 10th)  (2010 estimate)" title="127 million people  (world rank: 10th)  (2010 estimate)"  rel="" /></div><div class="annotpod">
+    </div></div>
+
+<hr class="bot" /></div>]]></markup>
+  <subpod title=''>
+   <plaintext>127 million people  (world rank: 10th)  (2010 estimate)</plaintext>
+   <img src='http://www4d.wolframalpha.com/Calculate/MSP/MSP34119ibic8eadb3hdfd00005582i17gf7g8b09i?MSPStoreType=image/gif&amp;s=45'
+       alt='127 million people  (world rank: 10th)  (2010 estimate)'
+       title='127 million people  (world rank: 10th)  (2010 estimate)'
+       width='311'
+       height='18' />
+  </subpod>
+ </pod>
+ <pod title='Recent population history'
+     scanner='Data'
+     id='RecentHistory:Population:CountryData'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <markup><![CDATA[<div id="pod_0300" class="pod "><hr class="top" /><h2>Recent population history:</h2><ul class="h"><li class="first btn"><a href="pod.jsp?id=MSP34319ibic8eadb3hdfd00002824iii4cdg44567&amp;s=45&amp;button=1" id="substitute_0300_0">Show projections</a></li><li class="btn"><a href="pod.jsp?id=MSP34419ibic8eadb3hdfd000039gc5804g3h60dci&amp;s=45&amp;button=1" id="substitute_0300_1">Log scale</a></li></ul><div id="subpod_0300_1" class="sub "width="377"width="377"><div class="output pnt" id="scannerresult_0300_1"><img  height="162"width="377" src="http://www4d.wolframalpha.com/Calculate/MSP/MSP34619ibic8eadb3hdfd0000109dg22i9c2b61i5?MSPStoreType=image/gif&s=45&amp;w=377&amp;h=162&amp;cdf=Coordinates&amp;cdf=Tooltips" id="i_0300_1" alt="" title=""  usemap="#map-0300_118" rel="" /><map id="map-0300_118" name="map-0300_118"><area shape="rect" coords="21,6,246,145" alt="Tooltip" /></map></div><div class="annotpod">
+    </div></div>
+
+<hr class="bot" /></div>]]></markup>
+  <subpod title=''>
+   <plaintext></plaintext>
+   <img src='http://www4d.wolframalpha.com/Calculate/MSP/MSP34719ibic8eadb3hdfd000062ecd0b90172i5dh?MSPStoreType=image/gif&amp;s=45'
+       alt=''
+       title=''
+       width='377'
+       height='162' />
+  </subpod>
+  <states count='2'>
+   <state name='Show projections'
+       input='RecentHistory:Population:CountryData__Show projections' />
+   <state name='Log scale'
+       input='RecentHistory:Population:CountryData__Log scale' />
+  </states>
+ </pod>
+ <pod title='Long-term population history'
+     scanner='Data'
+     id='LongTermHistory:Population:CountryData'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <markup><![CDATA[<div id="pod_0400" class="pod "><hr class="top" /><h2>Long-term population history:</h2><ul class="h"><li class="first btn"><a href="pod.jsp?id=MSP34919ibic8eadb3hdfd00001d81i8925350be39&amp;s=45&amp;button=1" id="substitute_0400_0">Show projections</a></li><li class="btn"><a href="pod.jsp?id=MSP35019ibic8eadb3hdfd00002133cf8hf1ecd1fb&amp;s=45&amp;button=1" id="substitute_0400_1">Log scale</a></li></ul><div id="subpod_0400_1" class="sub "width="496"width="496"><div class="output pnt" id="scannerresult_0400_1"><img  height="205"width="496" src="http://www4d.wolframalpha.com/Calculate/MSP/MSP35219ibic8eadb3hdfd000035g70d4gc115ia6c?MSPStoreType=image/gif&s=45&amp;w=496&amp;h=205&amp;cdf=Coordinates&amp;cdf=Tooltips" id="i_0400_1" alt="\n(population for current political boundaries)" title=""  usemap="#map-0400_123" rel="" /><map id="map-0400_123" name="map-0400_123"><area shape="rect" coords="21,6,492,147" alt="Tooltip" /></map></div><div class="annotpod">
+    </div></div>
+
+<hr class="bot" /></div>]]></markup>
+  <subpod title=''>
+   <plaintext>
+(population for current political boundaries)</plaintext>
+   <img src='http://www4d.wolframalpha.com/Calculate/MSP/MSP35319ibic8eadb3hdfd0000562ae80e7ii91376?MSPStoreType=image/gif&amp;s=45'
+       alt='
+(population for current political boundaries)'
+       title='
+(population for current political boundaries)'
+       width='496'
+       height='205' />
+  </subpod>
+  <states count='2'>
+   <state name='Show projections'
+       input='LongTermHistory:Population:CountryData__Show projections' />
+   <state name='Log scale'
+       input='LongTermHistory:Population:CountryData__Log scale' />
+  </states>
+ </pod>
+ <pod title='Demographics'
+     scanner='Data'
+     id='DemographicProperties:CountryData'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <markup><![CDATA[<div id="pod_0500" class="pod "><hr class="top" /><h2>Demographics:</h2><ul class="h"><li class="first btn"><a href="pod.jsp?id=MSP35519ibic8eadb3hdfd00000g967aice05ci206&amp;s=45&amp;button=1" id="substitute_0500_0">Show rates</a></li><li class="btn"><a href="pod.jsp?id=MSP35619ibic8eadb3hdfd00002793b50h39ed49ce&amp;s=45&amp;button=1" id="substitute_0500_1">Show distribution</a></li><li class="btn"><a href="pod.jsp?id=MSP35719ibic8eadb3hdfd00003d7e8aif66i6hche&amp;s=45&amp;button=1" id="substitute_0500_2">Show non-metric</a></li></ul><div id="subpod_0500_1" class="sub "width="496"width="496"><div class="output pnt" id="scannerresult_0500_1"><img  height="198"width="496" src="http://www4d.wolframalpha.com/Calculate/MSP/MSP35919ibic8eadb3hdfd00006276278d49b11644?MSPStoreType=image/gif&s=45&amp;w=496&amp;h=198" id="i_0500_1" alt="population | 127 million people  (world rank: 10th)  (2010 estimate)\npopulation density | 339 people\/km^2  (people per square kilometer)  (world rank: 36th)  (2010 estimate)\npopulation growth | -0.0808% per year  (world rank: 222nd)  (2008 estimate)\nlife expectancy | 82.1 years  (world rank: 3rd)  (2009 estimate)\nmedian age | 44.2 years  (world rank: 2nd)  (2009 estimate)" title="population | 127 million people  (world rank: 10th)  (2010 estimate)..."  rel="" /></div><div class="annotpod">
+    <div class="right"
+    id="units-MSP36019ibic8eadb3hdfd00004fafged866df84ah">
+ <a href="http://www4d.wolframalpha.com/Calculate/MSP/MSP36019ibic8eadb3hdfd00004fafged866df84ah?MSPStoreType=image/gif&amp;s=45">Units &#187;</a>
+</div></div></div>
+
+<hr class="bot" /></div>]]></markup>
+  <subpod title=''>
+   <plaintext>population | 127 million people  (world rank: 10th)  (2010 estimate)
+population density | 339 people/km^2  (people per square kilometer)  (world rank: 36th)  (2010 estimate)
+population growth | -0.0808% per year  (world rank: 222nd)  (2008 estimate)
+life expectancy | 82.1 years  (world rank: 3rd)  (2009 estimate)
+median age | 44.2 years  (world rank: 2nd)  (2009 estimate)</plaintext>
+   <img src='http://www4d.wolframalpha.com/Calculate/MSP/MSP36119ibic8eadb3hdfd00005e6g368af77284hb?MSPStoreType=image/gif&amp;s=45'
+       alt='population | 127 million people  (world rank: 10th)  (2010 estimate)
+population density | 339 people/km^2  (people per square kilometer)  (world rank: 36th)  (2010 estimate)
+population growth | -0.0808% per year  (world rank: 222nd)  (2008 estimate)
+life expectancy | 82.1 years  (world rank: 3rd)  (2009 estimate)
+median age | 44.2 years  (world rank: 2nd)  (2009 estimate)'
+       title='population | 127 million people  (world rank: 10th)  (2010 estimate)
+population density | 339 people/km^2  (people per square kilometer)  (world rank: 36th)  (2010 estimate)
+population growth | -0.0808% per year  (world rank: 222nd)  (2008 estimate)
+life expectancy | 82.1 years  (world rank: 3rd)  (2009 estimate)
+median age | 44.2 years  (world rank: 2nd)  (2009 estimate)'
+       width='496'
+       height='198' />
+  </subpod>
+  <states count='3'>
+   <state name='Show rates'
+       input='DemographicProperties:CountryData__Show rates' />
+   <state name='Show distribution'
+       input='DemographicProperties:CountryData__Show distribution' />
+   <state name='Show non-metric'
+       input='DemographicProperties:CountryData__Show non-metric' />
+  </states>
+  <infos count='1'>
+   <info>
+    <units count='1'>
+     <unit short='% per year'
+         long='percent per year' />
+     <img src='http://www4d.wolframalpha.com/Calculate/MSP/MSP36219ibic8eadb3hdfd000057319c284e9be42f?MSPStoreType=image/gif&amp;s=45'
+         width='190'
+         height='26' />
+    </units>
+   </info>
+  </infos>
+ </pod>
+ <pod title='Comparisons'
+     scanner='Unit'
+     id='Comparison'
+     position='600'
+     error='false'
+     numsubpods='2'>
+  <markup><![CDATA[<div id="pod_0600" class="pod "><hr class="top" /><h2>Comparisons:</h2><div id="subpod_0600_1" class="sub "width="386"width="386"><div class="output pnt" id="scannerresult_0600_1"><img  height="57"width="386" src="http://www4d.wolframalpha.com/Calculate/MSP/MSP36519ibic8eadb3hdfd00004h5dc2h4e8daa06e?MSPStoreType=image/gif&s=45&amp;w=386&amp;h=57" id="i_0600_1" alt=" ~~ ( 0.0012 ~~ 1\/838 ) &times; estimated total number of Homo sapiens to have ever lived ( 106.5 billion people )" title=" ~~ ( 0.0012 ~~ 1/838 ) &times; estimated total number of Homo sapiens to have ever lived ( 106.5 billion people )"  rel="" /></div><div class="annotpod">
+     </div></div>
+
+<hr class="div" style="clear: both" /><div id="subpod_0600_2" class="sub "width="359"width="359"><div class="output pnt" id="scannerresult_0600_2"><img  height="18"width="359" src="http://www4d.wolframalpha.com/Calculate/MSP/MSP36719ibic8eadb3hdfd000053i73g05fi6116a6?MSPStoreType=image/gif&s=45&amp;w=359&amp;h=18" id="i_0600_2" alt=" ~~ ( 0.018 ~~ 1\/55 ) &times; world population ( 6.983 billion people )" title=" ~~ ( 0.018 ~~ 1/55 ) &times; world population ( 6.983 billion people )"  rel="" /></div><div class="annotpod">
+    </div></div>
+
+<hr class="bot" /></div>]]></markup>
+  <subpod title=''>
+   <plaintext> ~~ ( 0.0012 ~~ 1/838 ) × estimated total number of Homo sapiens to have ever lived ( 106.5 billion people )</plaintext>
+   <img src='http://www4d.wolframalpha.com/Calculate/MSP/MSP36819ibic8eadb3hdfd00000g5bg06fhe4h5dc0?MSPStoreType=image/gif&amp;s=45'
+       alt=' ~~ ( 0.0012 ~~ 1/838 ) × estimated total number of Homo sapiens to have ever lived ( 106.5 billion people )'
+       title=' ~~ ( 0.0012 ~~ 1/838 ) × estimated total number of Homo sapiens to have ever lived ( 106.5 billion people )'
+       width='386'
+       height='53' />
+  </subpod>
+  <subpod title=''>
+   <plaintext> ~~ ( 0.018 ~~ 1/55 ) × world population ( 6.983 billion people )</plaintext>
+   <img src='http://www4d.wolframalpha.com/Calculate/MSP/MSP36919ibic8eadb3hdfd000019eea68a701cfh69?MSPStoreType=image/gif&amp;s=45'
+       alt=' ~~ ( 0.018 ~~ 1/55 ) × world population ( 6.983 billion people )'
+       title=' ~~ ( 0.018 ~~ 1/55 ) × world population ( 6.983 billion people )'
+       width='359'
+       height='18' />
+  </subpod>
+ </pod>
+ <sources count='1'>
+  <source url='http://www.wolframalpha.com/sources/CountryDataSourceInformationNotes.html'
+      text='Country data' />
+ </sources>
+ <scripts><![CDATA[<script>
+if (top !== self) {
+    top.location.replace(self.location.href);
+    document.body.innerHTML = "";
+}
+</script><script>
+var server = 'http://www4d.wolframalpha.com';
+var parsedExpr = '';
+var assumptionsMade = '';
+var rawAssumptions = '';
+var server = 'http://www4d.wolframalpha.com';
+var inputEsc = '';
+var escapedInput = ""; 
+var downloadKey = '';
+var hasTimeouts = '';
+
+var popupJS = "http://www4d.wolframalpha.com/Calculate/javascript/Alpha-20111207-popup.js";
+var iPadCSS = "http://www4d.wolframalpha.com/Calculate/css/iPad-min.css";
+
+
+var country = "";
+
+var type = "";
+var podselector = "";
+var isPro = false;
+var isCurrent = false;
+var slinks = "false";
+
+</script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script><script src="/compress/javascript/Alpha-20111207-init-min.js"></script><script>
+/* <![CDATA[ */
+
+$(function(){
+
+ if("") {
+	 recalculate("&input=Population+of+japan&format=plaintext,html,image,sound&appid=UXET5R-32QGQPEG2R&scantimeout=.5");
+ }
+
+
+
+});
+
+ /* ]]]]><![CDATA[> */
+</script>
+
+
+<script src="/compress/javascript/Alpha-20111207-concatenated-min.js"></script><script src="http://www4d.wolframalpha.com/Calculate/javascript/fade.results.js"></script><script src="http://www4d.wolframalpha.com/Calculate/javascript/fade.layout.js"></script><script>
+  // splatfade
+  $(document).ready(function(){
+    if (typeof window.waFade != "undefined" && typeof window.waFade.layout != "undefined" && !window.waFade.layout.sidebar.faded && window.waFade.layout.sidebar.trigger == "resultload") {
+      waFade.layout.sidebar.setupFn();
+    }
+    if (typeof window.waFade != "undefined" && typeof window.waFade.layout != "undefined" && !window.waFade.layout.footer.faded && window.waFade.layout.footer.trigger == "resultload") {
+      waFade.layout.footer.setupFn();
+    }
+  });
+  </script><link rel="stylesheet" href="/lightbox/css/lightbox.css" type="text/css" /><div id="lightboxOverlay">&nbsp;</div>
+<script src="/lightbox/javascript/lightbox.js"></script><link href="/lightbox/css/lbox.wob.css" rel="stylesheet" type="text/css" /><!--[if IE 7]><link href="/lightbox/css/lbox.wob.ie7.css" rel="stylesheet" type="text/css" /><![endif]--><link href="/lightbox/css/notifyForm.css" rel="stylesheet" type="text/css" /><div id="lboxContent_notifyForm" class="lightbox-content"><div class="round-top round-bottom lbox-wob-contain"><div class="title round-top"><div class="close"><a href="">&nbsp;</a></div>
+     Sign Up for Wolfram|Alpha News
+   </div><div class="content round-bottom"><form id="notifyForm" action="http://www.wolframalpha.com/input/sendFormData.jsp" method="post"><div class="lbox-wob-tophalf"><div><label for="name">Name <span class="optional">(optional)</span></label><input type="text" name="name" id="name" class="" /></div><div class="right"><label for="organization">Organization <span class="optional">(optional)</span></label><input type="text" name="organization" id="organization" class="" /></div><div class="big"><label for="email">Email</label><input type="text" name="email" id="email" class="required" /></div><br class="clear" /></div><div class="round-bottom lbox-wob-bottomhalf"><label for="comment">Message <span class="optional">(optional)</span></label><textarea name="comment" id="message" class=""></textarea><a href="" class="sendImg" title="Send">&nbsp;</a></div><input type="hidden" name="filename" value="notifyForm.html" /></form></div><div class="bottom round-bottom"></div></div></div><div id="lboxContent_notifyThanks" class="lightbox-content"><div class="round-top round-bottom lbox-wob-contain lbox-wob-thankyou"><div class="title round-top"><div class="close"><a href="">&nbsp;</a></div>
+      Thank You
+    </div><div class="content round-bottom"><div class="round-bottom lbox-wob-bottomhalf"><p>We appreciate your interest in Wolfram|Alpha and will be in touch soon.</p><i>&mdash;The Wolfram|Alpha Team</i></div></div><div class="bottom round-bottom"></div></div></div>
+
+<script src="/lightbox/javascript/notifyForm.js"></script><script>lboxBindNotify("#follow .news");</script><script src="http://www4d.wolframalpha.com/Calculate/javascript/browserplugin.js"></script><script src="http://www4d.wolframalpha.com/Calculate/javascript/cdf-toolbar-resultspage.js"></script><script>
+    $(document).ready(function(){
+      $(".pod img[usemap]").maphilight();
+    });
+</script><!--[if lt IE 9]><script src="/compress/javascript/Alpha-20111207-ie-min.js"></script><![endif]--><script>
+/* <![CDATA[ */
+type = getURLParam("type").replace(/\+/g," "); 
+podselector = getURLParam("podselector").replace(/\+/g," "); 
+
+$(document).ready(function() {
+  $("#input").addClass("loading");
+  $(window).load(function(){$("#input").removeClass("loading");});
+
+  // give focus to the input field if there is no current value for i
+  if($("#i").val() === ""){$("#i").focus();}
+
+  /* if scripts are running, we assume the user wants to use asynchronous pods */
+  $("input[name='asynchronous']").remove();
+
+  // activate the feedback form for non-asynchronous pages
+  if(getURLParam("i") === null ||
+    getURLParam("entityPage") === "true" ||
+    getURLParam("asynchronous") === "false" ||
+    $("#splat").length == 1) {
+      $("#tmpMessage").attr("disabled","");
+      $("#spin").removeClass("active");
+    }
+
+  // set future topic form values?
+  $("#ftAssumptionsMade").val(assumptionsMade);
+  $("#ftRawAssumptions").val(rawAssumptions);
+  $("#ftParsed").val(parsedExpr);
+
+/* handles if url reads  "http://www.wolframalpha.com/input/" */
+ if(location.href.lastIndexOf("/input/") == location.href.length-7) {
+  window.location = "/";
+}
+
+
+
+ if(!$.browser.msie && !$.browser.opera){
+     if($("#relatedlinks").length > 0) //if there are related links, we want related queries above related links
+        $("#relatedlinks").before('<div id="queries"></div>');
+     else //if there aren't related links, related queries should be at the bottom of the sidebar
+        $("#sidebar").append('<div id="queries"></div>');
+
+     $.get(server+"/input/queries.aside.jsp?id=&s=",function(data,status,xhr){
+        if(typeof innerShiv == 'function'){
+            data = innerShiv(data,false);
+     }
+     if($("#queries").length > 0) { $("#queries").replaceWith(data); $("#queries").fadeIn(1000); }
+     else {
+    if($("#relatedlinks").length > 0) //if there are related links, we want related queries above related links
+           $("#relatedlinks").before('<div id="queries"></div>');
+        else //if there aren't related links, related queries should be at the bottom of the sidebar
+           $("#sidebar").append('<div id="queries"></div>');
+     }
+    });
+  }
+   else if($.browser.msie && $.browser.version < 9) {
+     if($("#relatedlinks").length > 0){
+        $("#relatedlinks").before(typeof innerShiv == 'function' ? innerShiv('<aside id="queries"><b class="top"></b><i id="dum"></i><b class="bot"></b></aside>'): typeof ie8Shiv == 'function' ? ie8Shiv('<aside id="queries"><b class="top"></b><i id="dum"></i><b class="bot"></b></aside>'): '<aside id="queries"><i id="dum"></i></aside>');
+     }
+     else{
+        $("#sidebar").append(typeof innerShiv == 'function' ? innerShiv('<aside id="queries"><b class="top"></b><i id="dum"></i><b class="bot"></b></aside>'):  typeof ie8Shiv == 'function' ? ie8Shiv('<aside id="queries"><b class="top"></b><i id="dum"></i><b class="bot"></b></aside>'): '<aside id="queries"><i id="dum"></i></aside>');
+     }
+     if($('#dum').length > 0){
+       loadData("dum", "queries.aside.jsp?id=&s=", function(){
+         if($("#queries").children().length > 2) {
+           $("#queries").show();
+         } else { $("#queries").hide(); }
+       });
+     }
+  }
+
+  else {
+     if($("#relatedlinks").length > 0) //if there are related links, we want related queries above related links
+        $("#relatedlinks").before('<div id="queries"></div>');
+     else //if there aren't related links, related queries should be at the bottom of the sidebar
+        $("#sidebar").append('<div id="queries"></div>');
+
+      loadData("queries","queries.aside.jsp?id=&s=", function(){
+        $('#queries').show();
+      });
+  }
+
+
+
+  if(!Modernizr.borderradius){
+     $(".btn a").append('<i class="l"></i><i class="r"></i>');
+  }
+
+});
+
+
+
+/* ]]]]><![CDATA[> */
+</script><script>
+
+ // google analysis tracking setup
+var _gaq = [['_setAccount', 'UA-5677369-3'], ['_trackPageview'],['_trackPageLoadTime']];
+
+(function(d, t) {
+  var g = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  g.async = true;
+  g.src = '//www.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g, s);
+}(document, 'script'));
+
+// sharethis+google analysis tracking setup
+if($("#share").length > 0) {
+  var pageTracker = [];
+  if (_gaq._getAsyncTracker) {
+    pageTracker = _gaq._getAsyncTracker('');
+  }
+  var addthis_config = {
+    data_ga_tracker: pageTracker,
+    data_track_clickback: true,
+  };
+}
+
+// cross-domain links tracking setup
+$("#sources .content ul ul li a, .keypopup a[rel=external], #navMore ul#more li a").live("click.pageTracker", function(e){
+  pageTracker = _gaq._getAsyncTracker('');
+  if (typeof pageTracker != "undefined" && typeof pageTracker._link != "undefined")
+    pageTracker._link(this.href);
+});
+$("#relatedlinks div[id^=relatedLink]").live("click.pageTracker", function(e){
+  pageTracker = _gaq._getAsyncTracker('');
+  if (typeof pageTracker != "undefined" && typeof pageTracker._link != "undefined")
+    pageTracker._link($(this).find("a[id^=siteLink]").get(0).href);
+});
+
+</script><script>(function() {
+var stscr = document.createElement('script'); stscr.type = 'text/javascript'; stscr.async = true;
+stscr.src ="http://w.sharethis.com/button/light.js#publisher=1c0e0d54-547d-4312-9dde-61539c24e22f";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(stscr, s);
+})();
+</script>]]></scripts>
+ <css><![CDATA[<link href="http://www4d.wolframalpha.com/Calculate/css/calculate.css" rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/footer.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/assumptions.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/computed.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/warnings.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/debugging.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/inputfield.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/keys.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/pod.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/timeout.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/unknown.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/missed.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/navbar.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/jScrollPane.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/scrollBar.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/feedback.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/mainPrint.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/popup.css"  rel="stylesheet" type="text/css" />
+                <link href="http://www4d.wolframalpha.com/Calculate/css/examples.css"  rel="stylesheet" type="text/css" />
+
+                <!--[if lte IE 8]>
+                <link rel='stylesheet' type='text/css' media='screen' href='http://www4d.wolframalpha.com/Calculate/css/ie.css' />
+                <![endif]-->
+                <!--[if lte IE 6]>
+                <style type="text/css">
+                    body {behavior: url(http://www4d.wolframalpha.com/Calculate/javascript/csshover.htc);}
+                </style>
+                <![endif]-->]]></css>
+</queryresult>

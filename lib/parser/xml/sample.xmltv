@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+<tv source-info-url="http://www.schedulesdirect.org/" source-info-name="Schedules Direct" generator-info-name="XMLTV/$Id: tv_grab_na_dd.in,v 1.70 2008/03/03 15:21:41 rmeden Exp $" generator-info-url="http://www.xmltv.org/">
+  <channel id="I10436.labs.zap2it.com">
+    <display-name>13 KERA</display-name>    
+    <icon src="http://example.com/site/share/xmltv/icons/KERA.gif" />
+  </channel>
+  <programme start="20080715023000 -0600" stop="20080715040000 -0600" channel="I10436.labs.zap2it.com">
+    <title lang="en">Mystery!</title>
+    <sub-title lang="en">Foyle's War, Series IV: Casualties of War</sub-title>
+    <desc lang="en">The murder of a prominent scientist may have been due to a gambling debt.</desc>
+    <date>20070708</date>
+    <category lang="en">Anthology</category>
+    <episode-num system="dd_progid">EP00003026.0666</episode-num>
+    <episode-num system="onscreen">2706</episode-num>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
+    <previously-shown start="20070708000000" />
+    <subtitles type="teletext" />
+  </programme>
+</tv>

@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+	<SOAP-ENV:Body>
+		<ns1:downloadResponse SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="urn:TMSWebServices">
+			<xtvdResponse xsi:type="ns1:xtvdResponse">
+				<messages xsi:type="ns1:messages">
+					<message>Your subscription will expire: 2005-05-07T16:57:29Z</message>
+				</messages>
+				<xtvd from="2005-02-22T19:00:00Z" to="2005-02-22T21:00:00Z" schemaVersion="1.3" xmlns="urn:TMSWebServices" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:TMSWebServices http://docs.tms.tribune.com/tech/xml/schemas/tmsxtvd.xsd">
+					<stations>
+						<station id="11054">
+							<callSign>FSW</callSign>
+							<name>Fox Sports West</name>
+							<affiliate>Sports Regional</affiliate>
+						</station>
+						<station id="14771">
+							<callSign>HISTORY</callSign>
+							<name>The History Channel</name>
+							<affiliate>Satellite</affiliate>
+						</station>
+						<station id="21484">
+							<callSign>OXYGEN</callSign>
+							<name>Oxygen Media Inc.</name>
+							<affiliate>Satellite</affiliate>
+						</station>
+						<station id="11867">
+							<callSign>TBS</callSign>
+							<name>Turner Broadcasting System</name>
+							<affiliate>Satellite</affiliate>
+						</station>
+						<station id="11158">
+							<callSign>TLC</callSign>
+							<name>The Learning Channel</name>
+							<affiliate>Satellite</affiliate>
+						</station>
+						<station id="11299">
+							<callSign>WBBM</callSign>
+							<name>WBBM</name>
+							<fccChannelNumber>2</fccChannelNumber>
+							<affiliate>CBS Affiliate</affiliate>
+						</station>
+						<station id="20454">
+							<callSign>WBBMDT</callSign>
+							<name>WBBMDT (WBBM-DT)</name>
+							<fccChannelNumber>3</fccChannelNumber>
+							<affiliate>CBS Affiliate</affiliate>
+						</station>
+						<station id="11474">
+							<callSign>WGN</callSign>
+							<name>WGN (Local Chicago)</name>
+							<fccChannelNumber>9</fccChannelNumber>
+							<affiliate>WB Affiliate</affiliate>
+						</station>
+						<station id="20455">
+							<callSign>WGNDT</callSign>
+							<name>WGNDT (WGN-DT)</name>
+							<fccChannelNumber>19</fccChannelNumber>
+							<affiliate>WB Affiliate</affiliate>
+						</station>
+						<station id="31044">
+							<callSign>WGNDT2</callSign>
+							<name>WGNDT2 (WGN-DT2)</name>
+							<fccChannelNumber>19</fccChannelNumber>
+							<affiliate>WB Affiliate</affiliate>
+						</station>
+					</stations>
+					<lineups>
+						<lineup id="IL54437:X" name="Comcast SW Chicago (1, 4 &amp; 5)" location="Chicago" type="CableDigital" device="Digital" postalCode="60611">
+							<map station="11867" channel="33"/>
+							<map station="14771" channel="65"/>
+						</lineup>
+						<lineup id="PC:60611" name="Local Broadcast Listings" location="Antenna" type="LocalBroadcast" postalCode="60611">
+							<map station="11299" channel="2"/>
+							<map station="11474" channel="9"/>
+							<map station="20454" channel="2" channelMinor="1"/>
+							<map station="20455" channel="9" channelMinor="1"/>
+							<map station="31044" channel="9" channelMinor="2"/>
+						</lineup>
+						<lineup id="4DTV:-" name="4DTV" location="USA" type="Satellite" postalCode="60611">
+							<map station="11054" channel="W4405" from="2004-09-07"/>
+							<map station="11158" channel="C3002" from="2004-09-07"/>
+							<map station="21484" channel="GB604" from="2004-09-08"/>
+						</lineup>
+					</lineups>
+					<schedules>
+						<schedule program="EP3999340197" station="11054" time="2005-02-22T19:00:00Z" duration="PT01H00M" closeCaptioned="true"/>
+						<schedule program="EP5212620928" station="11054" time="2005-02-22T20:00:00Z" duration="PT02H00M"/>
+						<schedule program="SH2893060000" station="14771" time="2005-02-22T19:00:00Z" duration="PT02H00M" tvRating="TV-PG" closeCaptioned="true"/>
+						<schedule program="MV1157370000" station="21484" time="2005-02-22T17:00:00Z" duration="PT02H30M" tvRating="TV-PG"/>
+						<schedule program="EP1011690067" station="21484" time="2005-02-22T19:30:00Z" duration="PT00H30M" tvRating="TV-G" stereo="true" closeCaptioned="true"/>
+						<schedule program="EP0036710127" station="21484" time="2005-02-22T20:00:00Z" duration="PT00H30M" tvRating="TV-G" stereo="true" closeCaptioned="true"/>
+						<schedule program="EP0036710128" station="21484" time="2005-02-22T20:30:00Z" duration="PT00H30M" tvRating="TV-G" stereo="true" closeCaptioned="true"/>
+						<schedule program="EP1890510079" station="11867" time="2005-02-22T19:00:00Z" duration="PT00H30M" tvRating="TV-PG" stereo="true" closeCaptioned="true"/>
+						<schedule program="EP1890510080" station="11867" time="2005-02-22T19:30:00Z" duration="PT00H30M" tvRating="TV-PG" stereo="true" closeCaptioned="true"/>
+						<schedule program="EP1528700089" station="11867" time="2005-02-22T20:00:00Z" duration="PT00H30M" tvRating="TV-PG" stereo="true" closeCaptioned="true"/>
+						<schedule program="EP1528700090" station="11867" time="2005-02-22T20:30:00Z" duration="PT00H30M" tvRating="TV-PG" stereo="true" closeCaptioned="true"/>
+						<schedule program="EP2774740375" station="11158" time="2005-02-22T19:00:00Z" duration="PT00H30M" tvRating="TV-PG" closeCaptioned="true"/>
+						<schedule program="EP2774740412" station="11158" time="2005-02-22T19:30:00Z" duration="PT00H30M" tvRating="TV-PG" closeCaptioned="true"/>
+						<schedule program="EP7019670028" station="11158" time="2005-02-22T20:00:00Z" duration="PT00H30M" tvRating="TV-G"/>
+						<schedule program="EP3885250295" station="11158" time="2005-02-22T20:30:00Z" duration="PT00H30M" tvRating="TV-G" closeCaptioned="true"/>
+						<schedule program="SH0004120000" station="11299" time="2005-02-22T19:00:00Z" duration="PT01H00M" tvRating="TV-14" stereo="true" closeCaptioned="true"/>
+						<schedule program="SH1887100000" station="11299" time="2005-02-22T20:00:00Z" duration="PT00H30M" tvRating="TV-PG" stereo="true" closeCaptioned="true"/>
+						<schedule program="SH1887100000" station="11299" time="2005-02-22T20:30:00Z" duration="PT00H30M" tvRating="TV-PG" stereo="true" closeCaptioned="true"/>
+						<schedule program="SH0004120000" station="20454" time="2005-02-22T19:00:00Z" duration="PT01H00M" tvRating="TV-14" stereo="true" closeCaptioned="true"/>
+						<schedule program="SH1887100000" station="20454" time="2005-02-22T20:00:00Z" duration="PT00H30M" tvRating="TV-PG" stereo="true" closeCaptioned="true"/>
+						<schedule program="SH1887100000" station="20454" time="2005-02-22T20:30:00Z" duration="PT00H30M" tvRating="TV-PG" stereo="true" closeCaptioned="true"/>
+						<schedule program="SH2830830000" station="11474" time="2005-02-22T19:00:00Z" duration="PT01H00M" closeCaptioned="true"/>
+						<schedule program="SH6796980000" station="11474" time="2005-02-22T20:00:00Z" duration="PT01H00M" tvRating="TV-PG"/>
+						<schedule program="SH2830830000" station="20455" time="2005-02-22T19:00:00Z" duration="PT01H00M" closeCaptioned="true"/>
+						<schedule program="SH6796980000" station="20455" time="2005-02-22T20:00:00Z" duration="PT01H00M" tvRating="TV-PG"/>
+						<schedule program="SH2830830000" station="31044" time="2005-02-22T19:00:00Z" duration="PT01H00M" closeCaptioned="true"/>
+						<schedule program="SH6796980000" station="31044" time="2005-02-22T20:00:00Z" duration="PT01H00M" tvRating="TV-PG"/>
+					</schedules>
+					<programs>
+						<program id="EP0036710127">
+							<title>Roseanne</title>
+							<subtitle>Lanford Daze</subtitle>
+							<description>The Conners gear up for a local celebration.</description>
+							<showType>Series</showType>
+							<series>SH003671</series>
+							<syndicatedEpisodeNumber>9215</syndicatedEpisodeNumber>
+							<originalAirDate>1993-01-26</originalAirDate>
+						</program>
+						<program id="EP0036710128">
+							<title>Roseanne</title>
+							<subtitle>Wait &apos;Til Your Father Gets Home</subtitle>
+							<description>Roseanne confronts her father&apos;s mistress after his death.</description>
+							<showType>Series</showType>
+							<series>SH003671</series>
+							<syndicatedEpisodeNumber>9216</syndicatedEpisodeNumber>
+							<originalAirDate>1993-02-09</originalAirDate>
+						</program>
+						<program id="EP1011690067">
+							<title>Ellen</title>
+							<subtitle>Give Me Equity or Give Me Death</subtitle>
+							<description>Ellen&apos;s decision to buy a house may force her to sell Buy the Book.</description>
+							<showType>Series</showType>
+							<series>SH101169</series>
+							<originalAirDate>1996-09-18</originalAirDate>
+						</program>
+						<program id="EP1528700089">
+							<title>The Drew Carey Show</title>
+							<subtitle>A House Divided</subtitle>
+							<description>Drew says no when Winfred-Louder tries to buy the land on which Drew&apos;s house sits.</description>
+							<showType>Series</showType>
+							<series>SH152870</series>
+							<syndicatedEpisodeNumber>87</syndicatedEpisodeNumber>
+							<originalAirDate>1999-01-06</originalAirDate>
+						</program>
+						<program id="EP1528700090">
+							<title>The Drew Carey Show</title>
+							<subtitle>A House Reunited</subtitle>
+							<description>Drew asks Celia to move in with him when the company returns his house.</description>
+							<showType>Series</showType>
+							<series>SH152870</series>
+							<syndicatedEpisodeNumber>88</syndicatedEpisodeNumber>
+							<originalAirDate>1999-01-13</originalAirDate>
+						</program>
+						<program id="EP1890510079">
+							<title>The Steve Harvey Show</title>
+							<subtitle>Boy Trouble</subtitle>
+							<description>Steve contends with a sexist school-board member who shoots down Regina&apos;s proposals.</description>
+							<showType>Series</showType>
+							<series>SH189051</series>
+							<syndicatedEpisodeNumber>413</syndicatedEpisodeNumber>
+							<originalAirDate>2000-01-21</originalAirDate>
+						</program>
+						<program id="EP1890510080">
+							<title>The Steve Harvey Show</title>
+							<subtitle>Guess Who&apos;s Not Coming to Counseling</subtitle>
+							<description>Lovita enlists Steve to pose as her fiance; Bullethead and Romeo form a singing group.</description>
+							<showType>Series</showType>
+							<series>SH189051</series>
+							<syndicatedEpisodeNumber>414</syndicatedEpisodeNumber>
+							<originalAirDate>2000-02-04</originalAirDate>
+						</program>
+						<program id="EP2774740375">
+							<title>A Baby Story</title>
+							<subtitle>Baby Tompkins</subtitle>
+							<description>A football coach and a cheerleading coach have a baby.</description>
+							<showType>Series</showType>
+							<series>SH277474</series>
+							<originalAirDate>2004-03-29</originalAirDate>
+						</program>
+						<program id="EP2774740412">
+							<title>A Baby Story</title>
+							<subtitle>Baby McCarron</subtitle>
+							<description>A former cheerleader has a difficult pregnancy.</description>
+							<showType>Series</showType>
+							<series>SH277474</series>
+							<originalAirDate>2004-09-20</originalAirDate>
+						</program>
+						<program id="EP3885250295">
+							<title>A Makeover Story</title>
+							<subtitle>Meet the Parents</subtitle>
+							<description>Style coach Alison is introducing her boyfriend, Julio, to her parents for the first time.</description>
+							<showType>Series</showType>
+							<series>SH388525</series>
+							<originalAirDate>2005-01-04</originalAirDate>
+						</program>
+						<program id="EP3999340197">
+							<title>Beyond the Glory</title>
+							<subtitle>Mike Krzyzewski</subtitle>
+							<description>Duke basketball coach Mike Krzyzewski.</description>
+							<showType>Series</showType>
+							<series>SH399934</series>
+							<syndicatedEpisodeNumber>82</syndicatedEpisodeNumber>
+							<originalAirDate>2005-02-20</originalAirDate>
+						</program>
+						<program id="EP5212620928">
+							<title>Premiership Soccer</title>
+							<subtitle>Teams TBA</subtitle>
+							<showType>Series</showType>
+							<series>SH521262</series>
+							<syndicatedEpisodeNumber>28</syndicatedEpisodeNumber>
+							<originalAirDate>2005-02-22</originalAirDate>
+						</program>
+						<program id="EP7019670028">
+							<title>10 Years Younger</title>
+							<subtitle>Self Conscious to Self Confident</subtitle>
+							<description>Experts help a woman with her self-confidence.</description>
+							<showType>Series</showType>
+							<series>SH701967</series>
+							<originalAirDate>2005-02-22</originalAirDate>
+						</program>
+						<program id="MV1157370000">
+							<title>Charlotte Gray</title>
+							<description>A Scotswoman (Cate Blanchett) joins French Resistance fighters in order to rescue her lover during World War II.</description>
+							<mpaaRating>PG-13</mpaaRating>
+							<starRating>**</starRating>
+							<runTime>PT02H01M</runTime>
+							<year>2001</year>
+							<advisories>
+								<advisory>Adult Situations</advisory>
+								<advisory>Language</advisory>
+								<advisory>Violence</advisory>
+							</advisories>
+						</program>
+						<program id="SH0004120000">
+							<title>As the World Turns</title>
+							<description>Affections bind and conflicts threaten three closely related families.</description>
+							<showType>Series</showType>
+							<series>SH000412</series>
+							<originalAirDate>2000-01-01</originalAirDate>
+						</program>
+						<program id="SH1887100000">
+							<title>Judge Judy</title>
+							<description>Judge Judy Sheindlin hears real cases.</description>
+							<showType>Series</showType>
+							<series>SH188710</series>
+							<originalAirDate>1996-09-16</originalAirDate>
+						</program>
+						<program id="SH2830830000">
+							<title>Maury</title>
+							<description>Maury addresses sensative and private topics.</description>
+							<showType>Series</showType>
+							<series>SH283083</series>
+							<originalAirDate>1998-09-14</originalAirDate>
+						</program>
+						<program id="SH2893060000">
+							<title>Gettysburg: Victory at All Costs</title>
+							<description>The three-day battle; Pickett&apos;s Charge; the Gettysburg Address.</description>
+							<showType>Special</showType>
+							<series>SH289306</series>
+							<originalAirDate>1998-12-04</originalAirDate>
+						</program>
+						<program id="SH6796980000">
+							<title>Home Delivery</title>
+							<description>Search for everyday people with compelling stories.</description>
+							<showType>Series</showType>
+							<series>SH679698</series>
+							<originalAirDate>2004-09-13</originalAirDate>
+						</program>
+					</programs>
+					<productionCrew>
+						<crew program="EP0036710127">
+							<member>
+								<role>Actor</role>
+								<givenname>Roseanne</givenname>
+								<surname>Arnold</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>John</givenname>
+								<surname>Goodman</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Laurie</givenname>
+								<surname>Metcalf</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Sara</givenname>
+								<surname>Gilbert</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Michael</givenname>
+								<surname>Fishman</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Johnny</givenname>
+								<surname>Galecki</surname>
+							</member>
+							<member>
+								<role>Director</role>
+								<givenname>Andrew D.</givenname>
+								<surname>Weyman</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Loretta</givenname>
+								<surname>Lynn</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Ahmad</givenname>
+								<surname>Stoner</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Joe</givenname>
+								<surname>Keyes</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Joe</givenname>
+								<surname>Minjares</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>John Christian</givenname>
+								<surname>Graas</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Robin</givenname>
+								<surname>Greer</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Danielle</givenname>
+								<surname>Harris</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Mara</givenname>
+								<surname>Hobel</surname>
+							</member>
+							<member>
+								<role>Writer</role>
+								<givenname>Amy</givenname>
+								<surname>Sherman-Palladino</surname>
+							</member>
+						</crew>
+						<crew program="EP0036710128">
+							<member>
+								<role>Actor</role>
+								<givenname>Roseanne</givenname>
+								<surname>Arnold</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>John</givenname>
+								<surname>Goodman</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Laurie</givenname>
+								<surname>Metcalf</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Sara</givenname>
+								<surname>Gilbert</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Michael</givenname>
+								<surname>Fishman</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Estelle</givenname>
+								<surname>Parsons</surname>
+							</member>
+							<member>
+								<role>Director</role>
+								<givenname>Andrew D.</givenname>
+								<surname>Weyman</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Kay</givenname>
+								<surname>Arnold</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Danielle</givenname>
+								<surname>Harris</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Mara</givenname>
+								<surname>Hobel</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Lenny</givenname>
+								<surname>Wolpe</surname>
+							</member>
+							<member>
+								<role>Writer</role>
+								<givenname>Amy</givenname>
+								<surname>Sherman-Palladino</surname>
+							</member>
+						</crew>
+						<crew program="EP1011690067">
+							<member>
+								<role>Actor</role>
+								<givenname>Ellen</givenname>
+								<surname>DeGeneres</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>David Anthony</givenname>
+								<surname>Higgins</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Joely</givenname>
+								<surname>Fisher</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Clea</givenname>
+								<surname>Lewis</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Jeremy</givenname>
+								<surname>Piven</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>David</givenname>
+								<surname>Rosenthal</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Warren</givenname>
+								<surname>Bell</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Wendy</givenname>
+								<surname>Goldman</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Patrick</givenname>
+								<surname>Bristow</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Jack</givenname>
+								<surname>Plotnick</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Nancy</givenname>
+								<surname>Lenehan</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Curtis</givenname>
+								<surname>Armstrong</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Larry</givenname>
+								<surname>Hankin</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Ray</givenname>
+								<surname>Forchion</surname>
+							</member>
+						</crew>
+						<crew program="EP1528700089">
+							<member>
+								<role>Actor</role>
+								<givenname>Drew</givenname>
+								<surname>Carey</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Diedrich</givenname>
+								<surname>Bader</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Christa</givenname>
+								<surname>Miller</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Kathy</givenname>
+								<surname>Kinney</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Craig</givenname>
+								<surname>Ferguson</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Ryan</givenname>
+								<surname>Stiles</surname>
+							</member>
+							<member>
+								<role>Director</role>
+								<givenname>Gerry</givenname>
+								<surname>Cohen</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Bruce</givenname>
+								<surname>Helford</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Drew</givenname>
+								<surname>Carey</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Bernie</givenname>
+								<surname>Kosar</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Jenica</givenname>
+								<surname>Bergere</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Nan</givenname>
+								<surname>Martin</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Keith</givenname>
+								<surname>Diamond</surname>
+							</member>
+							<member>
+								<role>Writer</role>
+								<givenname>Katherine</givenname>
+								<surname>Green</surname>
+							</member>
+							<member>
+								<role>Writer</role>
+								<givenname>Dan</givenname>
+								<surname>O&apos;Keefe</surname>
+							</member>
+						</crew>
+						<crew program="EP1528700090">
+							<member>
+								<role>Actor</role>
+								<givenname>Drew</givenname>
+								<surname>Carey</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Diedrich</givenname>
+								<surname>Bader</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Christa</givenname>
+								<surname>Miller</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Kathy</givenname>
+								<surname>Kinney</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Craig</givenname>
+								<surname>Ferguson</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Ryan</givenname>
+								<surname>Stiles</surname>
+							</member>
+							<member>
+								<role>Director</role>
+								<givenname>Steve</givenname>
+								<surname>Zuckerman</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Bruce</givenname>
+								<surname>Helford</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Drew</givenname>
+								<surname>Carey</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Shirley</givenname>
+								<surname>Jones</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Ian</givenname>
+								<surname>Gomez</surname>
+							</member>
+							<member>
+								<role>Guest Star</role>
+								<givenname>Kelly</givenname>
+								<surname>Perine</surname>
+							</member>
+							<member>
+								<role>Writer</role>
+								<givenname>Jennifer</givenname>
+								<surname>Crittenden</surname>
+							</member>
+						</crew>
+						<crew program="EP1890510079">
+							<member>
+								<role>Actor</role>
+								<givenname>Steve</givenname>
+								<surname>Harvey</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Cedric</givenname>
+								<surname>The Entertainer</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Merlin</givenname>
+								<surname>Santana</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Tracy</givenname>
+								<surname>Vilar</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Terri J.</givenname>
+								<surname>Vaughn</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Ariyan</givenname>
+								<surname>Johnson</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>William Lee</givenname>
+								<surname>Scott</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Wendy Raquel</givenname>
+								<surname>Robinson</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Bernie</givenname>
+								<surname>Brillstein</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Brad</givenname>
+								<surname>Grey</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Winifred</givenname>
+								<surname>Hervey</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Stan</givenname>
+								<surname>Lathan</surname>
+							</member>
+							<member>
+								<role>Producer</role>
+								<givenname>Wenda</givenname>
+								<surname>Fong</surname>
+							</member>
+						</crew>
+						<crew program="EP1890510080">
+							<member>
+								<role>Actor</role>
+								<givenname>Steve</givenname>
+								<surname>Harvey</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Cedric</givenname>
+								<surname>The Entertainer</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Merlin</givenname>
+								<surname>Santana</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Tracy</givenname>
+								<surname>Vilar</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Terri J.</givenname>
+								<surname>Vaughn</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Ariyan</givenname>
+								<surname>Johnson</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>William Lee</givenname>
+								<surname>Scott</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Wendy Raquel</givenname>
+								<surname>Robinson</surname>
+							</member>
+							<member>
+								<role>Director</role>
+								<givenname>Stan</givenname>
+								<surname>Lathan</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Bernie</givenname>
+								<surname>Brillstein</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Brad</givenname>
+								<surname>Grey</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Winifred</givenname>
+								<surname>Hervey</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Stan</givenname>
+								<surname>Lathan</surname>
+							</member>
+							<member>
+								<role>Producer</role>
+								<givenname>Wenda</givenname>
+								<surname>Fong</surname>
+							</member>
+							<member>
+								<role>Writer</role>
+								<givenname>B. Mark</givenname>
+								<surname>Seabrooks</surname>
+							</member>
+						</crew>
+						<crew program="MV1157370000">
+							<member>
+								<role>Actor</role>
+								<givenname>Cate</givenname>
+								<surname>Blanchett</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Billy</givenname>
+								<surname>Crudup</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Michael</givenname>
+								<surname>Gambon</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Rupert</givenname>
+								<surname>Penry-Jones</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Anton</givenname>
+								<surname>Lesser</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>James</givenname>
+								<surname>Fleet</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Ron</givenname>
+								<surname>Cook</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Jack</givenname>
+								<surname>Shepherd</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Nicholas</givenname>
+								<surname>Farrell</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Helen</givenname>
+								<surname>McCrory</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Abigail</givenname>
+								<surname>Cruttenden</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Charlie</givenname>
+								<surname>Condou</surname>
+							</member>
+							<member>
+								<role>Director</role>
+								<givenname>Gillian</givenname>
+								<surname>Armstrong</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Paul</givenname>
+								<surname>Webster</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Robert</givenname>
+								<surname>Bernstein</surname>
+							</member>
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Hanno</givenname>
+								<surname>Huth</surname>
+							</member>
+							<member>
+								<role>Producer</role>
+								<givenname>Sarah</givenname>
+								<surname>Curtis</surname>
+							</member>
+							<member>
+								<role>Producer</role>
+								<givenname>Douglas</givenname>
+								<surname>Rae</surname>
+							</member>
+							<member>
+								<role>Writer</role>
+								<givenname>Jeremy</givenname>
+								<surname>Brock</surname>
+							</member>
+						</crew>
+						<crew program="SH0004120000">
+							<member>
+								<role>Actor</role>
+								<givenname>Martha</givenname>
+								<surname>Byrne</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Hunt</givenname>
+								<surname>Block</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Jon</givenname>
+								<surname>Hensley</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Michael</givenname>
+								<surname>Park</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Maura</givenname>
+								<surname>West</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Lesli</givenname>
+								<surname>Kay</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Ellen</givenname>
+								<surname>Dolan</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Scott</givenname>
+								<surname>Holmes</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Benjamin</givenname>
+								<surname>Hendrickson</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Kelley Menighan</givenname>
+								<surname>Hensley</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Jessica</givenname>
+								<surname>Dunphy</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Agim</givenname>
+								<surname>Kaba</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Peyton</givenname>
+								<surname>List</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Cady</givenname>
+								<surname>McClain</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Tamara</givenname>
+								<surname>Tunie</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Elizabeth</givenname>
+								<surname>Hubbard</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Don</givenname>
+								<surname>Hastings</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Kathryn</givenname>
+								<surname>Hays</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Eileen</givenname>
+								<surname>Fulton</surname>
+							</member>
+							<member>
+								<role>Actor</role>
+								<givenname>Kathleen</givenname>
+								<surname>Widdoes</surname>
+							</member>
+						</crew>
+						<crew program="SH2830830000">
+							<member>
+								<role>Host</role>
+								<givenname>Maury</givenname>
+								<surname>Povich</surname>
+							</member>
+						</crew>
+						<crew program="SH6796980000">
+							<member>
+								<role>Executive Producer</role>
+								<givenname>Amy</givenname>
+								<surname>Rosenblum</surname>
+							</member>
+							<member>
+								<role>Host</role>
+								<givenname xsi:nil="true"/>
+								<surname>Egypt</surname>
+							</member>
+							<member>
+								<role>Host</role>
+								<givenname>Sukanya</givenname>
+								<surname>Krishnan</surname>
+							</member>
+							<member>
+								<role>Host</role>
+								<givenname>Stephanie</givenname>
+								<surname>Lydecker</surname>
+							</member>
+							<member>
+								<role>Host</role>
+								<givenname>John</givenname>
+								<surname>Sencio</surname>
+							</member>
+						</crew>
+					</productionCrew>
+					<genres>
+						<programGenre program="EP0036710127">
+							<genre>
+								<class>Sitcom</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP0036710128">
+							<genre>
+								<class>Sitcom</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP1011690067">
+							<genre>
+								<class>Sitcom</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP1528700089">
+							<genre>
+								<class>Sitcom</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP1528700090">
+							<genre>
+								<class>Sitcom</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP1890510079">
+							<genre>
+								<class>Sitcom</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP1890510080">
+							<genre>
+								<class>Sitcom</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP2774740375">
+							<genre>
+								<class>Reality</class>
+								<relevance>0</relevance>
+							</genre>
+							<genre>
+								<class>Parenting</class>
+								<relevance>1</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP2774740412">
+							<genre>
+								<class>Reality</class>
+								<relevance>0</relevance>
+							</genre>
+							<genre>
+								<class>Parenting</class>
+								<relevance>1</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP3885250295">
+							<genre>
+								<class>Reality</class>
+								<relevance>0</relevance>
+							</genre>
+							<genre>
+								<class>Fashion</class>
+								<relevance>1</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP3999340197">
+							<genre>
+								<class>Sports non-event</class>
+								<relevance>0</relevance>
+							</genre>
+							<genre>
+								<class>Documentary</class>
+								<relevance>1</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP5212620928">
+							<genre>
+								<class>Sports event</class>
+								<relevance>0</relevance>
+							</genre>
+							<genre>
+								<class>Soccer</class>
+								<relevance>1</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="EP7019670028">
+							<genre>
+								<class>Reality</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="MV1157370000">
+							<genre>
+								<class>Drama</class>
+								<relevance>0</relevance>
+							</genre>
+							<genre>
+								<class>War</class>
+								<relevance>1</relevance>
+							</genre>
+							<genre>
+								<class>Romance</class>
+								<relevance>2</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="SH0004120000">
+							<genre>
+								<class>Soap</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="SH1887100000">
+							<genre>
+								<class>Reality</class>
+								<relevance>0</relevance>
+							</genre>
+							<genre>
+								<class>Law</class>
+								<relevance>1</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="SH2830830000">
+							<genre>
+								<class>Talk</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="SH2893060000">
+							<genre>
+								<class>Special</class>
+								<relevance>0</relevance>
+							</genre>
+							<genre>
+								<class>Documentary</class>
+								<relevance>1</relevance>
+							</genre>
+							<genre>
+								<class>History</class>
+								<relevance>2</relevance>
+							</genre>
+							<genre>
+								<class>War</class>
+								<relevance>3</relevance>
+							</genre>
+						</programGenre>
+						<programGenre program="SH6796980000">
+							<genre>
+								<class>Reality</class>
+								<relevance>0</relevance>
+							</genre>
+						</programGenre>
+					</genres>
+				</xtvd>
+			</xtvdResponse>
+		</ns1:downloadResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vogoo - Web Site Personalization & Collaborative Filtering</title>
+<link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" >
+<table width="752" cellspacing="0" cellpadding="0" align="center" class="maintable">
+<tr height="1">
+	<td colspan="3"></td>
+</tr>
+
+<tr>
+	<td width="1"></td><td>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" class="intable">
+	<!-- Menu -->
+	<tr>
+		<td align="center" valign="center"><img src="logo.gif" border="0" alt="Vogoo" vspace="1" /></td>
+		<td colspan="4"><img src="bann.gif" border="0" alt="" vspace="1" /></td>
+	</tr>
+	<tr>
+		<td valign="top" class="leftmenuitem"><table border="0" cellpadding="3" cellspacing="0" width="100%">
+		<tr class="leftmenutitle"><td>Manual</td></tr>
+
+		<tr><td><table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr><td><img src="square.gif" alt="square"></td>
+			<td class="leftmenuitem" width="100%">&nbsp;<a href="#introduction">Introduction</a></td>
+				</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+			<td class="leftmenuitem" width="100%">&nbsp;<a href="#datatypes">Data types</a></td>
+				</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#ratings">Ratings</a></td>
+			</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#itembased">Item-based CF</a></td>
+
+			</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#similarities">User-based CF</a></td>
+				</tr>
+		<!--<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#recommendations">User-based CF - Recommendations</a></td>
+
+			</tr> -->
+		<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#visitors">Visitors</a></td>
+
+				</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#ads">Ads</a></td>
+
+				</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#stats">Statistics</a></td>
+
+				</tr>
+				</table></td></tr>
+		</table></td>
+		<td colspan="4" valign="top"><table border="0" cellpadding="8" cellspacing="0" width="100%"><tr><td class="text" valign="top">
+<div class="title"><a name="introduction"></a>Introduction</div>
+Collaborative filtering is the process of predicting a user's tastes based on the interests he has shown previously and the interests of other users.<br />
+There are 2 main kinds of collaborative filtering :
+<ul>
+	<li><span class="subtitle">Item-based </span>: items can be related to each other based on their relative perception by users. For instance, items that are commonly liked by users can be grouped inside the same category. Categories are then used to make predictions.<br />The main advantage of item-based CF is that it's usually fast and can give good results even with few data. The disadvantage is that, depending on the method chosen to group items, the recommendations can lack the "personnalization" factor.<br /><br /> 
+	<li><span class="subtitle">User-based </span>: in user-based CF, users are related to each other based on how close their tastes are. The recommendations are then made using the tastes of users most similar to the current user.<br />
+	The advantage is that it can give very good personnalized results when it has enough data. However it is usually very resource-intensive and is often limited to databases with fewer items.
+</ul>
+<br />
+<span class="subtitle">Vogoo PHP LIB</span> supports both models of CF.<br /> Because of its good scalability, most implementations of Vogoo are using item-based CF. 
+<br /><br /><br />
+
+<div class="title"><a name="datatypes"></a>Data types</div>
+There are 4 types of input data in <span class="subtitle">Vogoo PHP LIB</span> :
+<ul>
+	<li><span class="subtitle">Members IDs</span> : the IDs you use on your web site to identify your users/members. Vogoo PHP LIB uses numbers as IDs. Therefore, if you do not use integers to identify your members, make
+sure to create a table linking your user IDs and the numeric IDs you will create for them in Vogoo.<br><br>
+
+<li><span class="subtitle">Products IDs</span> : IDs for objects/items rated by the members. These IDs are integers.
+<br><br>
+<li><span class="subtitle">Ratings</span> : ratings in Vogoo PHP LIB are floating-point numbers in the range 0.0 to 1.0 .
+This choice allows Vogoo to use a generic algorithm that can manage all 'real ratings' ranges in the same way.<br>
+Hence, before entering any rating in Vogoo PHP LIB, remember to divide it by the maximum rating value
+that can be given to a product on your website, e.g. if a member rated a product 7 over 10, the rating entered in Vogoo should be 7/10 = 0.7 .
+<br><br>
+<li><span class="subtitle">Categories</span> : categories are groups of products. Their goal is to allow you to store ratings for different types of product in a single database. Categories IDs are integers.
+Please note that you can assign non successive numbers to category IDs. Recommendations and item-based functions don't work across categories.
+</ul>
+<br /><br />
+<div class="title"><a name="ratings"></a>Ratings</div>
+
+Collaborative filtering uses ratings to make recommendations and compute similarities between users. Managing users/items ratings is the basis of all collaborative filtering processes. <br /> The following section shows how this is handled in Vogoo PHP Lib.<br /><br />
+To use these functions, you need to include 'vogoo.php' in your scripts. A new object called $vogoo will be created.<br /><br />
+<div class="subtitle">Set / Get / Delete ratings</div>
+<ul>
+	<li><span class="subtitle">$vogoo->set_rating($member_id,$product_id,$rating)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->set_rating($member_id,$product_id,$rating,$cat = 1) ]<br /><br />
+
+This function adds or changes the rating given by member $member_id to product $product_id .
+$rating must be in the range [0..1] as explained above. <br>If the rating doesn't exist in the DB, it is added. Otherwise it is changed to the new $rating value. <br>This function returns true on success,
+false otherwise.<br /><br />
+
+<li><span class="subtitle">$vogoo->automatic_rating($member_id,$product_id,$purchase)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->automatic_rating($member_id,$product_id,$purchase,$cat = 1) ]<br /><br />
+
+Many websites don't ask their users to rate items. But the fact that a user looks at the page of an item serveral times, or that he buys this item can be used to create a "virtual" rating. This rating can then be used to make recommendations based on the view/purchase information that is now associated to the item.<br /><br />The goal of this function is to create this virtual rating. It automatically adds or updates the rating for product $product_id depending on the $purchase flag information. <br />$purchase flag set to false is interpreted as a "view" of the product page. You should call this function everytime the user looks at the item's page: the greater the number of "views", the higher the rating gets for this member/product.<br>Calling this function with the flag set to true means that the user has bought the product.
+<br />
+<br />This function returns true on success, false otherwise.<br /><br />
+
+<li><span class="subtitle">$vogoo->set_not_interested($member_id,$product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->set_not_interested($member_id,$product_id,$cat = 1) ]<br /><br />
+Call this function to specify that member $member_id is not interested in product $product_id and
+that it should not be recommended to him even if it seems to match his tastes.<br />A member can't be at the same time "not interested" in a product and have a rating for this product. If you call this function when a rating already exists for this member/product, the rating will be erased.<br />
+This function returns true on success, false otherwise.<br /><br />
+
+<li><span class="subtitle">$vogoo->get_rating($member_id,$product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->get_rating($member_id,$product_id,$not_interested = false,$cat = 1) ]<br /><br />
+
+This function returns an array whose first element is the rating (key 'rating') given by member $member_id for product $product_id.
+The second element is the timestamp (key 'ts') at which the rating was last changed/given.<br />
+<span class="subtitle">As can be seen on the full interface</span>, you can set the type of rating returned by this function by using the $not_interested boolean (set by default to false).<br />
+Setting $not_interested to true returns an array with a rating value set to VG_NOT_INTERESTED (this is a constant, no $ at the beginning) if the member is not interested in this product.<br />
+If the product has never been rated by this member, an empty array is returned. If a problem occurs, the function returns false.<br /><br />
+
+<li><span class="subtitle">$vogoo->delete_rating($member_id,$product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->delete_rating($member_id,$product_id,$cat = 1) ]<br /><br />
+
+This function deletes the rating given by member $member_id to product $product_id (this includes the "not_interested" information).<br />
+Returns true on success, false otherwise.<br /><br />
+</ul>
+<div class="subtitle">Members functions</div>
+<ul>
+<li><span class="subtitle">$vogoo->member_num_ratings($member_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->member_num_ratings($member_id,$real_ratings = true,$not_interested = false,$cat = 1) ]<br /><br />
+Returns the number of ratings given by member $member_id. As there should be no dupicate in the database, this number matches the number of products rated by the member.<br />
+<span class="subtitle">Full interface :</span> you can specify the category in which the ratings are to be counted.
+You can also choose the type of ratings counted by using the $real_ratings and $not_interested booleans.
+If $real_ratings is set to true, the function counts the number of products rated by the member.
+If $not_interested is set to true, the function counts the number of products that the member is not interested in. These 2 options can be combined. You will then get the total number of products for which the member has given information (rating OR not interested).<br />
+If a problem occurs, this function returns false.
+<br /><br />
+<li><span class="subtitle">$vogoo->member_average_rating($member_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->member_average_rating($member_id,$cat = 1) ]<br /><br />
+Returns the average rating for member $member_id. If a problem occurs,
+this function returns false.
+You can specify the category on which the average rating must be computed.<br /><br />
+
+<li><span class="subtitle">$vogoo->member_ratings($member_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->member_ratings($member_id,$orderby_date = false,$orderby_rating = false, $sort_order_ASC = true,$real_ratings = true,$not_interested = false,$cat = 1) ]<br /><br />
+
+This function returns the array of products rated by member $member_id. If a problem
+occurs, this function returns false. If the member has not rated any product, this function returns an empty array.<br />
+Each row of the returned array is an array that contains 3 values: the Product ID, the rating (in the range [0..1])
+and the timestamp specifying when the rating was made or changed. The 3 keys to access these values in the array are 'product_id', 'rating' and 'ts' (you can also use array indexes to access the data).<br />
+<br /><span class="subtitle">Full interface : </span> the flags $orderby_date, $orderby_rating, $sort_order_ASC allow you to specify whether you want an array ordered by date or rating in ascending order ($sort_order_ASC == true)
+or descending order ($sort_order_ASC == false). <br />
+You can also specify the type of ratings returned by this function by setting the $real_ratings and $not_interested booleans (set by default to true and false).<br />
+Setting $not_interested to true returns the products in which the member is not interested. These products can be identified in the returned array by their rating set to VG_NOT_INTERESTED (this is a constant, so there is no preceeding $).
+<br /><br />
+<li><span class="subtitle">$vogoo->delete_member($member_id)</span><br />
+Delete all member $member_id ratings. Returns true on success, false otherwise.<br />
+<span class="subtitle">Warning : </span> this function can't be used with real-time item-based CF.
+</ul>
+<div class="subtitle">Product functions</div>
+<ul>
+<li><span class="subtitle">$vogoo->product_num_ratings($product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->product_num_ratings($product_id,$cat = 1) ]<br /><br />
+This function returns the number of ratings given to product $product_id. If a problem occurs,
+this function returns false.<br /><br />
+
+<li><span class="subtitle">$vogoo->product_average_rating($product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->product_average_rating($product_id,$cat = 1) ]<br /><br />
+This function returns the average rating for product $product_id. If a problem occurs,
+this function returns false.<br /><br />
+
+<li><span class="subtitle">$vogoo->product_ratings($product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->product_ratings($product_id,$orderby_date = false,$orderby_rating = false, $sort_order_ASC = true,$cat = 1) ]<br /><br />
+
+This function returns the array of ratings for product $product_id. If a problem
+occurs, this function returns false. If this product has not been rated, this function returns an empty array.<br />
+Each row of the returned array is an array that contains 3 values: the Member ID, the rating (in the range [0..1]) and the timestamp specifying when the rating was made or updated. The keys for these values are 'member_id' (index 0), 'rating' (index 1), 'ts' (index 2). <br />
+The flags $orderby_date, $orderby_rating, $sort_order_ASC allow you to get an array ordered by date or rating in ascending order ($sort_order_ASC == true)
+or descending order ($sort_order_ASC == false).<br /><br />
+<li><span class="subtitle">$vogoo->delete_product($product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo->delete_product($product_id,$cat = 1) ]<br /><br />
+Delete all ratings for product $product_id in category $cat. Returns true on success, false otherwise.<br />
+<span class="subtitle">Warning : </span> this function can't be used with real-time item-based CF.
+</ul>
+<br /><br />
+<div class="title"><a name="itembased"></a>Item-based Collaborative Filtering</div>
+Since v1.5, 2 item-based collaborative filtering engines are available in Vogoo PHP Lib. <br />
+
+<ul>
+<li>The first engine works in the way: "If you liked the following items, you should also like ...".
+<li>The second engine is based on <a href="http://www.daniel-lemire.com" class="orangelink">Daniel Lemire</a>'s Slope-one algorithm. It
+can predict the rating you would give to a specific item or the ratings for all items you have not rated yet.
+</ul>
+<div class="subtitle">Important notice</div>
+These 2 engines are quite fast but require some pre-computation. To do this we included 2 batch scripts (one for each engine) that pre-compute
+all the data needed to make recommendation. This is optional and you can insert new data in real time (when you add or update a rating for instance), but you may face some performance issues.<br />
+<br />Since v2.0, these 2 engines can't be run in parallel. They share the same database tables and creating data for one of the engines overwrites all previous data created for the other engine.<br />This behaviour has been chosen for 2 reasons:
+<ul>
+<li>most users only use one of the engines and don't require a parallel run of the 2 engines
+<li>it reduces the table sizes for large items databases
+</ul>
+
+<span class="subtitle">Warning : </span>Since the item-based LIB relies on Vogoo PHP LIB, you must check
+the $vogoo->connected boolean (as explained in the installation section) before you perform any operation.
+If this boolean is set to false, the item-based functions simply won't work.
+<br /><br />
+<div class="subtitle">Real time or batch pre-computation</div>
+As explained above, every rating set by a member generates new data for the item-based CF engines. This data is linked to all previous ratings given by the member.
+Hence, updating this item-based CF data in real time can cause the system to slow down dramatically if a member has rated many items.
+To avoid this kind of issues, we added 2 batch scripts that you can run daily (or more often if you use Vogoo PHP Pro) to compute the data. Nervertheless, some
+hosting services set a very low timeout limit for script execution, and you might not be able to run the batch
+scripts on these hosts.
+<br /><br />
+<ul>
+<li><span class="subtitle">Activating real-time computation</span><br />
+To activate real-time computation, edit the 'vogoo.php' file. Set the VG_DIRECT_LINKS constant to true to get real-time updates for the first engine. Set VG_DIRECT_SLOPE to true to get real-tie updates for the second engine.
+<br /><br />
+<li><span class="subtitle">Runnning batch scripts</span><br />
+Batch scripts can be run even if you have activated real-time computation. In this case, these scripts will be useful to check data consistency.<br /><br />
+<li><span class="subtitle">First engine</span><br />
+Call the 'cronlinks.php' script to run batch pre-computation.
+<br />The best way to do this is to add a line in your crontab that runs the PHP command-line interpreter on this script : 'php cronlinks.php'
+<br />If you don't have access to a cron mechanism or to the PHP command-line interpreter, simply call the cronlinks.php page in you browser. Note that since this script is meant to be run in background, you won't get any output on the page.
+<br /><br />
+<li><span class="subtitle">Second engine</span><br />
+Call the 'cronslope.php' script to run the batch pre-computation.
+<br />The best way to do this is to add a line in your crontab that runs the PHP command-line interpreter on this script : 'php cronslope.php'
+<br />If you don't have access to a cron mechanism or to the PHP command-line interpreter, simply call the cronslope.php page in you browser. Note that since this script is meant to be run in background, you won't get any output on the page.
+</ul>
+<br />
+
+<div class="subtitle">Using the first item-based engine</div>
+In order to use the first engine's functions, you must include the 'items.php' file in your scripts ('vogoo.php' is included automatically since items.php relies on it). An object called $vogoo_items will be created. This object willl give you access to the item-based functions.
+<ul>
+	<li><span class="subtitle">$vogoo_items->member_get_recommended_items($member_id,$cat = 1,$filter = false, $k = 1000000)</span><br /><br />
+This function returns an array that contains all the recommended items for member $member_id. Each element of the array is a Product ID.
+If a problem occured, false is returned.<br />
+Since v2.1, you can use the $k parameter to limit the number of returned values.<br /><br />
+<span class="subtitle">Note</span> : Since v1.7 a filter parameter has been added. This filter allows
+you to specify a sub-list of items that can be recommended.<br />
+For instance, if you have a DB that
+contains movies, you may want to recommend only movies that are currently played in cinemas. To do
+so simply create an array of booleans. Set array elements whose indexes are IDs of items played in cinemas to true. Set other elements to false and use this array as the $filter parameter.<br />
+The recommended items returned by the function will only contain movies that are currently played in cinemas.
+<br /><br />
+<li><span class="subtitle">$vogoo_items->member_get_reasons($member_id,$product_id,$cat = 1, $k = 1000000)</span><br /><br />
+This function returns the reasons why item $product_id has been recommended to member $member_id in the list of items returned by member_get_recommended_items function.<br />
+Each line of the returned array contains a Product ID. The result of this function can be interpreted as follows: "You might like $product_id because you like products A, B, C" where A, B, C are the items returned in the array.<br />
+False is returned on failure.
+<br />
+Since v2.1, you can use the $k parameter to limit the number of returned values.<br /><br />
+<li><span class="subtitle">$vogoo_items->visitor_get_recommended_items($cat = 1,$filter = false, $k = 1000000)
+<br />$vogoo_items->visitor_get_reasons($product_id,$cat = 1)</span><br /><br />
+These functions work the same way as the functions described above, except that they give recommendations and reasons for the current visitor (ie non registered member). To use these functions you need to have activated and included the visitor library. Please see the visitor section to learn more about the visitor library.
+<br /><br />
+<li><span class="subtitle">$vogoo_items->get_linked_items($product_id,$cat = 1,$filter = false, $k = 1000000)</span><br /><br />
+This function returns the array of items "linked" to item $product_id. This allowing you to display recommendations like: people who liked item X also liked items Y and Z, without having any knowledge of the current visitor/member's tastes.<br />
+Each column of the returned array is a product ID. The array is sorted from the most linked item to $product_id to the least linked.
+On failure, false is returned.<br />
+This function can be called for both members and visitors.<br /><br />
+<span class="subtitle">Note</span> : Since v1.7 a filter parameter has been added. This filter allows
+you to specify a sub-list of items that can be recommended.<br />
+For instance, if you have a DB that
+contains movies, you may want to recommend only movies that are currently played in cinemas. To do
+so simply create an array of booleans. Set array elements whose indexes are IDs of items played in cinemas to true. Set other elements to false and use this array as the $filter parameter.<br />
+The recommended items returned by the function will only contain movies that are currently played in cinemas.
+</ul>
+<br /><br />
+<div class="subtitle">Using the second item-based engine</div>
+In order to use the second engine, you must include 'items.php' file in your scripts ('vogoo.php' is included automatically as 'items.php' relies on it). An object called $vogoo_items will be created. This object willl give you access to the item-based functions.
+<ul>
+	<li><span class="subtitle">$vogoo_items->member_predict($member_id,$product_id,$cat = 1)</span><br /><br />
+This function predicts the rating that member $member_id would give to item $product_id.<br />
+The returned value is in the range 0.0 to 1.0.<br />
+If a problem occured, false is returned.
+<br /><br />
+<li><span class="subtitle">$vogoo_items->member_predict_all($member_id,$cat = 1,$filter = false, $k = 1000000)</span><br /><br />
+This function predicts the ratings that member $member_id would give to all the items he has not rated.<br />
+Each line of the returned array is an array that contains the Product ID ('product_id') and the predicted rating ('rating'). The array is sorted by descending rating.<br />
+False is returned on failure.<br />
+Since v2.1, you can use the $k parameter to limit the number of returned values. Although it contradicts the name of the function, the choice was to add this extra parameter in order to facilitate the integration of this limit in existing projects.
+<br /><br />
+<span class="subtitle">Note</span> : Since v1.7 a filter parameter has been added. This filter allows
+you to specify a sub-list of items that can be recommended.<br />
+For instance, if you have a DB that
+contains movies, you may want to recommend only movies that are currently played in cinemas. To do
+so simply create an array of booleans. Set array elements whose indexes are IDs of items played in cinemas to true. Set other elements to false and use this array as the $filter parameter.<br />
+The recommended items returned by the function will only contain movies that are currently played in cinemas.
+<br /><br />
+<li><span class="subtitle">$vogoo_items->visitor_predict($product_id,$cat = 1,$filter = false)
+<br />$vogoo_items->visitor_predict_all($cat = 1, $filter = false, $k = 1000000)</span><br /><br />
+These functions work the same way as the functions described above, except that they give predictions for the current visitor (ie non registered member). To use these functions you need to have activated and included the visitor library. Please see the visitor section to learn more about the visitor library.
+<br /><br />
+<li><span class="subtitle">$vogoo_items->get_slope_items($product_id,$min_nr_links = 1,$cat = 1,$filter = false, $k = 1000000)</span><br /><br />
+This function returns the array of items linked to item $product_id using the Slope One agorithm. It is similar to the get_linked_items function described above and allows you to display recommendations like: people who liked item X also liked items Y and Z.<br /><br />
+However, this function is more accurate in that it returns the average rating difference between item $product_id and each returned item.<br /><br />
+Each column of the returned array is an array containing the product ID (index 0 or key 'product_id') and the average rating difference (index 1 or key 'diff') between this item and $product_id (positive rating means the returned item is better rated in average than $product_id). The array is sorted in descending rating difference order.<br />
+The $min_nr_links parameter allows you to get only items that have been linked at least $min_nr_links times to $product_id (ie the returned item and $product_id both appear in the rated items lists of $min_nr_links users).<br />
+On failure, false is returned.<br />
+Since v2.1, you can use the $k parameter to limit the number of returned values.<br />
+This function can be called for both members and visitors.
+<br /><br />
+<span class="subtitle">Note</span> : Since v1.7 a filter parameter has been added. This filter allows
+you to specify a sub-list of items that can be recommended.<br />
+For instance, if you have a DB that
+contains movies, you may want to recommend only movies that are currently played in cinemas. To do
+so simply create an array of booleans. Set array elements whose indexes are IDs of items played in cinemas to true. Set other elements to false and use this array as the $filter parameter.<br />
+The recommended items returned by the function will only contain movies that are currently played in cinemas.
+</ul>
+
+<br /><br />
+<div class="title"><a name="similarities"></a>User-based CF - Similarities</div>
+In order to use user-based CF functions, you must include the 'users.php' file in your scripts ('vogoo.php' is included automatically as since users.php relies on it)<br /><br />
+Similarities is the core feature of <span class="subtitle">Vogoo PHP LIB</span> for user-based collaborative filtering.<br />
+<br />
+A similarity is a percentage indicating how close the tastes of 2 members are. The higher the similarity, the
+closer the tastes. Similarities over 80 can be considered as good, and those over 90 as excellent.<br />
+A similarity between 60 and 80 means that the members share some similar tastes. For numbers under 60, the tastes can be considered as really different and we can't use one member's ratings  to give advice to the other member.<br /><br />
+<ul>
+<li><span class="subtitle">$vogoo_users->member_similarity($member_id1,$member_id2,$cat = 1)</span><br /><br />
+This function returns the similarity (an integer in the range 0..100) between members $member_id1
+and $member_id2 for category $cat. <br />Since the computation of similarity is not symetric, you must be careful when you select id1 and id2. For instance, if you want to compute the similarity between the current
+customer browsing your website and another member, the current customer ID must be assigned to
+$member_id1 and the other member's ID to $member_id2. This will tell you how reliable member_id2 is to give recommendations to member_id1.
+<br /><br />
+<li><span class="subtitle">$vogoo_users->member_k_similarities($member_id,$k,&$similarities,$cat = 1)</span><br /><br />
+This function computes the $k best similarities for member $member_id (ie, the $k members whose tastes are the closest to $member_id) in category $cat and stores them
+in the $similarities var.<br />
+<span class="subtitle">This is probably the most important function in Vogoo PHP LIB for user-based Collaborative Filtering</span>, since the $similarities array created by this function must be
+sent as an argument to other functions in order to get user-based recommendations.<br />
+Note that $k is a maximum. If there aren't enough members whose tastes are close to member $member_id's tastes, the number of elements in the $similarities array
+will be smaller than $k.<br />
+<br />
+<span class="subtitle">Warning: </span>This function is very time consuming so be sure to call it only when a member has made major changes
+to his ratings, implying a change in all his similarities.
+<br /><br />
+Each row of the returned array $similarities is an array whose first element is the member ID and the second element
+is his similarity to member $member_id. The keys to these fields are 'member_id' and 'sim'. The fields can also be accessed via their index.<br /><br />
+<span class="subtitle">Note: </span>We recommend you store the $similarities array created by this function
+in the PHP Session var ($HTTP_SESSION_VARS or $_SESSION depending on your version of PHP), hence
+allowing you to simply transmit it from page to page without having to recompute it everytime you need it.<br /><br />
+
+
+<li><span class="subtitle">$vogoo_users->visitor_similarity($member_id2,$cat = 1)</span><br /><br />
+This function returns the similarity (an integer in the range 0 to 100) between the visitor
+and $member_id2 in category $cat.<br />
+To use these functions you need to have activated and included the visitor library. Please see the visitor section to learn more about the visitor library. 
+<br /><br />
+<li><span class="subtitle">$vogoo_users->visitor_k_similarities($k,&$similarities,$cat = 1)</span><br /><br />
+This function computes the $k best similarities for the visitor in category $cat and stores them
+in the $similarities var. This function works the same way as the member one. The same warnings and recommendations apply.<br />
+<br />
+
+<li><span class="subtitle">$vogoo_users->get_product_ratings_by_similarity($product_id,&$similarities,$cat = 1)</span><br /><br />
+This function returns an array of ratings for product $product_id ordered by their descending
+similarity value, thus <span class="subtitle">allowing the current member or visitor to know how other members, close to his tastes, have
+rated this product</span>.<br />
+Each row of the returned array is an array whose elements are: the member ID ('member_id'), his similarity to the current member ('sim'),
+the rating ('rating') he gave to the product and the timestamp of this rating ('ts').<br /><br />
+The $similarities parameter is the array computed by $vogoo_users->member_k_similarities .
+$vogoo_users->get_product_ratings_by_similarity only checks for ratings given by the members listed in the $similarities array, therefore
+an empty array can be returned even if the product has been rated several times.<br />
+Please note that a $cat argument can be specified. This is to allow cross-categories recommendations when $cat is different from the category used to compute the similarities array.<br /><br />
+As mentioned above, this function can work for both members and visitors.
+</ul>
+
+<br /><br />
+
+<div class="title"><a name="recommendations"></a>User-based CF - Recommendations</div>
+Once you have computed users'similarities, you can use the following functions to generate recommendations.
+<br /><br />
+<ul>
+<li><span class="subtitle">$vogoo_users->member_k_recommendations($member_id,$k,&$similarities, &$recommendations,$cat = 1,$filter = false)</span><br />
+This function creates an array in the $recommendations var that contains up to $k recommendations for member $member_id. The $similarities parameter is the array computed by $vogoo_users->member_k_similarities.<br /><br />
+Each row of the $recommendations array filled by member_k_recommendations() is an array whose elements
+are: the member ID (key 'member_id'), his similarity (key 'sim') to the current member $member_id, the ID of the product (key 'product_id'), the rating (key 'rating') given to this
+product and the timestamp of the rating (key 'ts'). These values can also be accessed via their index<br />
+<span class="subtitle">Note 1: </span>Since this function computes recommendations, all the products returned in
+the $recommendations array are products that have not been rated by member $member_id.<br />
+<span class="subtitle">Note 2: </span>When member $member_id has specified that he is not
+interested in a product, this product won't be recommended to him even if it appears
+to match his tastes.<br />
+<span class="subtitle">Note 3: </span>Since v1.7 a filter parameter has been added. This filter allows
+you to specify a sub-list of items that can be recommended.<br />
+For instance, if you have a DB that
+contains movies, you may want to recommend only movies that are currently played in cinemas. To do
+so simply create an array of booleans where the items IDs corresponding to the movies in cinemas
+are set to true and the other IDs are set to false. Use this array as the $filter parameter for this function.<br />
+The returned recommended items will only contain movies that are currently played in cinemas.
+<br /><br />
+true is returned on success, false otherwise.<br /><br />
+<li><span class="subtitle">$vogoo_users->get_product_recommendation($product_id,&$similarities,$cat = 1)</span><br />
+This function returns the rating for product $product_id given by the member who has the highest similarity to the current user (or visitor) and has rated this product.<br />
+If no member close to the current member has rated the product, an empty array is returned.<br />
+Otherwise, <span class="subtitle">the function returns an array containing</span>: the member ID, his similarity to the current member,
+his rating for the product and the timestamp of the rating ('member_id', 'sim', 'rating', 'ts').
+<br /><br />
+If a problem occurs, this function returns false.<br /><br />
+Since this function users the $similarities parameter and no user ID, it works for both members and visitors.
+<br /><br />
+
+<li><span class="subtitle">$vogoo_users->visitor_k_recommendations($k,&$similarities, &$recommendations,$cat = 1,$filter = false)</span><br />
+This function creates an array in the $recommendations var that contains up to $k recommendations for
+the visitor. This function works the same way as the member one.<br /><br />
+</ul>
+<br /><br />
+
+
+<div class="title"><a name="visitors"></a>Visitors</div>
+Vogoo PHP LIB can be used for visitors (or guests) of your website that are not registered members.<br /><br />
+<div class="subtitle">Requirements</div>
+<ul>
+<li>Make sure that PHP sessions are enabled on your server. This part of the LIB requires PHP sessions and
+will exit if it does not find any session variable.
+<li>Before you include any Vogoo file in your script, start the session with the session_start() function
+<li>After including the file "vogoo.php" in your script, you must include the file "visitors.php" which is in the same
+directory as "vogoo.php". A new object, called $vogoo_visitor, will be created.
+The syntax used to call a function in your scripts is: $vogoo_vistor->functionname()
+</ul>
+
+Once you included the file "visitors.php", the $vogoo_visitor object will refer automatically to the
+current visitor. That's why all the functions described below are very similar to the ones
+for members except that you do not have to specify any current member ID.
+<br /><span class="subtitle">Warning : </span>Since this visitors Lib relies on Vogoo PHP LIB, you must check
+the $vogoo->connected boolean (as explained in the installation section) before you perform any operation.
+If the value of this boolean is false, the visitors functions simply won't work.
+<br /><br />
+
+<ul>
+<li><span class="subtitle">$vogoo_visitor->num_ratings()</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_visitor->num_ratings($real_ratings = true,$not_interested = false,$cat = 1) ]<br /><br />
+Returns the number of products rated by the visitor.<br />
+<span class="subtitle">Full interface :</span> you can specify the category in which the ratings are to be counted.
+You can also choose the type of ratings that this function must count by using the $real_ratings and $not_interested booleans.
+If $real_ratings is set to true, the function counts the number of products rated by the visitor.
+If $not_interested is set to true, the function counts the number of products that the visitor is not interested in.<br />
+If a problem occurs, this function returns false.
+<br /><br />
+<li><span class="subtitle">$vogoo_visitor->average_rating()</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_visitor->average_rating($cat = 1) ]<br /><br />
+Returns the average rating of the visitor. If a problem occurs,
+this function returns false.
+You can specify the category in which the average rating must be computed.<br /><br />
+
+<li><span class="subtitle">$vogoo_visitor->ratings()</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_visitor->ratings($orderby_date = false,$orderby_rating = false, $sort_order_ASC = true,$real_ratings = true,$not_interested = false,$cat = 1) ]<br /><br />
+
+This function returns an array that contains all the products rated by the visitor. If a problem
+occurs, this function returns false. If the visitor has not rated any product, this function returns an empty array.<br />
+Each row of the returned array is an array which contains 3 values: the Product ID ('product_id'), the rating (key 'rating', value in the range [0..1])
+and the timestamp ('ts') specifying when the rating was made or changed.<br />
+<br /><span class="subtitle">Full interface :</span> $orderby_date, $orderby_rating, $sort_order_ASC flags allow you to specify whether you want an array ordered by date or rating in ascending order ($sort_order_ASC == true)
+or descending order ($sort_order_ASC == false). <br />
+You can also specify the type of ratings that this function should return by using the $real_ratings and $not_interested booleans (set by default to true and false).<br />
+Setting $not_interested to true returns the products that the visitor is not interested in. These products can be identified in the returned array by their rating set to VG_NOT_INTERESTED (this is a constant, so there is no preceeding $).
+<br /><br />
+
+<li><span class="subtitle">$vogoo_visitor->set_rating($product_id,$rating)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_visitor->set_rating($product_id,$rating,$cat = 1) ]<br /><br />
+
+Adds or changes the rating given by the visitor to product $product_id.
+$rating must be in the range [0..1] as explained above. This function returns true on success,
+false otherwise.<br /><br />
+
+<li><span class="subtitle">$vogoo_visitor->automatic_rating($product_id,$purchase)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_visitor->automatic_rating($product_id,$purchase,$cat = 1) ]<br /><br />
+
+Automatically adds or changes a rating to product $product_id
+based on the purchase indicator. Please see $vogoo->automatic_rating for a detailed description of the automatic rating process.
+This function returns true on success, false otherwise.<br /><br />
+
+<li><span class="subtitle">$vogoo_visitor->set_not_interested($product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_visitor->set_not_interested($product_id,$cat = 1) ]<br /><br />
+Specifies that the visitor is not interested in product $product_id and
+that we shloud not recommend it to him even if it seems to match his tastes.<br />
+This function returns true on success, false otherwise.<br /><br />
+
+<li><span class="subtitle">$vogoo_visitor->get_rating($product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_visitor->get_rating($product_id,$not_interested = false,$cat = 1) ]<br /><br />
+
+Returns an array whose first element is the rating ('rating') given by the visitor to product $product_id,
+and the second element is the timestamp ('ts') at which the rating was last changed/given.<br />
+<span class="subtitle">Full interface :</span> you can specify the type of rating that this function should return by using the $not_interested boolean (set by default to false).<br />
+Setting $not_interested to true returns an array with a rating value set to VG_NOT_INTERESTED (this is a constant, so there is no preceeding $) if the visitor is not interested in the product.<br />
+If this product has never been rated by the visitor, an empty array is returned. If a problem occurs, the function returns false.<br /><br />
+
+<li><span class="subtitle">$vogoo_visitor->delete_rating($product_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_visitor->delete_rating($product_id,$cat = 1) ]<br /><br />
+
+Deletes the rating given by the visitor to product $product_id.
+Returns true on success, false otherwise.<br /><br />
+
+</ul>
+
+<div class="subtitle">Conversion</div>
+<ul>
+<li><span class="subtitle">$vogoo_visitor->convert($member_id)</span><br />
+
+This functions turns the current visitor into a registered member whose ID is $member_id.
+The visitor ratings are saved in the database using this member ID and the session datas related to the visitor are erased (ie the visitor becomes a member).
+<br />If the specified member ID already exists, this function adds or updates the ratings for this member.
+<br />The function returns true on success, false otherwise.
+
+</ul>
+<br /><br />
+<div class="title"><a name="ads"></a>Targeted ads</div>
+Targeted ads are meant to display ads or messages to your members and visitors.<br />
+A targeted ad is defined by 4 elements:
+<ul>
+<li>Its ID
+<li>Its category
+<li>A list of product IDs
+<li>A minimum number of items
+</ul>
+People targeted by the ad will be those who liked at least the specified minimum number of items in the product list.
+For instance, you can target people who liked at least 2 items in the following product list : 10,12,15, ...
+<br /><br />
+To use the targeted ads feature, you must include 'ads.php' in your script. It will include 'vogoo.php' automatically as it relies on it.<br />
+This file is located in the vogoo directory.<br />
+If you want to use targeted ads for non-member visitors, you must also include 'visitors.php' before 'ads.php'.<br /><br />
+When you include the targeted ads feature, a new object named $vogoo_ads is created.
+<br /><br />
+<div class="subtitle">Ads management</div>
+<ul>
+<li><span class="subtitle">$vogoo_ads->record_ad($ad_id,$mini,$products)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_ads->record_ad($ad_id,$mini,$products,$cat = 1) ]<br /><br />
+This function records or updates ad $ad_id.<br />
+$mini is the minimum number of products in the products list that a member needs to like to be targeted by this ad.<br />
+$products contains the list of product IDs.<br />
+
+This function returns true on success, false otherwise.<br /><br />
+<li><span class="subtitle">$vogoo_ads->delete_ad($ad_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_ads->delete_ad($ad_id,$cat = 1) ]<br /><br />
+This function removes ad $ad_id.<br />
+
+This function returns true on success, false otherwise.<br /><br />
+<li><span class="subtitle">$vogoo_ads->get_ad_info($ad_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_ads->get_ad_info($ad_id,$cat = 1) ]<br /><br />
+This function returns an associative array containing the data for ad $ad_id.<br />
+The first element of the returned array, ['mini'], contains the minimum number of products in the products list.
+The second element, ['product_ids'], is an array containing the list of product IDs.<br />
+If the ad does not exist, mini is set to 0.<br/><br />
+<span class="subtitle">Example: </span><br />$ret = $vogoo_ads->get_ad_info(10);<br />
+echo 'Minimum number of items : '.$ret['mini'];<br />
+foreach ($ret['product_ids'] as $pid) {<br />
+	echo $pid;<br />
+}<br /><br />
+false is returned on failure.<br /><br />
+</ul>
+<div class="subtitle">Members and visitors</div>
+<ul>
+<li><span class="subtitle">$vogoo_ads->member_targeted_ads($member_id)</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_ads->member_targeted_ads($member_id,$cat = 1) ]<br /><br />
+This function returns the array of ads IDs for which member $member_id is in the target.<br />
+
+This function returns false on failure.<br /><br />
+<li><span class="subtitle">$vogoo_ads->visitor_targeted_ads()</span><br />
+[<span class="subtitle">Full interface :</span> $vogoo_ads->visitor_targeted_ads($cat = 1) ]<br /><br />
+This function returns the array of ads IDs for which the current visitor is in the target.<br />
+The 'visitors.php' file must be included before the 'ads.php' file in order to use this function.<br />
+This function returns false on failure.<br />
+
+</ul>
+
+<br /><br />
+<div class="title"><a name="stats"></a>Statistics</div>
+Statistics is a new module added in v2.0 . It currently includes a small set of functions that will be extended/changed based on your feedback and requirements.<br />
+The current functions give a simple access to management data without having to query the database directly.
+<br /><br />
+To use the Statistics module, you need to include the file 'stats.php' in your scripts. This file automatically includes 'vogoo.php'. On include, a new object named $vogoo_stats will be created.
+<ul>
+	<li><span class="subtitle">$vogoo_stats->categories()</span><br />
+<br />
+This function returns an array containing all the categories in the Vogoo database.<br />
+Only categories having at least one rating are returned. Each element of the array is a category ID.
+<br /><br />
+
+<li><span class="subtitle">$vogoo_stats->num_members($cat=1)</span><br /><br />
+This function returns the number of members having rated items in category $cat.<br />
+<br /><br />
+<li><span class="subtitle">$vogoo_stats->members($cat=1)</span><br /><br />
+This function returns the IDs of members having rated items in category $cat.<br />
+The returned result is an array whose elements are member IDs.
+<br /><br />
+<li><span class="subtitle">$vogoo_stats->num_products($cat=1)</span><br /><br />
+This function returns the number of products/items rated in category $cat.<br />
+<br /><br />
+<li><span class="subtitle">$vogoo_stats->products($cat=1)</span><br /><br />
+This function returns the IDs of products/items rated in category $cat.<br />
+The returned result is an array whose elements are product IDs.
+<br /><br />
+<li><span class="subtitle">$vogoo_stats->member_ratings_intervals($member_id,$max,$cat = 1)</span><br /><br />
+This function returns the number of ratings given by member $member_id per rating interval.<br />
+The intervals are defined by the $max parameter<br />
+For instance, if $max is set to 10, the ratings will be mapped to the range [0..10] and the function will return the number of ratings for each value in the range.<br /><br />
+<span class="subtitle">Note</span>: the "mapping" process is done by rounding the values. That means that the interval around the 0 and $max values is smaller than the interval for other values<br /><br />
+<span class="subtitle">Example</span>: member 1 has given the following ratings 0.1 ; 0.4; 0.7 ; 0.95; 1.0<br/>
+We want to get the number of ratings per interval in the range [0..4]. The ratings are first mapped to this range:<br />
+0.1 => round(0.1*4) = round(0.4) = 0<br />
+0.5 => round(0.5*4) = round(2.0) = 2<br />
+0.7 => round(0.7*4) = round(2.8) = 3<br />
+0.7 => round(0.95*4) = round(3.8) = 4<br />
+0.7 => round(1.0*4) = round(4.0) = 4<br /><br />
+The returned array will contain the number of values for each rating interval: 0=>1, 1=>0, 2=>1, 3=>1, 4=>2<br /><br />
+
+<li><span class="subtitle">$vogoo_stats->product_ratings_intervals($member_id,$max,$cat = 1)</span><br /><br />
+This function works the same way as the previous one. It returns the number of ratings given to product $product_id per rating interval. 
+
+<br /><br />
+</ul>
+
+
+		</td></tr></table>
+	</td>
+	</tr>
+	<tr>
+		<td class="bottomlink"><table width="100%" cellpadding="3" cellspacing="0" border="0"><tr><td align="center"><a href="http://www.vogoo-api.com" class="bottomlink">Home Page</a></td></tr></table></td>
+		<td colspan="4" class="leftmenuitem" align="right">&copy; 2005-2007 St&eacute;phane DROUX&nbsp;&nbsp;&nbsp;</td>
+
+	</tr>
+	</table>
+</td><td width="1"></td>
+</tr>
+<tr height="1">
+	<td colspan="3"></td>
+</tr>
+</table>
+<br />
+</body>
+</html>

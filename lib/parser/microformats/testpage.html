@@ -1,0 +1,139 @@
+<html>
+<head>
+	<title>Test page for MicroFormat Parser</title>
+<style type="text/css">
+html {
+	font-size: 12pt;
+	font-family: "Verdana", sans-serif;
+}
+.vcard {
+	margin: 2em;
+	padding: 1em;
+	border: 1px solid #CCC;
+	border-left: 10px solid #CCC;
+}
+.vevent {
+	width: 15em;
+	margin: 2em;
+	padding: 0.5em;
+	border: 1px solid #CCC;
+	border-top: 20px solid #CCC;
+	display: block;
+	float: left;
+}
+.hreview {
+	margin: 2em;
+	padding: 1em;
+	border: 5px solid #CCC;
+}
+.hreview .description {
+	margin: 0;
+	padding: 1em;
+	border: none;
+}
+</style>
+</head>
+<body>
+<div class="header">
+	<h1>The following information will be extracted</h1>
+</div>
+
+<h2>First vcard</h2>
+<div class="vcard">
+	<p class="fn org">Web Directions Conference Pty Ltd</p>
+	<div class="adr">
+		<p class="street-address">8/54 Mitchell St</p>
+		<span class="locality">Bondi</span> <span class="region">NSW</span> <span class="postal-code">2026</span>
+		<p class="country-name">Australia</p>
+	</div>
+	<div>
+		<p>Phone/Fax: <span class="tel">+61 2 9365 5007</span></p>
+		<p>Email: <span class="email"><a href="mailto:fake@morefake.fk">fake@morefake.fk</a></span></p>
+	</div>
+</div>
+
+<p>It is OK to have as much free text in the page as you need. It won't be parsed, as long as it's not 
+contained within an element with a special class attribute.</p>
+
+<p>For list of format-specific reserved class names, visit 
+<a href="http://www.microformats.org/">microformats</a>.</p>
+
+<h2>Second vcard</h2>
+<div class="vcard">
+	<p class="fn"><span class="given-name">Vladislav</span> <span class="family-name">Bailovic</span></p>
+	<div class="adr">
+		<p class="street-address">I Proleterske 44</p>
+		<span class="locality">Zrenjanin</span> <span class="region">Vojvodina</span> <span class="postal-code">23000</span>
+		<p class="country-name">Serbia and Montenegro</p>
+	</div>
+	<object class="photo" data="somephoto.jpg" type="image/jpeg">--- A picture of me ---</object>
+	<div>
+		<p>Phone/Fax: <span class="tel">+381 54 111 32 219</span></p>
+		<p>Email: <span class="email"><a href="mailto:malatestapunk@gmail.com">malatestapunk@gmail.com</a></span></p>
+	</div>
+	<div>
+		<span class="bday">August 20</span>
+		<p class="geo">
+			lat: <span class="latitude">I have no idea</span><br />
+			long: <span class="longitude">I have even less idea. And I don't even care.</span><br />
+			tz: <span class="tz">+1 GMT</span>
+		</p>
+	</div>
+</div>
+
+<p><strong>Note:</strong> The parsers are not datatype-specific: all fields are interpreted as free text.</p>
+
+<h2>Hcalendar</h2>
+<span class="vevent">
+<h3>Vevent 1</h3>
+ <a class="url" href="http://www.web2con.com/">
+  <span class="summary">Web 2.0 Conference</span>: 
+  <abbr class="dtstart" title="2005-10-05">October 5</abbr>-
+  <abbr class="dtend" title="2005-10-08">7</abbr>,
+ at the <span class="location">Argent Hotel, San Francisco, CA</span>
+ </a>
+</span>
+
+<span class="vevent">
+<h3>Vevent 2</h3>
+ <a class="url" href="http://www.web4con.com/">
+  <span class="summary">Web 4.0 Conference</span>: 
+  <abbr class="dtstart" title="2008-10-05">October 5</abbr>-
+  <abbr class="dtend" title="2008-10-08">7</abbr>,
+ at the <span class="location">XXX</span>
+ </a>
+</span>
+
+<br style="clear: both" />
+
+<h2>Hreview</h2>
+<div class="hreview">
+ <span><span class="rating">5</span> out of 5 stars</span>
+ <h4 class="summary">Crepes on Cole is awesome</h4>
+ <span class="reviewer vcard">Reviewer: <span class="fn">Tantek</span> - 
+ <abbr class="dtreviewed" title="20050418T2300-0700">April 18, 2005</abbr></span>
+ <div class="description item"><p>
+  <span class="fn org">Crepes on Cole</span> is one of the best little 
+  creperies in <span class="adr"><span class="locality">San Francisco</span></span>.
+  Excellent food and service. Plenty of tables in a variety of sizes 
+  for parties large and small.  Window seating makes for excellent 
+  people watching to/from the N-Judah which stops right outside.  
+  I've had many fun social gatherings here, as well as gotten 
+  plenty of work done thanks to neighborhood WiFi.
+ </p></div>
+ <p>Visit date: <span>April 2005</span></p>
+ <p>Food eaten: <span>Florentine crepe</span></p>
+ <div class="tags">
+	<a rel="tag" href="#">tech</a>
+	<a rel="tag" href="#f">food</a>
+ </div>
+ <p class="meta">
+	<a class="permalink" rel="bookmark" href="http://localhost">bookmark me</a>
+	<a class="license" rel="license" href="cc">Creative Commons</a>
+ </p>
+</div>
+
+<a rel="tag" href="http://microformats.org/">microformats</a>
+<a rel="tag" href="http://php.net/">PHP</a>
+</body>
+</html>

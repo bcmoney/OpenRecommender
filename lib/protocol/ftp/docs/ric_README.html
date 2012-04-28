@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1 align="center">README</h1>
+<pre>
+Description
+-------------------
+This package can be used to synchronize two hosts via FTP protocol.
+It connects to a given FTP server and compares the list of files of a remote directory with the files of a given local directory.
+It transfers the files to the remote host that are outdated and downloads the files from the remote host that were updated more recently.
+The directories are traversed recursively but the class may exclude given files or directories.
+Size comparison and cleaning up files can be done in version 2.0 and later.
+You can also synchronize files from the command line using a provided script.
+NOTE: USE THIS PACKAGE AT YOUR OWN RISK.
+
+Feature List
+-------------------
+- Sync based on local or remote host with different strategies
+- Interactive synchronization (CLI)
+- Logging activities
+- Traverse remote/local directories recursively
+- Exclude files/directories from synchronization
+- Get the list of files to be synchronized (Without transfering files)
+
+Getting Started
+-------------------
+You can start using FtpSync in either way:
+1- Run lib/Cli.php from command line: 
+   $ php lib/Cli.php
+2- Use the FtpSync like the provided example(index.php):
+   require 'lib/FTPSync.php';
+   $sync = new FtpSync('127.0.0.1', 'Amin', '123');
+   $sync-&gt;enableLog()
+        -&gt;ignore('.DS_Store')
+        -&gt;useStrategy(FtpSync::SYNC_BY_MTIME)
+        -&gt;remote('Remote path', 'Local path');
+
+</pre>
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 28 Nov 2011 22:08:33 +0330 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

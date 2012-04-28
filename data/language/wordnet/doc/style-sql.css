@@ -1,0 +1,57 @@
+
+.sqlsection{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: large;
+}
+
+
+.sqlsubsection{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: medium;
+}
+
+.sqlcomment{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #909090;
+	font-size: small;
+}
+
+.sqlquery{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	color: #000000;
+	background-color:#FFFFFF;
+}
+
+.sqlstatement{
+	border-style:solid;
+	padding: 5px;
+	border-width: 1px;
+	color:#FFFFFF;
+	background-color:#000000;
+}
+
+.sqlresultset{
+	color:#000000;
+	border-collapse: collapse;
+	background-color:#999999;
+}
+
+.sqlheader{
+	color:#FFFFFF;
+	background-color:#707070;
+}
+
+.sqlrow{
+	color:#808080;
+	background-color:#FFFFFF;
+}
+
+.sqlfield{
+	border-style:solid;
+	border-width: 1px;
+}
+

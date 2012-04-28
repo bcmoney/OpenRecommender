@@ -1,0 +1,167 @@
+;;================================
+;; Email2SMS Gateway information
+;;================================
+;;
+;;
+;; @package: Email2SMS API
+;; @version: 1.0
+;; @author : Utsav Handa
+;;
+;;
+
+
+[Alaska]
+General Communications  = NUMBER@msg.gci.net
+
+[Argentina]
+Claro              = NUMBER@sms.ctimovil.com.ar
+Personal           = NUMBER@alertas.personal.com.ar
+
+[Australia]
+T-Mobile/Optus Zoo = 0NUMBER@optusmobile.com.au
+
+[Autria]
+T-Mobile           = NUMBER@sms.t-mobile.at
+
+[Brasil]
+Vivo               = NUMBER@torpedoemail.com.br
+
+[Bulgaria]
+Mtel   = NUMBER@sms.mtel.net Mtel
+Globul = NUMBER@sms.globul.bg
+
+[Canada]
+Aliant           = NUMBER@wirefree.informe.ca
+Bell Mobility    = NUMBER@txt.bell.ca
+Fido             = NUMBER@fido.ca
+Koodo            = NUMBER@msg.koodomobile.com
+MTS Mobility     = NUMBER@text.mts.net
+PC Mobility      = NUMBER@mobiletxt.ca
+Rogers Wireless  = NUMBER@pcs.rogers.com
+Sasktel Mobility = NUMBER@pcs.sasktelmobility.com
+Telus            = NUMBER@msg.telus.com
+Virgin Mobile    = NUMBER@vmobile.ca
+
+[Crotia]
+T-Mobile         = 385NUMBER@sms.t-mobile.hr
+Tigo             = NUMBER@sms.tigo.com.co
+
+
+[Colombia]
+Comcel           = NUMBER@comcel.com.co    
+
+[France]
+Bouygues Telecom = NUMBER@mms.bouyguestelecom.fr
+
+[Germany]
+T-Mobile = 0NUMBER@t-d1-sms.de
+Vodafone = 0NUMBER@vodafone-sms.de
+O2       = 0NUMBER@o2online.de
+E-Plus   = 0NUMBER@smsmail.eplus.de
+
+[Iceland]
+OgVodafone = NUMBER@sms.is
+Siminn     = NUMBER@box.is Siminn
+
+[India]
+Andhra Pradesh Airtel = 91NUMBER@airtelap.com
+BPL Mobile Mumbai     = NUMBER@bplmobile.com
+Karnataka Airtel      = NUMBER@airtelkkk.com
+
+[Ireland]
+Meteor = NUMBER@sms.mymeteor.ie Meteor
+
+[Italy]
+TIM      = 0NUMBER@timnet.com
+Vodafone = 3**NUMBER@sms.vodafone.it
+
+[Japan]
+AU by KDDI                                   = NUMBER@ezweb.ne.jp
+NTT DoCoMo                                   = NUMBER@docomo.ne.jp
+Vodafone Chuugoku/Western                    = NUMBER@n.vodafone.ne.jp
+Vodafone Hokkaido                            = NUMBER@d.vodafone.ne.jp
+Vodafone Hokuriko/Central North              = NUMBER@r.vodafone.ne.jp
+Vodafone Kansai/West, including Osaka        = NUMBER@k.vodafone.ne.jp
+Vodafone Kanto/Koushin/East, including Tokyo = NUMBER@t.vodafone.ne.jp
+Vodafone Kyuushu/Okinawa                     = NUMBER@q.vodafone.ne.jp
+Vodafone Shikoku                             = NUMBER@s.vodafone.ne.jp
+Vodafone Touhoku/Niigata/North               = NUMBER@h.vodafone.ne.jp
+Vodafone Toukai/Central                      = NUMBER@c.vodafone.ne.jp
+Willcom                                      = NUMBER@pdx.ne.jp
+Willcom di                                   = NUMBER@di.pdx.ne.jp
+Willcom dj                                   = NUMBER@dj.pdx.ne.jp
+Willcom dk                                   = NUMBER@dk.pdx.ne.jp
+
+[Mexico]
+Nextel   = NUMBER@msgnextel.com.mx
+
+[Mauritius]
+Emtel    = NUMBER@emtelworld.net
+
+[Nepal]
+Mero Mobile   = 977NUMBER@sms.spicenepal.com
+
+[Netherlands]
+T-Mobile = 31NUMBER@gin.nl
+Orange   = 0NUMBER@sms.orange.nl
+
+[Nicaragua]
+Claro    = NUMBER@ideasclaro-ca.com
+
+[Singapore]
+M1 = NUMBER@m1.com.sg
+
+[South Africa]
+Vodacom = NUMBER@voda.co.za
+MTN     = NUMBER@sms.co.za
+
+[Spain]
+Telefonica Movistar = 0NUMBER@movistar.net
+Vodafone            = 0NUMBER@vodafone.es
+
+[Sri Lanka]
+Mobitel             = NUMBER@sms.mobitel.lk
+
+[Sweden]
+Tele2 = 0NUMBER@sms.tele2.se
+
+[Switzerland]
+Sunrise Communications   = NUMBER@gsm.sunrise.ch
+
+[USA]
+7-Eleven Speak Out Wireles    = NUMBER@cingularme.com
+Alaska Communications Systems = NUMBER@msg.acsalaska.com
+Alltel                        = NUMBER@message.alltel.com
+Ameritech                     = NUMBER@paging.acswireless.com
+Appalachian Wireless          = NUMBER@message.alltel.com
+AT&T Mobility                 = NUMBER@CingularME.com
+ATT Wireless                  = NUMBER@txt.att.net
+Bluegrass Cellular            = NUMBER@sms.bluecell.com
+Bellsouth                     = NUMBER@bellsouth.cl
+Boost                         = NUMBER@myboostmobile.com
+Cellular One                  = NUMBER@mobile.celloneusa.com
+Cellular South                = NUMBER@csouth1.com
+Centennial Wireless           = NUMBER@cwemail.com
+Cincinnati Bell Wireless      = NUMBER@gocbw.com
+Edge Wireless                 = NUMBER@sms.edgewireless.com
+Sprint PCS                    = NUMBER@messaging.sprintpcs.com
+Teleflip                      = NUMBER@teleflip.com
+T-Mobile                      = NUMBER@tmomail.net
+Metro PCS                     = NUMBER@mymetropcs.com
+Nextel                        = NUMBER@messaging.nextel.com
+O2                            = NUMBER@mobile.celloneusa.com
+Orange                        = NUMBER@mobile.celloneusa.com
+Qwest                         = NUMBER@qwestmp.com
+Rogers Wireless               = NUMBER@pcs.rogers.com
+Telus Mobility                = NUMBER@msg.telus.com
+US Cellular                   = NUMBER@email.uscc.net
+Verizon                       = NUMBER@vtext.com
+Virgin Mobile                 = NUMBER@vmobl.com
+
+[UK]
+O2 #1         = 44NUMBER@mobile.celloneusa.com
+O2 #2         = 44NUMBER@mmail.co.uk
+Orange        = 0NUMBER@orange.net
+T-Mobile      = 0NUMBER@t-mobile.uk.net
+Virgin Mobile = 0NUMBER@vxtras.com
+Vodafone      = 0NUMBER@vodafone.net

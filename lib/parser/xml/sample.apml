@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<APML xmlns="http://www.apml.org/apml-0.6" version="0.6">
+ <Head>
+  <Title>APML for BC$ Member bryan</Title>
+  <Generator>http://bcmoney-mobiletv.com/</Generator>
+  <DateCreated>10/05/11 : 21:17:54</DateCreated>
+ </Head>
+ <Body defaultprofile="default">
+  <Profile name="default">
+   <ImplicitData>
+    <Concepts>
+      <Concept key="Sports" value="0.0789473684211" from="http://bcmoney-mobiletv.com/" updated="2008-02-14" />  
+    </Concepts>
+    <Sources>
+     <Source key="http://bcmoney-mobiletv.com//view/23/visionaries-the-age-of-magic-begins-s1e1/" value="1" from="http://bcmoney-mobiletv.com/boomstick" updated="2011-05-05 10:30:01" /> 
+    </Sources>
+   </ImplicitData>
+   <ExplicitData />
+  </Profile>
+ </Body>
+</APML>

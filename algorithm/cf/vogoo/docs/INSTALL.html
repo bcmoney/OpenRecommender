@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vogoo - Web Site Personalization & Collaborative Filtering</title>
+<link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" >
+<table width="752" cellspacing="0" cellpadding="0" align="center" class="maintable">
+<tr height="1">
+	<td colspan="3"></td>
+</tr>
+<tr>
+
+	<td width="1"></td><td>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" class="intable">
+	<tr>
+		<td align="center" valign="center"><img src="logo.gif" border="0" alt="Vogoo" vspace="1" /></td>
+		<td colspan="4"><img src="bann.gif" border="0" alt="tutorial" vspace="1" /></td>
+	</tr>
+	<tr>
+		<td valign="top" class="leftmenuitem"><table border="0" cellpadding="3" cellspacing="0" width="100%">
+		<tr class="leftmenutitle"><td>Installation</td></tr>
+		<tr><td><table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr><td><img src="square.gif" alt="square"></td>
+			<td class="leftmenuitem" width="100%">&nbsp;<a href="#installation">Installation</a></td>
+		</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#troubleshooting">Troubleshooting</a></td>
+		</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#upgrading">Upgrade</a></td>
+		</tr>
+		<tr><td><img src="square.gif" alt="square"></td>
+				<td class="leftmenuitem" width="100%">&nbsp;<a href="#uninstall">Uninstall</a></td>
+				</tr>
+			</table></td></tr>
+		</table></td>
+		<td colspan="4" valign="top"><table border="0" cellpadding="8" cellspacing="0" width="100%"><tr><td class="text" valign="top">
+<div class="title"><a name="installation"></a>Installation</div>
+
+<br />Unzip the .zip or .tgz archive. A new directory named 'vogoo' will be created.
+It contains all the files required for the <span class="subtitle">Vogoo PHP LIB</span>.
+<br /><br />
+Copy this directory to your web site (keeping the full structure of the directory).
+Change the permissions on the 'config.php' file to make it writeable for all (666 or -rw-rw-rw
+mode in your FTP client).
+<br /><br />
+Open your Web browser to the location you placed <span class="subtitle">Vogoo PHP LIB</span> in,
+adding 'install/install.php' to the address, e.g. http://www.mydomain.com/vogoo/install/install.php
+<br /><br />
+A new page with the title 'Welcome to Vogoo LIB installation' should appear. This
+page contains a form as shown on the image below. <br />
+
+<p align="center"><img src="instform.gif" alt="Install form" align="center"></p>
+Fill in all the requested information. Choose the Database type of your Hosting Service.<br />
+In order to fill in the other fields, check the information given by your hosting service. Your
+private server hostname, database, username and password should have been sent to you when you
+created your account.
+<br /><br />
+Click <span class="subtitle">'Start Install'</span>. A new page informing you about the installation process should appear.
+If the installation succeeded, read the following section. Otherwise, go to the troubleshooting
+section below.<br /><br />
+<div class="title">Completing the installation and using Vogoo LIB</div>
+Once the installation succeeded, change permissions on 'config.php' to make it writeable
+only for yourself (644 or -rw-r--r-- mode).<br />
+To use the Lib, you must include the file 'vogoo.php' (contained in the vogoo directory) in your scripts.
+A new object, called $vogoo, will be created. The syntax used to call a Vogoo PHP Lib function
+in your scripts is: $vogoo->functionname()
+<br /><br />
+<div class="subtitle">Important information</div>
+
+Whenever you include the 'vogoo.php' file in your script, a new object named $vogoo is created
+and a Database connection is opened. If the connection to the Database failed, you won't be
+able to perform any operation allowed by Vogoo PHP LIB. Therefore, once you included the 'vogoo.php' file,
+<span class="subtitle">please check $vogoo->connected boolean value</span>. If this is set to true, the connection is opened, otherwise
+a problem has occured.<br />
+We also recommend you to add a constant to your scripts specifying the Vogoo LIB directory. Although
+Vogoo PHP LIB includes a mechanism to find its installation directory by itself, specifiying it
+in your scripts is a far more reliable solution. To do so, add the following directive to your script
+just before the include('vogoo/vogoo.php') line:<br />
+<span class="subtitle">define('VOGOO_DIR','[Vogoo installation path]');</span>
+<br /><br />
+<div class="title"><a name="troubleshooting"></a>Troubleshooting</div>
+If a problem occured during the installation, you can try to launch a new installation process after checking a few elements.<br />
+First, erase the content of the 'config.php' file. Do NOT erase the file itself but erase its content, if any.
+Then check the write permissions of the file as specified above.<br />
+If the file does not exist, create an empty one with the right permissions.<br />
+
+<br />
+If you are still unable to use the Lib, <span class="subtitle">go back to the Install page</span>. Check carefully all the information you provide in the form.<br />
+It's often the main reason for any failure during the installation.
+<br /><br />
+<div class="title"><a name="upgrading"></a>Upgrading Vogoo PHP LIB</div>
+Please check the Download section on vogoo-api.com website if you want to upgrade from a previous version
+of Vogoo PHP LIB.
+<br /><br />
+<div class="title"><a name="uninstall"></a>Uninstalling Vogoo PHP LIB</div>
+Before uninstalling <span class="subtitle">Vogoo PHP LIB</span>, make sure that your scripts do not use on the LIB anymore.<br />
+The uninstallation process is not automatic. You must first remove the directory you installed the LIB to.
+Then connect to your Database (through the interface provided by your Hosting Service or by any other method)
+and drop the 4 SQL tables called vogoo_ratings , vogoo_ads, vogoo_ads_products , vogoo_links (SQL Syntax: DROP TABLE vogoo_ratings , ...).<br />
+<br />
+		</td></tr></table>
+
+	</td>
+	</tr>
+	<tr>
+		<td class="bottomlink"><table width="100%" cellpadding="3" cellspacing="0" border="0"><tr><td align="center"><a href="http://www.vogoo-api.com" class="bottomlink">Home Page</a></td></tr></table></td>
+		<td colspan="4" class="leftmenuitem" align="right">&copy; 2005 St&eacute;phane DROUX&nbsp;&nbsp;&nbsp;</td>
+	</tr>
+	</table>
+
+</td><td width="1"></td>
+</tr>
+<tr height="1">
+	<td colspan="3"></td>
+</tr>
+</table>
+<br />
+</body>
+</html>

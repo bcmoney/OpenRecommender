@@ -1,0 +1,72 @@
+﻿#summary Quick sample!
+#labels Featured
+
+Lets get started with quick samples
+
+= Quick Samples =
+*my_file.csv*
+{{{
+name, age
+john, 13
+takaka, 8
+}}}
+
+*php script*
+{{{
+<?php
+
+  $csv = new File_CSV_DataSource;
+ 
+  $csv->load('my_file.csv'); // boolean
+
+  $csv->getHeaders(); // array('name', 'age');
+
+  $csv->getColumn('name'); // array('john', 'tanaka');
+
+  $csv->row(1); // array('john', '13');
+
+  $csv->connect(); // array(
+                   //   array('name' => 'john', 'age' => 13),
+                   //   array('name' => 'tanaka', 'age' => 8)
+                   // );
+
+?>
+
+}}}
+
+
+= Detailed Usage =
+
+{{{
+<?php
+
+     // usage sample
+     $csv = new File_CSV_DataSource;
+  
+     // tell the object to parse a specific file
+     if ($csv->load('my_file.csv')) {
+  
+       // execute the following if given file is usable
+  
+       // get the headers found in file
+       $array = $csv->getHeaders();
+      
+       // get a specific column from csv file
+       $csv->getColumn($array[2]);
+      
+       // get each record with its related header
+       // ONLY if all records length match the number
+       // of headers
+        if ($csv->isSymmetric()) {
+            $array = $csv->connect();
+        } else {
+            // fetch records that dont match headers length
+            $array = $csv->getAsymmetricRows();
+        }
+      
+        // ignore everything and simply get the data as an array
+        $array = $csv->getrawArray();
+     }
+
+?>
+}}}

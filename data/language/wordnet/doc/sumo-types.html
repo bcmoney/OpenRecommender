@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>SUMO term attributes</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">SUMO TYPES</DIV>
+<DIV class="sqlcomment">term attribute types</DIV>
+<DIV class="sqlquery">
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>sumoattrtype</TH>
+<TH>meaning</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">R</TD>
+<TD class="sqlfield">subclass of Relation</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">F</TD>
+<TD class="sqlfield">subclass of Function</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">P</TD>
+<TD class="sqlfield">subclass of Predicate</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">A</TD>
+<TD class="sqlfield">subclass of Attribute</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">r</TD>
+<TD class="sqlfield">child of Relation</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">f</TD>
+<TD class="sqlfield">child of Function</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">p</TD>
+<TD class="sqlfield">child of Predicate</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">a</TD>
+<TD class="sqlfield">child of Attribute</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">l</TD>
+<TD class="sqlfield">logical operator</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">q</TD>
+<TD class="sqlfield">quantifier</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">y</TD>
+<TD class="sqlfield">function</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">m</TD>
+<TD class="sqlfield">math function</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">~</TD>
+<TD class="sqlfield">comparison operator</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD>
+<TD class="sqlfield">is subclass c in some (subclass c C) formula</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD>
+<TD class="sqlfield">is superclass C in some (subclass c C) formula</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">i</TD>
+<TD class="sqlfield">is instance i in some (instance i c) formula</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">s</TD>
+<TD class="sqlfield">is subrelation s in some (subrelation s S) formula</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">S</TD>
+<TD class="sqlfield">is superrelation S in some (subrelation s S) formula</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">@</TD>
+<TD class="sqlfield">is relation operator in formula</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+
+<DIV class="sqlcomment">parse types</DIV>
+<DIV class="sqlquery">
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>sumoparsetype</TH>
+<TH>meaning</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">a</TD>
+<TD class="sqlfield">term appears as arg (the term is nested only within one pair of parentheses)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">p</TD>
+<TD class="sqlfield">term appears in rule antecedent (premise)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD>
+<TD class="sqlfield">term appears in rule consequent</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">s</TD>
+<TD class="sqlfield">term is nested inside multiple levels of parentheses</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+
+<DIV class="sqlcomment">wnmap types</DIV>
+<DIV class="sqlquery">
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>sumownmaptype</TH>
+<TH>meaning</TH>
+<TH>complement</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">=</TD>
+<TD class="sqlfield">WN synset is equivalent to SUMO concept</TD>
+<TD class="sqlfield">:</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">+</TD>
+<TD class="sqlfield">WN synset is subsumed by SUMO concept</TD>
+<TD class="sqlfield">[</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">@</TD>
+<TD class="sqlfield">WN synset is instance of SUMO concept</TD>
+<TD class="sqlfield">] (unused)</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

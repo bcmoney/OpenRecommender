@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>WordNet SQL Builder</title>
+<meta name="author" content="Bernard Bou">
+<meta name="created" content="20050201;12154260">
+<meta name="changedby" content="Bernard Bou">
+<meta name="changed" content="20090415;10000000">
+<meta name="keywords" content="wordnet,sql">
+<link rel="stylesheet" href="wordnet-style.css" type="text/css">
+</head>
+<body>
+<table width="100%" border="0">
+  <tbody>
+    <tr>
+      <td class="color1" width="25%">&nbsp;</td>
+      <td class="color2" width="25%">&nbsp;</td>
+      <td class="color3" width="25%">&nbsp;</td>
+      <td class="color4" width="25%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4"><p align="center"><img src="images/wnlogo.gif" alt="wordnet" width="279" height="92"><br>
+</p></td>
+    </tr>
+    <tr>
+      <td colspan="4"><p align="center"> <span class="color4"><b>wordnet sql builder </b></span><br>
+          <span class="subtitle">Bernard Bou</span><br>
+      <a href="mailto:bbou@ac-toulouse.fr">bbou@ac-toulouse.fr</a></p></td>
+    </tr>
+    <tr>
+      <td class="color1" width="25%">&nbsp;</td>
+      <td class="color2" width="25%">&nbsp;</td>
+      <td class="color3" width="25%">&nbsp;</td>
+      <td class="color4" width="25%">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<div class="header"><a name="database"><strong>DATABASE</strong></a></div>
+
+<ul>
+<li>1-select and download the modules from the <a href="http://sourceforge.net/project/showfiles.php?group_id=135112&package_id=219735">download area</a> into a common space</li>
+<li>2-decompress the zip files</li>
+<li>3-run <i>restore-[mysql|posgresql][bat|sh]</i></li>
+</ul>
+<p>- disregard warnings about overwriting the <i>restore-[mysql|posgresql][bat|sh]</i> files : these are actually the same in all packages.</p>
+<p>- the modules are the following:</p>
+<div align="center">
+<table class="grid" align="center"><tbody>
+<tr>
+<th class="grid">wn</th>
+<td class="grid">WordNet core</td>
+<td class="grid">this is the core module : it is <strong>required</strong> by others.</td>
+<tr>
+<th class="grid">legacy</th>
+<td class="grid">legacy wordnet</td>
+<td class="grid">2.0,2.1 senses and sensemaps to 3.0</td>
+<tr>
+<th class="grid">vn</th>
+<td class="grid">VerbNet</td>
+<td class="grid">VerbNet</td>
+<tr>
+<th class="grid">xwn</th>
+<td class="grid">XWordNet</td>
+<td class="grid">XWordNet</td>
+<tr>
+<th class="grid">bnc</th>
+<td class="grid">British National Corpus</td>
+<td class="grid">BNC statistical data</td>
+<tr>
+</tbody></table>
+</div>
+<p>- unless you modify the scripts you'll need to have MySQL <i>root</i> or PostgreSQL <i>postgres</i> access</p>
+<p>- ignore messages about non-existing constraints (the scripts attempt to drop everything before restoring)</p>
+
+<div class="header"><a name="builder"><strong>BUILDER</strong></a></div>
+
+<p><strong>LAUNCH</strong></p>
+<ul>
+  <li>    <em>Linux/Unix:</em><br>
+    $JAVA_HOME/jre/bin/java -classpath WordNetSQLBuilder.jar:./lib/mysql-connector-java-xxx-bin.jar wnsqlbuilder.Builder WordNetSQLBuilder-mysql.properties [action] <br>
+  $JAVA_HOME/jre/bin/java -classpath WordNetSQLBuilder.jar:./lib/postgresql-xxx.jdbc4.jar wnsqlbuilder.Builder WordNetSQLBuilder-postgresql.properties [action]</li>
+  <li>    <em>Windows:</em><br>
+&quot;%JAVA_HOME%\jre\bin\java.exe&quot; -classpath WordNetSQLBuilder.jar;./lib/mysql-connector-java-xxx-bin.jar wnsqlbuilder.Builder WordNetSQLBuilder-mysql.properties [action]<br>
+&quot;%JAVA_HOME%\jre\bin\java.exe&quot; -classpath WordNetSQLBuilder.jar;./lib/postgresql-xxx.jdbc4.jar wnsqlbuilder.Builder WordNetSQLBuilder-postgresql.properties [action]<br>
+  </li>
+</ul>
+<p><i>builder-[mysql|postgresql].[bat|sh]</i> files are provided for ease of use</p>
+
+<p><strong>ACTION</strong></p>
+<p>A list of action parameters is available when the above is run with no action parameter.</p>
+
+<p><strong>PROPERTY FILES</strong></p>
+<p>Please refer to example property files</p>
+<ul>
+  <li><strong>mysql</strong><br>
+    url = jdbc:mysql://localhost:3306/wordnet30<br>
+    dbms = mysql<br>
+ </li>
+  <li>    <strong>postgresql</strong><br>
+    url = jdbc:postgresql://localhost:5432/wordnet30<br>
+    dbms = postgresql<br>
+  </li>
+</ul>
+
+<table class="grid">
+<tbody>
+<tr class="grid"><td class="grid">user=wnsql</td><td class="grid">sql user</td></tr>
+<tr class="grid"><td class="grid">password=wnsql</td><td class="grid">sql user password</td></tr>
+<tr class="grid"><td class="grid">home=/opt/nlp/WordNet-3.0</td><td class="grid">wordnet home</td></tr>
+<tr class="grid"><td class="grid">loghome=./logs/mysql</td><td class="grid">log home</td></tr>
+<tr class="grid"><td class="grid">verbose=false</td><td class="grid">verbose switch</td></tr>
+
+<tr class="grid"><td class="grid">senses=20 /opt/nlp/WordNet-2.0 21 /opt/nlp/WordNet-2.1</td><td class="grid">legacy senses=[index home]*</td></tr>
+<tr class="grid"><td class="grid">sensemaps=21 30 21 * 2.1to3.0 /opt/nlp/WordNet-3.0/sensemap 20 21 20 21 2.0to2.1 /opt/nlp/WordNet-2.1/sensemap</td><td class="grid">legacy sensemaps=[fromindex toindex fromsenseindex tosenseindex pathsuffix sensemaphome]* (the '*' place-holder used as tosenseindex indicates use of 'senses' table</td></tr>
+<tr class="grid"><td class="grid">synsetmaps=20 30 /opt/nlp/wnmaps/mapping-20-30 /opt/nlp/wnmaps/mapping-30-20 21 30 /opt/nlp/wnmaps/mapping-21-30 /opt/nlp/wnmaps/mapping-30-21</td><td class="grid">legacy synsetmap=[fromindex toindex forwardhome backwardhome]*</td></tr>
+<tr class="grid"><td class="grid">sensemapview=20 21 30</td><td class="grid">fromindex viaindex toindex</td></tr>
+
+<tr class="grid"><td class="grid">xwnhome=/opt/nlp/XWordNet-2.0-1.1</td><td class="grid">xwordnet home</td></tr>
+<tr class="grid"><td class="grid">xwnsensemap=2030 </td><td class="grid">sensemap to use for xwordnet</td></tr>
+
+<tr class="grid"><td class="grid">vnhome=/opt/nlp/verbnet-2.3</td><td class="grid">verbnet home</td></tr>
+<tr class="grid"><td class="grid">vnsense=21</td><td class="grid">senses to use for verbnet</td></tr>
+<tr class="grid"><td class="grid">vnsynsetmap=2130</td><td class="grid">synsetmap to use for verbnet</td></tr>
+
+<tr class="grid"><td class="grid">bnchome=/opt/nlp/bnc</td><td class="grid">bnc home</td></tr>
+<tr class="grid"><td class="grid">bncmain=bnc.txt</td><td class="grid">general statistics</td></tr>
+<tr class="grid"><td class="grid">bncspwr=bnc-spoken-written.txt</td><td class="grid">spoken vs written file</td></tr>
+<tr class="grid"><td class="grid">bncconvtask=bnc-conv-task.txt</td><td class="grid">conversational vs task-oriented</td></tr>
+<tr class="grid"><td class="grid">bncimaginf=bnc-imag-inf.txt</td><td class="grid">imaginative vs informational</td></tr>
+</tbody>
+</table>
+
+<p><strong>INCREMENTAL BUILD</strong></p>
+<p><i>resume</i> preceding the wordnet stage will do the trick.</p>
+</body>
+</html>
+

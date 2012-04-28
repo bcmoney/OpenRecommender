@@ -1,0 +1,214 @@
+OpenRecommender
+    Activity
+        behavior
+            consume
+				follow
+					stop-following
+                join
+					leave
+				play
+                receive
+                rsvp-maybe
+                rsvp-no
+                rsvp-yes
+                save
+					unsave					  
+			create
+				add
+					remove
+				checkin
+				delete
+				favorite
+					unfavorite
+				like
+					unlike
+				tag
+				update
+            exchange
+				cancel
+				give
+				ignore
+				invite
+				request-friend
+					make-friend
+						remove-friend
+				share
+
+	Audio
+		music
+			album
+			song
+		radio
+			station
+				show
+		talk
+
+	Device
+		hardware
+			software
+				api
+				dependency
+				persistence
+				platform
+				programming-language
+						algorithm
+
+	Discussion
+		topic
+			comment
+
+	Education
+		curriculum
+			course
+
+	Environment
+		climate
+
+	Event
+		appointment
+		concert
+		date
+			time
+				timezone
+		festival
+		performance
+		presentation
+		sale
+		sport
+			game
+
+	Food
+		recipe
+			drink
+			meal
+			snack
+
+	Image
+		background
+		icon
+		logo
+		painting
+		photo
+		photo-album
+		poster
+		screenshot
+
+	Language
+
+	License
+
+
+	News
+		feed
+			subscription
+
+	Organization
+		business
+			company
+				bar
+				cafe
+				hotel
+				manufacturer
+				restaurant
+				retail-outlet
+				service-provider
+		government
+			group
+				cause
+		project
+		school
+			primary
+			private
+			public
+			secondary
+			university
+
+	Person
+		human-relationship
+			family
+				child
+				kin
+				parent
+				sibling
+				spouse
+			friendship
+				acquaintance
+				contact
+				friend
+			geographical
+				co-resident
+				neighbor
+			physical
+				met
+			professional
+				co-worker
+				colleague
+			romantic
+				crush
+				date
+				muse
+				sweetheart
+		right
+		role
+			privilege
+				badge
+
+	Place
+		country
+			district
+					region
+							city
+								address
+									postal
+		location
+			latitude
+			longitude
+
+	Product
+		coupon
+		service
+
+	Profession
+
+	Situation
+		mood
+		status
+
+	Species
+		  organism
+				gene
+
+	Text
+		article
+		book
+		bookmark
+		collection
+		keyword
+		note
+		poem
+		question
+			answer
+		review
+			rating
+				
+	Universe
+		celestial
+			cosmos
+				galaxy
+					planet
+						moon
+						star
+							sun
+								asteroid
+								comet
+					gravity
+				
+	Video
+		movie
+			film
+				trailer
+		series
+		tv
+			channel
+				programme
+		ugc

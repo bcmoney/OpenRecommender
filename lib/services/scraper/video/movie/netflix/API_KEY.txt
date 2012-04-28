@@ -1,0 +1,36 @@
+Netflix API
+Key: qh68ecaeu3ayy265m4ye258y
+
+Application:
+    BCmoney MobileTV
+Key:
+    qh68ecaeu3ayy265m4ye258y 
+Shared Secret:
+    pvNtMRaWSy 
+Status:
+    active 
+Registered:
+    3 years ago 
+
+Key Rate Limits
+4	Calls per second
+5,000	Calls per day
+
+------------------------------------------------
+OAUTH testing tool: 
+http://developer.netflix.com/resources/OAuthTest
+
+------------------------------------------------
+Example for http://api.netflix.com/users/
+http://api.netflix.com/users/?oauth_consumer_key=qh68ecaeu3ayy265m4ye258y&oauth_nonce=1234&oauth_signature=1PWDpfgaEp%2B%2FH3rfiqMzByzVIFw%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1316533243&oauth_version=1.0
+
+
+Signature String:GET&http%3A%2F%2Fapi.netflix.com%2Fusers%2F&oauth_consumer_key%3Dqh68ecaeu3ayy265m4ye258y%26oauth_nonce%3D1234%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1316533243%26oauth_version%3D1.0
+
+
+------------------------------------------------
+User Authentication Walkthrough:
+http://developer.netflix.com/walkthrough
+------------------------------------------------
+oauth_token=BQAJAAEDEFI2_b3iW6WqWgGpoDI5cwIwINRpFUBG6Rm95Gt6hupB_I_iea7k-guimAbXZjrKEQT7eofeCffXWU_QrT8rOgFf&user_id=BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa&oauth_token_secret=HxANqxMJmc4N
+

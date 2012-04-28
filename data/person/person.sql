@@ -1,0 +1,3 @@
+-- Notable Persons: Business leaders, Athletes, Musicians, Actors, Directors, Producers, Reporters, Bloggers, Developers, Activists --
+-- SEE: http://en.wikipedia.org/wiki/List_of_celebrities --
+-- http://en.wikipedia.org/wiki/Lists_of_people_by_occupation --

@@ -1,0 +1,2058 @@
+
+= Method:__construct = 
+
+_ data load initialize _
+
+  # *Argument* _mixed_  $filename please look at the load() method
+
+  * *Visibility*  public
+  * *Also see* load()
+  * *Returns* void
+
+
+----
+
+= Method:appendColumn = 
+
+_ column appender _
+
+Appends a column and each or all values in it can be
+dinamically filled. Only when the $values argument is given.
+
+
+{{{
+
+
+var_export($csv->fillColumn('age', 99));
+true
+
+var_export($csv->appendColumn('candy_ownership', array(99, 44, 65)));
+true
+
+var_export($csv->appendColumn('import_id', 111111111));
+true
+
+var_export($csv->connect());
+
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => 99,
+'skill' => 'knows magic',
+'candy_ownership' => 99,
+'import_id' => 111111111,
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => 99,
+'skill' => 'makes sushi',
+'candy_ownership' => 44,
+'import_id' => 111111111,
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => 99,
+'skill' => 'dances salsa',
+'candy_ownership' => 65,
+'import_id' => 111111111,
+),
+)
+
+}}}
+
+
+  # *Argument* _string_  $column an item returned by getHeaders()
+  # *Argument* _mixed_   $values same as fillColumn()
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* getHeaders(), fillColumn(), fillCell(), createHeaders(),
+setHeaders()
+
+
+----
+
+= Method:appendRow = 
+
+_ row appender _
+
+Aggregates one more row to the currently loaded dataset
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+
+first let's load the file and output whatever was retrived.
+
+
+
+{{{
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+now lets do some modifications, let's try adding three rows.
+
+
+
+{{{
+var_export($csv->appendRow(1));
+var_export($csv->appendRow('2'));
+var_export($csv->appendRow(array(3, 3, 3)));
+}}}
+
+
+output
+
+
+
+{{{
+true
+true
+true
+}}}
+
+
+and now let's try to see what has changed
+
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+3 =>
+array (
+'name' => 1,
+'age' => 1,
+'skill' => 1,
+),
+4 =>
+array (
+'name' => '2',
+'age' => '2',
+'skill' => '2',
+),
+5 =>
+array (
+'name' => 3,
+'age' => 3,
+'skill' => 3,
+),
+)
+}}}
+
+
+  # *Argument* _array_  $values the values to be appended to the row
+
+  * *Visibility*  public
+  * *Returns* boolean
+
+
+----
+
+= Method:connect = 
+
+_ header and row relationship builder _
+
+Attempts to create a relationship for every single cell that
+was captured and its corresponding header. The sample below shows
+how a connection/relationship is built.
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+{{{
+
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+
+if (!$csv->isSymmetric()) {
+die('file has headers and rows with different lengths
+cannot connect');
+}
+
+var_export($csv->connect());
+
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+
+}}}
+
+
+
+You can pass a collection of headers in an array to build
+a connection for those columns only!
+
+
+
+{{{
+
+var_export($csv->connect(array('age')));
+
+array (
+0 =>
+array (
+'age' => '13',
+),
+1 =>
+array (
+'age' => '8',
+),
+2 =>
+array (
+'age' => '5',
+),
+)
+
+}}}
+
+
+  # *Argument* _array_  $columns the columns to connect, if nothing
+is given all headers will be used to create a connection
+
+  * *Visibility*  public
+  * *Returns* array If the data is not symmetric an empty array
+will be returned instead
+  * *Also see* isSymmetric(), getAsymmetricRows(), symmetrize(), getHeaders()
+
+
+----
+
+= Method:countHeaders = 
+
+_ header counter _
+
+retrives the total number of loaded headers
+
+  * *Visibility*  public
+  * *Returns* integer gets the length of headers
+
+
+----
+
+= Method:countRows = 
+
+_ row counter _
+
+This function will exclude the headers
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+{{{
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+var_export($csv->countRows()); // returns 3
+}}}
+
+
+  * *Visibility*  public
+  * *Returns* integer
+
+
+----
+
+= Method:createHeaders = 
+
+_ header creator _
+
+uses prefix and creates a header for each column suffixed by a
+numeric value
+
+by default the first row is interpreted as headers but if we
+have a csv file with data only and no headers it becomes really
+annoying to work with the current loaded data.
+
+this function will create a set dinamically generated headers
+and make the current headers accessable with the row handling
+functions
+
+Note: that the csv file contains only data but no headers
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+checks if the csv file was loaded
+
+
+
+{{{
+$csv = new File_CSV_DataSource;
+if (!$csv->load('my_cool.csv')) {
+die('can not load csv file');
+}
+}}}
+
+
+dump current headers
+
+
+
+{{{
+var_export($csv->getHeaders());
+}}}
+
+
+standard output
+
+
+
+{{{
+array (
+0 => 'john',
+1 => '13',
+2 => 'knows magic',
+)
+}}}
+
+
+generate headers named 'column' suffixed by a number and interpret
+the previous headers as rows.
+
+
+
+{{{
+$csv->createHeaders('column')
+}}}
+
+
+dump current headers
+
+
+
+{{{
+var_export($csv->getHeaders());
+}}}
+
+
+standard output
+
+
+
+{{{
+array (
+0 => 'column_1',
+1 => 'column_2',
+2 => 'column_3',
+)
+}}}
+
+
+build a relationship and dump it
+
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+
+array (
+0 =>
+array (
+'column_1' => 'john',
+'column_2' => '13',
+'column_3' => 'knows magic',
+),
+1 =>
+array (
+'column_1' => 'tanaka',
+'column_2' => '8',
+'column_3' => 'makes sushi',
+),
+2 =>
+array (
+'column_1' => 'jose',
+'column_2' => '5',
+'column_3' => 'dances salsa',
+),
+)
+}}}
+
+
+  # *Argument* _string_  $prefix string to use as prefix for each
+independent header
+
+  * *Visibility*  public
+  * *Returns* boolean fails if data is not symmetric
+  * *Also see* isSymmetric(), getAsymmetricRows()
+
+
+----
+
+= Method:fillCell = 
+
+_ cell value filler _
+
+replaces the value of a specific cell
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+{{{
+
+$csv = new File_CSV_DataSource;
+
+// load the csv file
+$csv->load('my_cool.csv');
+
+// find out if the given coordinate is valid
+if($csv->hasCell(1, 1)) {
+
+// if so grab that cell and dump it
+var_export($csv->getCell(1, 1));       // '8'
+
+// replace the value of that cell
+$csv->fillCell(1, 1, 'new value');  // true
+
+// output the new value of the cell
+var_export($csv->getCell(1, 1));       // 'new value'
+
+}
+}}}
+
+
+now lets try to grab the whole row
+
+
+
+{{{
+// show the whole row
+var_export($csv->getRow(1));
+}}}
+
+
+standard output
+
+
+
+{{{
+array (
+0 => 'tanaka',
+1 => 'new value',
+2 => 'makes sushi',
+)
+}}}
+
+
+  # *Argument* _integer_  $x     the row to fetch
+  # *Argument* _integer_  $y     the column to fetch
+  # *Argument* _mixed_    $value the value to fill the cell with
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* hasCell(), getRow(), getRows(), getColumn()
+
+
+----
+
+= Method:fillColumn = 
+
+_ collumn data injector _
+
+fills alll the data in the given column with $values
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+{{{
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+
+// if the csv file loads
+if ($csv->load('my_cool.csv')) {
+
+// grab all data within the age column
+var_export($csv->getColumn('age'));
+
+// rename all values in it with the number 99
+var_export($csv->fillColumn('age', 99));
+
+// grab all data within the age column
+var_export($csv->getColumn('age'));
+
+// rename each value in a column independently
+$data = array(1, 2, 3);
+$csv->fillColumn('age', $data);
+
+var_export($csv->getColumn('age'));
+}
+}}}
+
+
+standard output
+
+
+
+{{{
+array (
+0 => '13',
+1 => '8',
+2 => '5',
+)
+}}}
+
+
+
+
+{{{
+true
+}}}
+
+
+
+
+{{{
+array (
+0 => 99,
+1 => 99,
+2 => 99,
+)
+}}}
+
+
+
+
+{{{
+array (
+0 => 1,
+1 => 2,
+2 => 3,
+)
+}}}
+
+
+  # *Argument* _mixed_  $column the column identified by a string
+  # *Argument* _mixed_  $values ither one of the following
+  #  (Number) will fill the whole column with the value of number
+  #  (String) will fill the whole column with the value of string
+  #  (Array) will fill the while column with the values of array
+the array gets ignored if it does not match the length of rows
+
+  * *Visibility*  public
+  * *Returns* void
+
+
+----
+
+= Method:fillRow = 
+
+_ fillRow _
+
+Replaces the contents of cells in one given row with $values.
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+if we load the csv file and fill the second row with new data?
+
+
+
+{{{
+// load the library
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+
+// load csv file
+$csv->load('my_cool.csv');
+
+// fill exitent row
+var_export($csv->fillRow(1, 'x'));
+}}}
+
+
+output
+
+
+
+{{{
+true
+}}}
+
+
+now let's dump whatever we have changed
+
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'x',
+'age' => 'x',
+'skill' => 'x',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+now lets try to fill the row with specific data for each cell
+
+
+
+{{{
+var_export($csv->fillRow(1, array(1, 2, 3)));
+}}}
+
+
+output
+
+
+
+{{{
+true
+}}}
+
+
+and dump the results
+
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 1,
+'age' => 2,
+'skill' => 3,
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+  # *Argument* _integer_  $row    the row to fill identified by its key
+  # *Argument* _mixed_    $values the value to use, if a string or number
+is given the whole row will be replaced with this value.
+if an array is given instead the values will be used to fill
+the row. Only when the currently loaded dataset is symmetric
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* isSymmetric(), getAsymmetricRows(), symmetrize(), fillColumn(),
+fillCell(), appendRow()
+
+
+----
+
+= Method:getAsymmetricRows = 
+
+_ asymmetric data fetcher _
+
+finds the rows that do not match the headers length
+
+lets assume that we add one more row to our csv file.
+that has only two values. Something like
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+niki,6
+}}}
+
+
+Then in our php code
+
+
+
+{{{
+$csv->load('my_cool.csv');
+var_export($csv->getAsymmetricRows());
+}}}
+
+
+The result
+
+
+
+{{{
+
+array (
+0 =>
+array (
+0 => 'niki',
+1 => '6',
+),
+)
+
+}}}
+
+
+  * *Visibility*  public
+  * *Returns* array filled with rows that do not match headers
+  * *Also see* getHeaders(), symmetrize(), isSymmetric(),
+getAsymmetricRows()
+
+
+----
+
+= Method:getCell = 
+
+_ cell fetcher _
+
+gets the value of a specific cell by given coordinates
+
+Note: That indexes start with zero, and headers are not
+searched!
+
+For example if we are trying to grab the cell that is in the
+second row and the third column
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+we would do something like
+
+
+{{{
+var_export($csv->getCell(1, 2));
+}}}
+
+
+and get the following results
+
+
+{{{
+'makes sushi'
+}}}
+
+
+  # *Argument* _integer_  $x the row to fetch
+  # *Argument* _integer_  $y the column to fetch
+
+  * *Visibility*  public
+  * *Returns* mixed|false the value of the cell or false if the cell does
+not exist
+  * *Also see* getHeaders(), hasCell(), getRow(), getRows(), getColumn()
+
+
+----
+
+= Method:getColumn = 
+
+_ column fetcher _
+
+gets all the data for a specific column identified by $name
+
+Note $name is the same as the items returned by getHeaders()
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+{{{
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+var_export($csv->getColumn('name'));
+}}}
+
+
+the above example outputs something like
+
+
+
+{{{
+
+array (
+0 => 'john',
+1 => 'tanaka',
+2 => 'jose',
+)
+
+}}}
+
+
+  # *Argument* _string_  $name the name of the column to fetch
+
+  * *Visibility*  public
+  * *Returns* array filled with values of a column
+  * *Also see* getHeaders(), fillColumn(), appendColumn(), getCell(), getRows(),
+getRow(), hasColumn()
+
+
+----
+
+= Method:getHeaders = 
+
+_ header fetcher _
+
+gets csv headers into an array
+
+
+
+{{{
+
+var_export($csv->getHeaders());
+
+array (
+0 => 'name',
+1 => 'age',
+2 => 'skill',
+)
+
+}}}
+
+
+  * *Visibility*  public
+  * *Returns* array
+
+
+----
+
+= Method:getRawArray = 
+
+_ raw data as array _
+
+Gets the data that was retrived from the csv file as an array
+
+Note: that changes and alterations made to rows, columns and
+values will also reflect on what this function retrives.
+
+  * *Visibility*  public
+  * *Returns* array
+  * *Also see* connect(), getHeaders(), getRows(), isSymmetric(), getAsymmetricRows(),
+symmetrize()
+
+
+----
+
+= Method:getRow = 
+
+_ row fetcher _
+
+Note: first row is zero
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+load the library and csv file
+
+
+
+{{{
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+}}}
+
+
+lets dump currently loaded data
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+Now let's fetch the second row
+
+
+
+{{{
+var_export($csv->getRow(1));
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 => 'tanaka',
+1 => '8',
+2 => 'makes sushi',
+)
+}}}
+
+
+  # *Argument* _integer_  $number the row number to fetch
+
+  * *Visibility*  public
+  * *Returns* array the row identified by number, if $number does
+not exist an empty array is returned instead
+
+
+----
+
+= Method:getRows = 
+
+_ multiple row fetcher _
+
+Extracts a rows in the following fashion
+  #  all rows if no $range argument is given
+  #  a range of rows identified by their key
+  #  if rows in range are not found nothing is retrived instead
+  #  if no rows were found an empty array is returned
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+load the library and csv file
+
+
+
+{{{
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+}}}
+
+
+lets dump currently loaded data
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+now get the second and thirdh row
+
+
+
+{{{
+var_export($csv->getRows(array(1, 2)));
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+0 => 'tanaka',
+1 => '8',
+2 => 'makes sushi',
+),
+1 =>
+array (
+0 => 'jose',
+1 => '5',
+2 => 'dances salsa',
+),
+)
+}}}
+
+
+now lets try something odd and the goodie third row
+
+
+
+{{{
+var_export($csv->getRows(array(9, 2)));
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+0 => 'jose',
+1 => '5',
+2 => 'dances salsa',
+),
+)
+}}}
+
+
+  # *Argument* _array_  $range a list of rows to retrive
+
+  * *Visibility*  public
+  * *Returns* array
+
+
+----
+
+= Method:hasCell = 
+
+_ checks if a coordinate is valid _
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+load the csv file
+
+
+
+{{{
+$csv = new File_CSV_DataSource;
+var_export($csv->load('my_cool.csv'));   // true if file is
+// loaded
+}}}
+
+
+find out if a coordinate is valid
+
+
+
+{{{
+var_export($csv->hasCell(99, 3)); // false
+}}}
+
+
+check again for a know valid coordinate and grab that cell
+
+
+
+{{{
+var_export($csv->hasCell(1, 1));  // true
+var_export($csv->getCell(1, 1));            // '8'
+}}}
+
+
+  # *Argument* _mixed_  $x the row to fetch
+  # *Argument* _mixed_  $y the column to fetch
+
+  * *Visibility*  public
+  * *Returns* void
+
+
+----
+
+= Method:hasColumn = 
+
+_ column existance checker _
+
+checks if a column exists, columns are identified by their
+header name.
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+{{{
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+$headers = $csv->getHeaders();
+}}}
+
+
+now lets check if the columns exist
+
+
+
+{{{
+var_export($csv->hasColumn($headers[0]));    // true
+var_export($csv->hasColumn('age'));          // true
+var_export($csv->hasColumn('I dont exist')); // false
+}}}
+
+
+  # *Argument* _string_  $string an item returned by getHeaders()
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* getHeaders()
+
+
+----
+
+= Method:hasRow = 
+
+_ row existance checker _
+
+Scans currently loaded dataset and
+checks if a given row identified by $number exists
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+load library and csv file
+
+
+
+{{{
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+}}}
+
+
+build a relationship and dump it so we can see the rows we will
+be working with
+
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>  // THIS ROW EXISTS!!!
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+now lets check for row existance
+
+
+
+{{{
+var_export($csv->hasRow(1));
+var_export($csv->hasRow(-1));
+var_export($csv->hasRow(9999));
+}}}
+
+
+output
+
+
+
+{{{
+true
+false
+false
+}}}
+
+
+  # *Argument* _mixed_  $number a numeric value that identifies the row
+you are trying to fetch.
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* getRow(), getRows(), appendRow(), fillRow()
+
+
+----
+
+= Method:isSymmetric = 
+
+_ data length/symmetry checker _
+
+tells if the headers and all of the contents length match.
+Note: there is a lot of methods that won't work if data is not
+symmetric this method is very important!
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* symmetrize(), getAsymmetricRows(), isSymmetric()
+
+
+----
+
+= Method:load = 
+
+_ csv file loader _
+
+indicates the object which file is to be loaded
+
+
+
+{{{
+
+require_once 'File/CSV/DataSource.php';
+
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+var_export($csv->connect());
+
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+
+}}}
+
+
+  # *Argument* _string_  $filename the csv filename to load
+
+  * *Visibility*  public
+  * *Returns* boolean true if file was loaded successfully
+  * *Also see* isSymmetric(), getAsymmetricRows(), symmetrize()
+
+
+----
+
+= Method:removeColumn = 
+
+_ column remover _
+
+Completly removes a whole column identified by $name
+Note: that this function will only work if data is symmetric.
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+load the library and csv file
+
+
+
+{{{
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+}}}
+
+
+lets dump currently loaded data
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+and now let's remove the second column
+
+
+
+{{{
+var_export($csv->removeColumn('age'));
+}}}
+
+
+output
+
+
+
+{{{
+true
+}}}
+
+
+those changes made let's dump the data again and see what we got
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+  # *Argument* _string_  $name same as the ones returned by getHeaders();
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* hasColumn(), getHeaders(), createHeaders(), setHeaders(),
+isSymmetric(), getAsymmetricRows()
+
+
+----
+
+= Method:removeRow = 
+
+_ row remover _
+
+removes one row from the current data set.
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+first let's load the file and output whatever was retrived.
+
+
+
+{{{
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+now lets remove the second row
+
+
+
+{{{
+var_export($csv->removeRow(1));
+}}}
+
+
+output
+
+
+
+{{{
+true
+}}}
+
+
+now lets dump again the data and see what changes have been
+made
+
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+  # *Argument* _mixed_  $number the key that identifies that row
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* hasColumn(), getHeaders(), createHeaders(), setHeaders(),
+isSymmetric(), getAsymmetricRows()
+
+
+----
+
+= Method:setHeaders = 
+
+_ header injector _
+
+uses a $list of values which wil be used to replace current
+headers.
+
+Note: that given $list must match the length of all rows.
+known as symmetric. see isSymmetric() and getAsymmetricRows() methods
+
+Also, that current headers will be used as first row of data
+and consecuently all rows order will change with this action.
+
+sample of a csv file "my_cool.csv"
+
+
+
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+load the library and csv file
+
+
+
+{{{
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
+}}}
+
+
+lets dump currently loaded data
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'name' => 'john',
+'age' => '13',
+'skill' => 'knows magic',
+),
+1 =>
+array (
+'name' => 'tanaka',
+'age' => '8',
+'skill' => 'makes sushi',
+),
+2 =>
+array (
+'name' => 'jose',
+'age' => '5',
+'skill' => 'dances salsa',
+),
+)
+}}}
+
+
+And now lets create a new set of headers and attempt to inject
+them into the current loaded dataset
+
+
+
+{{{
+$new_headers = array('a', 'b', 'c');
+var_export($csv->setHeaders($new_headers));
+}}}
+
+
+output
+
+
+
+{{{
+true
+}}}
+
+
+Now lets try the same with some headers that do not match the
+current headers length. (this should fail)
+
+
+
+{{{
+$new_headers = array('a', 'b');
+var_export($csv->setHeaders($new_headers));
+}}}
+
+
+output
+
+
+
+{{{
+false
+}}}
+
+
+now let's dump whatever we have changed
+
+
+
+{{{
+var_export($csv->connect());
+}}}
+
+
+output
+
+
+
+{{{
+array (
+0 =>
+array (
+'a' => 'name',
+'b' => 'age',
+'c' => 'skill',
+),
+1 =>
+array (
+'a' => 'john',
+'b' => '13',
+'c' => 'knows magic',
+),
+2 =>
+array (
+'a' => 'tanaka',
+'b' => '8',
+'c' => 'makes sushi',
+),
+3 =>
+array (
+'a' => 'jose',
+'b' => '5',
+'c' => 'dances salsa',
+),
+)
+}}}
+
+
+  # *Argument* _array_  $list a collection of names to use as headers,
+
+  * *Visibility*  public
+  * *Returns* boolean fails if data is not symmetric
+  * *Also see* isSymmetric(), getAsymmetricRows(), getHeaders(), createHeaders()
+
+
+----
+
+= Method:settings = 
+
+_ settings alterator _
+
+lets you define different settings for scanning
+
+Given array will override the internal settings
+
+
+
+{{{
+$settings = array(
+'delimiter' => ',',
+'eol' => ";",
+'length' => 999999,
+'escape' => '"'
+);
+}}}
+
+
+  # *Argument* _mixed_  $array containing settings to use
+
+  * *Visibility*  public
+  * *Returns* boolean true if changes where applyed successfully
+  * *Also see* $settings
+
+
+----
+
+= Method:symmetrize = 
+
+_ all rows length equalizer _
+
+makes the length of all rows and headers the same. If no $value is given
+all unexistent cells will be filled with empty spaces
+
+  # *Argument* _mixed_  $value the value to fill the unexistent cells
+
+  * *Visibility*  public
+  * *Returns* array
+  * *Also see* isSymmetric(), getAsymmetricRows(), symmetrize()
+
+
+----
+
+= Method:walkColumn = 
+
+_ column walker _
+
+goes through the whole column and executes a callback for each
+one of the cells in it.
+
+Note: callback functions get the value of the cell as an
+argument, and whatever that callback returns will be used to
+replace the current value of that cell.
+
+  # *Argument* _string_  $name     the header name used to identify the column
+  # *Argument* _string_  $callback the callback function to be called per
+each cell value
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* getHeaders(), fillColumn(), appendColumn()
+
+
+----
+
+= Method:walkGrid = 
+
+_ grid walker _
+
+travels through the whole dataset executing a callback per each
+cell
+
+Note: callback functions get the value of the cell as an
+argument, and whatever that callback returns will be used to
+replace the current value of that cell.
+
+  # *Argument* _string_  $callback the callback function to be called per
+each cell in the dataset.
+
+  * *Visibility*  public
+  * *Returns* void
+  * *Also see* walkColumn(), walkRow(), fillColumn(), fillRow(), fillCell()
+
+
+----
+
+= Method:walkRow = 
+
+_ row walker _
+
+goes through one full row of data and executes a callback
+function per each cell in that row.
+
+Note: callback functions get the value of the cell as an
+argument, and whatever that callback returns will be used to
+replace the current value of that cell.
+
+  # *Argument* _string_ |integer $row      anything that is numeric is a valid row
+identificator. As long as it is within the range of the currently
+loaded dataset
+
+  # *Argument* _string_          $callback the callback function to be executed
+per each cell in a row
+
+  * *Visibility*  public
+  * *Returns* boolean
+  #  false if callback does not exist
+  #  false if row does not exits
+
+
+----

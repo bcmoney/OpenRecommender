@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Game">
+  <element name="game">
+    <complexType>
+      <sequence>
+        <element name="choice" type="string" />
+        <element name="opponent" type="string" />
+        <element name="result" type="string" />
+        <element name="points" type="string" />        
+        <element name="score" type="string" />        
+      </sequence>
+    </complexType>
+  </element>  
+</schema>

@@ -1,0 +1,94 @@
+<html>
+<head>
+<script type="text/javascript">
+/**
+This example shows how to use YQL to 
+make queries to an Open Data Table that 
+binds data from the NetFlix API.
+The call to the YQL Web service uses 
+2-legged OAuth and is made with OpenSocial 
+functions.
+*/ 
+
+// 1. Register for Netflix developer account: 
+//    http://developer.netflix.com/member/register
+// 2. Get keys for app: http://developer.netflix.com/apps/mykeys
+
+// Create NETFLIX namespace to store Netflix info
+var NETFLIX = {};
+NETFLIX.keys = { ck: "qh68ecaeu3ayy265m4ye258y", cs:"pvNtMRaWSy" };
+NETFLIX.odt = "netflix.xml"; //"http://your_domain/netflix.xml";
+NETFLIX.table = "netflix_table";
+
+function make_movie_list(film_obj) {
+ var results = film_obj.query.results;
+ var catalog_title = results.catalog_titles.catalog_title;
+ var len = catalog_title.length;
+ var movie_table = "<table cellpadding='5'><tr>";
+ for(var i=0;i<len;i++)
+ {
+   if(i==5) { badge += "<tr>"; }
+   var movie_link = catalog_title[i].link[catalog_title[i].link.length-1].href;
+   movie_table += "<td><a href=\"" + movie_link + "\" target='blank'>";
+   movie_table += "<img s" + "rc=\"" + catalog_title[i].box_art.medium + "\" border='0'/></a>";
+   movie_table += "<br/>" + catalog_title[i].title.short + "<br/>Runtime: "; 
+   movie_table += parseInt(catalog_title[i].runtime)/60 + " min"; 
+   movie_table += "<br/>Avg. Rating: " + catalog_title[i].average_rating + "<br/></td>";
+
+   if((i+1)%5==0) { movie_table += "</tr>"; }
+ }
+ return movie_table;
+}
+// Make query to YQL Web service and set default term to "Star Wars" 
+function makeQuery() {
+  var term = document.getElementById("query").value || "Star Wars";
+  var content = "";
+
+  // Create query string
+  var toQueryString = function(obj) {
+    var parts = [];
+    for(var each in obj) if (obj.hasOwnProperty(each)) {
+        parts.push(encodeURIComponent(each) + '=' + encodeURIComponent(obj[each]));
+    }
+    return parts.join('&');
+  };
+  var BASE_URI = 'https://query.yahooapis.com/v1/yql';
+  // Run query with POST and authorize with OAuth
+  var runQuery = function(query, handler) {
+    gadgets.io.makeRequest(BASE_URI, handler, {
+        METHOD: 'POST',
+        POST_DATA: toQueryString({q: query, format: 'json'}),
+        CONTENT_TYPE: 'JSON',
+        AUTHORIZATION: 'OAuth'
+    });
+  };
+  // Create and form YQL query
+  var use_table = "USE " + '"' + NETFLIX.odt + '"' + " AS " + NETFLIX.table + "; ";
+  var query = use_table + "select * from " + NETFLIX.table + " WHERE ck=\"" + NETFLIX.keys.ck + "\"" + " AND cs=\"" + NETFLIX.keys.cs + "\" AND term=\"" + term + '"';
+  // Run query and display results to div with id='results'
+  runQuery(query, function(rsp) {
+   if(rsp.data){
+	   document.getElementById('results').innerHTML = make_movie_badge(rsp.data);
+   }
+   else {
+	   document.getElementById('results').innerHTML = gadgets.json.stringify(rsp);
+   }
+  });
+}
+</script>
+</head>
+<body>
+Enter Movie Title: <input id='query' type='text'/> 
+<p>
+<button id='make_query'>Find  Movie</button>
+</p>
+<script type="text/javascript">
+// Set keys and location of Open Data Table
+// Add event listener to button with id='make_query' and call method makeQuery
+// when user clicks button.
+document.getElementById("make_query").addEventListener('click',makeQuery,false);
+</script>
+<p/>
+<div id="results" style='margin-left: 10px; font-size: small'></div> 
+</body>
+</html>

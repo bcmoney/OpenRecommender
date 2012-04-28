@@ -1,0 +1,40 @@
+* What is this?
+------------------------------------------------------
+MicroFormatsParser is a package for extracting the microformats data
+embedded into HTML. The gathered data is stored as an xArray of objects - 
+one for each MicroFormat type container found.
+
+You can find out more about microformats here:
+http://microformats.org/
+
+
+* What can I do with this?
+------------------------------------------------------
+You can extract hcards, hcalendars, hreviews and various "rel" elements 
+(tags, bookmarks, permalinks...) from the existing HTML documents. Then
+you can use the gathered data in your scripts.
+
+
+* What do I need to run this?
+------------------------------------------------------
+1) PHP 4+; 
+2) DOM XML extension 
+3) xArray library package (get it at http://www.phpclasses.org/browse/package/3565.html)
+
+
+* How do I use this?
+------------------------------------------------------
+Check the examples in "example" directory. You can also take a look at 
+comments in the source, or run doxygen (http://www.stack.nl/~dimitri/doxygen/) over 
+it to get a more readable documentation.
+
+
+* Aaargh! I've found a bug!
+  - OR -
+* This stuff is working fine for me.
+  - OR -
+* Dis nuh workin.
+  - OR -
+* Dude, you rock!
+------------------------------------------------------
+Let me know: malatestapunk@gmail.com

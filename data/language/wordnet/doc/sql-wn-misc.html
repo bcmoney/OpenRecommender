@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">ADJ POSITIONS</DIV>
+<DIV class="sqlcomment">adj having multiple positions</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,COUNT(DISTINCT position) AS N,GROUP_CONCAT(position),GROUP_CONCAT(senseid) FROM adjectiveswithpositions GROUP BY wordid HAVING N &gt;1 ORDER BY N DESC</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>N</TH><TH>GROUP_CONCAT(position)</TH><TH>GROUP_CONCAT(senseid)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">at rest</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a</TD><TD class="sqlfield">11893,11892</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">big</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a</TD><TD class="sqlfield">18262,18258</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">certain</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,p,a</TD><TD class="sqlfield">30982,30981,30986</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dead</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,p,a,a</TD><TD class="sqlfield">47339,47335,47338,47328</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">down</TD><TD class="sqlfield">2</TD><TD class="sqlfield">a,p,p,p,a</TD><TD class="sqlfield">54636,54641,54635,54639,54637</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">downward</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ip,a</TD><TD class="sqlfield">54723,54722</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gone</TD><TD class="sqlfield">2</TD><TD class="sqlfield">a,p</TD><TD class="sqlfield">81490,81491</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">heavy</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a</TD><TD class="sqlfield">87064,87070</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">in</TD><TD class="sqlfield">2</TD><TD class="sqlfield">a,p</TD><TD class="sqlfield">94002,94003</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">leading</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a</TD><TD class="sqlfield">105321,105319</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">left</TD><TD class="sqlfield">2</TD><TD class="sqlfield">a,p</TD><TD class="sqlfield">105715,105716</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">low-density</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a</TD><TD class="sqlfield">109995,109994</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,p,a,p,a,p,a,p</TD><TD class="sqlfield">130203,130199,130208,130209,130204,130206,130211,130205</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">previous</TD><TD class="sqlfield">2</TD><TD class="sqlfield">a,p,a</TD><TD class="sqlfield">143542,143541,143543</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">proper</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ip,a</TD><TD class="sqlfield">144902,144901</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">several</TD><TD class="sqlfield">2</TD><TD class="sqlfield">a,a,p</TD><TD class="sqlfield">164440,164439,164438</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">square</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a</TD><TD class="sqlfield">174217,174216</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">supposed</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a</TD><TD class="sqlfield">180088,180091</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">throwaway</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a</TD><TD class="sqlfield">186270,186271</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">true</TD><TD class="sqlfield">2</TD><TD class="sqlfield">p,a,a,a,a</TD><TD class="sqlfield">190782,190777,190781,190779,190780</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">up</TD><TD class="sqlfield">2</TD><TD class="sqlfield">a,p,p,p,p</TD><TD class="sqlfield">196016,196018,196017,196019,196020</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">uses of "out"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,position,positionname,definition FROM adjectiveswithpositions INNER JOIN adjpositiontypes USING (position) WHERE lemma = 'out'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>position</TH><TH>positionname</TH><TH>definition</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">p</TD><TD class="sqlfield">predicate</TD><TD class="sqlfield">being out or having grown cold</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">p</TD><TD class="sqlfield">predicate</TD><TD class="sqlfield">knocked unconscious by a heavy blow</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">p</TD><TD class="sqlfield">predicate</TD><TD class="sqlfield">excluded from use or mention</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">p</TD><TD class="sqlfield">predicate</TD><TD class="sqlfield">not worth considering as a possibility</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">p</TD><TD class="sqlfield">predicate</TD><TD class="sqlfield">not allowed to continue to bat or run</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">a</TD><TD class="sqlfield">attributive</TD><TD class="sqlfield">outside or external</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">a</TD><TD class="sqlfield">attributive</TD><TD class="sqlfield">directed outward or serving to direct something outward</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">out</TD><TD class="sqlfield">a</TD><TD class="sqlfield">attributive</TD><TD class="sqlfield">out of power; especially having been unsuccessful in an election</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">uses of "big"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,position,positionname,definition FROM adjectiveswithpositions INNER JOIN adjpositiontypes USING (position) WHERE lemma = 'big'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>position</TH><TH>positionname</TH><TH>definition</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">big</TD><TD class="sqlfield">p</TD><TD class="sqlfield">predicate</TD><TD class="sqlfield">in an advanced stage of pregnancy</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">big</TD><TD class="sqlfield">a</TD><TD class="sqlfield">attributive</TD><TD class="sqlfield">prodigious</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

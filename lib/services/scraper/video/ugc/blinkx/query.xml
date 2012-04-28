@@ -1,0 +1,40 @@
+<autnresponse>
+<action>QUERY</action>
+<response>SUCCESS</response>
+	<responsedata>
+<autn:numhits>10</autn:numhits>
+<autn:totalhits>104</autn:totalhits>
+	<autn:hit>
+	<autn:reference>
+http://www.blinkx.com/burl?v=FJBHEp57U6VaVj3aKSu8T1NW17CaoM4erOt7Hg
+</autn:reference>
+<autn:title>Bloodhound Gang - The Ballad Of Chasey Lain</autn:title>
+	<autn:summary>
+Music video by Bloodhound Gang performing The Ballad Of Chasey Lain with Jimmy Pop Ali (C) 2000 Geffen Records
+</autn:summary>
+	<autn:content>
+	<DOCUMENT>
+<CHANNEL>YouTube</CHANNEL>
+<TYPE>Video</TYPE>
+<DOMAIN>http://www.youtube.com</DOMAIN>
+	<FOOTERIMAGE>
+http://cdn-99.blinkx.com/store/images/footers/youtube.gif
+</FOOTERIMAGE>
+	<ALTIMAGE>
+http://cdn-99.blinkx.com/store/images/defaultswf/youtube.jpg
+</ALTIMAGE>
+	<STATICPREVIEW>
+http://cdn-05.blinkx.com/store/redirectors/static.php?s=b/03/YouTube/20070718/14504099/14504099_swf_0.swf&d=youtube
+</STATICPREVIEW>
+	<IMAGE>
+http://cdn-02.blinkx.com/store/images/video/b//03/YouTube/20070718/14504099/14504099_swf_0.swf
+</IMAGE>
+<MEDIA_FORMAT_STRING>flv</MEDIA_FORMAT_STRING>
+<MEDIA_TYPE_STRING>Flash</MEDIA_TYPE_STRING>
+</DOCUMENT>
+</autn:content>
+<autn:date>1175205732</autn:date>
+<autn:datestring>Thursday March 29th 2007</autn:datestring>
+</autn:hit>
+</responsedata>
+</autnresponse>

@@ -1,0 +1,24 @@
+{
+    "message": {
+        "id": "99",
+        "action": "START",
+        "service": 
+        [
+            {
+                "id": "1",
+                "name": "EKG",
+                "endpoint": "http://localhost:8080/EKG/",
+                "parameter": 
+                [
+                    {
+                        "id": "HR",
+                        "name": "Heart Rate",
+                        "value": "75",
+                        "unit": "bpm",
+                        "unitType": "xs:integer"
+                    }
+                ]
+            }
+        ]
+    }
+}

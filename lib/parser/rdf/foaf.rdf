@@ -1,0 +1,44 @@
+<rdf:RDF
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:doap="http://usefulinc.com/ns/doap#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"      
+      xmlns:admin="http://bcmoney-mobiletv.com/">
+<foaf:PersonalProfileDocument rdf:about="bryan">
+  <foaf:maker rdf:resource="#me"/>
+  <foaf:primaryTopic rdf:resource="#me"/>
+  <admin:generatorAgent rdf:resource="http://bcmoney-mobiletv.com/bryan/foaf/"/>
+  <admin:errorReportsTo rdf:resource="mailto:bc@bcmoney-mobiletv.com"/>
+</foaf:PersonalProfileDocument>
+<foaf:Person rdf:ID="me">
+<foaf:name>Bryan Copeland</foaf:name>
+<foaf:title></foaf:title>
+<foaf:givenname>Bryan</foaf:givenname>
+<foaf:family_name>Copeland</foaf:family_name>
+<foaf:nick>bryan</foaf:nick>
+<foaf:mbox_sha1sum>8a8652d842b699b688557e03031e25635457addf</foaf:mbox_sha1sum>
+<foaf:phone rdf:resource=""/>
+<foaf:homepage rdf:resource="http://bryancopeland.com"/>
+<foaf:depiction rdf:resource="http://bcmoney-mobiletv.com/photo/24.jpg"/><foaf:interest rdf:resource="http://delicious.com/tag/MixedMartialArts"/><foaf:interest rdf:resource="http://delicious.com/tag/Philanthropy"/><foaf:interest rdf:resource="http://delicious.com/tag/IceHockey"/><foaf:interest rdf:resource="http://delicious.com/tag/Charity"/><foaf:interest rdf:resource="http://delicious.com/tag/Clubbing"/><foaf:interest rdf:resource="http://delicious.com/tag/Volunteerism"/><foaf:interest rdf:resource="http://delicious.com/tag/Breakdancing(badly/whiledrunk)"/><foaf:aimChatID rdf:resource="btothecmoney"/><foaf:yahooChatID rdf:resource="d3b62331d7c8d789d9332f3a9e6269554d4eb942"/><foaf:msnChatID rdf:resource="8a8652d842b699b688557e03031e25635457addf"/><foaf:icqChatID rdf:resource=""/><foaf:jabberChatID rdf:resource=""/>
+<foaf:openid rdf:resource="http://bcmoney.myopenid.com/"/>
+<foaf:holdsAccount>
+<foaf:OnlineAccount>
+<foaf:accountServiceHomepage rdf:resource="http://LastFM.com/"/>
+<foaf:accountProfilePage rdf:resource="http%3A%2F%2Fwww.last.fm%2Fuser%2Fbcmoney"/>
+<foaf:accountName rdf:resource="bcmoney"/>
+</foaf:OnlineAccount>
+</foaf:holdsAccount>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>BC Money</foaf:name>
+<foaf:nick>bcmoney</foaf:nick>
+<foaf:depiction rdf:resource="http://bcmoney-mobiletv.com/photo/2.jpg"/>
+<foaf:mbox_sha1sum>b4abceac56901049950ca8df159369e1b1842cf4</foaf:mbox_sha1sum>
+<foaf:homepage>http://bcmoney-mobiletv.com/bcmoney</foaf:homepage>
+<rdfs:seeAlso rdf:resource="http://bcmoney-mobiletv.com/bcmoney/foaf/"/>
+</foaf:Person>
+</foaf:knows>  
+</foaf:Person> 
+</rdf:RDF>

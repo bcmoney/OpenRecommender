@@ -1,0 +1,33 @@
+DESCRIPTION:
+============
+
+This is the main sub pod object that is returned when an API request is parsed.
+
+ACCESSOR VARIABLES:
+===================
+
+The following variables contain information about the result that can be used
+to display more information.
+
+Accessor vairables are called by using:
+$object->ACCESSOR_NAME
+
+* attributes: a hash array of the attributes of this result object. The has
+array can contain the following keys:
+  - title
+
+* plaintext: If the result was requested in plaintext format this variable
+will contain it.
+
+* image: If the result was requested in image format this variable will
+contain aa WAImage object of the image of this sub pod.
+
+* minput: if the result was requested in minput format this variable will
+contain the value.
+
+* moutput: if the result was reqeusted in moutput format this variable will
+contain the value.
+
+* mathml: if the result was requested in Math ML format this variable will 
+contain the value.
+

@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">XWORDNET</DIV>
+<DIV class="sqlcomment">get xwordnet parses for verb "want"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,synsetid,definition,parse FROM words LEFT JOIN senses USING (wordid) INNER JOIN synsets USING (synsetid) INNER JOIN xwnparselfts USING (synsetid) WHERE pos='v' and lemma='want'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>synsetid</TH><TH>definition</TH><TH>parse</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">200709205</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">(TOP (S (S (VP (TO to) 
+               (VP (VB want) ) ) ) 
+        (VP (VBZ is) 
+            (S (VP (TO to) 
+                   (VP (VB wish) (CC or) (VB demand) 
+                       (NP (NP (DT the) (NN presence) ) 
+                           (PP (IN of) ) ) ) ) ) ) 
+        (. .) ) )</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201188725</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">(TOP (S (S (VP (TO to) 
+               (VP (VB want) ) ) ) 
+        (VP (VBZ is) 
+            (S (VP (TO to) 
+                   (VP (VB have) 
+                       (NP (NP (NN need) ) 
+                           (PP (IN of) ) ) ) ) ) ) 
+        (. .) ) )</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201317064</TD><TD class="sqlfield">hunt or look for; want for a particular reason</TD><TD class="sqlfield">(TOP (S (S (VP (TO to) 
+               (VP (VB want) ) ) ) 
+        (VP (VBZ is) 
+            (S (VP (TO to) 
+                   (VP (VB want) 
+                       (PP (IN for) 
+                           (NP (DT a) (JJ particular) (NN reason) ) ) ) ) ) ) 
+        (. .) ) )</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201317064</TD><TD class="sqlfield">hunt or look for; want for a particular reason</TD><TD class="sqlfield">(TOP (S (S (VP (TO to) 
+               (VP (VB want) ) ) ) 
+        (VP (VBZ is) 
+            (S (VP (TO to) 
+                   (VP (VP (VB hunt) ) 
+                       (CC or) 
+                       (VP (VB look) 
+                           (ADVP (RP for) ) ) ) ) ) ) 
+        (. .) ) )</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201825237</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD><TD class="sqlfield">(TOP (S (S (VP (TO to) 
+               (VP (VB desire) ) ) ) 
+        (VP (VBZ is) 
+            (S (VP (TO to) 
+                   (VP (VB want) 
+                       (ADVP (RB strongly) ) ) ) ) ) 
+        (. .) ) )</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201825237</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD><TD class="sqlfield">(TOP (S (S (VP (TO to) 
+               (VP (VB desire) ) ) ) 
+        (VP (VBZ is) 
+            (S (VP (TO to) 
+                   (VP (VB feel) (CC or) (VB have) 
+                       (NP (NP (DT a) (NN desire) ) 
+                           (PP (IN for) ) ) ) ) ) ) 
+        (. .) ) )</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">202632567</TD><TD class="sqlfield">be without, lack; be deficient in</TD><TD class="sqlfield">(TOP (S (S (VP (TO to) 
+               (VP (VB want) ) ) ) 
+        (VP (VBZ is) 
+            (S (VP (TO to) 
+                   (VP (VB be) 
+                       (ADJP (JJ deficient) 
+                             (PP (IN in) ) ) ) ) ) ) 
+        (. .) ) )</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">202632567</TD><TD class="sqlfield">be without, lack; be deficient in</TD><TD class="sqlfield">(TOP (S (S (VP (TO to) 
+               (VP (VB want) ) ) ) 
+        (VP (VBZ is) 
+            (S (VP (TO to) 
+                   (VP (VP (VB be) 
+                           (PP (IN without) ) ) 
+                       (, ,) 
+                       (VP (VB lack) ) ) ) ) ) 
+        (. .) ) )</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get xwordnet lft for verb "want"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,synsetid,definition,lft FROM words LEFT JOIN senses USING (wordid) INNER JOIN synsets USING (synsetid) INNER JOIN xwnparselfts USING (synsetid) WHERE pos='v' and lemma='want'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>synsetid</TH><TH>definition</TH><TH>lft</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">200709205</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">want:VB(e1, x1, x2) -&gt; wish:VB(e2, x1, x3) or:CC(e1, e2, e3) demand:VB(e3, x1, x3) presence:NN(x3) of:IN(x3, x2)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201188725</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">want:VB(e1, x1, x2) -&gt; have:VB(e1, x1, x3) need:NN(x3) of:IN(e1, x2)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201317064</TD><TD class="sqlfield">hunt or look for; want for a particular reason</TD><TD class="sqlfield">want:VB(e1, x1, x2) -&gt; hunt:VB(e2, x1, x3) or:CC(e1, e2, e3) look_for:VB(e3, x1, x4)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201317064</TD><TD class="sqlfield">hunt or look for; want for a particular reason</TD><TD class="sqlfield">want:VB(e1, x1, x2) -&gt; want:VB(e1, x1, x4) for:IN(e1, x3) particular:JJ(x3) reason:NN(x3)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201825237</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD><TD class="sqlfield">desire:VB(e1, x1, x2) -&gt; feel:VB(e2, x1, x3) or:CC(e1, e2, e3) have:VB(e3, x1, x3) desire:NN(x3) for:IN(e1, x2)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201825237</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD><TD class="sqlfield">desire:VB(e1, x1, x2) -&gt; want:VB(e1, x1, x3) strongly:RB(e1)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">202632567</TD><TD class="sqlfield">be without, lack; be deficient in</TD><TD class="sqlfield">want:VB(e1, x1, x2) -&gt; be:VB(e1, x1, x3) deficient:JJ(x3) in:IN(e1, x2)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">202632567</TD><TD class="sqlfield">be without, lack; be deficient in</TD><TD class="sqlfield">want:VB(e1, x1, x2) -&gt; be:VB(e2, x1, x3) without:IN(e1, x2) or:CC(e1, e2, e3) lack:VB(e3, x1, x2)</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get xwordnet wsd for verb "want"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,synsetid,definition,wsd FROM words LEFT JOIN senses USING (wordid) INNER JOIN synsets USING (synsetid) INNER JOIN xwnwsds USING (synsetid) WHERE pos='v' and lemma='want'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>synsetid</TH><TH>definition</TH><TH>wsd</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">200709205</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">&lt;wf pos="VB" lemma="wish" quality="normal" wnsn="4"&gt;wish&lt;/wf&gt;&lt;wf pos="CC"&gt;or&lt;/wf&gt;&lt;wf pos="VB" lemma="demand" quality="silver" wnsn="1"&gt;demand&lt;/wf&gt;&lt;wf pos="DT"&gt;the&lt;/wf&gt;&lt;wf pos="NN" lemma="presence" quality="normal" wnsn="1"&gt;presence&lt;/wf&gt;&lt;wf pos="IN"&gt;of&lt;/wf&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201188725</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">&lt;wf pos="VB" lemma="have" quality="normal" wnsn="1"&gt;have&lt;/wf&gt;&lt;wf pos="NN" lemma="need" quality="normal" wnsn="1"&gt;need&lt;/wf&gt;&lt;wf pos="IN"&gt;of&lt;/wf&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201188725</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">&lt;wf pos="VB" lemma="have" quality="normal" wnsn="1"&gt;have&lt;/wf&gt;&lt;wf pos="NN" lemma="need" quality="normal" wnsn="1"&gt;need&lt;/wf&gt;&lt;wf pos="IN"&gt;of&lt;/wf&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201188725</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">&lt;wf pos="VB" lemma="have" quality="normal" wnsn="1"&gt;have&lt;/wf&gt;&lt;wf pos="NN" lemma="need" quality="normal" wnsn="1"&gt;need&lt;/wf&gt;&lt;wf pos="IN"&gt;of&lt;/wf&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201317064</TD><TD class="sqlfield">hunt or look for; want for a particular reason</TD><TD class="sqlfield">&lt;wf pos="VB" lemma="hunt" quality="gold" wnsn="6"&gt;hunt&lt;/wf&gt;&lt;wf pos="CC"&gt;or&lt;/wf&gt;&lt;wf pos="VB" lemma="look_for" quality="gold" wnsn="1"&gt;look_for&lt;/wf&gt;&lt;punc&gt;;&lt;/punc&gt;&lt;wf pos="VBP" lemma="want" quality="gold" wnsn="3"&gt;want&lt;/wf&gt;&lt;wf pos="IN"&gt;for&lt;/wf&gt;&lt;wf pos="DT"&gt;a&lt;/wf&gt;&lt;wf pos="JJ" lemma="particular" quality="gold" wnsn="2"&gt;particular&lt;/wf&gt;&lt;wf pos="NN" lemma="reason" quality="gold" wnsn="1"&gt;reason&lt;/wf&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201825237</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD><TD class="sqlfield">&lt;wf pos="VB" lemma="feel" quality="normal" wnsn="3"&gt;feel&lt;/wf&gt;&lt;wf pos="CC"&gt;or&lt;/wf&gt;&lt;wf pos="VB" lemma="have" quality="normal" wnsn="3"&gt;have&lt;/wf&gt;&lt;wf pos="DT"&gt;a&lt;/wf&gt;&lt;wf pos="NN" lemma="desire" quality="normal" wnsn="1"&gt;desire&lt;/wf&gt;&lt;wf pos="IN"&gt;for&lt;/wf&gt;&lt;punc&gt;;&lt;/punc&gt;&lt;wf pos="VBP" lemma="want" quality="silver" wnsn="1"&gt;want&lt;/wf&gt;&lt;wf pos="RB" lemma="strongly" quality="normal" wnsn="1"&gt;strongly&lt;/wf&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">201825237</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD><TD class="sqlfield">&lt;wf pos="VB" lemma="feel" quality="normal" wnsn="3"&gt;feel&lt;/wf&gt;&lt;wf pos="CC"&gt;or&lt;/wf&gt;&lt;wf pos="VB" lemma="have" quality="normal" wnsn="3"&gt;have&lt;/wf&gt;&lt;wf pos="DT"&gt;a&lt;/wf&gt;&lt;wf pos="NN" lemma="desire" quality="normal" wnsn="1"&gt;desire&lt;/wf&gt;&lt;wf pos="IN"&gt;for&lt;/wf&gt;&lt;punc&gt;;&lt;/punc&gt;&lt;wf pos="VBP" lemma="want" quality="silver" wnsn="1"&gt;want&lt;/wf&gt;&lt;wf pos="RB" lemma="strongly" quality="normal" wnsn="1"&gt;strongly&lt;/wf&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">202632567</TD><TD class="sqlfield">be without, lack; be deficient in</TD><TD class="sqlfield">&lt;wf pos="VB" lemma="be" quality="normal" wnsn="1"&gt;be&lt;/wf&gt;&lt;wf pos="IN"&gt;without&lt;/wf&gt;&lt;punc&gt;,&lt;/punc&gt;&lt;wf pos="NN" lemma="lack" quality="silver" wnsn="1"&gt;lack&lt;/wf&gt;&lt;punc&gt;;&lt;/punc&gt;&lt;wf pos="VB" lemma="be" quality="normal" wnsn="1"&gt;be&lt;/wf&gt;&lt;wf pos="JJ" lemma="deficient" quality="normal" wnsn="1"&gt;deficient&lt;/wf&gt;&lt;wf pos="IN"&gt;in&lt;/wf&gt;</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

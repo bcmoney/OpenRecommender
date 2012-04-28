@@ -1,0 +1,264 @@
+  <?xml version="1.0" encoding="utf-8" ?> 
+ <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xml.truveo.com" xsi:schemaLocation="http://xml.truveo.com apiv3.xsd">
+  <method>truveo.videos.getVideos</method> 
+  <query>category:news</query> 
+ <VideoSet>
+  <totalResultsAvailable>1905719</totalResultsAvailable> 
+  <totalResultsReturned>10</totalResultsReturned> 
+  <firstResultPosition>0</firstResultPosition> 
+  <title>News Videos</title> 
+  <rssUrl>http://xml.truveo.com/rss?query=category:news&showAdult=1</rssUrl> 
+  <embedTag><embed src="http://www.truveo.com/truveo_listWidget.swf?query=category:news&resultsnum=10" quality="high" wmode="transparent" type="application/x-shockwave-flash" width="600" height="150"></embed></embedTag> 
+<Video>
+  <id>2814984484</id> 
+  <title>Six die in US council shooting</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=2813004984&a=100f07056934b2dc19ee8b78b647746a&p=1</videoUrl> 
+  <channel>BBC News</channel> 
+  <channelUrl>http://news.bbc.co.uk</channelUrl> 
+  <dateFound>Fri, 08 Feb 2008 00:12:00 -0500</dateFound> 
+  <textRelevancy>309</textRelevancy> 
+  <vRank>0.299434</vRank> 
+  <description>A gunman has opened fire on a council meeting in St Louis in Missouri, killing six people.</description> 
+  <referrerPageUrl>http://news.bbc.co.uk/2/hi/video_and_audio/</referrerPageUrl> 
+  <copyright>(C) British Broadcasting Corporation</copyright> 
+  <runtime>106</runtime> 
+  <category>News</category> 
+  <tags>World</tags> 
+  <country>United Kingdom</country> 
+  <language>English</language> 
+  <dateProduced>Fri, 08 Feb 2008 04:39:12 GMT</dateProduced> 
+  <userRating>3.99996</userRating> 
+  <userRatingCount>1</userRatingCount> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb1/tn/1E/CC/1ECC07E35C399B7713E95F.jpg</thumbnailUrl> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:2814984484" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <quality>poor</quality> 
+  <formats>win, real</formats> 
+  <bitrate>56 kbps</bitrate> 
+  <fileSize>472 kb</fileSize> 
+  </Video>
+<Video>
+  <id>1926322731</id> 
+  <title>Blast at US sugar refinery</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=1915959741&a=100f07056934b2dc19ee8b78b647746a&p=2</videoUrl> 
+  <channel>BBC News</channel> 
+  <channelUrl>http://news.bbc.co.uk</channelUrl> 
+  <dateFound>Fri, 08 Feb 2008 00:12:01 -0500</dateFound> 
+  <textRelevancy>308</textRelevancy> 
+  <vRank>0.298999</vRank> 
+  <description>Several dozen people have been injured at a sugar refinery in Savannah in the US.</description> 
+  <referrerPageUrl>http://news.bbc.co.uk/2/hi/video_and_audio/</referrerPageUrl> 
+  <copyright>(C) British Broadcasting Corporation</copyright> 
+  <runtime>136</runtime> 
+  <category>News</category> 
+  <tags>World</tags> 
+  <country>United Kingdom</country> 
+  <language>English</language> 
+  <dateProduced>Fri, 08 Feb 2008 04:33:16 GMT</dateProduced> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb4/tn/77/EB/77EB759F77CD8BC660910F.jpg</thumbnailUrl> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:1926322731" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <quality>poor</quality> 
+  <formats>win, real</formats> 
+  <bitrate>56 kbps</bitrate> 
+  <fileSize>603 kb</fileSize> 
+  </Video>
+<Video>
+  <id>2951089052</id> 
+  <title>Police swoop on 'mafiosi'</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=2950127458&a=100f07056934b2dc19ee8b78b647746a&p=3</videoUrl> 
+  <channel>BBC News</channel> 
+  <channelUrl>http://news.bbc.co.uk</channelUrl> 
+  <dateFound>Thu, 07 Feb 2008 21:49:14 -0500</dateFound> 
+  <textRelevancy>309</textRelevancy> 
+  <vRank>0.298866</vRank> 
+  <description>Dozens of people have been held by US and Italian authorities targeting a drug-trafficking racket.</description> 
+  <referrerPageUrl>http://news.bbc.co.uk/2/hi/video_and_audio/</referrerPageUrl> 
+  <copyright>(C) British Broadcasting Corporation</copyright> 
+  <runtime>95</runtime> 
+  <category>News</category> 
+  <tags>World</tags> 
+  <country>United Kingdom</country> 
+  <language>English</language> 
+  <dateProduced>Fri, 08 Feb 2008 02:00:30 GMT</dateProduced> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb3/tn/57/FD/57FDA6D13539BBBC30F842.jpg</thumbnailUrl> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:2951089052" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <quality>poor</quality> 
+  <formats>win, real</formats> 
+  <bitrate>56 kbps</bitrate> 
+  <fileSize>433 kb</fileSize> 
+  </Video>
+<Video>
+  <id>2809775064</id> 
+  <title>Romney Calls It Quits</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=2817261617&a=100f07056934b2dc19ee8b78b647746a&p=4</videoUrl> 
+  <channel>FOX News</channel> 
+  <channelUrl>http://www.foxnews.com</channelUrl> 
+  <dateFound>Fri, 08 Feb 2008 00:43:10 -0500</dateFound> 
+  <textRelevancy>307</textRelevancy> 
+  <vRank>0.298711</vRank> 
+  <description>Mitt Romney drops out of presidential campaign</description> 
+  <referrerPageUrl>http://www.foxnews.com/video2/launchPage.html</referrerPageUrl> 
+  <copyright>1900, Fox News Channel</copyright> 
+  <runtime>39</runtime> 
+  <category>News</category> 
+  <tags>FOX News Flash</tags> 
+  <country>United States</country> 
+  <language>English</language> 
+  <dateProduced>02/07/08</dateProduced> 
+  <userRating>3</userRating> 
+  <userRatingCount>1</userRatingCount> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb2/tn/26/BF/26BFAF90B2FF44FDA4FAF8.jpg</thumbnailUrl> 
+  <thumbnailUrlLarge>http://thumbnail.search.aolcdn.com/vsthumb2/tn/26/BF/26BFAF90B2FF44FDA4FAF8_Large.jpg</thumbnailUrlLarge> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:2809775064" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <formats>flash</formats> 
+  <width>318</width> 
+  <height>240</height> 
+  </Video>
+<Video>
+  <id>1192912145</id> 
+  <title>Atlantis heads for space station</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=1207241924&a=100f07056934b2dc19ee8b78b647746a&p=5</videoUrl> 
+  <channel>MSN Video</channel> 
+  <channelUrl>http://video.msn.com</channelUrl> 
+  <dateFound>Thu, 07 Feb 2008 18:53:48 -0500</dateFound> 
+  <textRelevancy>310</textRelevancy> 
+  <vRank>0.298642</vRank> 
+  <description>Feb. 7: Atlantis takes off a on mission to the international space station. NBC's Kristen Dahlgren reports.</description> 
+  <referrerPageUrl>http://fieldnotes.msnbc.msn.com/</referrerPageUrl> 
+  <distributor>NBC News</distributor> 
+  <category>News</category> 
+  <tags>News, NBC News Channel</tags> 
+  <country>United States</country> 
+  <language>English</language> 
+  <dateProduced>2008-02-07 21:12:00</dateProduced> 
+  <userRating>3</userRating> 
+  <userRatingCount>1</userRatingCount> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb2/tn/39/F2/39F2396D417FFDE322D779.jpg</thumbnailUrl> 
+  <thumbnailUrlLarge>http://thumbnail.search.aolcdn.com/vsthumb2/tn/39/F2/39F2396D417FFDE322D779_Large.jpg</thumbnailUrlLarge> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:1192912145" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <formats>win</formats> 
+  </Video>
+<Video>
+  <id>1262250805</id> 
+  <title>Wise guys?</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=1269551020&a=100f07056934b2dc19ee8b78b647746a&p=6</videoUrl> 
+  <channel>MSN Video</channel> 
+  <channelUrl>http://video.msn.com</channelUrl> 
+  <dateFound>Thu, 07 Feb 2008 20:05:55 -0500</dateFound> 
+  <textRelevancy>309</textRelevancy> 
+  <vRank>0.298471</vRank> 
+  <description>Feb. 7: A massive mob bust rounded up 92 suspects and charged 62 people, including what authorities call the entire leadership of the Gambino family. NBC's Jonathan Dienst reports.</description> 
+  <referrerPageUrl>http://msnbc-com.newsvine.com/_action/tools/uniqueIdRedirect?type=v&id={id}</referrerPageUrl> 
+  <category>News</category> 
+  <tags>News, Nightly News, NBC News</tags> 
+  <showName>Nightly News</showName> 
+  <showUrl>http://nightlynews.msnbc.com</showUrl> 
+  <country>United States</country> 
+  <language>English</language> 
+  <dateProduced>2008-02-08 00:13:00</dateProduced> 
+  <userRating>2.00004</userRating> 
+  <userRatingCount>1</userRatingCount> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb7/tn/DD/69/DD69931FCC8465BE12AF6E.jpg</thumbnailUrl> 
+  <thumbnailUrlLarge>http://thumbnail.search.aolcdn.com/vsthumb7/tn/DD/69/DD69931FCC8465BE12AF6E_Large.jpg</thumbnailUrlLarge> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:1262250805" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <formats>win</formats> 
+  </Video>
+<Video>
+  <id>1436844934</id> 
+  <title>Kirkwood Shooting: News 4's Doug Vaughn on the suspected gunman</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=1427580718&a=100f07056934b2dc19ee8b78b647746a&p=7</videoUrl> 
+  <channel>Yahoo! News</channel> 
+  <channelUrl>http://news.yahoo.com</channelUrl> 
+  <dateFound>Fri, 08 Feb 2008 00:19:06 -0500</dateFound> 
+  <textRelevancy>305</textRelevancy> 
+  <vRank>0.297809</vRank> 
+  <description>Kirkwood Shooting: News 4's Doug Vaughn knew the suspected gunman "Cookie" Thornton and offers some background on the case.</description> 
+  <referrerPageUrl>http://news.yahoo.com/video</referrerPageUrl> 
+  <distributor>KMOV Channel 4 St. Louis</distributor> 
+  <category>News</category> 
+  <country>United States</country> 
+  <language>English</language> 
+  <dateProduced>Thursday, February 07, 2008 8:47:37 PM</dateProduced> 
+  <userRating>3</userRating> 
+  <userRatingCount>1</userRatingCount> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb4/tn/6B/32/6B3276B76D1DC81081CD7D.jpg</thumbnailUrl> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:1436844934" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <formats>win, flash</formats> 
+  </Video>
+<Video>
+  <id>1459591160</id> 
+  <title>Carnage at City Council meeting</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=1450367216&a=100f07056934b2dc19ee8b78b647746a&p=8</videoUrl> 
+  <channel>MSN Video</channel> 
+  <channelUrl>http://video.msn.com</channelUrl> 
+  <dateFound>Thu, 07 Feb 2008 23:02:14 -0500</dateFound> 
+  <textRelevancy>305</textRelevancy> 
+  <vRank>0.297563</vRank> 
+  <description>Feb. 7th: Five people were killed by a gunman who rushed into a City Council meeting in Kirkwood, Mo., shouting “Shoot the mayor!”</description> 
+  <referrerPageUrl>http://fieldnotes.msnbc.msn.com/</referrerPageUrl> 
+  <distributor>MSNBC</distributor> 
+  <category>News</category> 
+  <tags>News, MSNBC TV, NBC News</tags> 
+  <country>United States</country> 
+  <language>English</language> 
+  <dateProduced>2008-02-08 03:55:00</dateProduced> 
+  <userRating>3.99996</userRating> 
+  <userRatingCount>1</userRatingCount> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb4/tn/7F/00/7F00927BD3E59E32F285C0.jpg</thumbnailUrl> 
+  <thumbnailUrlLarge>http://thumbnail.search.aolcdn.com/vsthumb4/tn/7F/00/7F00927BD3E59E32F285C0_Large.jpg</thumbnailUrlLarge> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:1459591160" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <formats>win</formats> 
+  </Video>
+<Video>
+  <id>2928236834</id> 
+  <title>Kirkwood Shootings: Kirkwood resident reacts to attack</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=2931642217&a=100f07056934b2dc19ee8b78b647746a&p=9</videoUrl> 
+  <channel>Yahoo! News</channel> 
+  <channelUrl>http://news.yahoo.com</channelUrl> 
+  <dateFound>Fri, 08 Feb 2008 02:38:11 -0500</dateFound> 
+  <textRelevancy>303</textRelevancy> 
+  <vRank>0.297537</vRank> 
+  <description>News 4's Mike O'Connell talks with a long-time Kirkwood resident who knew the victims and the gunman.</description> 
+  <referrerPageUrl>http://news.yahoo.com/video</referrerPageUrl> 
+  <distributor>KMOV Channel 4 St. Louis</distributor> 
+  <category>News</category> 
+  <country>United States</country> 
+  <language>English</language> 
+  <dateProduced>Thursday, February 07, 2008 10:41:49 PM</dateProduced> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb1/tn/1D/D2/1DD2375EB15F77DA419486.jpg</thumbnailUrl> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:2928236834" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <formats>win, flash</formats> 
+  </Video>
+<Video>
+  <id>1778922732</id> 
+  <title>News 4 Coverage: Gunman opens fire in Kirkwood City Hall</title> 
+  <videoUrl>http://xml.truveo.com/rd?i=1792103447&a=100f07056934b2dc19ee8b78b647746a&p=10</videoUrl> 
+  <channel>Yahoo! News</channel> 
+  <channelUrl>http://news.yahoo.com</channelUrl> 
+  <dateFound>Thu, 07 Feb 2008 23:45:41 -0500</dateFound> 
+  <textRelevancy>304</textRelevancy> 
+  <vRank>0.297302</vRank> 
+  <description>Watch News 4 coverage of the mass shooting at Kirkwood City Hall.</description> 
+  <referrerPageUrl>http://news.yahoo.com/video</referrerPageUrl> 
+  <distributor>KMOV Channel 4 St. Louis</distributor> 
+  <category>News</category> 
+  <country>United States</country> 
+  <language>English</language> 
+  <dateProduced>Thursday, February 07, 2008 7:32:58 PM</dateProduced> 
+  <userRating>3</userRating> 
+  <userRatingCount>1</userRatingCount> 
+  <thumbnailUrl>http://thumbnail.search.aolcdn.com/vsthumb5/tn/84/10/8410302F483565F2EBA7BB.jpg</thumbnailUrl> 
+  <videoResultEmbedTag><embed src="http://www.truveo.com/truveo_videoWidget.swf?query=id:1778922732" wmode="transparent" type="application/x-shockwave-flash" width="425" height="110"></embed></videoResultEmbedTag> 
+  <adultFlag>0</adultFlag> 
+  <formats>win, flash</formats> 
+  </Video>
+  </VideoSet>
+  </Response>

@@ -1,0 +1,246 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">LEGACY</DIV>
+<DIV class="sqlcomment">wordnet 2.0 to 3.0</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy20 where ssynsetid=100124550</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader"></TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">wordnet 3.0 to 2.0</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy20 where dsynsetid=100130045</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader"></TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">wordnet 3.0 to 2.1</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy21 where dsynsetid=100130045</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader"></TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">wordnet 3.0 to 2.1</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy21 where dsynsetid=102690270</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>quality</TH><TH>ssynsetid</TH><TH>dsynsetid</TH><TH>ssensekey</TH><TH>dsensekey</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">air hose</TD><TD class="sqlfield">100</TD><TD class="sqlfield">102665619</TD><TD class="sqlfield">102690270</TD><TD class="sqlfield">air_hose%1:06:00::</TD><TD class="sqlfield">air_hose%1:06:00::</TD><TD class="sqlfield">a hose that carries air under pr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">airline</TD><TD class="sqlfield">100</TD><TD class="sqlfield">102665619</TD><TD class="sqlfield">102690270</TD><TD class="sqlfield">airline%1:06:01::</TD><TD class="sqlfield">airline%1:06:01::</TD><TD class="sqlfield">a hose that carries air under pr</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">abase (mono)</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy21  WHERE lemma='abase' ORDER BY ssensekey</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>quality</TH><TH>ssynsetid</TH><TH>dsynsetid</TH><TH>ssensekey</TH><TH>dsensekey</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">abase</TD><TD class="sqlfield">100</TD><TD class="sqlfield">201782644</TD><TD class="sqlfield">201799794</TD><TD class="sqlfield">abase%2:37:00::</TD><TD class="sqlfield">abase%2:37:00::</TD><TD class="sqlfield">cause to feel shame; hurt the pr</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">afford (poly)</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy21  WHERE lemma='afford' ORDER BY ssensekey</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>quality</TH><TH>ssynsetid</TH><TH>dsynsetid</TH><TH>ssensekey</TH><TH>dsensekey</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">afford</TD><TD class="sqlfield">100</TD><TD class="sqlfield">201181406</TD><TD class="sqlfield">201192628</TD><TD class="sqlfield">afford%2:34:00::</TD><TD class="sqlfield">afford%2:34:00::</TD><TD class="sqlfield">be able to spare or give up</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">afford</TD><TD class="sqlfield">100</TD><TD class="sqlfield">202316932</TD><TD class="sqlfield">202339171</TD><TD class="sqlfield">afford%2:40:00::</TD><TD class="sqlfield">afford%2:40:00::</TD><TD class="sqlfield">be the cause or source of</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">afford</TD><TD class="sqlfield">70</TD><TD class="sqlfield">202335639</TD><TD class="sqlfield">202358034</TD><TD class="sqlfield">afford%2:40:01::</TD><TD class="sqlfield">afford%2:40:01::</TD><TD class="sqlfield">afford access to</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">afford</TD><TD class="sqlfield">70</TD><TD class="sqlfield">202335639</TD><TD class="sqlfield">202744451</TD><TD class="sqlfield">afford%2:40:01::</TD><TD class="sqlfield">afford%2:42:00::</TD><TD class="sqlfield">have the financial means to do s</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">afford</TD><TD class="sqlfield">100</TD><TD class="sqlfield">202719910</TD><TD class="sqlfield">202744451</TD><TD class="sqlfield">afford%2:42:00::</TD><TD class="sqlfield">afford%2:42:00::</TD><TD class="sqlfield">have the financial means to do s</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">wordnet 2.0 to 3.0 for "want" from sensekey</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy20 WHERE ssensekey LIKE 'want\%%'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader"></TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synset merge</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy21  WHERE dsynsetid=100002137 ORDER BY ssensekey</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>quality</TH><TH>ssynsetid</TH><TH>dsynsetid</TH><TH>ssensekey</TH><TH>dsensekey</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">abstraction</TD><TD class="sqlfield">80</TD><TD class="sqlfield">100002236</TD><TD class="sqlfield">100002137</TD><TD class="sqlfield">abstraction%1:03:00::</TD><TD class="sqlfield">abstraction%1:03:00::</TD><TD class="sqlfield">a general concept formed by extr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">abstract entity</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100002119</TD><TD class="sqlfield">100002137</TD><TD class="sqlfield">abstract_entity%1:03:00::</TD><TD class="sqlfield">abstract_entity%1:03:00::</TD><TD class="sqlfield">a general concept formed by extr</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synset merge</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT quality,synsetid2,synsetid,SUBSTRING(definition FROM 1 FOR 32) FROM synsetmaps2130 INNER JOIN synsets USING (synsetid) WHERE synsetid=100002137</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>quality</TH><TH>synsetid2</TH><TH>synsetid</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">37</TD><TD class="sqlfield">100002119</TD><TD class="sqlfield">100002137</TD><TD class="sqlfield">a general concept formed by extr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">100002119</TD><TD class="sqlfield">100002137</TD><TD class="sqlfield">a general concept formed by extr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">62</TD><TD class="sqlfield">100002236</TD><TD class="sqlfield">100002137</TD><TD class="sqlfield">a general concept formed by extr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">100002236</TD><TD class="sqlfield">100002137</TD><TD class="sqlfield">a general concept formed by extr</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synset split</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,quality,ssynsetid,dsynsetid,ssensekey,dsensekey,SUBSTRING(definition FROM 1 FOR 32) FROM legacy21  WHERE ssynsetid=100019102 ORDER BY ssensekey</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>quality</TH><TH>ssynsetid</TH><TH>dsynsetid</TH><TH>ssensekey</TH><TH>dsensekey</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">matter</TD><TD class="sqlfield">90</TD><TD class="sqlfield">100019102</TD><TD class="sqlfield">100020827</TD><TD class="sqlfield">matter%1:03:00::</TD><TD class="sqlfield">matter%1:03:00::</TD><TD class="sqlfield">that which has mass and occupies</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">substance</TD><TD class="sqlfield">80</TD><TD class="sqlfield">100019102</TD><TD class="sqlfield">100019613</TD><TD class="sqlfield">substance%1:03:00::</TD><TD class="sqlfield">substance%1:03:00::</TD><TD class="sqlfield">the real physical matter of whic</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synset split</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT quality,synsetid2,synsetid,SUBSTRING(definition FROM 1 FOR 32) FROM synsetmaps2130 INNER JOIN synsets USING (synsetid) WHERE synsetid2=100019102</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>quality</TH><TH>synsetid2</TH><TH>synsetid</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">100019102</TD><TD class="sqlfield">100020827</TD><TD class="sqlfield">that which has mass and occupies</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">100019102</TD><TD class="sqlfield">100019613</TD><TD class="sqlfield">the real physical matter of whic</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">100019102</TD><TD class="sqlfield">100020090</TD><TD class="sqlfield">a particular kind or species of </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">100019102</TD><TD class="sqlfield">114580597</TD><TD class="sqlfield">material of a particular kind or</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synset map view (from sensemap)</DIV>
+<DIV class="sqlcomment">query from destination synset</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT quality,ssynsetid,dsynsetid,SUBSTRING(definition FROM 1 FOR 32) FROM legacy21 WHERE dsynsetid=202358034</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>quality</TH><TH>ssynsetid</TH><TH>dsynsetid</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">202335639</TD><TD class="sqlfield">202358034</TD><TD class="sqlfield">afford access to</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">202335639</TD><TD class="sqlfield">202358034</TD><TD class="sqlfield">afford access to</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">70</TD><TD class="sqlfield">202335639</TD><TD class="sqlfield">202358034</TD><TD class="sqlfield">afford access to</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">query from sensekey</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT sensekey,SUBSTRING(definition FROM 1 FOR 64)  FROM senses INNER JOIN synsets USING (synsetid) WHERE sensekey LIKE 'james\%%'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>sensekey</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:10:00::</TD><TD class="sqlfield">a New Testament book attributed to Saint James the Apostle</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:17:00::</TD><TD class="sqlfield">a river that rises in North Dakota and flows southward across So</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:17:01::</TD><TD class="sqlfield">a river in Virginia that flows east into Chesapeake Bay at Hampt</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:18:00::</TD><TD class="sqlfield">(New Testament) disciple of Jesus; brother of John; author of th</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:18:01::</TD><TD class="sqlfield">writer who was born in the United States but lived in England (1</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:18:02::</TD><TD class="sqlfield">United States pragmatic philosopher and psychologist (1842-1910)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:18:03::</TD><TD class="sqlfield">United States outlaw who fought as a Confederate soldier and lat</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:18:04::</TD><TD class="sqlfield">the first Stuart to be king of England and Ireland from 1603 to </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:18:05::</TD><TD class="sqlfield">the last Stuart to be king of England and Ireland and Scotland; </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">james%1:18:06::</TD><TD class="sqlfield">a Stuart king of Scotland who married a daughter of Henry VII; w</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

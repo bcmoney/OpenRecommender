@@ -1,0 +1,49 @@
+DESCRIPTION:
+============
+
+This is the main pod object that is returned when an API request is parsed.
+
+ACCESSOR VARIABLES:
+===================
+
+The following variables contain information about the result that can be used
+to display more information.
+
+Accessor vairables are called by using:
+$object->ACCESSOR_NAME
+
+* attributes: a hash array of the attributes of this result object. The has
+array can contain the following keys:
+  - title
+  - scanner
+  - position
+  - error
+  - numsubpods
+
+* markup: If the result is requested in html format this variable will contain
+the html markup for the pod.
+
+
+PUBLIC FUNCTIONS:
+=================
+
+* array( WASubpod ) getSubpods()
+Returns an array of all the sub pods found in this pod.
+
+* array( WASubstitution ) getSubstitutions()
+Returns a hash array of all the substitutions found in this pod. The
+substitutions are a hash array of arrays. The hash array key is the type of
+substitutions. In other words, all substitutions are bundled together by type.
+If this pod contained 4 substitutions of type "Clash" then getSubstitutions
+will return the following structure:
+  array(
+      Clash => array (
+                   WASubstitution,
+                   WASubstitution,
+                   WASubstitution,
+                   WASubstitution
+               );
+  );
+
+* array( WAInfo ) getInfos()
+Returns an array of all the infos found in this pod.

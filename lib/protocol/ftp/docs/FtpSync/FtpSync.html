@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class FtpSync</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class FtpSync</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FtpSync</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Amin Saeedi &lt;<a href="mailto:amin.w3dev@gmail.com">amin.w3dev@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> 3.1</li>
+				<li><span class="field">copyright:</span> Copyright (C) 2009-2011.</li>
+				<li><span class="field">license:</span> GPL</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---FtpSync.php.html">/lib/FtpSync.php</a> (line <span class="field">19</span>)
+		</p>
+		
+				
+		<pre><a href="../FtpSync/Ftp.html">Ftp</a>
+   |
+   --FtpSync</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#SYNC_BY_CLEANUP" title="details" class="const-name">SYNC_BY_CLEANUP</a> = 					<span class="var-type"> 'Strategy_CleanUp'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#SYNC_BY_MTIME" title="details" class="const-name">SYNC_BY_MTIME</a> = 					<span class="var-type"> 'Strategy_MTime'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#SYNC_BY_SIZE" title="details" class="const-name">SYNC_BY_SIZE</a> = 					<span class="var-type"> 'Strategy_Size'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_blackList" title="details" class="var-name">$_blackList</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_localFiles" title="details" class="var-name">$_localFiles</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_logEnabled" title="details" class="var-name">$_logEnabled</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../FtpSync/Logger.html">Logger</a></span>
+					<a href="#$_logger" title="details" class="var-name">$_logger</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_remoteFiles" title="details" class="var-name">$_remoteFiles</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">boolean</span>
+					<a href="#$_reportOnly" title="details" class="var-name">$_reportOnly</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_syncStrategies" title="details" class="var-name">$_syncStrategies</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																												
+												<div class="method-definition">
+											<span class="method-result"><a href="../FtpSync/FtpSync.html">FtpSync</a></span>
+										<a href="#enableLog" title="details" class="method-name">enableLog</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getLocalFilesRecursive" title="details" class="method-name">getLocalFilesRecursive</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../FtpSync/Logger.html">Logger</a></span>
+										<a href="#getLogger" title="details" class="method-name">getLogger</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getRemoteFilesRecursive" title="details" class="method-name">getRemoteFilesRecursive</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../FtpSync/Strategy_Abstract.html">Strategy_Abstract</a></span>
+										<a href="#getSyncStrategies" title="details" class="method-name">getSyncStrategies</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#ignore" title="details" class="method-name">ignore</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isReportOnly" title="details" class="method-name">isReportOnly</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../FtpSync/FtpSync.html">FtpSync</a></span>
+										<a href="#reportOnly" title="details" class="method-name">reportOnly</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../FtpSync/Strategy_Abstract.html">Strategy_Abstract</a></span>
+										<a href="#useStrategy" title="details" class="method-name">useStrategy</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$strategy</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_init" title="details" class="method-name">_init</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#_isInBlackList" title="details" class="method-name">_isInBlackList</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filepath</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_blackList" id="$_blackList"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_blackList</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Blacklist</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_localFiles" id="$_localFiles"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_localFiles</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">65</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Local files</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_logEnabled" id="$_logEnabled"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_logEnabled</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">37</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logging status</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_logger" id="$_logger"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../FtpSync/Logger.html">Logger</a></span>
+			<span class="var-name">$_logger</span>
+						(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logger object</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_remoteFiles" id="$_remoteFiles"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_remoteFiles</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remote files</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_reportOnly" id="$_reportOnly"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$_reportOnly</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">30</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Just reports the differences in two hosts</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_syncStrategies" id="$_syncStrategies"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_syncStrategies</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">44</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sync strategies</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../FtpSync/Ftp.html">Ftp</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../FtpSync/Ftp.html#var$_ascii">Ftp::$_ascii</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../FtpSync/Ftp.html#var$_mode">Ftp::$_mode</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../FtpSync/Ftp.html#var$_resource">Ftp::$_resource</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodenableLog" id="enableLog"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">enableLog</span> (line <span class="line-number">130</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enables logging</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FtpSync/FtpSync.html">FtpSync</a></span>
+		<span class="method-name">
+			enableLog
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLocalFilesRecursive" id="getLocalFilesRecursive"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLocalFilesRecursive</span> (line <span class="line-number">212</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Traverses local directory recursively</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getLocalFilesRecursive
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dir</span><span class="var-description">: local directory that should be traversed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLogger" id="getLogger"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLogger</span> (line <span class="line-number">141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the logger instance</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FtpSync/Logger.html">Logger</a></span>
+		<span class="method-name">
+			getLogger
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRemoteFilesRecursive" id="getRemoteFilesRecursive"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRemoteFilesRecursive</span> (line <span class="line-number">189</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Traverses remote directory recursively</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getRemoteFilesRecursive
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dir</span><span class="var-description">: remote directory that should be traversed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSyncStrategies" id="getSyncStrategies"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSyncStrategies</span> (line <span class="line-number">104</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">getSyncStrategies</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FtpSync/Strategy_Abstract.html">Strategy_Abstract</a></span>
+		<span class="method-name">
+			getSyncStrategies
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodignore" id="ignore"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">ignore</span> (line <span class="line-number">155</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds file to the blacklist</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ignore
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisReportOnly" id="isReportOnly"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isReportOnly</span> (line <span class="line-number">178</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">isReportOnly</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isReportOnly
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodreportOnly" id="reportOnly"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">reportOnly</span> (line <span class="line-number">167</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the report mode</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FtpSync/FtpSync.html">FtpSync</a></span>
+		<span class="method-name">
+			reportOnly
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseStrategy" id="useStrategy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">useStrategy</span> (line <span class="line-number">115</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets current strategy and returns strategy object</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FtpSync/Strategy_Abstract.html">Strategy_Abstract</a></span>
+		<span class="method-name">
+			useStrategy
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$strategy</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$strategy</span><span class="var-description">: e.g. Strategy_Size</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_init" id="_init"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_init</span> (line <span class="line-number">74</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_init
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../FtpSync/Ftp.html#method_init">Ftp::_init()</a></dt>
+						<dd>Initialization</dd>
+					</dl>
+			
+	</div>
+<a name="method_isInBlackList" id="_isInBlackList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_isInBlackList</span> (line <span class="line-number">89</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks whether a file is in blacklist or not</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_isInBlackList
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filepath</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filepath</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../FtpSync/Ftp.html">Ftp</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#method__construct">Ftp::__construct()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodchdir">Ftp::chdir()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodclose">Ftp::close()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methoddelete">Ftp::delete()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodget">Ftp::get()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodgetRemoteFiles">Ftp::getRemoteFiles()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodmkdir">Ftp::mkdir()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodmtime">Ftp::mtime()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodput">Ftp::put()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodpwd">Ftp::pwd()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodrmdir">Ftp::rmdir()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodsetMode">Ftp::setMode()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodsetPassive">Ftp::setPassive()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodsize">Ftp::size()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#methodsystype">Ftp::systype()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#method_connect">Ftp::_connect()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#method_getRemoteFileExt">Ftp::_getRemoteFileExt()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#method_init">Ftp::_init()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#method_isDir">Ftp::_isDir()</a></span><br>
+													<span class="method-name"><a href="../FtpSync/Ftp.html#method_login">Ftp::_login()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constSYNC_BY_CLEANUP" id="SYNC_BY_CLEANUP"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SYNC_BY_CLEANUP</span>
+			 = <span class="const-default"> 'Strategy_CleanUp'</span>
+			(line <span class="line-number">23</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSYNC_BY_MTIME" id="SYNC_BY_MTIME"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SYNC_BY_MTIME</span>
+			 = <span class="const-default"> 'Strategy_MTime'</span>
+			(line <span class="line-number">22</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSYNC_BY_SIZE" id="SYNC_BY_SIZE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SYNC_BY_SIZE</span>
+			 = <span class="const-default"> 'Strategy_Size'</span>
+			(line <span class="line-number">21</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+							<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../FtpSync/Ftp.html">Ftp</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../FtpSync/Ftp.html#constMODE_AUTO">Ftp::MODE_AUTO</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 28 Nov 2011 22:08:34 +0330 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

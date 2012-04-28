@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="recommendations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="recommendation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recommendation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title"/>
+        <xs:element ref="image"/>
+        <xs:element ref="link"/>
+        <xs:element ref="description" />
+      </xs:sequence>
+	  <xs:attribute name="priority" use="optional" type="xs:nonNegativeInteger"/>
+	  <xs:attribute name="taxonomy" use="optional" type="xs:string"/>
+		<xs:attribute name="type" use="optional" type="xs:string"/>
+		<xs:attribute name="subject" use="optional" type="xs:string"/>			
+		<xs:attribute name="creator" use="optional" type="xs:string"/>
+		<xs:attribute name="audience" use="optional" type="xs:string"/>	  
+		<xs:attribute name="date" use="optional" type="xs:date"/>
+		<xs:attribute name="time" use="optional" type="xs:time"/>	
+		<xs:attribute name="identifier" use="optional" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title">
+    <xs:complexType mixed="true">
+      <xs:attribute name="duration" use="optional" type="xs:string"/>
+      <xs:attribute name="playlist" use="optional" type="xs:string"/>
+      <xs:attribute name="captions" use="optional" type="xs:anyURI"/>
+      <xs:attribute name="subtitles" use="optional" type="xs:anyURI"/>
+		<xs:attribute name="language" use="optional" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:anyURI">
+		  <xs:attribute name="camera" use="optional" type="xs:string"/>		
+		  <xs:attribute name="thumb" use="optional" type="xs:string"/>
+		  <xs:attribute name="gallery" use="optional" type="xs:string"/>		  
+			<xs:attribute name="format" use="optional" type="xs:string"/>
+			<xs:attribute name="creator" use="optional" type="xs:anyURI"/>         
+			<xs:attribute name="date" use="optional" type="xs:date"/>
+			<xs:attribute name="time" use="optional" type="xs:time"/>
+			<xs:attribute name="publisher" use="optional" type="xs:anyURI"/>
+			<xs:attribute name="rights" use="optional" type="xs:string"/>
+			<xs:attribute name="rightsHolder" use="optional" type="xs:anyURI"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="link">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:anyURI">
+          <xs:attribute name="proxy" use="optional" type="xs:anyURI"/>
+          <xs:attribute name="download" use="optional" type="xs:anyURI"/>
+		  <xs:attribute name="oembed" use="optional" type="xs:anyURI"/>
+          <xs:attribute name="mobile" use="optional" type="xs:anyURI"/>
+		  <xs:attribute name="mobilestream" use="optional" type="xs:anyURI"/>
+		  <xs:attribute name="mobiledownload" use="optional" type="xs:anyURI"/>		  
+			<xs:attribute name="format" use="optional" type="xs:string"/>
+			<xs:attribute name="creator" use="optional" type="xs:string"/>
+			<xs:attribute name="date" use="optional" type="xs:date"/>
+			<xs:attribute name="time" use="optional" type="xs:time"/>
+			<xs:attribute name="publisher" use="optional" type="xs:string"/>
+			<xs:attribute name="rights" use="optional" type="xs:string"/>
+			<xs:attribute name="rightsHolder" use="optional" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description" use="optional">
+    <xs:complexType mixed="true">
+      <xs:simpleContent>
+        <xs:extension base="xs:string">	
+	      <xs:attribute name="rating" use="optional" type="xs:string"/>
+          <xs:attribute name="review" use="optional" type="xs:string"/>
+		    <xs:attribute name="language" use="optional" type="xs:NCName"/>
+		    <xs:attribute name="creator" use="optional" type="xs:string"/>
+		    <xs:attribute name="date" use="optional" type="xs:date"/>
+        </xs:extension>
+      </xs:simpleContent>			
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dcterms="http://purl.org/dc/terms/">
+<channel>
+<title>Example MRSS</title>
+<link>http://www.example.com/examples/mrss/</link>
+<description>MRSS Example</description>
+  <item xmlns:media="http://search.yahoo.com/mrss/" xmlns:dcterms="http://purl.org/dc/terms/">
+    <link>http://www.example.com/examples/mrss/example.html</link>
+    <media:content url="http://www.example.com/examples/mrss/example.flv" fileSize="405321"
+      type="video/x-flv" height="240" width="320" duration="120" medium="video" isDefault="true">
+      <media:player url="http://www.example.com/shows/example/video.swf?flash_params" />
+      <media:title>Grilling Steaks for Summer</media:title>
+      <media:description>Get perfectly done steaks every time</media:description>
+      <media:thumbnail url="http://www.example.com/examples/mrss/example.png" height="120" width="160"/>
+      <media:price price="19.99" currency="EUR" />      
+    </media:content>
+    <media:restriction relationship="allow" type="country">us ca</media:restriction>
+    <dcterms:valid xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF</dcterms:valid>
+  </item>
+</channel>
+</rss>

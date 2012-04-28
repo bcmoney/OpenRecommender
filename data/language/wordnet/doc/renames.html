@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>WordNet SQL - Queries</title>
+<meta name="author" content="Bernard Bou">
+<meta name="created" content="20050201;12154260">
+<meta name="changedby" content="Bernard Bou">
+<meta name="changed" content="20090415;10000000">
+<meta name="keywords" content="wordnet,sql">
+<link rel="stylesheet" href="wordnet-style.css" type="text/css">
+<link rel="stylesheet" href="style-rename.css" type="text/css">
+</head>
+<body>
+<table width="100%" border="0">
+  <tbody>
+    <tr>
+      <td class="color1" width="25%">&nbsp;</td>
+      <td class="color2" width="25%">&nbsp;</td>
+      <td class="color3" width="25%">&nbsp;</td>
+      <td class="color4" width="25%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4"><p align="center"><img src="images/wnlogo.gif" alt="wordnet" width="279" height="92"><br>
+</p></td>
+    </tr>
+    <tr>
+      <td colspan="4"><p align="center"> <span class="color4"><b>wordnet sql builder </b></span><br>
+          <span class="subtitle">Bernard Bou</span><br>
+      <a href="mailto:bbou@ac-toulouse.fr">bbou@ac-toulouse.fr</a></p></td>
+    </tr>
+    <tr>
+      <td class="color1" width="25%">&nbsp;</td>
+      <td class="color2" width="25%">&nbsp;</td>
+      <td class="color3" width="25%">&nbsp;</td>
+      <td class="color4" width="25%">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<div class="section" align="center">CHANGES FROM 1.x to 2.x</div>
+<div class="section" align="center">WORDNET</div>
+<table class="sectiontable" align="center"><tbody>
+<tr><th class="header">1</th><th class="header">2</th></tr>
+<tr class="trow"><td class="table1">
+casedword		</td><td class="table2">casedwords</td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2">casedwordid
+	<tr class="frow"><td class="field1">
+	lemma			</td><td class="field2">cased</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">wordid</td></tr>
+<tr class="trow"><td class="table1">
+categorydef		</td><td class="table2">lexdomains</td></tr>
+	<tr class="frow"><td class="field1">
+	categoryid		</td><td class="field2">lexdomainid</td></tr>
+	<tr class="frow"><td class="field1">
+	name			</td><td class="field2">lexdomainname</td></tr>
+	<tr class="frow"><td class="field1">
+	pos			</td><td class="field2">pos</td></tr>
+<tr class="trow"><td class="table1">
+framedef		</td><td class="table2">vframes</td></tr>
+	<tr class="frow"><td class="field1">
+	frameid			</td><td class="field2">frameid</td></tr>
+	<tr class="frow"><td class="field1">
+	frame			</td><td class="field2">frame</td></tr>
+<tr class="trow"><td class="table1">
+frameref		</td><td class="table2">vframemaps</td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+	frameid			</td><td class="field2">frameid</td></tr>
+<tr class="trow"><td class="table1">
+lexlinkref		</td><td class="table2">lexlinks</td></tr>
+	<tr class="frow"><td class="field1">
+	synset1id		</td><td class="field2">synset1id</td></tr>
+	<tr class="frow"><td class="field1">
+	word1id			</td><td class="field2">word1id</td></tr>
+	<tr class="frow"><td class="field1">
+	synset2id		</td><td class="field2">synset2id</td></tr>
+	<tr class="frow"><td class="field1">
+	word2id			</td><td class="field2">word2id</td></tr>
+	<tr class="frow"><td class="field1">
+	linkid			</td><td class="field2">linkid</td></tr>
+<tr class="trow"><td class="table1">
+linkdef			</td><td class="table2">linktypes</td></tr>
+	<tr class="frow"><td class="field1">
+	linkid			</td><td class="field2">linkid</td></tr>
+	<tr class="frow"><td class="field1">
+	name			</td><td class="field2">link</td></tr>
+	<tr class="frow"><td class="field1">
+	recurses		</td><td class="field2">recurses</td></tr>
+<tr class="trow"><td class="table1">
+morphdef		</td><td class="table2">morphs</td></tr>
+	<tr class="frow"><td class="field1">
+	morphid			</td><td class="field2">morphid</td></tr>
+	<tr class="frow"><td class="field1">
+	lemma			</td><td class="field2">morph</td></tr>
+<tr class="trow"><td class="table1">
+morphref		</td><td class="table2">morphmaps</td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+	pos			</td><td class="field2">pos</td></tr>
+	<tr class="frow"><td class="field1">
+	morphid			</td><td class="field2">morphid</td></tr>
+<tr class="trow"><td class="table1">
+sample			</td><td class="table2">samples</td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+	sampleid		</td><td class="field2">sampleid</td></tr>
+	<tr class="frow"><td class="field1">
+	sample			</td><td class="field2">sample</td></tr>
+<tr class="trow"><td class="table1">
+semlinkref		</td><td class="table2">semlinks</td></tr>
+	<tr class="frow"><td class="field1">
+	synset1id		</td><td class="field2">synset1id</td></tr>
+	<tr class="frow"><td class="field1">
+	synset2id		</td><td class="field2">synset2id</td></tr>
+	<tr class="frow"><td class="field1">
+	linkid			</td><td class="field2">linkid</td></tr>
+<tr class="trow"><td class="table1">
+sense			</td><td class="table2">senses</td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+	casedwordid		</td><td class="field2">casedwordid</td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+	rank			</td><td class="field2">sensenum</td></tr>
+	<tr class="frow"><td class="field1">
+	lexid			</td><td class="field2">lexid</td></tr>
+	<tr class="frow"><td class="field1">
+	tagcount		</td><td class="field2">tagcount</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">senseid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">sensekey</td></tr>
+<tr class="trow"><td class="table1">
+sentencedef		</td><td class="table2">vframesentences</td></tr>
+	<tr class="frow"><td class="field1">
+	sentenceid		</td><td class="field2">sentenceid</td></tr>
+	<tr class="frow"><td class="field1">
+	sentence		</td><td class="field2">sentence</td></tr>
+<tr class="trow"><td class="table1">
+sentenceref		</td><td class="table2">vframesentencemaps</td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+	sentenceid		</td><td class="field2">sentenceid</td></tr>
+<tr class="trow"><td class="table1">
+synset			</td><td class="table2">synsets</td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+	pos			</td><td class="field2">pos</td></tr>
+	<tr class="frow"><td class="field1">
+	categoryid		</td><td class="field2">lexdomainid</td></tr>
+	<tr class="frow"><td class="field1">
+	definition		</td><td class="field2">definition</td></tr>
+<tr class="trow"><td class="table1">
+word			</td><td class="table2">words</td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+	lemma			</td><td class="field2">lemma</td></tr>
+<tr class="trow"><td class="table1">
+wordposition		</td><td class="table2">adjpositions</td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+	positionid		</td><td class="field2">position</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">adjpositiontypes</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">position</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">positionname</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">postypes</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">pos</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">posname</td></tr>
+</tbody></table>
+
+<div class="section" align="center">LEGACY</div>
+<table class="sectiontable" align="center"><tbody>
+<tr><th class="header">1</th><th class="header">2</th></tr>
+<tr class="trow"><td class="table1">
+legacyXXYY		</td><td class="table2"></td></tr>
+	<tr class="frow"><td class="field1">
+	mapid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid2		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	score			</td><td class="field2"></td></tr>
+<tr class="trow"><td class="table1">
+legacysensekeyXXYY	</td><td class="table2"></td></tr>
+	<tr class="frow"><td class="field1">
+	mapid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	sensekey		</td><td class="field2"></td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">sensesXX</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">senseid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">sensenum</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">sensekey</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">sensemapsXXYY</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">synsetid2</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">quality</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">synsetmapsXXYY</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">synsetid2</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">quality</td></tr>
+</tbody></table>
+
+<div class="section" align="center">VERBNET</div>
+<table class="sectiontable" align="center"><tbody>
+<tr><th class="header">1</th><th class="header">2</th></tr>
+<tr class="trow"><td class="table1">
+vnclass			</td><td class="table2">vnclasses</td></tr>
+	<tr class="frow"><td class="field1">
+	classid			</td><td class="field2">classid</td></tr>
+	<tr class="frow"><td class="field1">
+	class			</td><td class="field2">class</td></tr>
+<tr class="trow"><td class="table1">
+vnexampledef		</td><td class="table2">vnexamples</td></tr>
+	<tr class="frow"><td class="field1">
+	exampleid		</td><td class="field2">exampleid</td></tr>
+	<tr class="frow"><td class="field1">
+	example			</td><td class="field2">example</td></tr>
+<tr class="trow"><td class="table1">
+vnexampleref		</td><td class="table2">vnexamplemaps</td></tr>
+	<tr class="frow"><td class="field1">
+	frameid			</td><td class="field2">frameid</td></tr>
+	<tr class="frow"><td class="field1">
+	exampleid		</td><td class="field2">exampleid</td></tr>
+<tr class="trow"><td class="table1">
+vnframedef		</td><td class="table2"></td></tr>
+	<tr class="frow"><td class="field1">
+	frameid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	number			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	xtag			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	description1		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	description2		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	syntax			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	semantics		</td><td class="field2"></td></tr>
+<tr class="trow"><td class="table1">
+vnframeref		</td><td class="table2"></td></tr>
+	<tr class="frow"><td class="field1">
+	framerefid		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	frameid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	classid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	quality			</td><td class="field2"></td></tr>
+<tr class="trow"><td class="table1">
+vnrole			</td><td class="table2"></td></tr>
+	<tr class="frow"><td class="field1">
+	roleid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	wordid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	classid			</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	rolesetid		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	roletypeid		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	selrestrsid		</td><td class="field2"></td></tr>
+	<tr class="frow"><td class="field1">
+	quality			</td><td class="field2"></td></tr>
+<tr class="trow"><td class="table1">
+vnroletype		</td><td class="table2">vnroletypes</td></tr>
+	<tr class="frow"><td class="field1">
+	roletypeid		</td><td class="field2">roletypeid</td></tr>
+	<tr class="frow"><td class="field1">
+	type			</td><td class="field2">roletype</td></tr>
+<tr class="trow"><td class="table1">
+vnselrestr		</td><td class="table2">vnselrestrtypes</td></tr>
+	<tr class="frow"><td class="field1">
+	value			</td><td class="field2">selrestrval</td></tr>
+	<tr class="frow"><td class="field1">
+	type			</td><td class="field2">selrestr</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">selrestrid</td></tr>
+<tr class="trow"><td class="table1">
+vnselrestrs		</td><td class="table2">vnselrestrs</td></tr>
+	<tr class="frow"><td class="field1">
+	selrestrsid		</td><td class="field2">selrestrsid</td></tr>
+	<tr class="frow"><td class="field1">
+	selrestrs		</td><td class="field2">selrestrs</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnframemaps</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">mapid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">frameid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">quality</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnrolemaps</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">mapid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">roleid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">quality</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnclassmembers</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">classid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">wordid</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnframes</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">frameid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">number</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">xtag</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">nameid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">subnameid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">syntaxid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">semanticsid</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnroles</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">roleid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">roletypeid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">selrestrsid</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnframenames</td></tr></td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">nameid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">framename</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnframesubnames</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">subnameid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">subname</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnsemantics</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">semanticsid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">semantics
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnsyntaxes</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">syntaxid</td></tr></td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">syntax</td></tr></td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnpredicatemaps</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">semanticsid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">predid</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">vnpredicates
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">predid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">pred</td></tr>
+</tbody></table>
+
+<div class="section" align="center">XWORDNET</div>
+<table class="sectiontable" align="center"><tbody>
+<tr><th class="header">1</th><th class="header">2</th></tr>
+<tr class="trow"><td class="table1">
+xwnparselft		</td><td class="table2">xwnparselfts</td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+	parse			</td><td class="field2">parse</td></tr>
+	<tr class="frow"><td class="field1">
+	lft			</td><td class="field2">lft</td></tr>
+	<tr class="frow"><td class="field1">
+	parsequality		</td><td class="field2">parsequality</td></tr>
+	<tr class="frow"><td class="field1">
+	lftquality		</td><td class="field2">lftquality</td></tr>
+<tr class="trow"><td class="table1">
+xwnwsd			</td><td class="table2">xwnwsds</td></tr>
+	<tr class="frow"><td class="field1">
+	synsetid		</td><td class="field2">synsetid</td></tr>
+	<tr class="frow"><td class="field1">
+	wsd			</td><td class="field2">wsd</td></tr>
+	<tr class="frow"><td class="field1">
+	text			</td><td class="field2">text</td></tr>
+</tbody></table>
+
+<div class="section" align="center">BNC</div>
+<table class="sectiontable" align="center"><tbody>
+<tr><th class="header">1</th><th class="header">2</th></tr>
+<tr class="trow"><td class="table1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</td><td class="table2">bncs</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">pos</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">freq</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">range</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">disp</td></tr>
+<tr class="trow"><td class="table1">
+			</td><td class="table2">bncAABB</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">wordid</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">pos</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">freq1</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">range1</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">disp1</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">freq2</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">range2</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">disp2</td></tr>
+	<tr class="frow"><td class="field1">
+				</td><td class="field2">ll</td></tr>
+</tbody></table>
+
+</body>
+</html>

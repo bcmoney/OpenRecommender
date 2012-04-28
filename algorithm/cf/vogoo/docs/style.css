@@ -1,0 +1,62 @@
+html {
+	height: 101%;
+}
+body {
+	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.maintable {
+	background-color: #CCCCCC;
+}
+.intable {
+	 background-color: #FFFFFF;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.orangelink {
+	font-size: 12px;
+	color: #FF5A00;
+	text-decoration: none;
+}
+.orangelink:hover {
+	text-decoration: underline;
+}
+.leftmenutitle {
+	color: #000000;
+	background-color: #AAAAAA;
+	font-size: 13px;
+	font-weight: bold;
+}
+.leftmenuitem {
+	color: #000000;
+	background-color: #CCCCCC;
+	font-size: 12px;
+}
+.bottomlink {
+	color: #FFFFFF;
+	background-color: #FF5A00;
+	font-size: 14px;
+	font-weight: bold;
+}
+.title {
+	color: #FF5A00;
+	font-size: 15px;
+	font-weight: bold;
+}
+.subtitle {
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+}
+.text {
+	font-size: 12px;
+}
+.code {
+	font-family: Courier, 'Courier New', sans-serif; font-size: 11px; color: #000000;
+}

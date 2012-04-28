@@ -1,0 +1,40 @@
+{"geonames": [{
+  "adminCode3": "751",
+  "adminCode2": "75",
+  "alternateNames": [
+    {
+      "name": "http://en.wikipedia.org/wiki/2nd_arrondissement_of_Paris",
+      "lang": "link"
+    },
+    {
+      "name": "75002",
+      "lang": "post"
+    }
+  ],
+  "adminCode1": "A8",
+  "countryName": "France",
+  "lng": 2.3426,
+  "adminCode4": "75102",
+  "adminName2": "Paris",
+  "fcodeName": "populated place",
+  "adminName3": "Paris",
+  "timezone": {
+    "dstOffset": 2,
+    "gmtOffset": 1,
+    "timeZoneId": "Europe/Paris"
+  },
+  "adminName4": "Paris 02",
+  "distance": "0.11833",
+  "name": "Paris 02 Bourse",
+  "fcode": "PPL",
+  "geonameId": 3030864,
+  "lat": 48.8655,
+  "population": 0,
+  "adminName1": "Île-de-France",
+  "fclName": "city, village,...",
+  "elevation": 0,
+  "countryCode": "FR",
+  "toponymName": "Paris 02 Bourse",
+  "fcl": "P",
+  "continentCode": "EU"
+}]}

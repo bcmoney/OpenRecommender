@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Score">
+  <element name="score">
+    <complexType>
+      <sequence>
+        <element name="id" type="string" />
+        <element name="lastGame" type="dateTime" />
+        <element name="player" type="Player" />
+        <element name="computer" type="Computer" />
+      </sequence>
+    </complexType>
+  </element>
+  <complexType name="Player">
+    <sequence>
+      <element name="points" type="int" />
+      <element name="lastChoice" type="string" />
+      <element name="rock" type="int" />
+      <element name="paper" type="int" />
+      <element name="scissors" type="int" />
+    </sequence>
+  </complexType>
+  <complexType name="Computer">
+    <sequence>         
+      <element name="points" type="int" />
+      <element name="lastChoice" type="string" />
+      <element name="rock" type="int" />
+      <element name="paper" type="int" />
+      <element name="scissors" type="int" />
+    </sequence>
+  </complexType>      
+</schema>

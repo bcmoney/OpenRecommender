@@ -1,0 +1,932 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">VERBNET</DIV>
+<DIV class="sqlcomment">vn role types</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT *  FROM vnroletypes</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>roletypeid</TH><TH>roletype</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">1</TD><TD class="sqlfield">Actor</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">2</TD><TD class="sqlfield">Actor1</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3</TD><TD class="sqlfield">Actor2</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">4</TD><TD class="sqlfield">Agent</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">5</TD><TD class="sqlfield">Asset</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">6</TD><TD class="sqlfield">Attribute</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">7</TD><TD class="sqlfield">Beneficiary</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">8</TD><TD class="sqlfield">Cause</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">9</TD><TD class="sqlfield">Destination</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">10</TD><TD class="sqlfield">Experiencer</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">11</TD><TD class="sqlfield">Extent</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">12</TD><TD class="sqlfield">Instrument</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">13</TD><TD class="sqlfield">Location</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">14</TD><TD class="sqlfield">Material</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">15</TD><TD class="sqlfield">Oblique</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">16</TD><TD class="sqlfield">Patient</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">17</TD><TD class="sqlfield">Patient1</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">18</TD><TD class="sqlfield">Patient2</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">19</TD><TD class="sqlfield">Predicate</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">20</TD><TD class="sqlfield">Product</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">21</TD><TD class="sqlfield">Proposition</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">22</TD><TD class="sqlfield">Recipient</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">23</TD><TD class="sqlfield">Source</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">24</TD><TD class="sqlfield">Stimulus</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">25</TD><TD class="sqlfield">Theme</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">26</TD><TD class="sqlfield">Theme1</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">27</TD><TD class="sqlfield">Theme2</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">28</TD><TD class="sqlfield">Time</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">29</TD><TD class="sqlfield">Topic</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">30</TD><TD class="sqlfield">Value</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">vnclasses with members</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT class,COUNT(wordid) AS N,SUBSTRING(GROUP_CONCAT(lemma) FROM 1 FOR 80) FROM vnclassmembers INNER JOIN vnclasses USING (classid) INNER JOIN words USING (wordid) GROUP BY classid ORDER BY N DESC LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>class</TH><TH>N</TH><TH>SUBSTRING(GROUP_CONCAT(lemma) FROM 1 FOR 80)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">other_cos-45.4</TD><TD class="sqlfield">373</TD><TD class="sqlfield">distend,abbreviate,soak,granulate,clog,worsen,nitrify,empty,amplify,straighten,i</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">amuse-31.1</TD><TD class="sqlfield">242</TD><TD class="sqlfield">confound,flabbergast,roil,depress,jollify,horrify,spook,terrify,dispirit,numb,ag</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">run-51.3.2</TD><TD class="sqlfield">126</TD><TD class="sqlfield">speed,gallop,limp,tear,promenade,waddle,scramble,canter,slog,flit,jog,swagger,pa</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">butter-9.9</TD><TD class="sqlfield">117</TD><TD class="sqlfield">calk,plaster,forest,salve,starch,label,turf,bridle,patch,drug,rouge,sod,halter,t</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">sound_emission-43.2</TD><TD class="sqlfield">116</TD><TD class="sqlfield">creak,tick,hum,whish,plunk,chime,shrill,clunk,thud,gurgle,wail,pink,burble,rustl</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fill-9.8</TD><TD class="sqlfield">97</TD><TD class="sqlfield">replenish,bind,stipple,deck,entangle,inlay,panel,anoint,speckle,contaminate,enci</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">judgement-33</TD><TD class="sqlfield">93</TD><TD class="sqlfield">forgive,malign,reprove,belittle,toast,condone,excuse,insult,remunerate,assail,sn</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">manner_speaking-37.3</TD><TD class="sqlfield">83</TD><TD class="sqlfield">thunder,coo,yell,holler,rasp,squeal,chant,whistle,grumble,prattle,splutter,burbl</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">animal_sounds-38</TD><TD class="sqlfield">68</TD><TD class="sqlfield">call,growl,pipe,wail,boom,cuckoo,moo,trill,bay,yip,cluck,low,squeak,woof,cheep,h</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">tape-22.4</TD><TD class="sqlfield">57</TD><TD class="sqlfield">hitch,padlock,tack,glue,manacle,staple,chain,leash,seal,truss,bracket,lace,plast</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">crane-40.3.2</TD><TD class="sqlfield">47</TD><TD class="sqlfield">bat,flutter,show,flap,raise,waggle,crane,knit,turn,clench,grind,snap,bare,flick,</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">steal-10.5</TD><TD class="sqlfield">47</TD><TD class="sqlfield">cabbage,liberate,rescue,highjack,purloin,take,extort,pilfer,snatch,confiscate,na</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">pocket-9.10</TD><TD class="sqlfield">47</TD><TD class="sqlfield">cellar,pasture,tin,box,jail,spit,bench,garage,shoulder,bag,corral,pocket,warehou</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">admire-31.2</TD><TD class="sqlfield">45</TD><TD class="sqlfield">disbelieve,pity,trust,bewail,lament,suffer,affirm,fancy,revere,envy,reaffirm,wor</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">entity_specific_modes_being-47.2</TD><TD class="sqlfield">45</TD><TD class="sqlfield">decompose,rage,tarnish,burn,grow,stagnate,blow,flower,smoke,ferment,roil,wither,</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">nonverbal_expression-40.2</TD><TD class="sqlfield">43</TD><TD class="sqlfield">snivel,cackle,groan,sneeze,glower,simper,yawn,gasp,pout,sob,cough,howl,snigger,b</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">spatial_configuration-47.6</TD><TD class="sqlfield">41</TD><TD class="sqlfield">dangle,perch,squat,balance,loom,slope,kneel,rise,fly,protrude,straddle,crouch,op</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">pit-10.7</TD><TD class="sqlfield">40</TD><TD class="sqlfield">worm,core,poll,tassel,bark,pip,stem,louse,shuck,head,scale,wind,burl,pod,tail,pi</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">remove-10.1</TD><TD class="sqlfield">39</TD><TD class="sqlfield">draw,partition,disengage,lop,withdraw,deduct,expel,shoo,eradicate,remove,dismiss</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">modes_of_being_with_motion-47.3</TD><TD class="sqlfield">38</TD><TD class="sqlfield">bow,quiver,vibrate,joggle,totter,float,sway,drift,roil,waver,bob,quake,vacillate</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">vnmembers with classes</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,COUNT(classid) N,SUBSTRING(GROUP_CONCAT(class) FROM 1 FOR 80) FROM vnclassmembers INNER JOIN vnclasses USING (classid) INNER JOIN words USING (wordid) GROUP BY wordid ORDER BY N DESC LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>N</TH><TH>SUBSTRING(GROUP_CONCAT(class) FROM 1 FOR 80)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">roll</TD><TD class="sqlfield">10</TD><TD class="sqlfield">coil-9.6,split-23.2,roll-51.3.1,build-26.1,sound_emission-43.2,run-51.3.2,shake-</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">take</TD><TD class="sqlfield">9</TD><TD class="sqlfield">steal-10.5,require-103,performance-26.7-2,fit-54.3,hire-13.5.3,bring-11.3,charac</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">cut</TD><TD class="sqlfield">8</TD><TD class="sqlfield">amuse-31.1,build-26.1-1,hurt-40.8.3-2,cut-21.1-1,cut-21.1,braid-41.2.2,split-23.</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">shake</TD><TD class="sqlfield">8</TD><TD class="sqlfield">shake-22.3,amuse-31.1,knead-26.5,funnel-9.3-2-1,shake-22.3-2,crane-40.3.2,modes_</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">draw</TD><TD class="sqlfield">7</TD><TD class="sqlfield">remove-10.1,force-59-1,carry-11.4,performance-26.7-2-1,scribble-25.2,split-23.2,</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">kick</TD><TD class="sqlfield">7</TD><TD class="sqlfield">carry-11.4-1-1,swat-18.2,crane-40.3.2,throw-17.1-1-1,hit-18.1-1,body_internal_mo</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">clear</TD><TD class="sqlfield">6</TD><TD class="sqlfield">clear-10.3-1,other_cos-45.4,weather-57,clear-10.3,free-80-1,preparing-26.3-1</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">feel</TD><TD class="sqlfield">6</TD><TD class="sqlfield">stimulus_subject-30.4,hunt-35.1,consider-29.9-2,see-30.1-1,conjecture-29.5-1,mar</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">grow</TD><TD class="sqlfield">6</TD><TD class="sqlfield">entity_specific_modes_being-47.2,other_cos-45.4,build-26.1,appear-48.1.1,calibra</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">hang</TD><TD class="sqlfield">6</TD><TD class="sqlfield">spray-9.7-1,assuming_position-50,poison-42.2,put_spatial-9.2-1,spatial_configura</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">leave</TD><TD class="sqlfield">6</TD><TD class="sqlfield">keep-15.2,leave-51.2-1,resign-10.11,future_having-13.3,escape-51.1-1,fulfilling-</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">paint</TD><TD class="sqlfield">6</TD><TD class="sqlfield">butter-9.9,coloring-24,characterize-29.2,scribble-25.2,image_impression-25.1,per</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">pass</TD><TD class="sqlfield">6</TD><TD class="sqlfield">send-11.1-1,throw-17.1-1,consume-66,occurrence-48.3,give-13.1,spend_time-104</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">pull</TD><TD class="sqlfield">6</TD><TD class="sqlfield">split-23.2,push-12-1,hurt-40.8.3-1-1,carry-11.4,get-13.5.1,hold-15.1-1</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">push</TD><TD class="sqlfield">6</TD><TD class="sqlfield">push-12-1-1,hold-15.1-1,split-23.2,funnel-9.3-2-1,carry-11.4-1-1,force-59</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">read</TD><TD class="sqlfield">6</TD><TD class="sqlfield">discover-84-1-1,learn-14-2-1,transfer_mesg-37.1.1-1,register-54.1-1,learn-14-1,t</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">run</TD><TD class="sqlfield">6</TD><TD class="sqlfield">bump-18.4,carry-11.4,meander-47.7,preparing-26.3-1,swarm-47.5.1-1,run-51.3.2</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">scratch</TD><TD class="sqlfield">6</TD><TD class="sqlfield">cut-21.1-1,scribble-25.2,swat-18.2,wipe_manner-10.4.1-1,hurt-40.8.3-2,rummage-35</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">turn</TD><TD class="sqlfield">6</TD><TD class="sqlfield">hurt-40.8.3-1-1,crane-40.3.2,roll-51.3.1,convert-26.6.2,meander-47.7,turn-26.6.1</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">burn</TD><TD class="sqlfield">6</TD><TD class="sqlfield">entity_specific_modes_being-47.2,light_emission-43.1,entity_specific_cos-45.5,hu</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get verbnet thematic roles for verb "want"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,SUBSTRING(definition FROM 1 FOR 32),class,roletype,selrestrs FROM verbnetroles WHERE pos='v' AND lemma='want' ORDER BY synsetid,classid,roletype</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH><TH>class</TH><TH>roletype</TH><TH>selrestrs</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">appoint-29.1</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">appoint-29.1</TD><TD class="sqlfield">Predicate</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">appoint-29.1</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Attribute</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Experiencer</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Attribute</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Experiencer</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Attribute</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Experiencer</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">order-60</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">order-60</TD><TD class="sqlfield">Patient</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">order-60</TD><TD class="sqlfield">Proposition</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Attribute</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Experiencer</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Attribute</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Experiencer</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">want-32.1-1-1</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">get verbnet frame (syntax/semantics/example) for verb "want"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,SUBSTRING(definition FROM 1 FOR 32),framename,framesubname,syntax,semantics,example FROM verbnetframes WHERE pos='v' AND lemma='want'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH><TH>framename</TH><TH>framesubname</TH><TH>syntax</TH><TH>semantics</TH><TH>example</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-NP</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;NP value="Predicate"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="designated"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="result(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Predicate"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="cause"&gt;&lt;ARGS&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="Event" value="E"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">We elected him governor</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">as-PP</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;LEX value="as"/&gt;&lt;NP value="Predicate"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="-" type="sentential"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="designated"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="result(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Predicate"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="cause"&gt;&lt;ARGS&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="Event" value="E"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">We elected him as governor</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">Infinitival Copular Clause</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;LEX value="to"/&gt;&lt;LEX value="be"/&gt;&lt;NP value="Predicate"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="-" type="sentential"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="designated"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="result(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Predicate"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="cause"&gt;&lt;ARGS&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="Event" value="E"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">We elected Alan to be our new governor</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="designated"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="result(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Predicate"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="cause"&gt;&lt;ARGS&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="Event" value="E"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">They elected John</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him to go</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-TOBE</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="to_be"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him to be nice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">FOR-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="for_comp"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need for her to be happy</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">ING-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_omit_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need exercising</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-ADJP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;ADJ/&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">She wanted the meat red</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-ADVP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him here</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-ING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="acc_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-VEN-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_ppart"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need the children found</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">POSSING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="poss_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed his cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">TO-INF-SC</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="sc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed to come</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs new shoes</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">Possessor Object, Attribute-PP</TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="for"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Attribute"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs her for her skills</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">NP-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him to go</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">NP-TOBE</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="to_be"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him to be nice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">FOR-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="for_comp"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need for her to be happy</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">ING-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_omit_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need exercising</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">NP-ADJP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;ADJ/&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">She wanted the meat red</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">NP-ADVP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him here</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">NP-ING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="acc_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">NP-VEN-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_ppart"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need the children found</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">POSSING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="poss_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed his cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">TO-INF-SC</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="sc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed to come</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs new shoes</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">Possessor Object, Attribute-PP</TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="for"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Attribute"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs her for her skills</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">NP-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him to go</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">NP-TOBE</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="to_be"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him to be nice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">FOR-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="for_comp"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need for her to be happy</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">ING-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_omit_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need exercising</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">NP-ADJP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;ADJ/&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">She wanted the meat red</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">NP-ADVP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him here</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">NP-ING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="acc_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">NP-VEN-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_ppart"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need the children found</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">POSSING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="poss_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed his cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">TO-INF-SC</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="sc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed to come</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs new shoes</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">hunt or look for; want for a par</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">Possessor Object, Attribute-PP</TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="for"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Attribute"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs her for her skills</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="command"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="?Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">He ordered John</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">NP-TO-INF-OC</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="oc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="command"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">He ordered John to eat his sloth</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">NP-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him to go</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">NP-TOBE</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="to_be"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him to be nice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">FOR-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="for_comp"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need for her to be happy</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">ING-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_omit_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need exercising</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">NP-ADJP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;ADJ/&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">She wanted the meat red</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">NP-ADVP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him here</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">NP-ING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="acc_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">NP-VEN-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_ppart"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need the children found</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">POSSING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="poss_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed his cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">TO-INF-SC</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="sc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed to come</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs new shoes</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">feel or have a desire for; want </TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">Possessor Object, Attribute-PP</TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="for"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Attribute"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs her for her skills</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">NP-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him to go</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">NP-TOBE</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="to_be"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him to be nice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">FOR-TO-INF</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="for_comp"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need for her to be happy</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">ING-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_omit_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need exercising</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">NP-ADJP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;ADJ/&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">She wanted the meat red</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">NP-ADVP-PRED</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed him here</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">NP-ING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="acc_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need him cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">NP-VEN-NP-OMIT</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="np_ppart"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I need the children found</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">POSSING</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="poss_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed his cooking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">TO-INF-SC</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="sc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I needed to come</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs new shoes</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">be without, lack; be deficient i</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">Possessor Object, Attribute-PP</TD><TD class="sqlfield">&lt;NP value="Experiencer"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="for"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Attribute"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="desire"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Experiencer"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Dorothy needs her for her skills</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">lemma whose frames have semantics involving the "rotational_motion" predicate</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,SUBSTRING(definition FROM 1 FOR 32),framename,framesubname,frameid,SUBSTRING(semantics FROM 1 FOR 32) FROM verbnetframes INNER JOIN vnpredicatemaps USING (semanticsid) INNER JOIN vnpredicates USING (predid) WHERE pred='rotational_motion' ORDER BY lemma,framename,framesubname</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>SUBSTRING(definition FROM 1 FOR 32)</TH><TH>framename</TH><TH>framesubname</TH><TH>frameid</TH><TH>SUBSTRING(semantics FROM 1 FOR 32)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">coil</TD><TD class="sqlfield">wind around something in coils o</TD><TD class="sqlfield">Middle Construction</TD><TD class="sqlfield"></TD><TD class="sqlfield">310</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">coil</TD><TD class="sqlfield">wind around something in coils o</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">coil</TD><TD class="sqlfield">wind around something in coils o</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">twist or roll into coils or ring</TD><TD class="sqlfield">Middle Construction</TD><TD class="sqlfield"></TD><TD class="sqlfield">310</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">shape one's body into a curl</TD><TD class="sqlfield">Middle Construction</TD><TD class="sqlfield"></TD><TD class="sqlfield">310</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">wind around something in coils o</TD><TD class="sqlfield">Middle Construction</TD><TD class="sqlfield"></TD><TD class="sqlfield">310</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">twist or roll into coils or ring</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">shape one's body into a curl</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">wind around something in coils o</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">wind around something in coils o</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">twist or roll into coils or ring</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curl</TD><TD class="sqlfield">shape one's body into a curl</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">loop</TD><TD class="sqlfield">make a loop in</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">loop</TD><TD class="sqlfield">wind around something in coils o</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">loop</TD><TD class="sqlfield">make a loop in</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">loop</TD><TD class="sqlfield">wind around something in coils o</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">roll</TD><TD class="sqlfield">arrange or or coil around</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">roll</TD><TD class="sqlfield">arrange or or coil around</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rotate</TD><TD class="sqlfield">turn on or around an axis or a c</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rotate</TD><TD class="sqlfield">turn on or around an axis or a c</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">spin</TD><TD class="sqlfield">cause to spin</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">spin</TD><TD class="sqlfield">cause to spin</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swing</TD><TD class="sqlfield">move in a curve or arc, usually </TD><TD class="sqlfield">Middle Construction</TD><TD class="sqlfield"></TD><TD class="sqlfield">310</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swing</TD><TD class="sqlfield">change direction with a swinging</TD><TD class="sqlfield">Middle Construction</TD><TD class="sqlfield"></TD><TD class="sqlfield">310</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swing</TD><TD class="sqlfield">move in a curve or arc, usually </TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swing</TD><TD class="sqlfield">change direction with a swinging</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swing</TD><TD class="sqlfield">move in a curve or arc, usually </TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swing</TD><TD class="sqlfield">change direction with a swinging</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swirl</TD><TD class="sqlfield">turn in a twisting or spinning m</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swirl</TD><TD class="sqlfield">turn in a twisting or spinning m</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">twine</TD><TD class="sqlfield">arrange or or coil around</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">twine</TD><TD class="sqlfield">arrange or or coil around</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">twirl</TD><TD class="sqlfield">cause to spin</TD><TD class="sqlfield">Middle Construction</TD><TD class="sqlfield"></TD><TD class="sqlfield">310</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">twirl</TD><TD class="sqlfield">cause to spin</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">twirl</TD><TD class="sqlfield">cause to spin</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">twist</TD><TD class="sqlfield">form into twists</TD><TD class="sqlfield">Middle Construction</TD><TD class="sqlfield"></TD><TD class="sqlfield">310</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">twist</TD><TD class="sqlfield">form into twists</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">twist</TD><TD class="sqlfield">form into twists</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">whirl</TD><TD class="sqlfield">cause to spin</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">whirl</TD><TD class="sqlfield">cause to spin</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">wind</TD><TD class="sqlfield">arrange or or coil around</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">641</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">wind</TD><TD class="sqlfield">arrange or or coil around</TD><TD class="sqlfield">PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">945</TD><TD class="sqlfield">&lt;PRED value="rotational_motion"&gt;</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">vn class (and word members) having "Stimulus" role</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT class,GROUP_CONCAT(lemma) FROM verbnetroles WHERE roletype = 'Stimulus' GROUP BY roleid</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>class</TH><TH>GROUP_CONCAT(lemma)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">see-30.1-1-1</TD><TD class="sqlfield">hear,savor,sound,ogle,espy,sight,stare,inspect,survey,feel,note,watch,gape,see,peruse,look,listen,see,descry,scan,peer,experience,spy,taste,investigate,watch,feel,observe,sniff,glance,see,regard,smell,look,hear,discover,scrutinize,squint,inspect,survey,discern,note,watch,check,notice,perceive,look,leer,see,hear,scan,taste,peep,examine,spot,taste,investigate,watch,feel,observe,witness,gaze,see,recognize,smell,look,see,discover,scrutinize,snoop,glimpse,study,detect,note,watch,check,notice,overhear,feel,goggle,see,hear,savor,taste,peek,examine,spot,smell,inspect,view,feel,observe,witness,gawk,see,recognize,look,listen,see,discover,scent,sniff,eye,spy,taste,make out,watch,sense,observe,feel,glare,see</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">vn roles for "guide" by synset</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT synsetid,class,lemma,GROUP_CONCAT(roletype ORDER BY roletype),SUBSTRING(definition FROM 1 FOR 64) FROM verbnetroles  WHERE lemma = 'guide' GROUP BY synsetid,classid ORDER BY synsetid,classid</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>synsetid</TH><TH>class</TH><TH>lemma</TH><TH>GROUP_CONCAT(roletype ORDER BY roletype)</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">201212230</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide</TD><TD class="sqlfield">Agent,Destination,Theme</TD><TD class="sqlfield">pass over, across, or through</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">201931768</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide</TD><TD class="sqlfield">Agent,Destination,Theme</TD><TD class="sqlfield">direct the course; determine the direction of travelling</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">201931768</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">guide</TD><TD class="sqlfield">Agent,Patient,Proposition</TD><TD class="sqlfield">direct the course; determine the direction of travelling</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">201999798</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide</TD><TD class="sqlfield">Agent,Destination,Theme</TD><TD class="sqlfield">take somebody somewhere</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">202439732</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">guide</TD><TD class="sqlfield">Agent,Patient,Proposition</TD><TD class="sqlfield">be a guiding or motivating force or drive</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">vn roles for "guide" by synset (Verbnet-like entry)</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,class,sensekey,roletype,selrestrs,rquality FROM verbnetroles  WHERE lemma = 'guide' ORDER BY classid,sensekey,roletype,selrestrs</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>class</TH><TH>sensekey</TH><TH>roletype</TH><TH>selrestrs</TH><TH>rquality</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:35:00::</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:35:00::</TD><TD class="sqlfield">Destination</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:35:00::</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">Destination</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">Destination</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">Patient</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">Proposition</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">guide%2:41:00::</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">guide%2:41:00::</TD><TD class="sqlfield">Patient</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">guide%2:41:00::</TD><TD class="sqlfield">Proposition</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">vn roles/frames for "guide%2:38" (Verbnet-like entry)</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT DISTINCT sensekey,class,framename,framesubname,number,xtag,syntax,semantics,exampleset,  roletype,selrestrs,fquality,rquality FROM verbnetrolesframes LEFT JOIN vnexamplesets USING (frameid) WHERE sensekey LIKE 'guide%%2:38%' ORDER BY synsetid,class ASC,frameid ASC,roletypeid ASC</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>sensekey</TH><TH>class</TH><TH>framename</TH><TH>framesubname</TH><TH>number</TH><TH>xtag</TH><TH>syntax</TH><TH>semantics</TH><TH>exampleset</TH><TH>roletype</TH><TH>selrestrs</TH><TH>fquality</TH><TH>rquality</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose|Jackie chased the thief</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">0</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose|Jackie chased the thief</TD><TD class="sqlfield">Destination</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">0</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose|Jackie chased the thief</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">0</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP&gt;&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="spatial"/&gt;&lt;/SELRESTRS&gt;&lt;/PREP&gt;&lt;NP value="Destination"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose to the store</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">0</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP&gt;&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="spatial"/&gt;&lt;/SELRESTRS&gt;&lt;/PREP&gt;&lt;NP value="Destination"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose to the store</TD><TD class="sqlfield">Destination</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">0</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP&gt;&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="spatial"/&gt;&lt;/SELRESTRS&gt;&lt;/PREP&gt;&lt;NP value="Destination"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose to the store</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">0</TD><TD class="sqlfield">0</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="?Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="?Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him</TD><TD class="sqlfield">Patient</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="?Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him</TD><TD class="sqlfield">Proposition</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-P-ING-OC</TD><TD class="sqlfield">into-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="into"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="oc_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him into coming</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-P-ING-OC</TD><TD class="sqlfield">into-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="into"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="oc_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him into coming</TD><TD class="sqlfield">Patient</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-P-ING-OC</TD><TD class="sqlfield">into-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="into"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="oc_ing"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him into coming</TD><TD class="sqlfield">Proposition</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">into-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.1</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="into"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="-" type="sentential"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced John into the chairmanship</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">into-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.1</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="into"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="-" type="sentential"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced John into the chairmanship</TD><TD class="sqlfield">Patient</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">into-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.1</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP value="into"&gt;&lt;SELRESTRS/&gt;&lt;/PREP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="-" type="sentential"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced John into the chairmanship</TD><TD class="sqlfield">Proposition</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-TO-INF-OC</TD><TD class="sqlfield"></TD><TD class="sqlfield">8.1</TD><TD class="sqlfield">0.1</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="oc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him to come</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-TO-INF-OC</TD><TD class="sqlfield"></TD><TD class="sqlfield">8.1</TD><TD class="sqlfield">0.1</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="oc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him to come</TD><TD class="sqlfield">Patient</TD><TD class="sqlfield">&lt;SELRESTRS logic="or"&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;SELRESTR Value="+" type="organization"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:01::</TD><TD class="sqlfield">force-59-1</TD><TD class="sqlfield">NP-TO-INF-OC</TD><TD class="sqlfield"></TD><TD class="sqlfield">8.1</TD><TD class="sqlfield">0.1</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Patient"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;NP value="Proposition"&gt;&lt;SYNRESTRS&gt;&lt;SYNRESTR Value="+" type="oc_to_inf"/&gt;&lt;/SYNRESTRS&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="force"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Patient"/&gt;&lt;ARG type="ThemRole" value="Proposition"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">I forced him to come</TD><TD class="sqlfield">Proposition</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose|Jackie chased the thief</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose|Jackie chased the thief</TD><TD class="sqlfield">Destination</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">Basic Transitive</TD><TD class="sqlfield"></TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose|Jackie chased the thief</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP&gt;&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="spatial"/&gt;&lt;/SELRESTRS&gt;&lt;/PREP&gt;&lt;NP value="Destination"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose to the store</TD><TD class="sqlfield">Agent</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP&gt;&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="spatial"/&gt;&lt;/SELRESTRS&gt;&lt;/PREP&gt;&lt;NP value="Destination"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose to the store</TD><TD class="sqlfield">Destination</TD><TD class="sqlfield">&lt;SELRESTRS/&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">guide%2:38:00::</TD><TD class="sqlfield">accompany-51.7</TD><TD class="sqlfield">NP-PP</TD><TD class="sqlfield">path-PP</TD><TD class="sqlfield">0.2</TD><TD class="sqlfield"></TD><TD class="sqlfield">&lt;NP value="Agent"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;VERB/&gt;&lt;NP value="Theme"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;&lt;PREP&gt;&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="spatial"/&gt;&lt;/SELRESTRS&gt;&lt;/PREP&gt;&lt;NP value="Destination"&gt;&lt;SYNRESTRS/&gt;&lt;/NP&gt;</TD><TD class="sqlfield">&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="motion"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="during(E)"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Theme"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;&lt;PRED value="Prep"&gt;&lt;ARGS&gt;&lt;ARG type="Event" value="E"/&gt;&lt;ARG type="ThemRole" value="Agent"/&gt;&lt;ARG type="ThemRole" value="Destination"/&gt;&lt;/ARGS&gt;&lt;/PRED&gt;</TD><TD class="sqlfield">Jackie accompanied Rose to the store</TD><TD class="sqlfield">Theme</TD><TD class="sqlfield">&lt;SELRESTRS&gt;&lt;SELRESTR Value="+" type="animate"/&gt;&lt;/SELRESTRS&gt;</TD><TD class="sqlfield">100</TD><TD class="sqlfield">100</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">stats</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT COUNT(*) FROM vnframemaps</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>COUNT(*)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">52968</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT fquality,COUNT(*) FROM vnframemaps WHERE fquality = 0</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>fquality</TH><TH>COUNT(*)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">0</TD><TD class="sqlfield">643</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT fquality,COUNT(*) FROM vnframemaps WHERE fquality = 100</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>fquality</TH><TH>COUNT(*)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">52325</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT COUNT(*) FROM vnrolemaps</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>COUNT(*)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">26779</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT rquality,COUNT(*) FROM vnrolemaps WHERE rquality = 0</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>rquality</TH><TH>COUNT(*)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">0</TD><TD class="sqlfield">418</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT rquality,COUNT(*) FROM vnrolemaps WHERE rquality = 100</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>rquality</TH><TH>COUNT(*)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">100</TD><TD class="sqlfield">26361</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

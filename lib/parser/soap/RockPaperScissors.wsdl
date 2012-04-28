@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="RockPaperScissors" 
+  targetNamespace="urn:RockPaperScissors" 
+  xmlns:typens="urn:RockPaperScissors"
+  xmlns:external="urn:Game"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+  xmlns="http://schemas.xmlsoap.org/wsdl/">
+  
+  <!-- WSDL v1.1 -->
+  <types>
+    <xsd:import namespace="urn:Game" schemaLocation= "http://bcmoney-mobiletv.com/api/soap/RockPaperScissors/Game.xsd"/>
+    <xsd:import namespace="urn:Score" schemaLocation= "http://bcmoney-mobiletv.com/api/soap/RockPaperScissors/Score.xsd"/>
+    <xsd:import namespace="urn:CurrentScores" schemaLocation= "http://bcmoney-mobiletv.com/api/soap/RockPaperScissors/CurrentScores.xsd"/>
+  </types>
+  <message name="getCurrentDateTime"></message>
+  <message name="getCurrentDateTimeResponse">
+    <part name="getCurrentDateTimeReturn" type="xsd:datetime"></part>
+  </message>
+  <message name="playGame">
+    <part name="choice" type="xsd:string"></part>
+  </message>
+  <message name="playGameResponse">
+    <part name="game" type="urn:Game"></part>
+  </message>
+  <message name="getScore">
+    <part name="id" type="xsd:string"></part>
+  </message>
+  <message name="getScoreResponse">
+    <part name="score" type="urn:Score"></part>
+  </message>
+  <message name="getCurrentScores"></message>
+  <message name="getCurrentScoresResponse">
+    <part name="scores" type="urn:CurrentScores"></part>
+  </message>  
+
+  <portType name="rpsPortType">
+    <operation name="getCurrentDateTime">
+      <input message="typens:getCurrentDateTime"></input>
+      <output message="typens:getCurrentDateTimeResponse"></output>
+    </operation>
+    <operation name="playGame">
+      <input message="typens:playGame"></input>
+      <output message="typens:playGameResponse"></output>
+    </operation>
+    <operation name="getCurrentScores">
+      <input message="typens:getCurrentScores"></input>
+      <output message="typens:getCurrentScoresResponse"></output>
+    </operation>
+    <operation name="getScore">
+      <input message="typens:getScore"></input>
+      <output message="typens:getScoreResponse"></output>
+    </operation>    
+  </portType>
+  
+  <binding name="rpsBinding" type="typens:rpsPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <operation name="getCurrentDateTime">
+      <soap:operation soapAction="urn:rpsAction"></soap:operation>
+      <input>
+        <soap:body namespace="urn:RockPaperScissors" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body>
+      </input>
+      <output>
+        <soap:body namespace="urn:RockPaperScissors" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body>
+      </output>
+    </operation>
+    <operation name="playGame">
+      <soap:operation soapAction="urn:rpsAction"></soap:operation>
+      <input>
+        <soap:body namespace="urn:RockPaperScissors" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body>
+      </input>
+      <output>
+        <soap:body namespace="urn:RockPaperScissors" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body>
+      </output>
+    </operation>
+    <operation name="getCurrentScores">
+      <soap:operation soapAction="urn:rpsAction"></soap:operation>
+      <input>
+        <soap:body namespace="urn:RockPaperScissors" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body>
+      </input>
+      <output>
+        <soap:body namespace="urn:RockPaperScissors" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body>
+      </output>
+    </operation>    
+    <operation name="getScore">
+      <soap:operation soapAction="urn:rpsAction"></soap:operation>
+      <input>
+        <soap:body namespace="urn:RockPaperScissors" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body>
+      </input>
+      <output>
+        <soap:body namespace="urn:RockPaperScissors" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  
+  <service name="RockPaperScissorsService">
+    <documentation>RockPaperScissors game - A test SOAP Web Service by BCmoney</documentation> 
+    <port name="rpsPort" binding="typens:rpsBinding">
+      <soap:address location="http://bcmoney-mobiletv.com/api/soap/RockPaperScissors/"></soap:address>
+    </port>
+  </service>
+
+</definitions>

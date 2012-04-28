@@ -1,0 +1,22 @@
+DESCRIPTION:
+============
+
+This is the main image object that is returned when an API request is parsed.
+
+ACCESSOR VARIABLES:
+===================
+
+The following variables contain information about the result that can be used
+to display more information.
+
+Accessor vairables are called by using:
+$object->ACCESSOR_NAME
+
+* attributes: a hash array of the attributes of this result object. The has
+array can contain the following keys:
+  - src
+  - alt
+  - title
+  - width
+  - height
+

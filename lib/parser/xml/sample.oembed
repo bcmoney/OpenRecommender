@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oembed>
+  <type>video</type>
+  <version>1.0</version>
+  <provider_name>Vimeo</provider_name>
+  <provider_url>http://www.vimeo.com/</provider_url>
+  <title>Meet the office</title>
+  <author_name>Blake Whitman</author_name>
+  <author_url>http://www.vimeo.com/blakewhitman</author_url>
+  <is_plus>0</is_plus>
+  <html>&lt;object type=&quot;application/x-shockwave-flash&quot;...&lt;/object&gt;</html>
+  <width>504</width>
+  <height>380</height>
+  <thumbnail_url>
+    http://90.media.vimeo.com/d1/5/38/21/85/thumbnail-38218529.jpg
+  </thumbnail_url>
+  <thumbnail_width>160</thumbnail_width>
+  <thumbnail_height>120</thumbnail_height>
+  <video_id>757219</video_id>
+</oembed>

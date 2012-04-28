@@ -1,0 +1,340 @@
+{
+    "errorMessage": "Invalid key-value pair(s) in request: { country = \"UK\"; }",
+    "queryParameters": {
+        "output": "json",
+        "platform": "[itunes, volumestore, ipad, ipod, enterprisestore, atv, iphone]",
+        "media": {
+            "movie": {
+                "entity": [
+                    "movieArtist",
+                    "movie"
+                ],
+                "attribute": [
+                    "directorProducerName",
+                    "movieArtistTerm",
+                    "completeTitle",
+                    "genreTerm",
+                    "allTitle",
+                    "movieTerm",
+                    "genreIndex",
+                    "flavor",
+                    "actorTerm",
+                    "shortFilmArtistTerm",
+                    "actorNames",
+                    "ratingTerm",
+                    "closedCaption",
+                    "allArtistNames",
+                    "ratingIndex",
+                    "artistTerm",
+                    "producerTerm",
+                    "directorTerm",
+                    "descriptionTerm",
+                    "shortFilmTerm",
+                    "releaseYearTerm",
+                    "featureFilmTerm",
+                    "movieBundleTerm"
+                ]
+            },
+            "all": {
+                "entity": [
+                    "allArtist",
+                    "allTrack",
+                    "album",
+                    "movie",
+                    "tvSeason",
+                    "software",
+                    "iPadSoftware",
+                    "musicVideo",
+                    "mix",
+                    "audiobook",
+                    "ebook",
+                    "podcast",
+                    "iTunesUPodcast",
+                    "song",
+                    "tvEpisode",
+                    "podcastEpisode",
+                    "iTunesUPodcastEpisode"
+                ],
+                "attribute": [
+                    "allArtistTerm",
+                    "completeTitle",
+                    "composerTerm",
+                    "actorTerm",
+                    "tier",
+                    "mostRecentChildReleaseDate",
+                    "narratorTerm",
+                    "songTerm",
+                    "allITunesUTrackTerm",
+                    "ringtone",
+                    "matchName",
+                    "featureFilmTerm",
+                    "directorProducerName",
+                    "urlTerm",
+                    "allTitle",
+                    "genreIndex",
+                    "allTrackTerm",
+                    "flavor",
+                    "tvEpisodeTerm",
+                    "shortFilmArtistTerm",
+                    "ratingTerm",
+                    "allArtistNames",
+                    "closedCaption",
+                    "podcastMediaTypeTerm",
+                    "languageTerm",
+                    "completePlaylistTitle",
+                    "iMixTerm",
+                    "releaseYearTerm",
+                    "albumTerm",
+                    "genreTerm",
+                    "titleTerm",
+                    "movieTerm",
+                    "artistAndComposer",
+                    "playlistTerm",
+                    "ratingIndex",
+                    "releaseDate",
+                    "artistTerm",
+                    "keywordsTerm",
+                    "producerTerm",
+                    "directorTerm",
+                    "shortFilmTerm",
+                    "authorTerm",
+                    "movieBundleTerm",
+                    "tvSeasonTerm",
+                    "movieArtistTerm",
+                    "showTerm",
+                    "mixTerm",
+                    "softwareDeveloper",
+                    "actorNames",
+                    "showAndSeasonTerm",
+                    "allITunesUArtistTerm",
+                    "descriptionTerm"
+                ]
+            },
+            "ebook": {
+                "entity": [
+                    "ibookAuthor",
+                    "ebook"
+                ],
+                "attribute": [
+                    "completeTitle",
+                    "genreTerm",
+                    "allTitle",
+                    "titleTerm",
+                    "bookSeriesTerm",
+                    "genreIndex",
+                    "publisherTerm",
+                    "allArtistNames",
+                    "free",
+                    "ratingIndex",
+                    "releaseDate",
+                    "languageTerm",
+                    "keywordsTerm",
+                    "ibookAuthorTerm",
+                    "descriptionTerm",
+                    "isbnTerm",
+                    "authorTerm",
+                    "subtitleTerm"
+                ]
+            },
+            "podcast": {
+                "entity": [
+                    "podcastAuthor",
+                    "podcast",
+                    "podcastEpisode"
+                ],
+                "attribute": [
+                    "albumTerm",
+                    "urlTerm",
+                    "completeTitle",
+                    "genreTerm",
+                    "allTitle",
+                    "titleTerm",
+                    "genreIndex",
+                    "mostRecentChildReleaseDate",
+                    "allArtistNames",
+                    "playlistTerm",
+                    "ratingIndex",
+                    "podcastMediaTypeTerm",
+                    "completePlaylistTitle",
+                    "artistTerm",
+                    "languageTerm",
+                    "keywordsTerm",
+                    "descriptionTerm",
+                    "authorTerm"
+                ]
+            },
+            "music": {
+                "entity": [
+                    "musicArtist",
+                    "musicTrack",
+                    "album",
+                    "musicVideo",
+                    "mix",
+                    "song"
+                ],
+                "attribute": [
+                    "albumTerm",
+                    "completeTitle",
+                    "mixTerm",
+                    "genreTerm",
+                    "allTitle",
+                    "composerTerm",
+                    "genreIndex",
+                    "flavor",
+                    "tier",
+                    "musicTrackTerm",
+                    "artistAndComposer",
+                    "allArtistNames",
+                    "songTerm",
+                    "releaseDate",
+                    "ratingIndex",
+                    "completePlaylistTitle",
+                    "artistTerm",
+                    "ringtone",
+                    "iMixTerm",
+                    "matchName"
+                ]
+            },
+            "macSoftware": {
+                "entity": [
+                    "softwareDeveloper",
+                    "macSoftware"
+                ],
+                "attribute": [
+                    "mediaTypeTerm",
+                    "alternateTitleTerm",
+                    "completeTitle",
+                    "genreTerm",
+                    "allTitle",
+                    "uti",
+                    "genreIndex",
+                    "softwareDeveloper",
+                    "deviceTerm",
+                    "allArtistNames",
+                    "extension",
+                    "free",
+                    "softwareTerm",
+                    "ratingIndex",
+                    "releaseDate",
+                    "keywordsTerm",
+                    "macSoftwareTerm",
+                    "desktopSoftwareTerm"
+                ]
+            },
+            "software": {
+                "entity": [
+                    "softwareDeveloper",
+                    "software",
+                    "iPadSoftware"
+                ],
+                "attribute": [
+                    "gameCenterOnly",
+                    "mediaTypeTerm",
+                    "alternateTitleTerm",
+                    "completeTitle",
+                    "genreTerm",
+                    "allTitle",
+                    "genreIndex",
+                    "softwareDeveloper",
+                    "deviceTerm",
+                    "allArtistNames",
+                    "free",
+                    "ratingIndex",
+                    "softwareTerm",
+                    "releaseDate",
+                    "keywordsTerm",
+                    "descriptionTerm"
+                ]
+            },
+            "musicVideo": {
+                "entity": [
+                    "musicVideoArtist",
+                    "musicVideo"
+                ],
+                "attribute": [
+                    "albumTerm",
+                    "genreTerm",
+                    "completeTitle",
+                    "allTitle",
+                    "genreIndex",
+                    "flavor",
+                    "allArtistNames",
+                    "songTerm",
+                    "ratingIndex",
+                    "artistTerm",
+                    "completePlaylistTitle",
+                    "ringtone",
+                    "matchName"
+                ]
+            },
+            "audiobook": {
+                "entity": [
+                    "audiobookAuthor",
+                    "audiobook"
+                ],
+                "attribute": [
+                    "ratingIndex",
+                    "completeTitle",
+                    "genreTerm",
+                    "allTitle",
+                    "titleTerm",
+                    "genreIndex",
+                    "descriptionTerm",
+                    "allArtistNames",
+                    "narratorTerm",
+                    "authorTerm"
+                ]
+            },
+            "shortFilm": {
+                "entity": [
+                    "shortFilmArtist",
+                    "shortFilm"
+                ],
+                "attribute": [
+                    "genreTerm",
+                    "completeTitle",
+                    "allTitle",
+                    "genreIndex",
+                    "flavor",
+                    "shortFilmArtistTerm",
+                    "allArtistNames",
+                    "closedCaption",
+                    "ratingIndex",
+                    "artistTerm",
+                    "descriptionTerm",
+                    "shortFilmTerm",
+                    "releaseYearTerm"
+                ]
+            },
+            "tvShow": {
+                "entity": [
+                    "tvShow",
+                    "tvEpisode",
+                    "tvSeason"
+                ],
+                "attribute": [
+                    "tvSeasonTerm",
+                    "showTerm",
+                    "genreTerm",
+                    "completeTitle",
+                    "allTitle",
+                    "genreIndex",
+                    "flavor",
+                    "tvEpisodeTerm",
+                    "allArtistNames",
+                    "closedCaption",
+                    "showAndSeasonTerm",
+                    "ratingIndex",
+                    "completePlaylistTitle",
+                    "descriptionTerm"
+                ]
+            }
+        },
+        "offset": "The result index at which to start returning results",
+        "country": "ISO-2A country code",
+        "callback": "A javascript function to handle your search results",
+        "limit": "The number of search results to return",
+        "term": "A search string",
+        "lang": "ISO-2A language code"
+    }
+}

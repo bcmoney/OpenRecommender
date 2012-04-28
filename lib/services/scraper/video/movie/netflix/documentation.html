@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Netflix API 1.0 by Aziz Documentation</title>
+<style type="text/css">
+<!--
+.functionName {
+	color: #00F;
+}
+.functionTitle {
+	font-weight:bold;
+}
+.sectionTitle {
+	font-style:italic;
+}
+-->
+</style>
+</head>
+<body>
+<p><strong>Netflix API 1.0 <br  />
+  by Aziz S. Hussain<br  />
+  azizsaleh@gmail.com<br  />
+  http://azizsaleh.com<br  />
+  </strong><br  />
+<span class="sectionTitle">Usage Requirements:</span></p>
+<ol>
+  <li>PHP 5.3 or higher</li>
+  <li> CURL Enabled</li>
+  <li> hash_hmac Enabled with sha1 support</li>
+  <li> json_decode Enabled<br  />
+    Note: Having the last three enabled might work even for PHP versions under 5.3 (no guarantees)<br  />
+  </li>
+</ol>
+<p class="sectionTitle"> Usage Examples:</p>
+<ol>
+  <li>The following piece of code must be included before usage:<br /><br />
+    <code><span style="color: #000000">
+define&nbsp;('BASE_DIR',&nbsp;dirname(__FILE__)&nbsp;.'/');
+<br />require_once&nbsp;(&nbsp;BASE_DIR&nbsp;.&nbsp;'Configuration.php');
+<br />require_once&nbsp;(&nbsp;BASE_DIR&nbsp;.&nbsp;'includes/NetflixAPI.php');
+<br />require_once&nbsp;(&nbsp;BASE_DIR&nbsp;.&nbsp;'includes/Request.php');
+<br />require_once&nbsp;(&nbsp;BASE_DIR&nbsp;.&nbsp;'includes/OAuthSimple.php');
+<br />
+<br />require_once&nbsp;(&nbsp;BASE_DIR&nbsp;.&nbsp;'netflix/nonAuthenticatedCall.php');
+<br />require_once&nbsp;(&nbsp;BASE_DIR&nbsp;.&nbsp;'netflix/protectedCall.php');
+
+<br />require_once&nbsp;(&nbsp;BASE_DIR&nbsp;.&nbsp;'netflix/signedCall.php');
+<br />require_once&nbsp;(&nbsp;BASE_DIR&nbsp;.&nbsp;'netflix/getToken.php');</span>
+</code>
+  </li>
+  <br />
+  <li>To make a call, do:<br /><br />
+    <code><span style="color: #000000">
+$Netflix&nbsp;=&nbsp;new&nbsp;NetflixAPI();
+<br />$results&nbsp;=&nbsp;$Netflix-&gt;getCatalogTitlesAutoComplete('Fun');
+<br />//&nbsp;$results&nbsp;is&nbsp;now&nbsp;an&nbsp;array&nbsp;containing&nbsp;the&nbsp;results
+
+<br />&nbsp;&nbsp;</span>
+
+  </li>
+</ol>
+<p class="sectionTitle">Available Call List [For more detailed information regarding these calls click on <a href="http://developer.netflix.com/docs/REST_API_Reference" target="_blank">this link</a>]:</p>
+<ol>
+  <li><span class="functionTitle">    Catalog Titles Autocomplete</span> - Conducts a search of the catalog for titles of movies and television   series by season. Currently, it is not possible to search for television   shows by series.<br />
+  <br />
+    @param		string		term<br />
+  <br />
+    @return		array<br />
+    <br />
+  <span class="functionName">public function getCatalogTitlesAutoComplete ($term)</span><br /><br /></li>
+  <li><span class="functionTitle">    Catalog Titles</span> - Searches the catalog for movies and television series whose title   matches a partial search text. Returned title names can then be passed   to the title search methods to conduct the actual search. The   autocomplete method only applies to titles.<br />
+    <br />
+    @param		string		term<br />
+    @param		int			start_index = 0<br />
+    @param		int			max_result = 25<br />
+    <br />
+    @return		array<br />
+    <br />
+  <span class="functionName">public function getCatalogTitles ($term, $start_index = 0, $max_result = 25)</span><br /></li>
+  </li>
+  <li><span class="functionTitle">Catalog Titles Index</span> - Returns an index of all titles in the catalog. The titles index is   intended for partners with their own movie or TV catalogs who want to   find corresponding titles in the Netflix catalog. The index data   returned by the method includes titles, release dates (year of release),   production studio name, and top cast members. You can use this data to   interlink titles. In addition, the returned data includes Netflix title   URLs, media formats, and availability windows. Each title entry in the   returned data includes an update date, which indicates the last time the   title data was updated.<br />
+    <br />
+    @param		string		include_amg = null<br />
+    @param		string		include_tms = null<br />
+    <br />
+    @return		array<br />
+    <br />
+    <span class="functionName">public function getCatalogTitlesIndex ($include_amg = '', $include_tms = '')</span><br />
+    <br /></li>
+  <li>    <span class="functionTitle">Get Title Details -  </span>Use these movie and television series season API, described in this   section, to retrieve details for specific catalog titles. The API   consists of a set of subresources within one resource URL type,   catalog/titles, that returns all details for the requested title.
+    <p>Note: For each title, you can find the URLs to retrieve the title's   details in the responses from other resource queries (e.g., search   results, queue responses, and so forth) that reference titles. The links   within those responses contain the URLs for retrieving a title's   details.  You should never attempt to construct a title URL directly.<span class="functionTitle"><br />
+    </span><br />
+    @param		string		movie_id<br />
+    @param		string		type = movies (movies, series, programs, or discs)<br />
+    @param		int			season_id = null<br />
+    <br />
+    @return		array<br />
+    <span class="functionName"><br />
+    public function getTitleDetails ($movie_id, $type = 'movies', $season_id = NULL)
+    </span><br />
+    </p>
+</li>
+  <li><span class="functionTitle">Titles Similars</span> - This resources returns a list of titles similar to the parent title   resource.  The similars resource URL can be found in the response of any   title resource and will have a URL like the following   :catalog/titles/12345678/similars.<br />
+    <br />
+    @param		string		title_id<br />
+    @param		int			start_index = 0<br />
+    @param		int			max_result = 25<br />
+    <br />
+    @return		array<br />
+    <br />
+    <span class="functionName">public function getTitlesSimilars ($title_id, $start_index = 0, $max_result = 25) </span><br /><br /></li>
+  <li><span class="functionTitle">Searching for People</span> - This section covers the resources used to retrieve details about cast members and others in the Catalog.<br />
+    <br />
+    @param		string		term<br />
+    @param		int			start_index = 0<br />
+    @param		int			max_result = 25<br />
+    <br />
+    @return		array<br />
+    <br />
+    <span class="functionName">public function getSearchForPeople ($term, $start_index = 0, $max_result = 25) </span><br /><br /></li>
+  <li><span class="functionTitle">Person Details</span> - You can retrieve detailed information for a person in the Catalog, using that person's ID, including a bio, featured titles, and a complete list of titles.<br />
+    <br />
+    @param		string		person_id<br />
+    <br />
+    @return		array<br />
+    <span class="functionName"><br />
+    public function getPersonDetails ($person_id)
+  </span><br /><br /></li>
+  <li> <span class="functionTitle">Users</span> - Returns information about the specified user.<br />
+    <br />
+    @return		array<br />
+    <br />
+    <span class="functionName">public function getUsersInfo () <br />
+    </span><br /></li>
+  <li><span class="functionTitle">Current User (reflection)</span> - This resource returns a link to the currently authenticated user. You can access the active user's associated API resource without extracing the user ID from the OAuth access token response. <br />
+    <br />
+    @return		array<br />
+    <span class="functionName"><br />
+    public function getCurrentUser ()
+    </span><br /><br /></li>
+    
+    <li><span class="functionTitle">Get Current User Item List</span> - This resource will return a list of user's specific URLS for any of the following:queues, rental_history, recommendations, title_states, ratings, reviews, at_home, feeds. <br />
+    <br />
+    @param		string		list_Type<br />  
+    <br />
+    @return		array<br />
+    <span class="functionName"><br />
+    public function getUserSpecificList ($list_Type)
+    </span><br /><br /></li>
+    
+  <li><span class="functionTitle">Feeds</span> - This function will return the feed info based on a feed URL and feed token (returned by the above function getUserSpecificList(). Feed url is either "recommendations", "ratings/title/actual", "reviews", "at_home", "rental_history/returned", "rental_history/watched", "rental_history/shipped", "rental_history", "queues/instant", or "queues/disc".<br />
+    <br />
+    @param		string		feed_url<br />
+    @param		string		feed_token<br />    
+    @param		string		sort<br />       
+    <br />
+    @return		array<br />
+    <span class="functionName"><br />
+    public function getFeeds ($feed_url, $feed_token, $sort = 'date_added')
+    </span><br /><br /></li>
+  <li><span class="functionTitle">Title States</span> - Use this resource to help determine a subscriber's rental options. Each user response contains a link to a to the user's title states.<br />
+    <br />
+    @param		array		title_refs<br />
+    <br />
+    @return		array<br />
+    <br />
+    <span class="functionName">public function getTitleStates ($title_refs) </span><br /><br /></li>
+  <li><span class="functionTitle">Managing Queues</span> - Use the queue management API to retrieve and manipulate the contents of a user's queue. <br />
+    <br />
+    @param		timestamp	updated_min<br />    
+    <br />
+    @param		string		search_type 			[disc, instant]<br />
+    @param		string		sort  = alphabetical	[queue_sequence, date_added, alphabetical]<br />
+    @param		string		search_method 			[available, saved]<br />
+    @param		int			entry_id = null<br />    
+    @param		int			start_index<br />
+    @param		int			max_results<br />
+    <br />
+    @return		array<br />
+    <br />
+    <span class="functionName">public function getQueues ($updated_min, $search_type = 'disc', $sort = 'alphabetical', $search_method = NULL, <br />
+								  $entry_id = NULL,$start_index = 0, $max_results = 25)
+    </span><br /><br /></li>
+  <li><span class="functionTitle">Updating a Queue</span> - You use a subset of the queue management API resources to add titles to a queue, change the queue order, or remove titles from a queue. <br />
+    <br />
+    @param		string		title_ref<br />
+    @param		string		format			[DVD, Blue-ray]<br />
+    @param		int			position<br />
+    @param		string		etag<br />
+    <br />
+    
+    @param		string		search_type 	[disc, instant]<br />
+    @param		string		search_method 	[available, saved]<br />
+    @param		int			entry_id = null<br />
+    <br />    
+    @return		array<br />
+    <span class="functionName"><br />
+    public function updatingAQueue ($title_ref, $format, $position, $etag, $search_type = 'disc',<br />
+    $search_method = NULL, $entry_id = NULL, )
+    </span><br /><br /></li>
+  <li><span class="functionTitle">Tracking Discs</span> - This API keeps track of discs that have been sent to a subscriber's home and not yet received back to the Netflix distribution center. <br />
+    <br />
+    @param		timestamp	updated_min<br />    
+    @param		int			start_index = 0<br />
+    @param		int			max_results = 25<br />
+
+    <br />
+    @return		array<br />
+    <br />
+    <span class="functionName">public function getTrackingDiscs ($updated_min, $start_index = 0, $max_results = 25) </span><br /><br /></li>
+  <li><span class="functionTitle">Managing Rental History</span> - Use the rental_history resource and its subresources to retrieve a user's rental history. You can retrieve information about titles (discs) shipped to the user for viewing at home, discs returned to Netflix, or titles the user has watched instantly.<br />
+    <br />
+    @param		timestamp	updated_min<br />
+    <br />
+    @param		string		history_type = NULL	[shipped, returned, watched]<br />    
+    @param		int			start_index = 0<br />
+    @param		int			max_results = 25<br />
+
+    <br />
+    @return		array <br />
+    <br />
+    <span class="functionName">public function managingRentalHistory ($updated_min, $history_type = NULL, $start_index = 0, $max_results = 25)</span><br /><br /></li>
+  <li><span class="functionTitle">Get User Title Ratings</span> - You use the user title rating resources to retrieve a subscriber's rating for an individual movie or television series season. You can retrieve the user's actual rating and predicted rating for the title. You also use these resources to create new ratings for a user.<br />
+    <br />
+    @param		string		title_refs<br />
+    @param		string		rating_type = NULL	[actual, predicted]<br />
+    @param		int			rating_id = NULL<br />
+
+    <br />
+    @return		array <br />
+    <br />
+    <span class="functionName">public function getUserRatings ($rating_type, $title_refs, $rating_id = NULL) </span><br /><br /></li>
+  <li><span class="functionTitle">Create User Title Rating</span> - Use this resource to create a new rating for a subscriber or to access subscriber ratings.<br />
+    <br />
+    @param		string		title_ref<br />
+    @param		string		rating [1,2,3,4,5,not_interested,no_opinion]<br />
+    <br />
+    @return		array <br />
+    <br />
+    <br />
+    <span class="functionName">public function createUserRating ($title_ref, $rating) </span><br /><br /></li>
+  <li><span class="functionTitle">Update User Title Rating</span> - Use this resource to update an existing rating for a subscriber or to access a specific subscriber rating.<br />
+    <br />
+    @param		int			rating_id<br />
+    @param		string		rating [1,2,3,4,5,not_interested,no_opinion]<br />
+    <br />
+    @return		array <br />
+    <br />
+    <span class="functionName">public function updateUserRating ($rating_id, $rating) </span><br /><br /></li>
+  <li><span class="functionTitle">Retrieving Reviews</span> - This resource returns a subscriber's reviews and related title URLs.<br />
+    <br />
+    @param		int			title_refs<br />
+    @param		timestamp	updated_min<br />    
+    @param		int			start_index<br />
+    @param		int			max_results<br />
+
+    <br />
+    @return		array<br />
+    <br />
+  <span class="functionName">public function retrieveReviews ($title_refs, $updated_min, $start_index = 0, $max_results = 25) </span><br /><br /></li>
+  <li> <span class="functionTitle">Retrieving Recommendations</span> - You use the recommendations resource to see suggested catalog title recommendations for that user. These are recommendations that Netflix makes based on a user's viewing history.<br />
+    <br />
+    @param		int		start_index = 0<br />
+    @param		int		max_results = 25<br />
+    <br />
+    @return		array<br />
+    <br />
+    <span class="functionName">public function retrieveRecommendations ($start_index = 0, $max_results = 25)</span></li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,614 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">DICTIONARY-LIKE</DIV>
+<DIV class="sqlcomment">"want" entry</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,sensenum,synsetid,SUBSTRING(definition FROM 1 FOR 64),SUBSTRING(sampleset FROM 1 FOR 50) FROM dict WHERE lemma = 'want' ORDER BY pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>synsetid</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH><TH>SUBSTRING(sampleset FROM 1 FOR 50)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">114493426</TD><TD class="sqlfield">a state of extreme poverty</TD><TD class="sqlfield"></TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2</TD><TD class="sqlfield">114449405</TD><TD class="sqlfield">the state of needing something that is absent or unavailable</TD><TD class="sqlfield">water is the critical deficiency in desert regions</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">n</TD><TD class="sqlfield">3</TD><TD class="sqlfield">109367991</TD><TD class="sqlfield">anything that is necessary but lacking</TD><TD class="sqlfield">I tried to supply his wants</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">n</TD><TD class="sqlfield">4</TD><TD class="sqlfield">107486229</TD><TD class="sqlfield">a specific feeling of desire</TD><TD class="sqlfield">he was above all wishing and desire</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1</TD><TD class="sqlfield">201825237</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD><TD class="sqlfield">I want my own room</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">2</TD><TD class="sqlfield">201188725</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield"></TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">3</TD><TD class="sqlfield">201317064</TD><TD class="sqlfield">hunt or look for; want for a particular reason</TD><TD class="sqlfield">Uncle Sam wants you</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">4</TD><TD class="sqlfield">200709205</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield"></TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">5</TD><TD class="sqlfield">202632567</TD><TD class="sqlfield">be without, lack; be deficient in</TD><TD class="sqlfield">want the strength to go on living|flood victims wa</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">"like" verb entry</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,sensenum,synsetid,SUBSTRING(definition FROM 1 FOR 64),SUBSTRING(sampleset FROM 1 FOR 50) FROM dict WHERE lemma = 'like' AND pos = 'v' ORDER BY pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>synsetid</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH><TH>SUBSTRING(sampleset FROM 1 FOR 50)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">like</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1</TD><TD class="sqlfield">201824736</TD><TD class="sqlfield">prefer or wish to do something</TD><TD class="sqlfield">Would you like to come along to the movies?</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">like</TD><TD class="sqlfield">v</TD><TD class="sqlfield">2</TD><TD class="sqlfield">201777210</TD><TD class="sqlfield">find enjoyable or agreeable</TD><TD class="sqlfield">She likes to read Russian novels</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">like</TD><TD class="sqlfield">v</TD><TD class="sqlfield">3</TD><TD class="sqlfield">201776952</TD><TD class="sqlfield">be fond of</TD><TD class="sqlfield"></TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">like</TD><TD class="sqlfield">v</TD><TD class="sqlfield">4</TD><TD class="sqlfield">200691665</TD><TD class="sqlfield">feel about or towards; consider, evaluate, or regard</TD><TD class="sqlfield"></TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">like</TD><TD class="sqlfield">v</TD><TD class="sqlfield">5</TD><TD class="sqlfield">201825962</TD><TD class="sqlfield">want to have</TD><TD class="sqlfield"></TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">"want" as verb entry</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,sensenum,SUBSTRING(definition FROM 1 FOR 64),SUBSTRING(sampleset FROM 1 FOR 50) FROM dict WHERE lemma = 'want' AND pos = 'v' ORDER BY pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH><TH>SUBSTRING(sampleset FROM 1 FOR 50)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD><TD class="sqlfield">I want my own room</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">2</TD><TD class="sqlfield">have need of</TD><TD class="sqlfield"></TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">3</TD><TD class="sqlfield">hunt or look for; want for a particular reason</TD><TD class="sqlfield">Uncle Sam wants you</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">4</TD><TD class="sqlfield">wish or demand the presence of</TD><TD class="sqlfield"></TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">5</TD><TD class="sqlfield">be without, lack; be deficient in</TD><TD class="sqlfield">want the strength to go on living|flood victims wa</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">"want" as noun with tag information</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,sensenum,tagcount,SUBSTRING(definition FROM 1 FOR 64) FROM dict WHERE lemma = 'want' ORDER BY pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>tagcount</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">3</TD><TD class="sqlfield">a state of extreme poverty</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2</TD><TD class="sqlfield">1</TD><TD class="sqlfield">the state of needing something that is absent or unavailable</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">n</TD><TD class="sqlfield">3</TD><TD class="sqlfield">1</TD><TD class="sqlfield">anything that is necessary but lacking</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">n</TD><TD class="sqlfield">4</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a specific feeling of desire</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1</TD><TD class="sqlfield">389</TD><TD class="sqlfield">feel or have a desire for; want strongly</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">2</TD><TD class="sqlfield">15</TD><TD class="sqlfield">have need of</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">3</TD><TD class="sqlfield">3</TD><TD class="sqlfield">hunt or look for; want for a particular reason</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">4</TD><TD class="sqlfield">2</TD><TD class="sqlfield">wish or demand the presence of</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">want</TD><TD class="sqlfield">v</TD><TD class="sqlfield">5</TD><TD class="sqlfield">0</TD><TD class="sqlfield">be without, lack; be deficient in</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">starting with "fear"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,sensenum,SUBSTRING(definition FROM 1 FOR 64) FROM dict WHERE lemma LIKE 'fear%' ORDER BY lemma,pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fear</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">an emotion experienced in anticipation of some specific pain or </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fear</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2</TD><TD class="sqlfield">an anxious feeling</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fear</TD><TD class="sqlfield">n</TD><TD class="sqlfield">3</TD><TD class="sqlfield">a feeling of profound respect for someone or something</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fear</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1</TD><TD class="sqlfield">be afraid or feel anxious or apprehensive about a possible or pr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fear</TD><TD class="sqlfield">v</TD><TD class="sqlfield">2</TD><TD class="sqlfield">be afraid or scared of; be frightened of</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fear</TD><TD class="sqlfield">v</TD><TD class="sqlfield">3</TD><TD class="sqlfield">be sorry; used to introduce an unpleasant statement</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fear</TD><TD class="sqlfield">v</TD><TD class="sqlfield">4</TD><TD class="sqlfield">be uneasy or apprehensive about</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fear</TD><TD class="sqlfield">v</TD><TD class="sqlfield">5</TD><TD class="sqlfield">regard with feelings of respect and reverence; consider hallowed</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearful</TD><TD class="sqlfield">a</TD><TD class="sqlfield">3</TD><TD class="sqlfield">lacking courage; ignobly timid and faint-hearted</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearful</TD><TD class="sqlfield">s</TD><TD class="sqlfield">1</TD><TD class="sqlfield">experiencing or showing fear</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearful</TD><TD class="sqlfield">s</TD><TD class="sqlfield">2</TD><TD class="sqlfield">causing fear or dread or terror</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearful</TD><TD class="sqlfield">s</TD><TD class="sqlfield">4</TD><TD class="sqlfield">extremely distressing</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearful</TD><TD class="sqlfield">s</TD><TD class="sqlfield">5</TD><TD class="sqlfield">timid by nature or revealing timidity</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearfully</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">in fear,</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearfully</TD><TD class="sqlfield">r</TD><TD class="sqlfield">2</TD><TD class="sqlfield">in an alarming manner</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearfulness</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">an emotion experienced in anticipation of some specific pain or </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearfulness</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2</TD><TD class="sqlfield">the trait of being afraid</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearless</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1</TD><TD class="sqlfield">oblivious of dangers or perils or calmly resolute in facing them</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearless</TD><TD class="sqlfield">s</TD><TD class="sqlfield">2</TD><TD class="sqlfield">invulnerable to fear or intimidation</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearlessly</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">without fear</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearlessness</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">feeling no fear</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearlessness</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2</TD><TD class="sqlfield">the trait of feeling no fear</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearsome</TD><TD class="sqlfield">s</TD><TD class="sqlfield">1</TD><TD class="sqlfield">causing fear or dread or terror</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fearsomely</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">in a fearsome manner</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">ending with "wards"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,sensenum,SUBSTRING(definition FROM 1 FOR 64) FROM dict WHERE lemma LIKE '%wards' ORDER BY lemma,pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">afterwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">happening at a time subsequent to a reference time</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">backwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">at or to or toward the back or rear</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">backwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">2</TD><TD class="sqlfield">in a manner or order or direction the reverse of normal</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bend over backwards</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1</TD><TD class="sqlfield">try very hard to please someone</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">downwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">spatially or metaphorically from a higher to a lower level or po</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">eastwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward the east</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">edwards</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">American theologian whose sermons and writings stimulated a peri</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fall over backwards</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1</TD><TD class="sqlfield">try very hard to please someone</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">forwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">at or to or toward the front</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">forwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">2</TD><TD class="sqlfield">in a forward direction</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">frontwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">at or to or toward the front</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">heavenwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward heaven</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">homewards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward home</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">inwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">to or toward the inside of</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">inwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">2</TD><TD class="sqlfield">toward the center or interior</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">jonathan edwards</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">American theologian whose sermons and writings stimulated a peri</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">landwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward land</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">northwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">in a northern direction</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">onwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">in a forward direction</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">outwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward the outside</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rearwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">at or to or toward the back or rear</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">seawards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">in the direction of the sea</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">sidewards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward one side</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">skywards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward the sky</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">soar upwards</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1</TD><TD class="sqlfield">rise rapidly</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">southwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward the south</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">spacewards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">towards outer space</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">upwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">spatially or metaphorically from a lower to a higher position</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">upwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">2</TD><TD class="sqlfield">to a later time</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">westwards</TD><TD class="sqlfield">r</TD><TD class="sqlfield">1</TD><TD class="sqlfield">toward the west</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">containing "ipod"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,sensenum,SUBSTRING(definition FROM 1 FOR 64) FROM dict WHERE lemma LIKE '%ipod%' ORDER BY lemma,pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">amphipod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a kind of malacostracan crustacean</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">amphipoda</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">small flat-bodied semiterrestrial crustaceans: whale lice; sand-</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">antipodal</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">the relation of opposition along a diameter</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">antipodal</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1</TD><TD class="sqlfield">relating to the antipodes or situated at opposite sides of the e</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">antipodal opposition</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">the relation of opposition along a diameter</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">antipode</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">direct opposite</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">antipodean</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1</TD><TD class="sqlfield">relating to the antipodes or situated at opposite sides of the e</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">antipodes</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">any two places or regions on diametrically opposite sides of the</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">camera tripod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a tripod used to support a camera</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dipodidae</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">Old World jerboas</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dipodomys</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">kangaroo rats</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dipodomys ordi</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">most widely distributed kangaroo rat: plains and mountain areas </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dipodomys phillipsii</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">any of various leaping rodents of desert regions of North Americ</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">family dipodidae</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">Old World jerboas</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">genus dipodomys</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">kangaroo rats</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">genus microdipodops</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">kangaroo mice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">hemipode</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">small quail-like terrestrial bird of southern Eurasia and northe</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">ipod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">(trademark) a pocket-sized device used to play music files</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">microdipodops</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">kangaroo mice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">order amphipoda</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">small flat-bodied semiterrestrial crustaceans: whale lice; sand-</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">tripod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a three-legged rack used for support</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">video ipod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">(trademark) an iPod that can also play video files</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">staring with "rhino", ending with "s"</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,sensenum,SUBSTRING(definition FROM 1 FOR 64) FROM dict WHERE lemma LIKE 'rhino%s' ORDER BY lemma,pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinoceros</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">massive powerful herbivorous odd-toed ungulate of southeast Asia</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinoceros antiquitatis</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">extinct thick-haired species of Arctic regions</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinoceros unicornis</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">having one horn</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinonicteris</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">orange horseshoe bats</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinonicteris aurantius</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a common bat of northwestern Australia having orange or yellow f</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinoptera bonasus</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">large ray found along eastern coast of North America</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinosporidiosis</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">fungal infection of the nose; often acquired while swimming</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinostenosis</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">narrowing of the passages in the nasal cavities</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinotracheitis</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a respiratory infection of the nose and throat in cattle</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rhinovirus</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">any of a group of picornaviruses that are responsible for many u</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">with lexical domain</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lexdomainname,lemma,pos,sensenum,SUBSTRING(definition FROM 1 FOR 64) FROM dict INNER JOIN lexdomains USING(lexdomainid,pos) WHERE lemma LIKE '%ipod%' ORDER BY lexdomainid,lemma,pos,sensenum</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lexdomainname</TH><TH>lemma</TH><TH>pos</TH><TH>sensenum</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">adj.pert</TD><TD class="sqlfield">antipodal</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1</TD><TD class="sqlfield">relating to the antipodes or situated at opposite sides of the e</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">adj.pert</TD><TD class="sqlfield">antipodean</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1</TD><TD class="sqlfield">relating to the antipodes or situated at opposite sides of the e</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">amphipod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a kind of malacostracan crustacean</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">amphipoda</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">small flat-bodied semiterrestrial crustaceans: whale lice; sand-</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">dipodidae</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">Old World jerboas</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">dipodomys</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">kangaroo rats</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">dipodomys ordi</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">most widely distributed kangaroo rat: plains and mountain areas </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">dipodomys phillipsii</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">any of various leaping rodents of desert regions of North Americ</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">family dipodidae</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">Old World jerboas</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">genus dipodomys</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">kangaroo rats</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">genus microdipodops</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">kangaroo mice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">hemipode</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">small quail-like terrestrial bird of southern Eurasia and northe</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">microdipodops</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">kangaroo mice</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.animal</TD><TD class="sqlfield">order amphipoda</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">small flat-bodied semiterrestrial crustaceans: whale lice; sand-</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.artifact</TD><TD class="sqlfield">camera tripod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a tripod used to support a camera</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.artifact</TD><TD class="sqlfield">ipod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">(trademark) a pocket-sized device used to play music files</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.artifact</TD><TD class="sqlfield">tripod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">a three-legged rack used for support</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.artifact</TD><TD class="sqlfield">video ipod</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">(trademark) an iPod that can also play video files</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.location</TD><TD class="sqlfield">antipodes</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">any two places or regions on diametrically opposite sides of the</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.linkdef</TD><TD class="sqlfield">antipodal</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">the relation of opposition along a diameter</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.linkdef</TD><TD class="sqlfield">antipodal opposition</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">the relation of opposition along a diameter</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">noun.linkdef</TD><TD class="sqlfield">antipode</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1</TD><TD class="sqlfield">direct opposite</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">matching definition</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT SUBSTRING(definition FROM 1 FOR 64) FROM synsets WHERE pos= 'n' AND definition LIKE '(trademark)%' LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a guide dog trained to guide a blind person</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a pocket-sized device used to play music files</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) an iPod that can also play video files</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a child's plastic construction set for making mechan</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) an in-line skate</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a desktop rotary card index with removable cards; us</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a self-balancing personal transportation device with</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a pocket-sized stereo system with light weight earph</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a hollow plastic ball with cutouts</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) an operating system with a graphical user interface</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a sweet aromatic French wine (red or white) used chi</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a liquid that temporarily disables a person; prepare</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">(trademark) a microscopic and traceable identification particle </TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synset members</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT synsetid,pos,GROUP_CONCAT(lemma),SUBSTRING(definition FROM 1 FOR 60) FROM dict WHERE synsetid IN (201824736,201777210,201776952,200691665,201825962) GROUP BY synsetid</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>synsetid</TH><TH>pos</TH><TH>GROUP_CONCAT(lemma)</TH><TH>SUBSTRING(definition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">200691665</TD><TD class="sqlfield">v</TD><TD class="sqlfield">like</TD><TD class="sqlfield">feel about or towards; consider, evaluate, or regard</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">201776952</TD><TD class="sqlfield">v</TD><TD class="sqlfield">like</TD><TD class="sqlfield">be fond of</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">201777210</TD><TD class="sqlfield">v</TD><TD class="sqlfield">like</TD><TD class="sqlfield">find enjoyable or agreeable</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">201824736</TD><TD class="sqlfield">v</TD><TD class="sqlfield">wish,like,care</TD><TD class="sqlfield">prefer or wish to do something</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">201825962</TD><TD class="sqlfield">v</TD><TD class="sqlfield">like</TD><TD class="sqlfield">want to have</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">synset members</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT synsetid,pos,GROUP_CONCAT(lemma),SUBSTRING(definition FROM 1 FOR 60) FROM dict WHERE synsetid IN (300019731,300604897,300062626) GROUP BY synsetid</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>synsetid</TH><TH>pos</TH><TH>GROUP_CONCAT(lemma)</TH><TH>SUBSTRING(definition FROM 1 FOR 60)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">300019731</TD><TD class="sqlfield">s</TD><TD class="sqlfield">handy,ready to hand</TD><TD class="sqlfield">easy to reach</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">300062626</TD><TD class="sqlfield">s</TD><TD class="sqlfield">handy</TD><TD class="sqlfield">skillful with the hands</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">300604897</TD><TD class="sqlfield">s</TD><TD class="sqlfield">handy</TD><TD class="sqlfield">easy to use</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

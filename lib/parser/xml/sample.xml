@@ -1,0 +1,5 @@
+<message id="99" action="START">
+  <service id="1" name="RSV" endpoint="http://198.164.40.210/savoir/gallery/RSV_Web_Installers/install.htm">
+	<parameter id="HR" name="Heart Rate" value="75" unit="bpm" unitType="xs:integer" />
+  </service>
+</message>

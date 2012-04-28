@@ -1,0 +1,644 @@
+<?xml version="1.0" standalone="yes"?>
+<recommendations>
+  <url_template>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations?{-join|&amp;|start_index|max_results}</url_template>
+  <number_of_results>324</number_of_results>
+  <start_index>0</start_index>
+  <results_per_page>25</results_per_page>
+  <recommendation>
+
+    <predicted_rating>4.5</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/60035712</id>
+    <link href="http://api.netflix.com/catalog/titles/series/60035712" rel="http://schemas.netflix.com/catalog/title" title="Freaks &amp; Geeks: The Complete Series"></link><title short="Freaks &amp; Geeks: The Complete Series" regular="Freaks &amp; Geeks: The Complete Series"></title>
+<box_art small="http://cdn-2.nflximg.com/en_us/boxshots/tiny/60035712.jpg" medium="http://cdn-2.nflximg.com/en_us/boxshots/small/60035712.jpg" large="http://cdn-2.nflximg.com/en_us/boxshots/large/60035712.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/series/60035712/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1999</release_year>
+<category scheme="http://api.netflix.com/categories/tv_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Shows" term="TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Dramas" term="TV Dramas"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Teen TV Shows" term="Teen TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Teen Dramas" term="TV Teen Dramas"></category>
+
+<runtime>64800</runtime>
+<link href="http://api.netflix.com/catalog/titles/series/60035712/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/series/60035712/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/60035712/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/60035712/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.0</average_rating>
+<link href="http://api.netflix.com/catalog/titles/series/60035712/discs" rel="http://schemas.netflix.com/catalog/titles.discs" title="discs"></link>
+<link href="http://api.netflix.com/catalog/titles/series/60035712/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Freaks_Geeks_The_Complete_Series/60035712" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.5</predicted_rating>
+
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70065292</id>
+    <link href="http://api.netflix.com/catalog/titles/series/70065292" rel="http://schemas.netflix.com/catalog/title" title="Planet Earth: The Complete Collection"></link><title short="Planet Earth: The Complete Collection" regular="Planet Earth: The Complete Collection"></title>
+<box_art small="http://cdn-2.nflximg.com/en_us/boxshots/tiny/70065292.jpg" medium="http://cdn-2.nflximg.com/en_us/boxshots/small/70065292.jpg" large="http://cdn-2.nflximg.com/en_us/boxshots/large/70065292.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/series/70065292/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>2007</release_year>
+<category scheme="http://api.netflix.com/categories/tv_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Shows" term="TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Documentaries" term="Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="British TV Shows" term="British TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Documentaries" term="TV Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Science &amp; Nature Documentaries" term="Science &amp; Nature Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="British Movies" term="British Movies"></category>
+<runtime>33000</runtime>
+
+<link href="http://api.netflix.com/catalog/titles/series/70065292/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70065292/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70065292/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70065292/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.5</average_rating>
+<link href="http://api.netflix.com/catalog/titles/series/70065292/discs" rel="http://schemas.netflix.com/catalog/titles.discs" title="discs"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70065292/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Planet_Earth_The_Complete_Collection/70065292" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.4</predicted_rating>
+
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70115101</id>
+    <link href="http://api.netflix.com/catalog/titles/series/70115101" rel="http://schemas.netflix.com/catalog/title" title="The Mysterious Cities of Gold"></link><title short="The Mysterious Cities of Gold" regular="The Mysterious Cities of Gold"></title>
+<box_art small="http://cdn-1.nflximg.com/en_us/boxshots/tiny/70115101.jpg" medium="http://cdn-1.nflximg.com/en_us/boxshots/small/70115101.jpg" large="http://cdn-1.nflximg.com/en_us/boxshots/large/70115101.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/series/70115101/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>2009</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime" term="Anime"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Sci-Fi Movies" term="Anime Sci-Fi Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Series" term="Anime Series"></category>
+<runtime>64800</runtime>
+<link href="http://api.netflix.com/catalog/titles/series/70115101/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70115101/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+
+<link href="http://api.netflix.com/catalog/titles/series/70115101/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70115101/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70115101/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>3.3</average_rating>
+<link href="http://api.netflix.com/catalog/titles/series/70115101/discs" rel="http://schemas.netflix.com/catalog/titles.discs" title="discs"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70115101/episodes" rel="http://schemas.netflix.com/catalog/titles.programs" title="episodes"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70115101/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/The_Mysterious_Cities_of_Gold/70115101" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.4</predicted_rating>
+
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/60000575</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/60000575" rel="http://schemas.netflix.com/catalog/title" title="The Goonies"></link><title short="The Goonies" regular="The Goonies"></title>
+<box_art small="http://cdn-5.nflximg.com/en_us/boxshots/tiny/60000575.jpg" medium="http://cdn-5.nflximg.com/en_us/boxshots/small/60000575.jpg" large="http://cdn-5.nflximg.com/en_us/boxshots/large/60000575.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/60000575/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1985</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG" term="PG"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Children &amp; Family Movies" term="Children &amp; Family Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 8 to 10" term="Movies for ages 8 to 10"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 11 to 12" term="Movies for ages 11 to 12"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Features" term="Family Features"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Teen Movies" term="Teen Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Adventures" term="Family Adventures"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Comedies" term="Family Comedies"></category>
+
+<runtime>6840</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/60000575/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60000575/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60000575/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60000575/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60000575/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.0</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/60000575/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/The_Goonies/60000575" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.4</predicted_rating>
+
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70157308</id>
+    <link href="http://api.netflix.com/catalog/titles/series/70157308" rel="http://schemas.netflix.com/catalog/title" title="Only Fools and Horses"></link><title short="Only Fools and Horses" regular="Only Fools and Horses"></title>
+<box_art small="http://cdn-8.nflximg.com/en_us/boxshots/tiny/70157308.jpg" medium="http://cdn-8.nflximg.com/en_us/boxshots/small/70157308.jpg" large="http://cdn-8.nflximg.com/en_us/boxshots/large/70157308.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/series/70157308/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1981</release_year>
+<category scheme="http://api.netflix.com/categories/tv_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Shows" term="TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="British TV Shows" term="British TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Comedies" term="TV Comedies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="British TV Comedies" term="British TV Comedies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Sitcoms" term="Sitcoms"></category>
+<link href="http://api.netflix.com/catalog/titles/series/70157308/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<average_rating>3.1</average_rating>
+
+<link href="http://api.netflix.com/catalog/titles/series/70157308/seasons" rel="http://schemas.netflix.com/catalog/titles.seasons" title="seasons"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70157308/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Only_Fools_and_Horses/70157308" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.3</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70038022</id>
+    <link href="http://api.netflix.com/catalog/titles/series/70038022" rel="http://schemas.netflix.com/catalog/title" title="Cowboy Bebop Remix"></link><title short="Cowboy Bebop Remix" regular="Cowboy Bebop Remix"></title>
+<box_art small="http://cdn-2.nflximg.com/en_us/boxshots/tiny/70038022.jpg" medium="http://cdn-2.nflximg.com/en_us/boxshots/small/70038022.jpg" large="http://cdn-2.nflximg.com/en_us/boxshots/large/70038022.jpg"></box_art>
+
+<link href="http://api.netflix.com/catalog/titles/series/70038022/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1999</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime" term="Anime"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Action Movies" term="Anime Action Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Comedies" term="Anime Comedies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Sci-Fi Movies" term="Anime Sci-Fi Movies"></category>
+<runtime>7500</runtime>
+<link href="http://api.netflix.com/catalog/titles/series/70038022/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70038022/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70038022/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70038022/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70038022/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.5</average_rating>
+
+<link href="http://api.netflix.com/catalog/titles/series/70038022/discs" rel="http://schemas.netflix.com/catalog/titles.discs" title="discs"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70038022/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Cowboy_Bebop_Remix/70038022" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.3</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/60010110</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/60010110" rel="http://schemas.netflix.com/catalog/title" title="Back to the Future"></link><title short="Back to the Future" regular="Back to the Future"></title>
+<box_art small="http://cdn-0.nflximg.com/en_us/boxshots/tiny/60010110.jpg" medium="http://cdn-0.nflximg.com/en_us/boxshots/small/60010110.jpg" large="http://cdn-0.nflximg.com/en_us/boxshots/large/60010110.jpg"></box_art>
+
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/bonus_materials" rel="http://schemas.netflix.com/catalog/titles/bonus_materials" title="bonus materials"></link>
+<release_year>1985</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG" term="PG"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Children &amp; Family Movies" term="Children &amp; Family Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Sci-Fi &amp; Fantasy" term="Sci-Fi &amp; Fantasy"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 8 to 10" term="Movies for ages 8 to 10"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 11 to 12" term="Movies for ages 11 to 12"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Comedies" term="Family Comedies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Sci-Fi &amp; Fantasy" term="Family Sci-Fi &amp; Fantasy"></category>
+<runtime>6960</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.0</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/60010110/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.bttfmovie.com" rel="http://schemas.netflix.com/catalog/titles/official_url" title="official webpage"></link>
+<link href="http://www.netflix.com/Movie/Back_to_the_Future/60010110" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.3</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/60021103</id>
+
+    <link href="http://api.netflix.com/catalog/titles/movies/60021103" rel="http://schemas.netflix.com/catalog/title" title="Akira"></link><title short="Akira" regular="Akira"></title>
+<box_art small="http://cdn-3.nflximg.com/en_us/boxshots/tiny/60021103.jpg" medium="http://cdn-3.nflximg.com/en_us/boxshots/small/60021103.jpg" large="http://cdn-3.nflximg.com/en_us/boxshots/large/60021103.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/60021103/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1988</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="R" term="R"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime" term="Anime"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Fantasies" term="Anime Fantasies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Feature Movies" term="Anime Feature Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Sci-Fi Movies" term="Anime Sci-Fi Movies"></category>
+<runtime>7440</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/60021103/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60021103/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60021103/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60021103/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+
+<link href="http://api.netflix.com/catalog/titles/movies/60021103/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>3.9</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/60021103/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Akira/60021103" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70041666</id>
+    <link href="http://api.netflix.com/catalog/titles/series/70041666" rel="http://schemas.netflix.com/catalog/title" title="Long Way Round"></link><title short="Long Way Round" regular="Long Way Round"></title>
+
+<box_art small="http://cdn-6.nflximg.com/en_us/boxshots/tiny/70041666.jpg" medium="http://cdn-6.nflximg.com/en_us/boxshots/small/70041666.jpg" large="http://cdn-6.nflximg.com/en_us/boxshots/large/70041666.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/series/70041666/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>2004</release_year>
+<category scheme="http://api.netflix.com/categories/tv_ratings" label="TV-MA" term="TV-MA"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Shows" term="TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="British TV Shows" term="British TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Documentaries" term="TV Documentaries"></category>
+<runtime>21600</runtime>
+<link href="http://api.netflix.com/catalog/titles/series/70041666/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70041666/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70041666/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70041666/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70041666/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.1</average_rating>
+
+<link href="http://api.netflix.com/catalog/titles/series/70041666/discs" rel="http://schemas.netflix.com/catalog/titles.discs" title="discs"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70041666/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Long_Way_Round/70041666" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70140428</id>
+    <link href="http://api.netflix.com/catalog/titles/series/70140428" rel="http://schemas.netflix.com/catalog/title" title="Red Dwarf"></link><title short="Red Dwarf" regular="Red Dwarf"></title>
+<box_art small="http://cdn-8.nflximg.com/en_us/boxshots/tiny/70140428.jpg" medium="http://cdn-8.nflximg.com/en_us/boxshots/small/70140428.jpg" large="http://cdn-8.nflximg.com/en_us/boxshots/large/70140428.jpg"></box_art>
+
+<link href="http://api.netflix.com/catalog/titles/series/70140428/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1988</release_year>
+<category scheme="http://api.netflix.com/categories/tv_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Shows" term="TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="British TV Shows" term="British TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Sci-Fi &amp; Fantasy" term="TV Sci-Fi &amp; Fantasy"></category>
+<link href="http://api.netflix.com/catalog/titles/series/70140428/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<average_rating>3.7</average_rating>
+<link href="http://api.netflix.com/catalog/titles/series/70140428/seasons" rel="http://schemas.netflix.com/catalog/titles.seasons" title="seasons"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70140428/episodes" rel="http://schemas.netflix.com/catalog/titles.programs" title="episodes"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70140428/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Red_Dwarf/70140428" rel="alternate" title="web page"></link>
+
+  </recommendation>
+
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/950727</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/950727" rel="http://schemas.netflix.com/catalog/title" title="Seven Samurai"></link><title short="Seven Samurai" regular="Seven Samurai"></title>
+<box_art small="http://cdn-7.nflximg.com/en_us/boxshots/tiny/950727.jpg" medium="http://cdn-7.nflximg.com/en_us/boxshots/small/950727.jpg" large="http://cdn-7.nflximg.com/en_us/boxshots/large/950727.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/950727/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1954</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Action &amp; Adventure" term="Action &amp; Adventure"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Dramas" term="Dramas"></category>
+
+<category scheme="http://api.netflix.com/categories/genres" label="Foreign Movies" term="Foreign Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Foreign Action &amp; Adventure" term="Foreign Action &amp; Adventure"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Foreign Dramas" term="Foreign Dramas"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Art House Movies" term="Art House Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Japanese Movies" term="Japanese Movies"></category>
+<runtime>12420</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/950727/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/950727/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/950727/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/950727/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/950727/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/950727/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.1</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/950727/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Seven_Samurai/950727" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70142413</id>
+    <link href="http://api.netflix.com/catalog/titles/series/70142413" rel="http://schemas.netflix.com/catalog/title" title="Chappelle's Show"></link><title short="Chappelle's Show" regular="Chappelle's Show"></title>
+<box_art small="http://cdn-3.nflximg.com/en_us/boxshots/tiny/70142413.jpg" medium="http://cdn-3.nflximg.com/en_us/boxshots/small/70142413.jpg" large="http://cdn-3.nflximg.com/en_us/boxshots/large/70142413.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/series/70142413/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>2003</release_year>
+
+<category scheme="http://api.netflix.com/categories/tv_ratings" label="TV-MA" term="TV-MA"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Shows" term="TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Comedies" term="TV Comedies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Sketch Comedies" term="TV Sketch Comedies"></category>
+<link href="http://api.netflix.com/catalog/titles/series/70142413/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<average_rating>3.8</average_rating>
+<link href="http://api.netflix.com/catalog/titles/series/70142413/seasons" rel="http://schemas.netflix.com/catalog/titles.seasons" title="seasons"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70142413/episodes" rel="http://schemas.netflix.com/catalog/titles.programs" title="episodes"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70142413/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Chappelle_s_Show/70142413" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/60011649</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/60011649" rel="http://schemas.netflix.com/catalog/title" title="Indiana Jones and the Raiders of the Lost Ark"></link><title short="Raiders of the Lost Ark" regular="Indiana Jones and the Raiders of the Lost Ark"></title>
+<box_art small="http://cdn-9.nflximg.com/en_us/boxshots/tiny/60011649.jpg" medium="http://cdn-9.nflximg.com/en_us/boxshots/small/60011649.jpg" large="http://cdn-9.nflximg.com/en_us/boxshots/large/60011649.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/bonus_materials" rel="http://schemas.netflix.com/catalog/titles/bonus_materials" title="bonus materials"></link>
+<release_year>1981</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG" term="PG"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Action &amp; Adventure" term="Action &amp; Adventure"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Adventures" term="Adventures"></category>
+<runtime>6900</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.3</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/60011649/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Indiana_Jones_and_the_Raiders_of_the_Lost_Ark/60011649" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/60027810</id>
+
+    <link href="http://api.netflix.com/catalog/titles/movies/60027810" rel="http://schemas.netflix.com/catalog/title" title="Style Wars"></link><title short="Style Wars" regular="Style Wars"></title>
+<box_art small="http://cdn-0.nflximg.com/en_us/boxshots/tiny/60027810.jpg" medium="http://cdn-0.nflximg.com/en_us/boxshots/small/60027810.jpg" large="http://cdn-0.nflximg.com/en_us/boxshots/large/60027810.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/60027810/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60027810/bonus_materials" rel="http://schemas.netflix.com/catalog/titles/bonus_materials" title="bonus materials"></link>
+<release_year>1983</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Documentaries" term="Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Social &amp; Cultural Documentaries" term="Social &amp; Cultural Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Music &amp; Concert Documentaries" term="Music &amp; Concert Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Music &amp; Concert Movies" term="Music &amp; Concert Movies"></category>
+<runtime>4200</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/60027810/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60027810/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60027810/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+
+<link href="http://api.netflix.com/catalog/titles/movies/60027810/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60027810/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>3.9</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/60027810/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Style_Wars/60027810" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70157149</id>
+
+    <link href="http://api.netflix.com/catalog/titles/series/70157149" rel="http://schemas.netflix.com/catalog/title" title="The Wire"></link><title short="The Wire" regular="The Wire"></title>
+<box_art small="http://cdn-9.nflximg.com/en_us/boxshots/tiny/70157149.jpg" medium="http://cdn-9.nflximg.com/en_us/boxshots/small/70157149.jpg" large="http://cdn-9.nflximg.com/en_us/boxshots/large/70157149.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/series/70157149/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>2003</release_year>
+<category scheme="http://api.netflix.com/categories/tv_ratings" label="TV-MA" term="TV-MA"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Shows" term="TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Dramas" term="TV Dramas"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Crime TV Dramas" term="Crime TV Dramas"></category>
+<link href="http://api.netflix.com/catalog/titles/series/70157149/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<average_rating>4.1</average_rating>
+<link href="http://api.netflix.com/catalog/titles/series/70157149/seasons" rel="http://schemas.netflix.com/catalog/titles.seasons" title="seasons"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70157149/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/The_Wire/70157149" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/541018</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/541018" rel="http://schemas.netflix.com/catalog/title" title="Ghostbusters"></link><title short="Ghostbusters" regular="Ghostbusters"></title>
+<box_art small="http://cdn-8.nflximg.com/en_us/boxshots/tiny/541018.jpg" medium="http://cdn-8.nflximg.com/en_us/boxshots/small/541018.jpg" large="http://cdn-8.nflximg.com/en_us/boxshots/large/541018.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/541018/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1984</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG" term="PG"></category>
+
+<category scheme="http://api.netflix.com/categories/genres" label="Action &amp; Adventure" term="Action &amp; Adventure"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Children &amp; Family Movies" term="Children &amp; Family Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Comedies" term="Comedies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Sci-Fi &amp; Fantasy" term="Sci-Fi &amp; Fantasy"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Action Comedies" term="Action Comedies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Action Sci-Fi &amp; Fantasy" term="Action Sci-Fi &amp; Fantasy"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Fantasy" term="Fantasy"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Comedies" term="Family Comedies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Sci-Fi &amp; Fantasy" term="Family Sci-Fi &amp; Fantasy"></category>
+<runtime>6300</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/541018/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/541018/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/541018/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/541018/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/541018/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/541018/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+
+<average_rating>3.8</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/541018/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Ghostbusters/541018" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/60026106</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/60026106" rel="http://schemas.netflix.com/catalog/title" title="City of God"></link><title short="City of God" regular="City of God"></title>
+
+<box_art small="http://cdn-6.nflximg.com/en_us/boxshots/tiny/60026106.jpg" medium="http://cdn-6.nflximg.com/en_us/boxshots/small/60026106.jpg" large="http://cdn-6.nflximg.com/en_us/boxshots/large/60026106.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/60026106/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>2002</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="R" term="R"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Dramas" term="Dramas"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Foreign Movies" term="Foreign Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Crime Dramas" term="Crime Dramas"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Foreign Dramas" term="Foreign Dramas"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Latin American Movies" term="Latin American Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Brazilian Movies" term="Brazilian Movies"></category>
+<runtime>7800</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/60026106/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60026106/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60026106/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60026106/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+
+<link href="http://api.netflix.com/catalog/titles/movies/60026106/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60026106/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.1</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/60026106/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/City_of_God/60026106" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/60023642</id>
+
+    <link href="http://api.netflix.com/catalog/titles/movies/60023642" rel="http://schemas.netflix.com/catalog/title" title="Spirited Away"></link><title short="Spirited Away" regular="Spirited Away"></title>
+<box_art small="http://cdn-2.nflximg.com/en_us/boxshots/tiny/60023642.jpg" medium="http://cdn-2.nflximg.com/en_us/boxshots/small/60023642.jpg" large="http://cdn-2.nflximg.com/en_us/boxshots/large/60023642.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/bonus_materials" rel="http://schemas.netflix.com/catalog/titles/bonus_materials" title="bonus materials"></link>
+<release_year>2001</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG" term="PG"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Children &amp; Family Movies" term="Children &amp; Family Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Sci-Fi &amp; Fantasy" term="Sci-Fi &amp; Fantasy"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 5 to 7" term="Movies for ages 5 to 7"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 8 to 10" term="Movies for ages 8 to 10"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 11 to 12" term="Movies for ages 11 to 12"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Features" term="Family Features"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Japanese Movies" term="Japanese Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Fantasy" term="Fantasy"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Family Feature Animation" term="Family Feature Animation"></category>
+
+<runtime>7500</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>3.9</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/60023642/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Spirited_Away/60023642" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+
+    <predicted_rating>4.2</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70177032</id>
+    <link href="http://api.netflix.com/catalog/titles/series/70177032" rel="http://schemas.netflix.com/catalog/title" title="Transformers"></link><title short="Transformers" regular="Transformers"></title>
+<box_art small="http://cdn-2.nflximg.com/en_us/boxshots/tiny/70177032.jpg" medium="http://cdn-2.nflximg.com/en_us/boxshots/small/70177032.jpg" large="http://cdn-2.nflximg.com/en_us/boxshots/large/70177032.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/series/70177032/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1984</release_year>
+<category scheme="http://api.netflix.com/categories/tv_ratings" label="TV-Y7" term="TV-Y7"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Shows" term="TV Shows"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Kids' TV" term="Kids' TV"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="TV Cartoons" term="TV Cartoons"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Comic Book &amp; Superhero TV" term="Comic Book &amp; Superhero TV"></category>
+
+<link href="http://api.netflix.com/catalog/titles/series/70177032/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<average_rating>3.7</average_rating>
+<link href="http://api.netflix.com/catalog/titles/series/70177032/seasons" rel="http://schemas.netflix.com/catalog/titles.seasons" title="seasons"></link>
+<link href="http://api.netflix.com/catalog/titles/series/70177032/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Transformers/70177032" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.1</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/9365380</id>
+
+    <link href="http://api.netflix.com/catalog/titles/movies/9365380" rel="http://schemas.netflix.com/catalog/title" title="Ninja Scroll"></link><title short="Ninja Scroll" regular="Ninja Scroll"></title>
+<box_art small="http://cdn-0.nflximg.com/en_us/boxshots/tiny/9365380.jpg" medium="http://cdn-0.nflximg.com/en_us/boxshots/small/9365380.jpg" large="http://cdn-0.nflximg.com/en_us/boxshots/large/9365380.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/9365380/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>1995</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="NR" term="NR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime" term="Anime"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Action Movies" term="Anime Action Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Fantasies" term="Anime Fantasies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Anime Feature Movies" term="Anime Feature Movies"></category>
+<runtime>5400</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/9365380/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/9365380/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/9365380/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/9365380/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+
+<average_rating>4.1</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/9365380/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Ninja_Scroll/9365380" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.1</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70108783</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/70108783" rel="http://schemas.netflix.com/catalog/title" title="Food, Inc."></link><title short="Food, Inc." regular="Food, Inc."></title>
+
+<box_art small="http://cdn-3.nflximg.com/en_us/boxshots/tiny/70108783.jpg" medium="http://cdn-3.nflximg.com/en_us/boxshots/small/70108783.jpg" large="http://cdn-3.nflximg.com/en_us/boxshots/large/70108783.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/70108783/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>2008</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG" term="PG"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Documentaries" term="Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Political Documentaries" term="Political Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Social &amp; Cultural Documentaries" term="Social &amp; Cultural Documentaries"></category>
+<runtime>5640</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/70108783/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70108783/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70108783/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70108783/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70108783/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70108783/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.0</average_rating>
+
+<link href="http://api.netflix.com/catalog/titles/movies/70108783/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Food_Inc./70108783" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.1</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70053213</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/70053213" rel="http://schemas.netflix.com/catalog/title" title="Star Wars: Episode IV: A New Hope: Original Theatrical Version"></link><title short="Star Wars: A New Hope" regular="Star Wars: Episode IV: A New Hope: Original Theatrical Version"></title>
+<box_art small="http://cdn-3.nflximg.com/en_us/boxshots/tiny/70053213.jpg" medium="http://cdn-3.nflximg.com/en_us/boxshots/small/70053213.jpg" large="http://cdn-3.nflximg.com/en_us/boxshots/large/70053213.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/70053213/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+
+<release_year>1977</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG" term="PG"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Sci-Fi &amp; Fantasy" term="Sci-Fi &amp; Fantasy"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 8 to 10" term="Movies for ages 8 to 10"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Movies for ages 11 to 12" term="Movies for ages 11 to 12"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Action Sci-Fi &amp; Fantasy" term="Action Sci-Fi &amp; Fantasy"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Sci-Fi Adventure" term="Sci-Fi Adventure"></category>
+<runtime>7620</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/70053213/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70053213/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70053213/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70053213/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70053213/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.4</average_rating>
+
+<link href="http://api.netflix.com/catalog/titles/movies/70053213/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Star_Wars_Episode_IV_A_New_Hope_Original_Theatrical_Version/70053213" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.1</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/17017662</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/17017662" rel="http://schemas.netflix.com/catalog/title" title="Night of the Living Dead"></link><title short="Night of the Living Dead" regular="Night of the Living Dead"></title>
+<box_art small="http://cdn-2.nflximg.com/en_us/boxshots/tiny_ste/17017662.jpg" medium="http://cdn-2.nflximg.com/en_us/boxshots/small_ste/17017662.jpg" large="http://cdn-2.nflximg.com/en_us/boxshots/large_ste/17017662.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/17017662/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+
+<release_year>1968</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="UR" term="UR"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Classic Movies" term="Classic Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Horror Movies" term="Horror Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Classic Horror Movies" term="Classic Horror Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Cult Horror Movies" term="Cult Horror Movies"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Zombie Movies" term="Zombie Movies"></category>
+<runtime>5760</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/17017662/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/17017662/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/17017662/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/17017662/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/17017662/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/17017662/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>3.5</average_rating>
+
+<link href="http://api.netflix.com/catalog/titles/movies/17017662/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/Night_of_the_Living_Dead/17017662" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.1</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70139555</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/70139555" rel="http://schemas.netflix.com/catalog/title" title="Inside Job"></link><title short="Inside Job" regular="Inside Job"></title>
+<box_art small="http://cdn-5.nflximg.com/en_us/boxshots/tiny/70139555.jpg" medium="http://cdn-5.nflximg.com/en_us/boxshots/small/70139555.jpg" large="http://cdn-5.nflximg.com/en_us/boxshots/large/70139555.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/70139555/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+
+<release_year>2010</release_year>
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG-13" term="PG-13"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Documentaries" term="Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Political Documentaries" term="Political Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Social &amp; Cultural Documentaries" term="Social &amp; Cultural Documentaries"></category>
+<runtime>6480</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/70139555/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70139555/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70139555/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70139555/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70139555/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70139555/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.0</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/70139555/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+
+<link href="http://www.netflix.com/Movie/Inside_Job/70139555" rel="alternate" title="web page"></link>
+
+  </recommendation>
+  <recommendation>
+    <predicted_rating>4.1</predicted_rating>
+    <id>http://api.netflix.com/users/BQAJAAEDEAzOWlSFnAnaZCRCUyXjpEUwubDPDgHTomh9Fg00iv3wopfFNkBjp0z-9s224PPRryr6MbgqeGBC3l8ASBcAMBpa/recommendations/70112741</id>
+    <link href="http://api.netflix.com/catalog/titles/movies/70112741" rel="http://schemas.netflix.com/catalog/title" title="The Cove"></link><title short="The Cove" regular="The Cove"></title>
+<box_art small="http://cdn-1.nflximg.com/en_us/boxshots/tiny/70112741.jpg" medium="http://cdn-1.nflximg.com/en_us/boxshots/small/70112741.jpg" large="http://cdn-1.nflximg.com/en_us/boxshots/large/70112741.jpg"></box_art>
+<link href="http://api.netflix.com/catalog/titles/movies/70112741/synopsis" rel="http://schemas.netflix.com/catalog/titles/synopsis" title="synopsis"></link>
+<release_year>2009</release_year>
+
+<category scheme="http://api.netflix.com/categories/mpaa_ratings" label="PG-13" term="PG-13"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Documentaries" term="Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Political Documentaries" term="Political Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Science &amp; Nature Documentaries" term="Science &amp; Nature Documentaries"></category>
+<category scheme="http://api.netflix.com/categories/genres" label="Social &amp; Cultural Documentaries" term="Social &amp; Cultural Documentaries"></category>
+<runtime>5520</runtime>
+<link href="http://api.netflix.com/catalog/titles/movies/70112741/cast" rel="http://schemas.netflix.com/catalog/people.cast" title="cast"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70112741/directors" rel="http://schemas.netflix.com/catalog/people.directors" title="directors"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70112741/format_availability" rel="http://schemas.netflix.com/catalog/titles/format_availability" title="formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70112741/awards" rel="http://schemas.netflix.com/catalog/titles/awards" title="awards"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70112741/screen_formats" rel="http://schemas.netflix.com/catalog/titles/screen_formats" title="screen formats"></link>
+<link href="http://api.netflix.com/catalog/titles/movies/70112741/languages_and_audio" rel="http://schemas.netflix.com/catalog/titles/languages_and_audio" title="languages and audio"></link>
+<average_rating>4.2</average_rating>
+<link href="http://api.netflix.com/catalog/titles/movies/70112741/similars" rel="http://schemas.netflix.com/catalog/titles.similars" title="similars"></link>
+<link href="http://www.netflix.com/Movie/The_Cove/70112741" rel="alternate" title="web page"></link>
+
+  </recommendation>
+</recommendations>

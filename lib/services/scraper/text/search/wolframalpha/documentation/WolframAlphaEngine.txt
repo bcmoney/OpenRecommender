@@ -1,0 +1,36 @@
+DESCRIPTION:
+============
+
+The WolframAlphaEngine class (WolframAlphaEngine.php) is the main wrapper and in most
+cases will be the only file you will need to include in your script. This class handles
+loading all result objects, querying the API, error detection and parsing.
+
+CONSTRUCTOR:
+============
+
+The constructor for this class requires passing your API APP KEY:
+$engine = new WolframAlphaEngine( 'YOUR_APP_KEY_HERE' );
+
+PUBLIC FUNCTIONS:
+=================
+
+* WAResponse getResults( input_string [, otherParameterHash ] ):
+getResults takes as input the query string to be used and an associative array of other key value pairs
+needed to send to the engine. It will return an object of type WAResponse.
+
+Sample usages:
+# to query the API for pi with the rest of the settings as default
+$response = $engine->getResults( 'pi' );
+
+# to query the API for pi expecting a return format of html
+$response = $engine->getResults( 'pi', array( format => 'html ) );
+
+# to query the API for pi expecting an html formatted result 
+# with only the 2nd, 3rd and 5th pods to be returned
+$otherParams = array(
+        format => 'html',
+        podindex => '2,3,5'
+  );
+$response = $engine->getResults( 'pi', $otherParams );
+
+

@@ -1,0 +1,8 @@
+/**
+* Free to use and distribute or modify
+*
+**/
+
+1) Open config.php and input the consumer_secret,consumer_key and callback_url.
+2) If these files are extracted in a folder called goodreads, then point your browser to http://youdomain.com/goodreads
+3) Rest will work automatically. Edit callback.php to perform the tasks you require

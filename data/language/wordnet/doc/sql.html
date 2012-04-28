@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>WordNet SQL - Queries</title>
+<meta name="author" content="Bernard Bou">
+<meta name="created" content="20050201;12154260">
+<meta name="changedby" content="Bernard Bou">
+<meta name="changed" content="20090520;10000000">
+<meta name="keywords" content="wordnet,sql">
+<link rel="stylesheet" href="wordnet-style.css" type="text/css">
+</head>
+<body>
+<table width="100%" border="0">
+  <tbody>
+    <tr>
+      <td class="color1" width="25%">&nbsp;</td>
+      <td class="color2" width="25%">&nbsp;</td>
+      <td class="color3" width="25%">&nbsp;</td>
+      <td class="color4" width="25%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4"><p align="center"><img src="images/wnlogo.gif" alt="wordnet" width="279" height="92"><br>
+</p></td>
+    </tr>
+    <tr>
+      <td colspan="4"><p align="center"> <span class="color4"><b>wordnet sql builder </b></span><br>
+          <span class="subtitle">Bernard Bou</span><br>
+      <a href="mailto:bbou@ac-toulouse.fr">bbou@ac-toulouse.fr</a></p></td>
+    </tr>
+    <tr>
+      <td class="color1" width="25%">&nbsp;</td>
+      <td class="color2" width="25%">&nbsp;</td>
+      <td class="color3" width="25%">&nbsp;</td>
+      <td class="color4" width="25%">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<div align="center">
+<table class="grid">
+  <tbody>
+    <tr class="grid">
+      <th class="grid">&nbsp;</th>
+      <th class="grid">link</th>
+      <th class="grid">comment</th>
+    </tr>
+    <tr class="grid">
+      <th class="grid">dict</th>
+      <td class="grid"><a href="sql-dict.html">see</a></td>
+      <td class="grid">dictionary-like usage</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">links</th>
+      <td class="grid"><a href="sql-links.html">see</a></td>
+      <td class="grid">links</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">cased</th>
+      <td class="grid"><a href="sql-cased.html">see</a></td>
+      <td class="grid">cased forms</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">misc</th>
+      <td class="grid"><a href="sql-misc.html">see</a></td>
+      <td class="grid">adjective position</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">morph</th>
+      <td class="grid"><a href="sql-morph.html">see</a></td>
+      <td class="grid">morphology</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">vframe</th>
+      <td class="grid"><a href="sql-vframe.html">see</a></td>
+      <td class="grid">verb frames</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">legacy</th>
+      <td class="grid"><a href="sql-legacy.html">see</a></td>
+      <td class="grid">legacy WordNet</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">vn</th>
+      <td class="grid"><a href="sql-vn.html">see</a></td>
+      <td class="grid">VerbNet</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">xwn</th>
+      <td class="grid"><a href="sql-xwn.html">see</a></td>
+      <td class="grid">XWordNet</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">bnc</th>
+      <td class="grid"><a href="sql-bnc.html">see</a></td>
+      <td class="grid">British National Corpus usage statistical data</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">sumo</th>
+      <td class="grid"><a href="sql-sumo.html">see</a></td>
+      <td class="grid">Suggested Upper Merged Ontology (see <a href="sumo-types.html">types</a>)</td>
+    </tr>
+    <tr class="grid">
+      <th class="grid">cardinality</th>
+      <td class="grid"><a href="sql-cardinality.html">see</a></td>
+      <td class="grid">cardinality of associations</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<br>
+<div>
+<p>Some of these queries will work only with MySQL, notably those resorting to GROUP_CONCAT (PostGreSQl uses another construct).</p>
+<p>Views are used to make SQL queries easier to build and understand. Some of these queries will not work without them.</p>
+</div>
+</body>
+</html>

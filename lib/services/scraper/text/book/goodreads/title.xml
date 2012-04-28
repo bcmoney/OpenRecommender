@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[MTky483a1218cdb836d072e66543b2b8629f4a438a54]]></key>
+    <method><![CDATA[book_title]]></method>
+  </Request>
+  <book>
+  <id>8921</id>
+
+  <title><![CDATA[The Hound of the Baskervilles]]></title>
+  <isbn><![CDATA[0451528018]]></isbn>
+  <isbn13><![CDATA[9780451528018]]></isbn13>
+  <asin><![CDATA[]]></asin>
+  <image_url>http://photo.goodreads.com/books/1311281165m/8921.jpg</image_url>
+  <small_image_url>http://photo.goodreads.com/books/1311281165s/8921.jpg</small_image_url>
+  <publication_year>2001</publication_year>
+
+  <publication_month>7</publication_month>
+  <publication_day>1</publication_day>
+  <publisher>Signet Classics</publisher>
+  <language_code>eng</language_code>
+  <is_ebook>false</is_ebook>
+  <description><![CDATA[Holmes and Watson are faced with their most terrifying case yet. The legend of the devil-beast that haunts the moors around the Baskerville families home warns the descendants of that ancient clan never to venture out in those dark hours when the power of evil is exalted. Now, the most recent Baskerville, Sir Charles, is dead and the footprints of a giant hound have been found near his body. Will the new heir meet the same fate?]]></description>
+
+  <work>
+  <best_book_id type="integer">8921</best_book_id>
+  <books_count type="integer">716</books_count>
+  <desc_user_id type="integer">1344613</desc_user_id>
+  <id type="integer">3311984</id>
+  <media_type>book</media_type>
+
+  <original_language_id type="integer" nil="true"></original_language_id>
+  <original_publication_day type="integer" nil="true"></original_publication_day>
+  <original_publication_month type="integer" nil="true"></original_publication_month>
+  <original_publication_year type="integer">1902</original_publication_year>
+  <original_title>The Hound of the Baskervilles</original_title>
+  <rating_dist>5:7619|4:12076|3:8362|2:1353|1:205|total:29615</rating_dist>
+  <ratings_count type="integer">29615</ratings_count>
+
+  <ratings_sum type="integer">114396</ratings_sum>
+  <reviews_count type="integer">38752</reviews_count>
+  <text_reviews_count type="integer">1464</text_reviews_count>
+</work>
+
+  <average_rating><![CDATA[3.86]]></average_rating>
+    <num_pages><![CDATA[256]]></num_pages>
+    <ratings_count><![CDATA[24960]]></ratings_count>
+
+  <text_reviews_count><![CDATA[1050]]></text_reviews_count>
+  
+  <url><![CDATA[http://www.goodreads.com/book/show/8921.The_Hound_of_the_Baskervilles]]></url>
+  <link><![CDATA[http://www.goodreads.com/book/show/8921.The_Hound_of_the_Baskervilles]]></link>
+  
+    
+
+<authors>
+    <author>
+    <id>2448</id>
+        <name><![CDATA[Arthur Conan Doyle]]></name>
+    <image_url><![CDATA[http://photo.goodreads.com/authors/1289836561p5/2448.jpg]]></image_url>
+
+    <small_image_url><![CDATA[http://photo.goodreads.com/authors/1289836561p2/2448.jpg]]></small_image_url>
+    <link><![CDATA[http://www.goodreads.com/author/show/2448.Arthur_Conan_Doyle]]></link>
+    <average_rating>4.09</average_rating>
+    <ratings_count>146513</ratings_count>
+    <text_reviews_count>8017</text_reviews_count>
+  </author>
+  </authors>
+
+      
+    <friend_reviews>
+              <review>
+  <id>72306079</id>
+      <user>
+  <id>899082</id>
+  <name><![CDATA[Andersen]]></name>
+  <location><![CDATA[Dayton, OH]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/899082-andersen-prunty]]></link>
+
+  <image_url><![CDATA[http://photo.goodreads.com/users/1209085521p3/899082.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1209085521p2/899082.jpg]]></small_image_url>
+</user>
+        <rating>3</rating>
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Sun Sep 27 10:08:38 -0700 2009</read_at>
+  <date_added>Wed Sep 23 21:21:50 -0700 2009</date_added>
+
+  <date_updated>Sun Sep 27 10:08:38 -0700 2009</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/72306079]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/72306079]]></link>
+
+  <owned>0</owned>
+</review>
+
+          </friend_reviews>
+    
+    <reviews start="1" end="30" total="38751" api_blocked_count="0">
+              <review>
+  <id>15326712</id>
+      <user>
+  <id>901901</id>
+
+  <name><![CDATA[Doug]]></name>
+  <location><![CDATA[Lindon, UT]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/901901-doug-cannon]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1204149168p3/901901.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1204149168p2/901901.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+  <votes>20</votes>
+
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+
+  <read_at></read_at>
+  <date_added>Wed Feb 13 08:51:43 -0800 2008</date_added>
+  <date_updated>Wed Oct 12 09:28:40 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[My Grandpa Cannon loved this story, and he often told of a time when he went to see a &quot;picture show&quot; about the Hound of the Baskervilles.  &quot;It scared the willies out of me,&quot; he said, and then he and his friend had to part ways as my grandpa rode his bicycle home in the dark.
+<br/>...
+              <a href="http://www.goodreads.com/review/show/15326712">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/15326712]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/15326712]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>99520398</id>
+      <user>
+  <id>2099671</id>
+
+  <name><![CDATA[Michael]]></name>
+  <location><![CDATA[Blackburn, Lancashire, The United Kingdom]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/2099671-michael]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1270248331p3/2099671.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1270248331p2/2099671.jpg]]></small_image_url>
+</user>
+        <rating>5</rating>
+  <votes>5</votes>
+
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+              <shelf name="graphic-novels" />
+          <shelf name="review" />
+      </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Tue Oct 05 00:00:00 -0700 2010</read_at>
+  <date_added>Wed Apr 21 16:12:53 -0700 2010</date_added>
+  <date_updated>Fri Dec 02 15:19:42 -0800 2011</date_updated>
+  <read_count></read_count>
+  <body>
+
+          <![CDATA[Review from <a rel="nofollow" target="_blank" href="http://finxy.blogspot.com/2010/10/hound-of-baskervilles.html">Badelynge</a>
+<br/>The key to producing a good adaptation of The Hound of the Baskervilles  in any media is for the producers to understand that perhaps the most important character in the story is not Sherlock Holmes, or Doctor Watson; it's the moor and the atmosphere it generates in all it...
+              <a href="http://www.goodreads.com/review/show/99520398">more...</a>
+            ]]>
+      </body>
+  <comments_count>1</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/99520398]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/99520398]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+
+  <id>18751841</id>
+      <user>
+  <id>1022982</id>
+  <name><![CDATA[Brad]]></name>
+  <location><![CDATA[Summerside, PE, Canada]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/1022982-brad]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1308747432p3/1022982.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1308747432p2/1022982.jpg]]></small_image_url>
+
+</user>
+        <rating>5</rating>
+  <votes>19</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+
+              <shelf name="faves" />
+          <shelf name="mystery" />
+      </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Mar 27 08:11:26 -0700 2008</date_added>
+
+  <date_updated>Fri Apr 10 13:16:48 -0700 2009</date_updated>
+  <read_count>3</read_count>
+  <body>
+          <![CDATA[The ultimate tale of the ultimate Victorian hero, <a href="http://www.goodreads.com/book/show/8921.The_Hound_of_the_Baskervilles" title="The Hound of the Baskervilles by Arthur Conan Doyle">The Hound of the Baskervilles</a> is a true masterpiece of the mystery genre, and quite possibly remains the finest mystery novel ever produced -- even if its first appearance was serialized in <em>Strand Magazine</em>. 
+<br/>
+<br/><a href="http://www.goodreads.com/author/show/2448.Arthur_Conan_Doyle" title="Arthur Conan Doyle">Sir Arthur Conan Doyle</a>'s unforg...
+              <a href="http://www.goodreads.com/review/show/18751841">more...</a>
+            ]]>
+      </body>
+  <comments_count>3</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/18751841]]></url>
+
+  <link><![CDATA[http://www.goodreads.com/review/show/18751841]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>210211964</id>
+      <user>
+  <id>1257629</id>
+
+  <name><![CDATA[Carlo]]></name>
+  <location><![CDATA[Yerevan, Armenia]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/1257629-carlo]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1314285348p3/1257629.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1314285348p2/1257629.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+  <votes>4</votes>
+
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+              <shelf name="detective-fiction" />
+          <shelf name="english-literature" />
+          <shelf name="mystery" />
+      </shelves>
+
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at>Sun Sep 25 00:00:00 -0700 2011</started_at>
+  <read_at>Tue Sep 27 00:00:00 -0700 2011</read_at>
+  <date_added>Sun Sep 18 05:39:44 -0700 2011</date_added>
+  <date_updated>Sat Oct 08 01:21:37 -0700 2011</date_updated>
+  <read_count></read_count>
+
+  <body>
+          <![CDATA[The good thing about any Sherlock Holmes book, is that the story doesn't revolve only around some mystery. You can't help but realize the richness of Arthur Conan Doyle's fiction, which makes the Holmes mysteries distinguished from many others. Focusing solely on the mystery (not necessarily a bad t...
+              <a href="http://www.goodreads.com/review/show/210211964">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/210211964]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/210211964]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>10614551</id>
+      <user>
+  <id>692429</id>
+  <name><![CDATA[Amanda]]></name>
+  <location><![CDATA[The United States]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/692429-amanda]]></link>
+
+  <image_url><![CDATA[http://photo.goodreads.com/users/1197982859p3/692429.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1197982859p2/692429.jpg]]></small_image_url>
+</user>
+        <rating>5</rating>
+  <votes>7</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+
+  <shelves>
+          <shelf name="read" />
+              <shelf name="loved" />
+          <shelf name="mystery" />
+      </shelves>
+  <recommended_for><![CDATA[Anyone who loves Sherlock Holmes, or a good mystery]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Sat Dec 01 00:00:00 -0800 2007</read_at>
+
+  <date_added>Tue Dec 18 05:04:11 -0800 2007</date_added>
+  <date_updated>Tue Dec 18 05:15:11 -0800 2007</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[I just finished teaching this book, and it gave me a new appreciation for the vocabulary and structure of Sir Arthur Conan Doyle.  I was a little nervous about teaching this to 6th graders, as the vocabulary is difficult, and the story is intricately woven together, and can be confusing for younger ...
+              <a href="http://www.goodreads.com/review/show/10614551">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/10614551]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/10614551]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>187033064</id>
+      <user>
+  <id>1079533</id>
+
+  <name><![CDATA[Laurel]]></name>
+  <location><![CDATA[Winnipeg, Manitoba, Canada]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/1079533-laurel]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1315615381p3/1079533.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1315615381p2/1079533.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+  <votes>3</votes>
+
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+              <shelf name="2011" />
+      </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at>Thu Jul 21 00:00:00 -0700 2011</started_at>
+
+  <read_at>Thu Jul 21 00:00:00 -0700 2011</read_at>
+  <date_added>Thu Jul 21 13:24:31 -0700 2011</date_added>
+  <date_updated>Fri Dec 02 15:19:42 -0800 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[I love reading a classic Sherlock Holmes story, but I've never &quot;seen&quot; an interpretation of a Holmes mystery.  The graphics and coloring enhanced both the settings and the emotional responses of the characters to the plot.  I thought that the writer also did an excellent job of adapting the...
+              <a href="http://www.goodreads.com/review/show/187033064">more...</a>
+            ]]>
+      </body>
+
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/187033064]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/187033064]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>42971473</id>
+
+      <user>
+  <id>1207684</id>
+  <name><![CDATA[Bruce]]></name>
+  <location><![CDATA[Janesville, WI]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/1207684-bruce]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1290916771p3/1207684.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1290916771p2/1207684.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+
+  <votes>5</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Fri Jan 23 00:00:00 -0800 2009</read_at>
+  <date_added>Tue Jan 13 19:03:28 -0800 2009</date_added>
+  <date_updated>Sun Jan 25 10:53:20 -0800 2009</date_updated>
+  <read_count></read_count>
+  <body>
+
+          <![CDATA[Having completed my nth reading of Arthur Conan Doyle’s, <em>The Hound of the Baskervilles</em>, not having read it for a decade or two, I was once again charmed, realizing yet again why the Sherlock Holmes stories have been so enduring for so many readers.  This time around I was more aware of the occasiona...
+              <a href="http://www.goodreads.com/review/show/42971473">more...</a>
+            ]]>
+      </body>
+  <comments_count>7</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/42971473]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/42971473]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+
+  <id>113472095</id>
+      <user>
+  <id>124482</id>
+  <name><![CDATA[Alison]]></name>
+  <location><![CDATA[Memphis, TN]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/124482-alison]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1254195240p3/124482.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1254195240p2/124482.jpg]]></small_image_url>
+
+</user>
+        <rating>4</rating>
+  <votes>9</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+
+          </shelves>
+  <recommended_for><![CDATA[fans of crime fiction, of course!]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at>Sun Jul 25 00:00:00 -0700 2010</started_at>
+  <read_at>Tue Jul 27 00:00:00 -0700 2010</read_at>
+  <date_added>Sun Jul 25 20:30:21 -0700 2010</date_added>
+  <date_updated>Sun Aug 22 18:49:25 -0700 2010</date_updated>
+
+  <read_count>1</read_count>
+  <body>
+          <![CDATA[I love Sherlock Holmes.  I love his name, I love his clothes...I just love his style.  Reading The Hound of the Baskervilles...I felt like I was reading the first detective novel ever written.  Doyle defined the genre--he was the first and the best.
+<br/>
+<br/>My nine-year-old <em>daughter</em> loves Sherloc...
+              <a href="http://www.goodreads.com/review/show/113472095">more...</a>
+            ]]>
+      </body>
+  <comments_count>5</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/113472095]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/113472095]]></link>
+  <owned>0</owned>
+
+</review>
+
+              <review>
+  <id>160957527</id>
+      <user>
+  <id>5113047</id>
+  <name><![CDATA[Elisa]]></name>
+  <location><![CDATA[]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/5113047-elisa]]></link>
+
+  <image_url><![CDATA[http://photo.goodreads.com/users/1315387003p3/5113047.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1315387003p2/5113047.jpg]]></small_image_url>
+</user>
+        <rating>5</rating>
+  <votes>4</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+
+  <shelves>
+          <shelf name="read" />
+              <shelf name="classici" />
+          <shelf name="letteratura-inglese" />
+      </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at>Thu Apr 14 00:00:00 -0700 2011</started_at>
+
+  <read_at>Tue Apr 19 00:00:00 -0700 2011</read_at>
+  <date_added>Thu Apr 14 02:56:44 -0700 2011</date_added>
+  <date_updated>Tue Apr 19 07:07:27 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[<em> &quot;Per me il mistero più grande è come mai il cane, supponendo che tutte le nostre ipotesi siano corrette...&quot;.<br/>&quot;Io non suppongo&quot;. </em> (Watson e Holmes)<br/><br/>Avete presente i libri pop-up che popolano gli scaffali dedicati alla letteratura d'infanzia? Quelli che, appena aperti...
+              <a href="http://www.goodreads.com/review/show/160957527">more...</a>
+            ]]>
+      </body>
+
+  <comments_count>11</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/160957527]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/160957527]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>15299635</id>
+
+      <user>
+  <id>898670</id>
+  <name><![CDATA[Ian]]></name>
+  <location><![CDATA[Salt Lake City, UT]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/898670-ian]]></link>
+  <image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-111x148.jpg]]></image_url>
+  <small_image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-50x66.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+
+  <votes>2</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Tue Feb 12 20:52:12 -0800 2008</date_added>
+  <date_updated>Tue Feb 12 21:16:39 -0800 2008</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[I liked the book, but REALLY liked the British film production that I've seen on PBS.  It was the scariest thing I've ever watched--ever!  I can't wait to see it again!
+            ]]>
+
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/15299635]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/15299635]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>191374530</id>
+
+      <user>
+  <id>160319</id>
+  <name><![CDATA[Seth]]></name>
+  <location><![CDATA[Rancho Santa Margarita, CA]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/160319-seth-hahne]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1251915636p3/160319.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1251915636p2/160319.jpg]]></small_image_url>
+</user>
+        <rating>3</rating>
+
+  <votes>1</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+              <shelf name="comics" />
+      </shelves>
+
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Jul 28 14:34:46 -0700 2011</date_added>
+  <date_updated>Fri Dec 02 15:19:42 -0800 2011</date_updated>
+  <read_count></read_count>
+  <body>
+
+          <![CDATA[<img src="http://goodokbad.com/assets/images/books/baskervilles_03.jpg" alt="The Hound of the Baskervilles by Edginton and Culbard" class="escapedImg"/><br/><br/>After an unsuccessful permanent hiatus (and killing off his great detective), Arthur Conan Doyle returned to Sherlock Holmes and penned perhaps his most famous of the sleuth’s stories. <em>The Hound of the Baskervilles</em> was well-regarded and is still read by students and Holmes aficionados ever...
+              <a href="http://www.goodreads.com/review/show/191374530">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/191374530]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/191374530]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+
+  <id>84361091</id>
+      <user>
+  <id>3115592</id>
+  <name><![CDATA[Jennifer]]></name>
+  <location><![CDATA[Los Gatos, CA]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/3115592-jennifer]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1319259403p3/3115592.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1319259403p2/3115592.jpg]]></small_image_url>
+
+</user>
+        <rating>4</rating>
+  <votes>1</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+
+              <shelf name="graphic-novels" />
+          <shelf name="mystery" />
+      </shelves>
+  <recommended_for><![CDATA[people who love mysteries]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at>Sun Jan 10 00:00:00 -0800 2010</started_at>
+  <read_at>Tue Jan 19 00:00:00 -0800 2010</read_at>
+  <date_added>Sun Jan 10 18:34:59 -0800 2010</date_added>
+
+  <date_updated>Fri Dec 02 15:19:42 -0800 2011</date_updated>
+  <read_count>One</read_count>
+  <body>
+          <![CDATA[This was my first time reading a novel starring Sherlock Holmes.  I've always wanted to read about Sherlock Holmes after seeing a few movies, etc., but never got around to it.  I recently went to see the newest &quot;Sherlock Holmes&quot; movie starring Robert Downey, Jr. and Jude Law and decided it...
+              <a href="http://www.goodreads.com/review/show/84361091">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/84361091]]></url>
+
+  <link><![CDATA[http://www.goodreads.com/review/show/84361091]]></link>
+  <owned>1</owned>
+</review>
+
+              <review>
+  <id>45653389</id>
+      <user>
+  <id>2005641</id>
+
+  <name><![CDATA[Cassandre]]></name>
+  <location><![CDATA[Templemars, B4, France]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/2005641-cassandre]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1234016923p3/2005641.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1234016923p2/2005641.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+  <votes>1</votes>
+
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+              <shelf name="policier" />
+      </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+
+  <started_at></started_at>
+  <read_at>Fri Aug 01 00:00:00 -0700 2008</read_at>
+  <date_added>Sat Feb 07 10:24:59 -0800 2009</date_added>
+  <date_updated>Sat Feb 07 10:27:57 -0800 2009</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[Présentation de l'éditeur
+<br/>Les circonstances dramatiques de la disparition de sir Charles ont réveillé le souvenir de la malédiction qui pèse sur la famille des Baskerville : dès que l'heure de la mort a sonné pour l'un d'eux, un chien monstrueux lui apparaît. Watson est chargé de veiller sur si...
+              <a href="http://www.goodreads.com/review/show/45653389">more...</a>
+            ]]>
+
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/45653389]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/45653389]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>46097020</id>
+
+      <user>
+  <id>1518415</id>
+  <name><![CDATA[Karen]]></name>
+  <location><![CDATA[]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/1518415-karen]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1316531087p3/1518415.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1316531087p2/1518415.jpg]]></small_image_url>
+</user>
+        <rating>5</rating>
+
+  <votes>1</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+              <shelf name="kindle" />
+      </shelves>
+
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Sat Feb 07 00:00:00 -0800 2009</read_at>
+  <date_added>Wed Feb 11 18:57:13 -0800 2009</date_added>
+  <date_updated>Wed Feb 11 19:01:54 -0800 2009</date_updated>
+  <read_count></read_count>
+
+  <body>
+          <![CDATA[I have never read this book and found it refreshing.  The language and writing style were a throwback, and yet I found it exciting.  I great mystery too boot.
+            ]]>
+      </body>
+  <comments_count>1</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/46097020]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/46097020]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>17366123</id>
+      <user>
+  <id>858053</id>
+  <name><![CDATA[Molly]]></name>
+  <location><![CDATA[Martins Ferry, OH]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/858053-molly]]></link>
+
+  <image_url><![CDATA[http://photo.goodreads.com/users/1321758692p3/858053.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1321758692p2/858053.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+  <votes>1</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Fri Feb 01 00:00:00 -0800 2008</read_at>
+  <date_added>Sun Mar 09 08:40:16 -0700 2008</date_added>
+
+  <date_updated>Thu Mar 13 09:37:57 -0700 2008</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[I think the writing in this was pretty good, but I felt like he wasn't trying that hard to create a real mystery. There are no red herrings in this book, which is surprising, and in almost every instance where someone is being suspicious, they are. Some things are too obvious and you figure out righ...
+              <a href="http://www.goodreads.com/review/show/17366123">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/17366123]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/17366123]]></link>
+
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>52827015</id>
+      <user>
+  <id>1870527</id>
+  <name><![CDATA[Nick]]></name>
+
+  <location><![CDATA[Englewood, OH]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/1870527-nick]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1233106480p3/1870527.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1233106480p2/1870527.jpg]]></small_image_url>
+</user>
+        <rating>0</rating>
+  <votes>1</votes>
+    <spoiler_flag>false</spoiler_flag>
+
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at></read_at>
+
+  <date_added>Wed Apr 15 16:37:53 -0700 2009</date_added>
+  <date_updated>Wed Apr 29 15:51:11 -0700 2009</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[Another horrible book that my teacher forced me to read. I thought it was very boring. Mostly because of how old it was and the old setting of the whole story.
+            ]]>
+      </body>
+  <comments_count>4</comments_count>
+
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/52827015]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/52827015]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>230349081</id>
+      <user>
+  <id>1278237</id>
+
+  <name><![CDATA[Elisha]]></name>
+  <location><![CDATA[Salt Lake City, UT]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/1278237-elisha-condie]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1214669834p3/1278237.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1214669834p2/1278237.jpg]]></small_image_url>
+</user>
+        <rating>3</rating>
+  <votes>0</votes>
+
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+
+  <read_at>Wed Nov 02 00:00:00 -0700 2011</read_at>
+  <date_added>Wed Nov 02 16:32:29 -0700 2011</date_added>
+  <date_updated>Wed Nov 02 16:37:22 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[   I could never quite get into Sherlock Holmes as a kid, which really bothered me because I thought I loved ALL mysteries (and wasn't Sherlock Holmes supposed to be the greatest?). I don't want to say that age and the Robert Downey Jr. version of Holmes changed me....but it has. I admit it may most...
+              <a href="http://www.goodreads.com/review/show/230349081">more...</a>
+            ]]>
+      </body>
+
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/230349081]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/230349081]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>228104101</id>
+
+      <user>
+  <id>6797887</id>
+  <name><![CDATA[Ruth]]></name>
+  <location><![CDATA[The United States]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/6797887-ruth]]></link>
+  <image_url><![CDATA[http://www.goodreads.com/images/nophoto-F-111x148.jpg]]></image_url>
+  <small_image_url><![CDATA[http://www.goodreads.com/images/nophoto-F-50x66.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Oct 27 11:10:29 -0700 2011</date_added>
+  <date_updated>Thu Oct 27 11:10:48 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[Mystery books have never really been my cup of tea. I've tried some Agatha Christie and told myself that I should read more of them, but I never get around to it. They just don't &quot;call&quot; to me like so many other books. 
+<br/>But Doyle might be the man to change that. This book probably woul...
+              <a href="http://www.goodreads.com/review/show/228104101">more...</a>
+            ]]>
+
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/228104101]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/228104101]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>222275444</id>
+
+      <user>
+  <id>6394515</id>
+  <name><![CDATA[Noah]]></name>
+  <location><![CDATA[Draper, UT]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/6394515-noah-valentine]]></link>
+  <image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-111x148.jpg]]></image_url>
+  <small_image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-50x66.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+              <shelf name="currently-reading" />
+      </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Mon Dec 25 00:00:00 -0800 1911</read_at>
+  <date_added>Tue Oct 11 21:47:20 -0700 2011</date_added>
+  <date_updated>Tue Oct 11 21:51:22 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+
+          <![CDATA[Sherlock Holmes
+<br/>Have you ever made a smart observation? Have you ever solved a small mystery? Well imagine doing this as a profession. In the book Sherlock Holmes and the Hound of the Baskerville by Sir Arthur Doyle Sherlock does just that. Sherlock was the best in his line of work until now.
+<br/>...
+              <a href="http://www.goodreads.com/review/show/222275444">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/222275444]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/222275444]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+
+  <id>204569097</id>
+      <user>
+  <id>3423673</id>
+  <name><![CDATA[Amy]]></name>
+  <location><![CDATA[The United States]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/3423673-amy]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1314918046p3/3423673.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1314918046p2/3423673.jpg]]></small_image_url>
+
+</user>
+        <rating>4</rating>
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Tue Jun 15 00:00:00 -0700 2010</read_at>
+  <date_added>Fri Sep 02 11:34:39 -0700 2011</date_added>
+  <date_updated>Fri Sep 02 11:34:58 -0700 2011</date_updated>
+
+  <read_count></read_count>
+  <body>
+          <![CDATA[This was the first Sherlock Holmes novel I've ever read, even though I have had The Adventures of Sherlock Holmes sitting on my bookshelf since middle school or earlier (I got it with a 2 for $1 deal at Walmart).  I like to read a series in its entirety and in order, and it was frustrating to me to ...
+              <a href="http://www.goodreads.com/review/show/204569097">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/204569097]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/204569097]]></link>
+  <owned>0</owned>
+
+</review>
+
+              <review>
+  <id>202272545</id>
+      <user>
+  <id>5945367</id>
+  <name><![CDATA[Christian]]></name>
+  <location><![CDATA[Granville, OH]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/5945367-christian-mock]]></link>
+
+  <image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-111x148.jpg]]></image_url>
+  <small_image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-50x66.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Thu Jun 23 00:00:00 -0700 2011</read_at>
+  <date_added>Thu Aug 25 20:59:36 -0700 2011</date_added>
+
+  <date_updated>Thu Aug 25 21:12:51 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[While reading:
+<br/>
+<br/>No wonder this book is often regarded as one of the great mystery novels. From the opening pages with the unidentified guest, Doyle creates an atmosphere of excitement and intrigue. The fast pace of The Hound gives the reader a sense of urgency. I have finished half of the ...
+              <a href="http://www.goodreads.com/review/show/202272545">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/202272545]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/202272545]]></link>
+
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>201533094</id>
+      <user>
+  <id>5546971</id>
+  <name><![CDATA[Seth]]></name>
+
+  <location><![CDATA[Granville, OH]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/5546971-seth-blumling]]></link>
+  <image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-111x148.jpg]]></image_url>
+  <small_image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-50x66.jpg]]></small_image_url>
+</user>
+        <rating>5</rating>
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at></read_at>
+
+  <date_added>Tue Aug 23 16:26:43 -0700 2011</date_added>
+  <date_updated>Tue Aug 23 18:26:58 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[The Hound of the Baskervilles was a great book. I'm a large fan of murder mysteries and the fact that it was Sherlock Holmes just made it better! It was a book that I just opened and read without even wondering how long I had been reading or what page I was on. With these kind of books you always wa...
+              <a href="http://www.goodreads.com/review/show/201533094">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/201533094]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/201533094]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>200711604</id>
+      <user>
+  <id>6091260</id>
+
+  <name><![CDATA[Marie]]></name>
+  <location><![CDATA[Germany]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/6091260-marie-gra-hoff]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1313935432p3/6091260.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1313935432p2/6091260.jpg]]></small_image_url>
+</user>
+        <rating>5</rating>
+  <votes>0</votes>
+
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+
+  <read_at>Tue Nov 16 00:00:00 -0800 2010</read_at>
+  <date_added>Sun Aug 21 08:20:50 -0700 2011</date_added>
+  <date_updated>Sun Aug 21 09:30:22 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[Bisher mein liebstes Sherlock Holmes Buch! Der Schreibstil ist so wunderbar und schön, wie man ihn gewöhnt ist, flüssig zu lesen und trotzdem nicht einfach. Die Beschreibungen der Gegend und von allem sind hier mehr als gelungen und angebracht und unterstrichen die düstere Atmosphäre des Moores, auf...
+              <a href="http://www.goodreads.com/review/show/200711604">more...</a>
+            ]]>
+      </body>
+
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/200711604]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/200711604]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>190599042</id>
+
+      <user>
+  <id>5716249</id>
+  <name><![CDATA[Asra]]></name>
+  <location><![CDATA[Hyderabad, India]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/5716249-asra-ghouse]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1309416872p3/5716249.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1309416872p2/5716249.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+              <shelf name="classics" />
+          <shelf name="thrillers" />
+
+      </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Wed Jul 27 07:02:23 -0700 2011</date_added>
+  <date_updated>Wed Jul 27 07:29:20 -0700 2011</date_updated>
+  <read_count></read_count>
+
+  <body>
+          <![CDATA[A fun fact :D
+<br/>I was reading this book late in the night around 2:00 am. My door was closed and there was just my brother and myself in the house that summer night. Deep silence of the night drew me into the horror of the book to an extent that I felt myself haunted by the hound's terror. Muster...
+              <a href="http://www.goodreads.com/review/show/190599042">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/190599042]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/190599042]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>178352923</id>
+      <user>
+  <id>4531112</id>
+  <name><![CDATA[Alex]]></name>
+  <location><![CDATA[Medford, MA]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/4531112-alex-nguyen]]></link>
+
+  <image_url><![CDATA[http://www.goodreads.com/images/nophoto-U-111x148.jpg]]></image_url>
+  <small_image_url><![CDATA[http://www.goodreads.com/images/nophoto-U-50x66.jpg]]></small_image_url>
+</user>
+        <rating>5</rating>
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Sat Jan 15 00:00:00 -0800 2011</read_at>
+  <date_added>Mon Jun 20 19:00:22 -0700 2011</date_added>
+
+  <date_updated>Mon Jun 20 19:22:21 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[Sherlock Holmes is a famous detective in England and always had a knack for solving difficult and intriguing cases. He is the best and was made famous in cartoons and movies, but I would never imagine that he first originated in books. Right away, this book caught my attention. I expected a lot from...
+              <a href="http://www.goodreads.com/review/show/178352923">more...</a>
+            ]]>
+      </body>
+  <comments_count>1</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/178352923]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/178352923]]></link>
+
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>175365351</id>
+      <user>
+  <id>2690037</id>
+  <name><![CDATA[Mimi]]></name>
+
+  <location><![CDATA[]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/2690037-mimi]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1319369123p3/2690037.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1319369123p2/2690037.jpg]]></small_image_url>
+</user>
+        <rating>5</rating>
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Thu Jun 09 00:00:00 -0700 2011</read_at>
+
+  <date_added>Fri Jun 10 03:23:21 -0700 2011</date_added>
+  <date_updated>Fri Jun 10 03:23:58 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[“As you value your life or your reason keep away from the moor.” These mysterious words of warning as well as some really ominous descriptions of the moors, make for an engrossing story!<br/><br/>This is such a cool mystery, featuring my favorite brilliant, OCD, substance-addicted, biplor private in...
+              <a href="http://www.goodreads.com/review/show/175365351">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/175365351]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/175365351]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>160009063</id>
+      <user>
+  <id>5248080</id>
+
+  <name><![CDATA[Evan]]></name>
+  <location><![CDATA[Medford, MA]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/5248080-evan]]></link>
+  <image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-111x148.jpg]]></image_url>
+  <small_image_url><![CDATA[http://www.goodreads.com/images/nophoto-M-50x66.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+  <votes>0</votes>
+
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+
+  <read_at>Sat Apr 02 00:00:00 -0700 2011</read_at>
+  <date_added>Sun Apr 10 06:13:08 -0700 2011</date_added>
+  <date_updated>Sun Apr 10 06:31:13 -0700 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[The Hound of the Baskervilles by Arthur Conan Doyle was an excite novel about another adventure from everyones favorite detective, Sherlock Holmes.  I found a great interest in this novel because I am very fond of mysteries.  Sherlock Holmes is back with another mystery, but this time he has a suspe...
+              <a href="http://www.goodreads.com/review/show/160009063">more...</a>
+            ]]>
+      </body>
+
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/160009063]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/160009063]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>151116074</id>
+
+      <user>
+  <id>2328078</id>
+  <name><![CDATA[Tony]]></name>
+  <location><![CDATA[Swift Current, SK, Canada]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/2328078-tony]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1242602960p3/2328078.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1242602960p2/2328078.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Mon Feb 28 06:49:36 -0800 2011</date_added>
+  <date_updated>Mon Feb 28 06:49:52 -0800 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[Arthur Conan Doyle- The Hound of the Baskervilles (Penguin Classics 2009) 3.75 Stars
+<br/>
+<br/>Sherlock Holmes and Watson are hunting down a ruthless villain. The villain is using a large menacing dog to haunt and murder the rich Baskervilles. Leading into perilous places, they must unravel this my...
+              <a href="http://www.goodreads.com/review/show/151116074">more...</a>
+            ]]>
+
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/151116074]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/151116074]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>150385634</id>
+
+      <user>
+  <id>2116837</id>
+  <name><![CDATA[Steve]]></name>
+  <location><![CDATA[Washington, DC]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/2116837-steve]]></link>
+  <image_url><![CDATA[http://photo.goodreads.com/users/1236975142p3/2116837.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1236975142p2/2116837.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+
+  <votes>0</votes>
+    <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  <shelves>
+          <shelf name="read" />
+              <shelf name="mystery" />
+      </shelves>
+
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at></started_at>
+  <read_at>Sat Feb 12 00:00:00 -0800 2011</read_at>
+  <date_added>Thu Feb 24 16:27:39 -0800 2011</date_added>
+  <date_updated>Thu Feb 24 16:35:59 -0800 2011</date_updated>
+  <read_count></read_count>
+
+  <body>
+          <![CDATA[It is the height of the enlightenment era and 19th century England is ruled by science, with no room for the supernatural.   Yet, Sherlock Holmes is approached by a case.  A very wealthy many seems to have died from an encounter with a supernatural beast foisted on his family via an ancient curse.  ...
+              <a href="http://www.goodreads.com/review/show/150385634">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/150385634]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/150385634]]></link>
+  <owned>0</owned>
+</review>
+
+              <review>
+  <id>141094674</id>
+      <user>
+  <id>4275341</id>
+  <name><![CDATA[Carissa]]></name>
+  <location><![CDATA[Denver, CO]]></location>
+  <link><![CDATA[http://www.goodreads.com/user/show/4275341-carissa]]></link>
+
+  <image_url><![CDATA[http://photo.goodreads.com/users/1284181453p3/4275341.jpg]]></image_url>
+  <small_image_url><![CDATA[http://photo.goodreads.com/users/1284181453p2/4275341.jpg]]></small_image_url>
+</user>
+        <rating>4</rating>
+  <votes>0</votes>
+    <spoiler_flag>true</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+
+  <shelves>
+          <shelf name="read" />
+          </shelves>
+  <recommended_for><![CDATA[]]></recommended_for>
+  <recommended_by><![CDATA[]]></recommended_by>
+  <started_at>Thu Jan 13 00:00:00 -0800 2011</started_at>
+  <read_at>Sun Jan 16 00:00:00 -0800 2011</read_at>
+  <date_added>Sat Jan 15 19:06:56 -0800 2011</date_added>
+
+  <date_updated>Sun Jan 16 12:33:03 -0800 2011</date_updated>
+  <read_count></read_count>
+  <body>
+          <![CDATA[I felt for sure that I had read this book before but I could not remember the secret of the mystery.  I certainly remember the Murders in the Rue Morgue.  Now after having read it I'm pretty certain that I haven't read it before.  The only questions I have are: What kind of dog was this great hound ...
+              <a href="http://www.goodreads.com/review/show/141094674">more...</a>
+            ]]>
+      </body>
+  <comments_count>0</comments_count>
+    
+  <url><![CDATA[http://www.goodreads.com/review/show/141094674]]></url>
+  <link><![CDATA[http://www.goodreads.com/review/show/141094674]]></link>
+
+  <owned>1</owned>
+</review>
+
+          </reviews>
+  
+  <popular_shelves>
+          <shelf name="to-read" count="4701"/>
+          <shelf name="mystery" count="1090"/>
+          <shelf name="classics" count="1029"/>
+          <shelf name="fiction" count="570"/>
+
+          <shelf name="currently-reading" count="367"/>
+          <shelf name="classic" count="224"/>
+          <shelf name="favorites" count="154"/>
+          <shelf name="crime" count="148"/>
+          <shelf name="1001-books" count="112"/>
+          <shelf name="mysteries" count="96"/>
+      </popular_shelves>
+  <book_links>
+    <book_link>
+
+  <id>31</id>
+  <name><![CDATA[Amazon CA]]></name>
+  <link>http://www.goodreads.com/book_link/follow/31?book_id=8921</link>
+</book_link><book_link>
+  <id>39</id>
+  <name><![CDATA[Indigo.ca]]></name>
+  <link>http://www.goodreads.com/book_link/follow/39?book_id=8921</link>
+
+</book_link><book_link>
+  <id>32</id>
+  <name><![CDATA[Half.com]]></name>
+  <link>http://www.goodreads.com/book_link/follow/32?book_id=8921</link>
+</book_link><book_link>
+  <id>33</id>
+  <name><![CDATA[Barnes & Noble]]></name>
+  <link>http://www.goodreads.com/book_link/follow/33?book_id=8921</link>
+
+</book_link><book_link>
+  <id>34</id>
+  <name><![CDATA[Abebooks]]></name>
+  <link>http://www.goodreads.com/book_link/follow/34?book_id=8921</link>
+</book_link><book_link>
+  <id>35</id>
+  <name><![CDATA[Alibris]]></name>
+  <link>http://www.goodreads.com/book_link/follow/35?book_id=8921</link>
+
+</book_link><book_link>
+  <id>36</id>
+  <name><![CDATA[Powells]]></name>
+  <link>http://www.goodreads.com/book_link/follow/36?book_id=8921</link>
+</book_link><book_link>
+  <id>37</id>
+  <name><![CDATA[IndieBound]]></name>
+  <link>http://www.goodreads.com/book_link/follow/37?book_id=8921</link>
+
+</book_link><book_link>
+  <id>38</id>
+  <name><![CDATA[WorldCat]]></name>
+  <link>http://www.goodreads.com/book_link/follow/38?book_id=8921</link>
+</book_link><book_link>
+  <id>40</id>
+  <name><![CDATA[Audible]]></name>
+  <link>http://www.goodreads.com/book_link/follow/40?book_id=8921</link>
+
+</book_link>
+  </book_links>
+  <series_works>
+    <series_work>
+<id>185869</id>
+<user_position>5</user_position>
+<series>
+<id>49996</id>
+<title>
+<![CDATA[
+    Sherlock Holmes
+]]>
+</title>
+
+<description>
+<![CDATA[
+]]>
+</description>
+<note>
+<![CDATA[
+]]>
+</note>
+<series_works_count>9</series_works_count>
+<primary_work_count>9</primary_work_count>
+<numbered>true</numbered>
+</series>
+
+</series_work>
+
+  </series_works>
+
+  
+    
+      <public_document>
+        <id>301</id>
+        <document_url>
+          http://feedbooks.com/book/1.epub
+        </document_url>
+      </public_document>
+    
+  
+</book>
+
+</GoodreadsResponse>

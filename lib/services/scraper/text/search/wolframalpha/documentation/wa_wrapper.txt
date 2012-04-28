@@ -1,0 +1,52 @@
+DESCRIPTION:
+============
+
+The WA Wrapper is a PHP wrapper for the Wolfram Alpha API.
+You can find more info on the API at: http://www.wolframalpha.com/developers.html
+
+REQUIREMENTS:
+=============
+
+You need to have an API Access key from Wolfram Alpha to use the wrapper. 
+You can request a key from: http://www.wolframalpha.com/apiapplication.html
+
+SYNOPSIS:
+=========
+
+# this synopsis will use the simpleRequest.php sample
+# found in the "samples" directory.
+# to use the wrapper, unzip the wa_wrapper to a directory
+# and include the main php class
+include '../wa_wrapper_0.1/WolframAlphaEngine.php';
+
+# define your APP ID.
+$appID = 'PLACE_YOUR_APP_ID_HERE';
+
+# the WolframAlphaEngine class has a constructor that
+# requires you to pass it your app id.
+$engine = new WolframAlphaEngine( $appID );
+
+# now you are ready to query the API for results
+$response = $engine->getResults( $_REQUEST['q'] );
+
+# the getResults function will query/parse the API
+# and return a WAResponse object. Now you are ready to display
+# info back to the user. You can check if the API errored out
+if ( $response->isError ) {
+?>
+  <h1>There was an error in the request</h1>
+  </body>
+  </html>
+<?php
+    die();
+  }
+
+# you can loop through the pods if any were returned
+if ( count($response->getPods()) > 0 ) {
+  foreach ( $response->getPods() as $pod ) {
+
+  }
+}
+
+
+

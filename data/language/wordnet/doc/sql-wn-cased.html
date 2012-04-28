@@ -1,0 +1,508 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">CASED FORMS</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM words WHERE lemma='neolithic'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>lemma</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">89314</TD><TD class="sqlfield">neolithic</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM words INNER JOIN casedwords USING (wordid) WHERE lemma='neolithic'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>lemma</TH><TH>casedwordid</TH><TH>cased</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">89314</TD><TD class="sqlfield">neolithic</TD><TD class="sqlfield">22079</TD><TD class="sqlfield">Neolithic</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM words INNER JOIN casedwords USING (wordid) WHERE lemma='shakespeare'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>lemma</TH><TH>casedwordid</TH><TH>cased</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">118422</TD><TD class="sqlfield">shakespeare</TD><TD class="sqlfield">28927</TD><TD class="sqlfield">Shakespeare</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM words INNER JOIN casedwords USING (wordid) WHERE cased='shaKEspeare'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader"></TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM words INNER JOIN casedwords USING (wordid) WHERE cased='Shakespeare'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>lemma</TH><TH>casedwordid</TH><TH>cased</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">118422</TD><TD class="sqlfield">shakespeare</TD><TD class="sqlfield">28927</TD><TD class="sqlfield">Shakespeare</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM words INNER JOIN casedwords USING (wordid) WHERE lemma='am'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>lemma</TH><TH>casedwordid</TH><TH>cased</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">4403</TD><TD class="sqlfield">am</TD><TD class="sqlfield">106</TD><TD class="sqlfield">AM</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">4403</TD><TD class="sqlfield">am</TD><TD class="sqlfield">1262</TD><TD class="sqlfield">Am</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM words LEFT JOIN casedwords USING (wordid) WHERE lemma='abolition'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>lemma</TH><TH>casedwordid</TH><TH>cased</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">618</TD><TD class="sqlfield">abolition</TD><TD class="sqlfield"></TD><TD class="sqlfield"></TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT cased,definition  FROM senses INNER JOIN casedwords USING (wordid,casedwordid) INNER JOIN synsets USING (synsetid) WHERE cased='Jackson'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>cased</TH><TH>definition</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">English film actress who later became a member of British Parliament (born in 1936)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">United States singer who began singing with his four brothers and later became a highly successful star during the 1980s (born in 1958)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">United States singer who did much to popularize gospel music (1911-1972)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">United States civil rights leader who led a national campaign against racial discrimination and ran for presidential nomination (born in 1941)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">United States writer of romantic novels about the unjust treatment of Native Americans (1830-1885)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">general in the Confederate Army during the American Civil War whose troops at the first Battle of Bull Run stood like a stone wall (1824-1863)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">7th president of the US; successfully defended New Orleans from the British in 1815; expanded the power of the presidency (1767-1845)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">a town in western Wyoming</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">a town in western Tennessee</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">capital of the state of Mississippi on the Pearl River</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">Jackson</TD><TD class="sqlfield">a town in south central Michigan</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT cased,definition  FROM senses INNER JOIN casedwords USING (wordid,casedwordid) INNER JOIN synsets USING (synsetid) WHERE cased='C'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>cased</TH><TH>definition</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">street names for cocaine</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">the 3rd letter of the Roman alphabet</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">(music) the keynote of the scale of C major</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">a general-purpose programing language closely associated with the UNIX operating system</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">a unit of electrical charge equal to the amount of charge transferred by a current of 1 ampere in 1 second</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">a degree on the centigrade scale of temperature</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">ten 10s</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">an abundant nonmetallic tetravalent element occurring in three allotropic forms: amorphous carbon and graphite and diamond; occurs in all organic compounds</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">a base found in DNA and RNA and derived from pyrimidine; pairs with guanine</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">one of the four nucleotides used in building DNA; all four nucleotides have a common phosphate group and a sugar (ribose)</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">C</TD><TD class="sqlfield">a vitamin found in fresh fruits (especially citrus fruits) and vegetables; prevents scurvy</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,cased,SUBSTRING(definition FROM 1 FOR 64) FROM senses INNER JOIN words USING (wordid) LEFT JOIN casedwords USING (wordid,casedwordid) INNER JOIN synsets USING (synsetid) WHERE lemma='C'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>cased</TH><TH>SUBSTRING(definition FROM 1 FOR 64)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">street names for cocaine</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">the 3rd letter of the Roman alphabet</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">(music) the keynote of the scale of C major</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">a general-purpose programing language closely associated with th</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">a unit of electrical charge equal to the amount of charge transf</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">a degree on the centigrade scale of temperature</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">ten 10s</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">an abundant nonmetallic tetravalent element occurring in three a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">a base found in DNA and RNA and derived from pyrimidine; pairs w</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">one of the four nucleotides used in building DNA; all four nucle</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield">C</TD><TD class="sqlfield">a vitamin found in fresh fruits (especially citrus fruits) and v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield"></TD><TD class="sqlfield">the speed at which light travels in a vacuum; the constancy and </TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">c</TD><TD class="sqlfield"></TD><TD class="sqlfield">being ten more than ninety</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">lemma having several cased forms</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT wordid,COUNT(casedwordid) AS N,GROUP_CONCAT(cased)  FROM casedwords GROUP BY wordid HAVING N &gt; 1 ORDER BY N DESC</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>N</TH><TH>GROUP_CONCAT(cased)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">403</TD><TD class="sqlfield">2</TD><TD class="sqlfield">AB,Ab</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">865</TD><TD class="sqlfield">2</TD><TD class="sqlfield">AC,Ac</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3220</TD><TD class="sqlfield">2</TD><TD class="sqlfield">AL,Al</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">3664</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ALGOL,Algol</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">4403</TD><TD class="sqlfield">2</TD><TD class="sqlfield">AM,Am</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">7230</TD><TD class="sqlfield">2</TD><TD class="sqlfield">AR,Ar</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">8438</TD><TD class="sqlfield">2</TD><TD class="sqlfield">AS,As</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">8601</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Ashcan School,Ashcan school</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">9636</TD><TD class="sqlfield">2</TD><TD class="sqlfield">AU,Au</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">10450</TD><TD class="sqlfield">2</TD><TD class="sqlfield">BA,Ba</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">14571</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Black Maria,black Maria</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">16694</TD><TD class="sqlfield">2</TD><TD class="sqlfield">BR,Br</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">19022</TD><TD class="sqlfield">2</TD><TD class="sqlfield">CA,Ca</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">22172</TD><TD class="sqlfield">2</TD><TD class="sqlfield">CD,Cd</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">22188</TD><TD class="sqlfield">2</TD><TD class="sqlfield">CE,Ce</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">22868</TD><TD class="sqlfield">2</TD><TD class="sqlfield">CF,Cf</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">24640</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Christian Church,Christian church</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">26461</TD><TD class="sqlfield">2</TD><TD class="sqlfield">CO,Co</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">27836</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Common Era,Common era</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">33924</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Db,dB</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">33931</TD><TD class="sqlfield">2</TD><TD class="sqlfield">DDC,ddC</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">33932</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ddI,DDI</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">38538</TD><TD class="sqlfield">2</TD><TD class="sqlfield">DOS,DoS</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">39535</TD><TD class="sqlfield">2</TD><TD class="sqlfield">DS,Ds</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">40397</TD><TD class="sqlfield">2</TD><TD class="sqlfield">EB,Eb</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">43256</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ER,Er</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">43913</TD><TD class="sqlfield">2</TD><TD class="sqlfield">EU,Eu</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">49883</TD><TD class="sqlfield">2</TD><TD class="sqlfield">FM,Fm</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">52226</TD><TD class="sqlfield">2</TD><TD class="sqlfield">GA,Ga</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">53089</TD><TD class="sqlfield">2</TD><TD class="sqlfield">GB,Gb</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">53095</TD><TD class="sqlfield">2</TD><TD class="sqlfield">GD,Gd</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">57577</TD><TD class="sqlfield">2</TD><TD class="sqlfield">GI,Gi</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">63787</TD><TD class="sqlfield">2</TD><TD class="sqlfield">HF,Hf</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">67928</TD><TD class="sqlfield">2</TD><TD class="sqlfield">IN,In</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">70640</TD><TD class="sqlfield">2</TD><TD class="sqlfield">IR,Ir</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">73393</TD><TD class="sqlfield">2</TD><TD class="sqlfield">KB,kB</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">74467</TD><TD class="sqlfield">2</TD><TD class="sqlfield">KR,Kr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">74652</TD><TD class="sqlfield">2</TD><TD class="sqlfield">LA,La</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">80244</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MA,mA</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">81690</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MAO,Mao</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">81790</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MArch,March</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">82874</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MB,Mb</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">82904</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MD,Md</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">84693</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MIDI,Midi</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">85688</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MN,Mn</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">85697</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MO,Mo</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">87219</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MS,Ms</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">87229</TD><TD class="sqlfield">2</TD><TD class="sqlfield">MT,Mt</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">88020</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Mv,mV</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">88980</TD><TD class="sqlfield">2</TD><TD class="sqlfield">NB,Nb</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">88985</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ND,Nd</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">88988</TD><TD class="sqlfield">2</TD><TD class="sqlfield">NE,Ne</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">91450</TD><TD class="sqlfield">2</TD><TD class="sqlfield">NP,Np</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">91876</TD><TD class="sqlfield">2</TD><TD class="sqlfield">OB,Ob</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">94462</TD><TD class="sqlfield">2</TD><TD class="sqlfield">OS,Os</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">95546</TD><TD class="sqlfield">2</TD><TD class="sqlfield">PA,Pa</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">97540</TD><TD class="sqlfield">2</TD><TD class="sqlfield">PB,Pb</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">101833</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Pm,PM</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">101864</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Po,PO</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">103534</TD><TD class="sqlfield">2</TD><TD class="sqlfield">PR,Pr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">107535</TD><TD class="sqlfield">2</TD><TD class="sqlfield">RA,Ra</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">108062</TD><TD class="sqlfield">2</TD><TD class="sqlfield">RAM,Ram</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">111198</TD><TD class="sqlfield">2</TD><TD class="sqlfield">RF,Rf</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">111201</TD><TD class="sqlfield">2</TD><TD class="sqlfield">RH,Rh</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">112055</TD><TD class="sqlfield">2</TD><TD class="sqlfield">RN,Rn</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">115307</TD><TD class="sqlfield">2</TD><TD class="sqlfield">SB,Sb</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">115311</TD><TD class="sqlfield">2</TD><TD class="sqlfield">SC,Sc</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">116367</TD><TD class="sqlfield">2</TD><TD class="sqlfield">SE,Se</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">119465</TD><TD class="sqlfield">2</TD><TD class="sqlfield">SI,Si</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">121397</TD><TD class="sqlfield">2</TD><TD class="sqlfield">SM,Sm</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">122286</TD><TD class="sqlfield">2</TD><TD class="sqlfield">SoHo,Soho</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">130623</TD><TD class="sqlfield">2</TD><TD class="sqlfield">TB,Tb</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">130626</TD><TD class="sqlfield">2</TD><TD class="sqlfield">TC,Tc</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">135597</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Trojan Horse,Trojan horse</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">142439</TD><TD class="sqlfield">2</TD><TD class="sqlfield">WAC,Wac</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">146517</TD><TD class="sqlfield">2</TD><TD class="sqlfield">YB,Yb</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">146841</TD><TD class="sqlfield">2</TD><TD class="sqlfield">Young Turk,young Turk</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">146987</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ZB,Zb</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">senses having a cased form</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT COUNT(*) FROM senses WHERE NOT ISNULL(casedwordid)</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>COUNT(*)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">43972</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">words having a cased form</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT COUNT(*) FROM words INNER JOIN casedwords USING (wordid)</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>COUNT(*)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">40791</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

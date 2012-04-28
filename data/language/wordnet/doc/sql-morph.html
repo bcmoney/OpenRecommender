@@ -1,0 +1,862 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">MORPHOLOGY</DIV>
+<DIV class="sqlcomment">lemma from morph</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT *  FROM morphology WHERE morph = 'better'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>morphid</TH><TH>wordid</TH><TH>lemma</TH><TH>pos</TH><TH>morph</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">318</TD><TD class="sqlfield">58843</TD><TD class="sqlfield">good</TD><TD class="sqlfield">a</TD><TD class="sqlfield">better</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">318</TD><TD class="sqlfield">143642</TD><TD class="sqlfield">well</TD><TD class="sqlfield">a</TD><TD class="sqlfield">better</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">318</TD><TD class="sqlfield">143642</TD><TD class="sqlfield">well</TD><TD class="sqlfield">r</TD><TD class="sqlfield">better</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">morph from lemma</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT *  FROM morphology WHERE lemma = 'good'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>morphid</TH><TH>wordid</TH><TH>lemma</TH><TH>pos</TH><TH>morph</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">309</TD><TD class="sqlfield">58843</TD><TD class="sqlfield">good</TD><TD class="sqlfield">a</TD><TD class="sqlfield">best</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">318</TD><TD class="sqlfield">58843</TD><TD class="sqlfield">good</TD><TD class="sqlfield">a</TD><TD class="sqlfield">better</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">chivy-chevied,chevies,chevying,chivied,chivvied,chivvies,chivvying</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,morph FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) WHERE lemma = 'chivy'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>morph</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">chivy</TD><TD class="sqlfield">v</TD><TD class="sqlfield">chevied</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">chivy</TD><TD class="sqlfield">v</TD><TD class="sqlfield">chevies</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">chivy</TD><TD class="sqlfield">v</TD><TD class="sqlfield">chevying</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">chivy</TD><TD class="sqlfield">v</TD><TD class="sqlfield">chivied</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">chivy</TD><TD class="sqlfield">v</TD><TD class="sqlfield">chivvied</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">chivy</TD><TD class="sqlfield">v</TD><TD class="sqlfield">chivvies</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">chivy</TD><TD class="sqlfield">v</TD><TD class="sqlfield">chivvying</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">quiz(n,v)-quizzes</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,morph FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) WHERE lemma = 'quiz'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>morph</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">quiz</TD><TD class="sqlfield">n</TD><TD class="sqlfield">quizzes</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">quiz</TD><TD class="sqlfield">v</TD><TD class="sqlfield">quizzed</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">quiz</TD><TD class="sqlfield">v</TD><TD class="sqlfield">quizzes</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">quiz</TD><TD class="sqlfield">v</TD><TD class="sqlfield">quizzing</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">gas(n,v)-gasses</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,morph FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) WHERE lemma = 'gas'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>morph</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gas</TD><TD class="sqlfield">n</TD><TD class="sqlfield">gas</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gas</TD><TD class="sqlfield">n</TD><TD class="sqlfield">gasses</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gas</TD><TD class="sqlfield">v</TD><TD class="sqlfield">gassed</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gas</TD><TD class="sqlfield">v</TD><TD class="sqlfield">gasses</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gas</TD><TD class="sqlfield">v</TD><TD class="sqlfield">gassing</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">good,well-better</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,morph FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) WHERE morph = 'better'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>morph</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">good</TD><TD class="sqlfield">a</TD><TD class="sqlfield">better</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">well</TD><TD class="sqlfield">a</TD><TD class="sqlfield">better</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">well</TD><TD class="sqlfield">r</TD><TD class="sqlfield">better</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">well(a,r)-better</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,morph FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) WHERE lemma = 'well'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>morph</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">well</TD><TD class="sqlfield">a</TD><TD class="sqlfield">better</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">well</TD><TD class="sqlfield">r</TD><TD class="sqlfield">best</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">well</TD><TD class="sqlfield">r</TD><TD class="sqlfield">better</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">be-am,are,been,is,was,were</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,pos,morph FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) WHERE lemma = 'be'</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>pos</TH><TH>morph</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">be</TD><TD class="sqlfield">v</TD><TD class="sqlfield">am</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">be</TD><TD class="sqlfield">v</TD><TD class="sqlfield">are</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">be</TD><TD class="sqlfield">v</TD><TD class="sqlfield">been</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">be</TD><TD class="sqlfield">v</TD><TD class="sqlfield">is</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">be</TD><TD class="sqlfield">v</TD><TD class="sqlfield">was</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">be</TD><TD class="sqlfield">v</TD><TD class="sqlfield">were</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">morphs per lemma</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,COUNT(morph) AS N,GROUP_CONCAT(morph) AS morphs,GROUP_CONCAT(pos) FROM morphology GROUP BY lemma HAVING N &gt; 1 LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>N</TH><TH>morphs</TH><TH>GROUP_CONCAT(pos)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">abet</TD><TD class="sqlfield">2</TD><TD class="sqlfield">abetted,abetting</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">abhor</TD><TD class="sqlfield">2</TD><TD class="sqlfield">abhorred,abhorring</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">abut</TD><TD class="sqlfield">2</TD><TD class="sqlfield">abutted,abutting</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">aby</TD><TD class="sqlfield">2</TD><TD class="sqlfield">abought,abye</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">acquit</TD><TD class="sqlfield">2</TD><TD class="sqlfield">acquitted,acquitting</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">ad-lib</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ad-libbing,ad-libbed</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">admit</TD><TD class="sqlfield">2</TD><TD class="sqlfield">admitted,admitting</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">airdrop</TD><TD class="sqlfield">2</TD><TD class="sqlfield">airdropping,airdropped</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">airy</TD><TD class="sqlfield">2</TD><TD class="sqlfield">airiest,airier</TD><TD class="sqlfield">a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">allot</TD><TD class="sqlfield">2</TD><TD class="sqlfield">allotted,allotting</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">allow for</TD><TD class="sqlfield">3</TD><TD class="sqlfield">allowed for,allows for,allowing for</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">angry</TD><TD class="sqlfield">2</TD><TD class="sqlfield">angrier,angriest</TD><TD class="sqlfield">a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">annul</TD><TD class="sqlfield">2</TD><TD class="sqlfield">annulling,annulled</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">antheridium</TD><TD class="sqlfield">2</TD><TD class="sqlfield">andtheridia,antheridia</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">appal</TD><TD class="sqlfield">2</TD><TD class="sqlfield">appalling,appalled</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">appall</TD><TD class="sqlfield">2</TD><TD class="sqlfield">appalled,appalling</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">arc</TD><TD class="sqlfield">2</TD><TD class="sqlfield">arcking,arcked</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">argali</TD><TD class="sqlfield">2</TD><TD class="sqlfield">argali,araglis</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">arise</TD><TD class="sqlfield">2</TD><TD class="sqlfield">arose,arisen</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">arty</TD><TD class="sqlfield">2</TD><TD class="sqlfield">artiest,artier</TD><TD class="sqlfield">a,a</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">lemma per morph</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT morph,COUNT(lemma) AS N,GROUP_CONCAT(lemma) AS lemmas,GROUP_CONCAT(pos) FROM morphology GROUP BY morph HAVING N &gt; 1 LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>morph</TH><TH>N</TH><TH>lemmas</TH><TH>GROUP_CONCAT(pos)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">appalled</TD><TD class="sqlfield">2</TD><TD class="sqlfield">appal,appall</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">appalling</TD><TD class="sqlfield">2</TD><TD class="sqlfield">appal,appall</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">assegais</TD><TD class="sqlfield">2</TD><TD class="sqlfield">assagai,assegai</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">auspices</TD><TD class="sqlfield">2</TD><TD class="sqlfield">auspex,auspice</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">axes</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ax,axis</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bacchantes</TD><TD class="sqlfield">2</TD><TD class="sqlfield">bacchant,bacchante</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bases</TD><TD class="sqlfield">2</TD><TD class="sqlfield">base,basis</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">beadsmen</TD><TD class="sqlfield">2</TD><TD class="sqlfield">beadsman,bedesman</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">best</TD><TD class="sqlfield">2</TD><TD class="sqlfield">good,well</TD><TD class="sqlfield">a,r</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">better</TD><TD class="sqlfield">3</TD><TD class="sqlfield">good,well,well</TD><TD class="sqlfield">a,a,r</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bicennaries</TD><TD class="sqlfield">2</TD><TD class="sqlfield">bicentenary,bicentennial</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">brants</TD><TD class="sqlfield">2</TD><TD class="sqlfield">brant,brent</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">caddied</TD><TD class="sqlfield">2</TD><TD class="sqlfield">caddie,caddy</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">caddies</TD><TD class="sqlfield">2</TD><TD class="sqlfield">caddie,caddy</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">caddying</TD><TD class="sqlfield">2</TD><TD class="sqlfield">caddie,caddy</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">comics</TD><TD class="sqlfield">2</TD><TD class="sqlfield">comic strip,comic</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">distilled</TD><TD class="sqlfield">2</TD><TD class="sqlfield">distil,distill</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">distilling</TD><TD class="sqlfield">2</TD><TD class="sqlfield">distil,distill</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">djinn</TD><TD class="sqlfield">2</TD><TD class="sqlfield">djinni,djinny</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">enrolled</TD><TD class="sqlfield">2</TD><TD class="sqlfield">enrol,enroll</TD><TD class="sqlfield">v,v</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">lemma - 3 (or more) morphs</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,COUNT(wordid) AS N,GROUP_CONCAT(morph),GROUP_CONCAT(pos) FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) GROUP BY wordid HAVING N &gt; 2 ORDER BY N DESC</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>N</TH><TH>GROUP_CONCAT(morph)</TH><TH>GROUP_CONCAT(pos)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">chivy</TD><TD class="sqlfield">7</TD><TD class="sqlfield">chevying,chivied,chevies,chevied,chivvying,chivvies,chivvied</TD><TD class="sqlfield">v,v,v,v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">be</TD><TD class="sqlfield">6</TD><TD class="sqlfield">am,were,been,is,was,are</TD><TD class="sqlfield">v,v,v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">wry</TD><TD class="sqlfield">5</TD><TD class="sqlfield">wried,wryest,wriest,wryer,wrier</TD><TD class="sqlfield">v,a,a,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">red</TD><TD class="sqlfield">5</TD><TD class="sqlfield">redded,red,redding,reddest,redder</TD><TD class="sqlfield">v,v,v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gas</TD><TD class="sqlfield">5</TD><TD class="sqlfield">gasses,gasses,gassed,gassing,gas</TD><TD class="sqlfield">v,n,v,v,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">shy</TD><TD class="sqlfield">5</TD><TD class="sqlfield">shyest,shyer,shiest,shier,shied</TD><TD class="sqlfield">a,a,a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swap</TD><TD class="sqlfield">5</TD><TD class="sqlfield">swopping,swopped,swapping,swapped,swops</TD><TD class="sqlfield">v,v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">trammel</TD><TD class="sqlfield">5</TD><TD class="sqlfield">tramelling,tramelled,trameling,trameled,tramels</TD><TD class="sqlfield">v,v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dry</TD><TD class="sqlfield">5</TD><TD class="sqlfield">dried,dryest,dryer,driest,drier</TD><TD class="sqlfield">v,a,a,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">tan</TD><TD class="sqlfield">4</TD><TD class="sqlfield">tanned,tanning,tannest,tanner</TD><TD class="sqlfield">v,v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dun</TD><TD class="sqlfield">4</TD><TD class="sqlfield">dunned,dunning,dunnest,dunner</TD><TD class="sqlfield">v,v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">prim</TD><TD class="sqlfield">4</TD><TD class="sqlfield">primmer,primmed,primming,primmest</TD><TD class="sqlfield">a,v,v,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">flat</TD><TD class="sqlfield">4</TD><TD class="sqlfield">flatted,flatting,flattest,flatter</TD><TD class="sqlfield">v,v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">throw out</TD><TD class="sqlfield">4</TD><TD class="sqlfield">throws out,thrown out,threw out,throwing out</TD><TD class="sqlfield">v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fat</TD><TD class="sqlfield">4</TD><TD class="sqlfield">fatted,fatting,fattest,fatter</TD><TD class="sqlfield">v,v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">wet</TD><TD class="sqlfield">4</TD><TD class="sqlfield">wetting,wettest,wetter,wetted</TD><TD class="sqlfield">v,a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">trim</TD><TD class="sqlfield">4</TD><TD class="sqlfield">trimmest,trimmer,trimmed,trimming</TD><TD class="sqlfield">a,a,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">squat</TD><TD class="sqlfield">4</TD><TD class="sqlfield">squatted,squatting,squattest,squatter</TD><TD class="sqlfield">v,v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">go deep</TD><TD class="sqlfield">4</TD><TD class="sqlfield">going deep,goes deep,gone deep,went deep</TD><TD class="sqlfield">v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">pasquinade</TD><TD class="sqlfield">4</TD><TD class="sqlfield">pasquil,pasquils,pasquilling,pasquilled</TD><TD class="sqlfield">v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">quiz</TD><TD class="sqlfield">4</TD><TD class="sqlfield">quizzed,quizzing,quizzes,quizzes</TD><TD class="sqlfield">v,v,v,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">sly</TD><TD class="sqlfield">4</TD><TD class="sqlfield">slyest,sliest,slyer,slier</TD><TD class="sqlfield">a,a,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">drab</TD><TD class="sqlfield">4</TD><TD class="sqlfield">drabber,drabbed,drabbing,drabbest</TD><TD class="sqlfield">a,v,v,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">shake hands</TD><TD class="sqlfield">4</TD><TD class="sqlfield">shaking hands,shook hands,shakes hands,shaken hands</TD><TD class="sqlfield">v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dim</TD><TD class="sqlfield">4</TD><TD class="sqlfield">dimmed,dimming,dimmest,dimmer</TD><TD class="sqlfield">v,v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">wan</TD><TD class="sqlfield">4</TD><TD class="sqlfield">wanner,wanned,wanning,wannest</TD><TD class="sqlfield">a,v,v,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">mad</TD><TD class="sqlfield">4</TD><TD class="sqlfield">madder,madded,madding,maddest</TD><TD class="sqlfield">a,v,v,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">forbid</TD><TD class="sqlfield">4</TD><TD class="sqlfield">forbade,forbad,forbidding,forbidden</TD><TD class="sqlfield">v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">thin</TD><TD class="sqlfield">4</TD><TD class="sqlfield">thinning,thinnest,thinner,thinned</TD><TD class="sqlfield">v,a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fit</TD><TD class="sqlfield">4</TD><TD class="sqlfield">fittest,fitter,fitted,fitting</TD><TD class="sqlfield">a,a,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">beget</TD><TD class="sqlfield">4</TD><TD class="sqlfield">begetting,begotten,begat,begot</TD><TD class="sqlfield">v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">snug</TD><TD class="sqlfield">4</TD><TD class="sqlfield">snuggest,snugger,snugged,snugging</TD><TD class="sqlfield">a,a,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">take pains</TD><TD class="sqlfield">4</TD><TD class="sqlfield">took pains,taking pains,takes pains,taken pains</TD><TD class="sqlfield">v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">coordinate</TD><TD class="sqlfield">4</TD><TD class="sqlfield">co-ordinated,co-ordinate,co-ordinating,co-ordinates</TD><TD class="sqlfield">v,v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">forget</TD><TD class="sqlfield">3</TD><TD class="sqlfield">forgetting,forgotten,forgot</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">man</TD><TD class="sqlfield">3</TD><TD class="sqlfield">manning,manned,men</TD><TD class="sqlfield">v,v,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">jump off</TD><TD class="sqlfield">3</TD><TD class="sqlfield">jumped off,jumps off,jumping off</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fancy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">fanciest,fancier,fancied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dizzy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">dizziest,dizzier,dizzied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bestride</TD><TD class="sqlfield">3</TD><TD class="sqlfield">bestrid,bestrode,bestridden</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">well</TD><TD class="sqlfield">3</TD><TD class="sqlfield">better,best,better</TD><TD class="sqlfield">r,r,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">ken</TD><TD class="sqlfield">3</TD><TD class="sqlfield">kent,kenning,kenned</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">curet</TD><TD class="sqlfield">3</TD><TD class="sqlfield">curettes,curetted,curetting</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">ban</TD><TD class="sqlfield">3</TD><TD class="sqlfield">bani,banning,banned</TD><TD class="sqlfield">n,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">underlie</TD><TD class="sqlfield">3</TD><TD class="sqlfield">underlying,underlay,underlain</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bandy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">bandiest,bandier,bandied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">easy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">easier,easied,easiest</TD><TD class="sqlfield">a,v,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">shrink</TD><TD class="sqlfield">3</TD><TD class="sqlfield">shrunken,shrunk,shrank</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">tidy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">tidiest,tidier,tidied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bid</TD><TD class="sqlfield">3</TD><TD class="sqlfield">bidden,bade,bidding</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">savvy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">savviest,savvier,savvied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">go</TD><TD class="sqlfield">3</TD><TD class="sqlfield">goes,gone,went</TD><TD class="sqlfield">n,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">program</TD><TD class="sqlfield">3</TD><TD class="sqlfield">programmed,programming,programmes</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">overlie</TD><TD class="sqlfield">3</TD><TD class="sqlfield">overlying,overlay,overlain</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">busy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">busied,busiest,busier</TD><TD class="sqlfield">v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">prologue</TD><TD class="sqlfield">3</TD><TD class="sqlfield">prologing,prologed,prologs</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">colly</TD><TD class="sqlfield">3</TD><TD class="sqlfield">colliest,collier,collied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">whiz</TD><TD class="sqlfield">3</TD><TD class="sqlfield">whizzing,whizzes,whizzed</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">caddie</TD><TD class="sqlfield">3</TD><TD class="sqlfield">caddies,caddied,caddying</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">caddy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">caddies,caddied,caddying</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">ko</TD><TD class="sqlfield">3</TD><TD class="sqlfield">ko'ing,ko'd,ko's</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">swim</TD><TD class="sqlfield">3</TD><TD class="sqlfield">swimming,swam,swum</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">muddy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">muddiest,muddier,muddied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bear</TD><TD class="sqlfield">3</TD><TD class="sqlfield">borne,born,bore</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">smite</TD><TD class="sqlfield">3</TD><TD class="sqlfield">smote,smitten,smit</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">lie</TD><TD class="sqlfield">3</TD><TD class="sqlfield">lying,lay,lain</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">get</TD><TD class="sqlfield">3</TD><TD class="sqlfield">gotten,got,getting</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">get started</TD><TD class="sqlfield">3</TD><TD class="sqlfield">got started,getting started,gets started</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">untidy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">untidied,untidiest,untidier</TD><TD class="sqlfield">v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">os</TD><TD class="sqlfield">3</TD><TD class="sqlfield">ora,ossa,osar</TD><TD class="sqlfield">n,n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bed</TD><TD class="sqlfield">3</TD><TD class="sqlfield">bedding,bedded,bed</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">steady</TD><TD class="sqlfield">3</TD><TD class="sqlfield">steadied,steadiest,steadier</TD><TD class="sqlfield">v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bloody</TD><TD class="sqlfield">3</TD><TD class="sqlfield">bloodiest,bloodier,bloodied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">giddy</TD><TD class="sqlfield">3</TD><TD class="sqlfield">giddiest,giddier,giddied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">nonplus</TD><TD class="sqlfield">3</TD><TD class="sqlfield">nonplussing,nonplusses,nonplussed</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">empty</TD><TD class="sqlfield">3</TD><TD class="sqlfield">emptiest,emptier,emptied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">hallah</TD><TD class="sqlfield">3</TD><TD class="sqlfield">halloth,hallot,challoth</TD><TD class="sqlfield">n,n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gin</TD><TD class="sqlfield">3</TD><TD class="sqlfield">ginning,ginned,gan</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">sing</TD><TD class="sqlfield">3</TD><TD class="sqlfield">singing,sung,sang</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">dirty</TD><TD class="sqlfield">3</TD><TD class="sqlfield">dirtiest,dirtier,dirtied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">pen</TD><TD class="sqlfield">3</TD><TD class="sqlfield">pent,penning,penned</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">sink</TD><TD class="sqlfield">3</TD><TD class="sqlfield">sunken,sunk,sank</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">cleave</TD><TD class="sqlfield">3</TD><TD class="sqlfield">cloven,cleft,clove</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">deepfreeze</TD><TD class="sqlfield">3</TD><TD class="sqlfield">deep-freezes,deep-freezed,deep-freeze</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">spit</TD><TD class="sqlfield">3</TD><TD class="sqlfield">spat,spitting,spitted</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">allow for</TD><TD class="sqlfield">3</TD><TD class="sqlfield">allowed for,allows for,allowing for</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">join battle</TD><TD class="sqlfield">3</TD><TD class="sqlfield">joins battle,joining battle,joined battle</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">think the world of</TD><TD class="sqlfield">3</TD><TD class="sqlfield">thought the world of,thinks the world of,thinking the world of</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">join forces</TD><TD class="sqlfield">3</TD><TD class="sqlfield">joining forces,joined forces,joins forces</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">begin</TD><TD class="sqlfield">3</TD><TD class="sqlfield">begun,began,beginning</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">grip</TD><TD class="sqlfield">3</TD><TD class="sqlfield">gript,gripping,gripped</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">degas</TD><TD class="sqlfield">3</TD><TD class="sqlfield">degassed,degassing,degasses</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">weary</TD><TD class="sqlfield">3</TD><TD class="sqlfield">wearied,weariest,wearier</TD><TD class="sqlfield">v,a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bog down</TD><TD class="sqlfield">3</TD><TD class="sqlfield">bogging down,bogged down,bogs down</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">jolly</TD><TD class="sqlfield">3</TD><TD class="sqlfield">jolliest,jollier,jollied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">cry</TD><TD class="sqlfield">3</TD><TD class="sqlfield">crying,cried,cryings</TD><TD class="sqlfield">n,v,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">tallith</TD><TD class="sqlfield">3</TD><TD class="sqlfield">tallithes,tallaisim,tallitoth</TD><TD class="sqlfield">n,n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">transship</TD><TD class="sqlfield">3</TD><TD class="sqlfield">transshipped,tranship,transshipping</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">pretty</TD><TD class="sqlfield">3</TD><TD class="sqlfield">prettiest,prettier,prettied</TD><TD class="sqlfield">a,a,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">shit</TD><TD class="sqlfield">3</TD><TD class="sqlfield">shat,shitting,shitted</TD><TD class="sqlfield">v,v,v</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">morph - 2 (or more) lemmas</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT morph,COUNT(morphid) AS N ,GROUP_CONCAT(lemma),GROUP_CONCAT(pos) FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) GROUP BY morphid HAVING N &gt; 1 ORDER BY N DESC</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>morph</TH><TH>N</TH><TH>GROUP_CONCAT(lemma)</TH><TH>GROUP_CONCAT(pos)</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">better</TD><TD class="sqlfield">3</TD><TD class="sqlfield">good,well,well</TD><TD class="sqlfield">a,r,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">comics</TD><TD class="sqlfield">2</TD><TD class="sqlfield">comic strip,comic</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">brants</TD><TD class="sqlfield">2</TD><TD class="sqlfield">brent,brant</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">halteres</TD><TD class="sqlfield">2</TD><TD class="sqlfield">haltere,halter</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">ploughmen</TD><TD class="sqlfield">2</TD><TD class="sqlfield">plowman,ploughman</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">entozoa</TD><TD class="sqlfield">2</TD><TD class="sqlfield">entozoon,entozoan</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">taxes</TD><TD class="sqlfield">2</TD><TD class="sqlfield">taxis,tax</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">offer</TD><TD class="sqlfield">2</TD><TD class="sqlfield">offer,off</TD><TD class="sqlfield">a,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">epizoa</TD><TD class="sqlfield">2</TD><TD class="sqlfield">epizoon,epizoan</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">soles</TD><TD class="sqlfield">2</TD><TD class="sqlfield">sole,sol</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">plectra</TD><TD class="sqlfield">2</TD><TD class="sqlfield">plectrum,plectron</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bases</TD><TD class="sqlfield">2</TD><TD class="sqlfield">basis,base</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">enthralling</TD><TD class="sqlfield">2</TD><TD class="sqlfield">enthrall,enthral</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">haggadas</TD><TD class="sqlfield">2</TD><TD class="sqlfield">haggadah,haggada</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">auspices</TD><TD class="sqlfield">2</TD><TD class="sqlfield">auspice,auspex</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">oesophagi</TD><TD class="sqlfield">2</TD><TD class="sqlfield">oesophagus,esophagus</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">leaves</TD><TD class="sqlfield">2</TD><TD class="sqlfield">leave,leaf</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">enthralled</TD><TD class="sqlfield">2</TD><TD class="sqlfield">enthrall,enthral</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">taeniae</TD><TD class="sqlfield">2</TD><TD class="sqlfield">tenia,taenia</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fulfilling</TD><TD class="sqlfield">2</TD><TD class="sqlfield">fulfill,fulfil</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">distilling</TD><TD class="sqlfield">2</TD><TD class="sqlfield">distil,distill</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">axes</TD><TD class="sqlfield">2</TD><TD class="sqlfield">axis,ax</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">beadsmen</TD><TD class="sqlfield">2</TD><TD class="sqlfield">bedesman,beadsman</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">oedemata</TD><TD class="sqlfield">2</TD><TD class="sqlfield">oedema,edema</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">best</TD><TD class="sqlfield">2</TD><TD class="sqlfield">well,good</TD><TD class="sqlfield">r,a</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">fulfilled</TD><TD class="sqlfield">2</TD><TD class="sqlfield">fulfil,fulfill</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">distilled</TD><TD class="sqlfield">2</TD><TD class="sqlfield">distill,distil</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">djinn</TD><TD class="sqlfield">2</TD><TD class="sqlfield">djinny,djinni</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">litai</TD><TD class="sqlfield">2</TD><TD class="sqlfield">litas,lit</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">assegais</TD><TD class="sqlfield">2</TD><TD class="sqlfield">assegai,assagai</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">singing</TD><TD class="sqlfield">2</TD><TD class="sqlfield">sing,singe</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">rabatos</TD><TD class="sqlfield">2</TD><TD class="sqlfield">rebato,rabato</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">appalling</TD><TD class="sqlfield">2</TD><TD class="sqlfield">appall,appal</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">mishnayoth</TD><TD class="sqlfield">2</TD><TD class="sqlfield">mishnah,mishna</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">enrolling</TD><TD class="sqlfield">2</TD><TD class="sqlfield">enroll,enrol</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">caddying</TD><TD class="sqlfield">2</TD><TD class="sqlfield">caddy,caddie</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">prothalamia</TD><TD class="sqlfield">2</TD><TD class="sqlfield">prothalamion,prothalamium</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">signori</TD><TD class="sqlfield">2</TD><TD class="sqlfield">signore,signior</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">overflown</TD><TD class="sqlfield">2</TD><TD class="sqlfield">overfly,overflow</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">morses</TD><TD class="sqlfield">2</TD><TD class="sqlfield">mors,morse</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gasses</TD><TD class="sqlfield">2</TD><TD class="sqlfield">gas,gas</TD><TD class="sqlfield">v,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">appalled</TD><TD class="sqlfield">2</TD><TD class="sqlfield">appall,appal</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">ichthyosauruses</TD><TD class="sqlfield">2</TD><TD class="sqlfield">ichthyosaurus,ichthyosaur</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">enrolled</TD><TD class="sqlfield">2</TD><TD class="sqlfield">enroll,enrol</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">quizzes</TD><TD class="sqlfield">2</TD><TD class="sqlfield">quiz,quiz</TD><TD class="sqlfield">v,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">caddies</TD><TD class="sqlfield">2</TD><TD class="sqlfield">caddy,caddie</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">wahhabis</TD><TD class="sqlfield">2</TD><TD class="sqlfield">wahhabi,wahabi</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">masses</TD><TD class="sqlfield">2</TD><TD class="sqlfield">masse,mass</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">caddied</TD><TD class="sqlfield">2</TD><TD class="sqlfield">caddy,caddie</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bacchantes</TD><TD class="sqlfield">2</TD><TD class="sqlfield">bacchante,bacchant</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">installing</TD><TD class="sqlfield">2</TD><TD class="sqlfield">install,instal</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">shofroth</TD><TD class="sqlfield">2</TD><TD class="sqlfield">shophar,shofar</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">monades</TD><TD class="sqlfield">2</TD><TD class="sqlfield">monas,monad</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">bicennaries</TD><TD class="sqlfield">2</TD><TD class="sqlfield">bicentennial,bicentenary</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">touracos</TD><TD class="sqlfield">2</TD><TD class="sqlfield">turaco,touraco</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">saguaros</TD><TD class="sqlfield">2</TD><TD class="sqlfield">sahuaro,saguaro</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">installed</TD><TD class="sqlfield">2</TD><TD class="sqlfield">install,instal</TD><TD class="sqlfield">v,v</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">tyros</TD><TD class="sqlfield">2</TD><TD class="sqlfield">tyro,tiro</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">paraleipses</TD><TD class="sqlfield">2</TD><TD class="sqlfield">paralipsis,paraleipsis</TD><TD class="sqlfield">n,n</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">feed</TD><TD class="sqlfield">2</TD><TD class="sqlfield">fee,feed</TD><TD class="sqlfield">v,v</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">morph matching several pos</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT lemma,morph,GROUP_CONCAT(pos),COUNT(*) AS N FROM morphmaps INNER JOIN words USING (wordid) INNER JOIN morphs USING (morphid) GROUP BY wordid,morphid HAVING N &gt; 1 ORDER BY N DESC</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>lemma</TH><TH>morph</TH><TH>GROUP_CONCAT(pos)</TH><TH>N</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">gas</TD><TD class="sqlfield">gasses</TD><TD class="sqlfield">v,n</TD><TD class="sqlfield">2</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">well</TD><TD class="sqlfield">better</TD><TD class="sqlfield">r,a</TD><TD class="sqlfield">2</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">quiz</TD><TD class="sqlfield">quizzes</TD><TD class="sqlfield">v,n</TD><TD class="sqlfield">2</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+<ShortName>BCmoney</ShortName> 
+<LongName>BCmoney MobileTV Search</LongName> 
+<Description>Search for user submitted videos, music, news, and images at BC$</Description> 
+<InputEncoding>UTF-8</InputEncoding> 
+<OutputEncoding>UTF-8</OutputEncoding> 
+<AdultContent>false</AdultContent> 
+<Language>en-us</Language> 
+<Developer>BCmoney Development Team (Bryan Copeland)</Developer> 
+<Contact>bc@bcmoney-mobiletv.com</Contact> 
+<Description>Search for videos, music, news, and images on BC$</Description> 
+<Tags>bcmoney mobiletv bc$ videos music news images virals funny podcasts vodcasts behavior content money recommendations</Tags> 
+<Attribution>Search data from BCmoney MobileTV, LLC. http://bcmoney-mobiletv.com/</Attribution> 
+<SyndicationRight>open</SyndicationRight> 
+<Query role="example" searchTerms="bcmoney" /> 
+<Image height="16" width="16" type="image/vnd.microsoft.icon">http://bcmoney-mobiletv.com/favicon.ico</Image> 
+<Image height="64" width="64" type="image/png">http://bcmoney-mobiletv.com/templates/images/bcmoney-64x64.png
+</Image> 
+<Url type="application/rss+xml" template="http://bcmoney-mobiletv.com/mrss/rss_search.php?searchkey={searchTerms}" /> 
+<Url type="text/html" template="http://bcmoney-mobiletv.com/tag/{searchTerms}/" /> 
+</OpenSearchDescription>

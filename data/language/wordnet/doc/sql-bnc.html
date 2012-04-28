@@ -1,0 +1,366 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>MYSQL</TITLE>
+<LINK rel="stylesheet" href="style-sql.css" type="text/css">
+</HEAD>
+<BODY>
+<DIV class="sqlsection">BNC</DIV>
+<DIV class="sqlcomment">most common words</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM  bncs INNER JOIN words USING (wordid) ORDER BY freq DESC LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>pos</TH><TH>freq</TH><TH>range</TH><TH>disp</TH><TH>lemma</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">12320</TD><TD class="sqlfield">v</TD><TD class="sqlfield">42277</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">be</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">62318</TD><TD class="sqlfield">v</TD><TD class="sqlfield">13655</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">have</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">38006</TD><TD class="sqlfield">v</TD><TD class="sqlfield">5594</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">do</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">115291</TD><TD class="sqlfield">v</TD><TD class="sqlfield">3344</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">say</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">57446</TD><TD class="sqlfield">v</TD><TD class="sqlfield">2210</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.87</TD><TD class="sqlfield">get</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">80925</TD><TD class="sqlfield">v</TD><TD class="sqlfield">2165</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">make</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">58418</TD><TD class="sqlfield">v</TD><TD class="sqlfield">2078</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.91</TD><TD class="sqlfield">go</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">116926</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1920</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">see</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">74296</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1882</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.9</TD><TD class="sqlfield">know</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">133078</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1833</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">time</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">129777</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1797</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">take</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">146521</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1639</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">year</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">132195</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1520</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.9</TD><TD class="sqlfield">think</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">27533</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1512</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">come</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">57893</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1284</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">give</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">58843</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1276</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">good</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">98216</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1256</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">people</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">89722</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1154</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">new</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">79040</TD><TD class="sqlfield">v</TD><TD class="sqlfield">1151</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">look</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">143325</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1108</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">way</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">most common adj</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM  bncs INNER JOIN words USING (wordid) WHERE pos = 'a' ORDER BY freq DESC LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>pos</TH><TH>freq</TH><TH>range</TH><TH>disp</TH><TH>lemma</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">58843</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1276</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">good</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">89722</TD><TD class="sqlfield">a</TD><TD class="sqlfield">1154</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">new</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">92630</TD><TD class="sqlfield">a</TD><TD class="sqlfield">648</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">old</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">59656</TD><TD class="sqlfield">a</TD><TD class="sqlfield">635</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">great</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">63886</TD><TD class="sqlfield">a</TD><TD class="sqlfield">574</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">high</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">121401</TD><TD class="sqlfield">a</TD><TD class="sqlfield">518</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">small</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">75484</TD><TD class="sqlfield">a</TD><TD class="sqlfield">471</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">large</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">78882</TD><TD class="sqlfield">a</TD><TD class="sqlfield">392</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">long</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">146831</TD><TD class="sqlfield">a</TD><TD class="sqlfield">379</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">young</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">111701</TD><TD class="sqlfield">a</TD><TD class="sqlfield">354</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.89</TD><TD class="sqlfield">right</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">40159</TD><TD class="sqlfield">a</TD><TD class="sqlfield">353</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">early</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">13752</TD><TD class="sqlfield">a</TD><TD class="sqlfield">338</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">big</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">75681</TD><TD class="sqlfield">a</TD><TD class="sqlfield">302</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">late</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">51872</TD><TD class="sqlfield">a</TD><TD class="sqlfield">289</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">full</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">47080</TD><TD class="sqlfield">a</TD><TD class="sqlfield">288</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">far</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">79432</TD><TD class="sqlfield">a</TD><TD class="sqlfield">286</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">low</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">10777</TD><TD class="sqlfield">a</TD><TD class="sqlfield">264</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">bad</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">128393</TD><TD class="sqlfield">a</TD><TD class="sqlfield">241</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">sure</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">25825</TD><TD class="sqlfield">a</TD><TD class="sqlfield">239</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">clear</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">77610</TD><TD class="sqlfield">a</TD><TD class="sqlfield">228</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">likely</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">most common nouns</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM  bncs INNER JOIN words USING (wordid) WHERE pos = 'n' ORDER BY freq DESC LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>pos</TH><TH>freq</TH><TH>range</TH><TH>disp</TH><TH>lemma</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">133078</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1833</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">time</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">146521</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1639</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">year</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">98216</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1256</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">people</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">143325</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1108</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">way</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">81318</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1003</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">man</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">33852</TD><TD class="sqlfield">n</TD><TD class="sqlfield">940</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">day</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">132185</TD><TD class="sqlfield">n</TD><TD class="sqlfield">776</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">thing</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">24010</TD><TD class="sqlfield">n</TD><TD class="sqlfield">710</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">child</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">87206</TD><TD class="sqlfield">n</TD><TD class="sqlfield">673</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.84</TD><TD class="sqlfield">mr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">59100</TD><TD class="sqlfield">n</TD><TD class="sqlfield">670</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.88</TD><TD class="sqlfield">government</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">145783</TD><TD class="sqlfield">n</TD><TD class="sqlfield">653</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">work</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">77376</TD><TD class="sqlfield">n</TD><TD class="sqlfield">645</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">life</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">145482</TD><TD class="sqlfield">n</TD><TD class="sqlfield">631</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">woman</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">129414</TD><TD class="sqlfield">n</TD><TD class="sqlfield">619</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.89</TD><TD class="sqlfield">system</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">21507</TD><TD class="sqlfield">n</TD><TD class="sqlfield">613</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">case</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">96883</TD><TD class="sqlfield">n</TD><TD class="sqlfield">612</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">part</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">60327</TD><TD class="sqlfield">n</TD><TD class="sqlfield">607</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">group</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">91583</TD><TD class="sqlfield">n</TD><TD class="sqlfield">606</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">number</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">145880</TD><TD class="sqlfield">n</TD><TD class="sqlfield">600</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">world</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">65540</TD><TD class="sqlfield">n</TD><TD class="sqlfield">598</TD><TD class="sqlfield">100</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">house</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">most common nouns in speech</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM  bncspwrs INNER JOIN words USING (wordid) WHERE pos = 'n' ORDER BY freq1 DESC LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>pos</TH><TH>freq1</TH><TH>range1</TH><TH>disp1</TH><TH>freq2</TH><TH>range2</TH><TH>disp2</TH><TH>ll</TH><TH>lemma</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">132185</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2240</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">607</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">-22464.9</TD><TD class="sqlfield">thing</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">133078</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2103</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">1802</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">-439.7</TD><TD class="sqlfield">time</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">98216</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2071</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.87</TD><TD class="sqlfield">1162</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">-5231.4</TD><TD class="sqlfield">people</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">146521</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1507</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.9</TD><TD class="sqlfield">1655</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">126.9</TD><TD class="sqlfield">year</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">143325</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1358</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">1079</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">-614.7</TD><TD class="sqlfield">way</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">33852</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1064</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">926</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">-181.8</TD><TD class="sqlfield">day</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">65957</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1053</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.81</TD><TD class="sqlfield">136</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.89</TD><TD class="sqlfield">-20229.9</TD><TD class="sqlfield">hundred</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">103393</TD><TD class="sqlfield">n</TD><TD class="sqlfield">899</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.85</TD><TD class="sqlfield">101</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.75</TD><TD class="sqlfield">-18746.4</TD><TD class="sqlfield">pound</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">143538</TD><TD class="sqlfield">n</TD><TD class="sqlfield">829</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.93</TD><TD class="sqlfield">435</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">-2548.1</TD><TD class="sqlfield">week</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">122793</TD><TD class="sqlfield">n</TD><TD class="sqlfield">800</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.89</TD><TD class="sqlfield">163</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">-10829.2</TD><TD class="sqlfield">sort</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">102024</TD><TD class="sqlfield">n</TD><TD class="sqlfield">747</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.79</TD><TD class="sqlfield">454</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">-1441.9</TD><TD class="sqlfield">point</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">91583</TD><TD class="sqlfield">n</TD><TD class="sqlfield">638</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.87</TD><TD class="sqlfield">602</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">-20.1</TD><TD class="sqlfield">number</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">86098</TD><TD class="sqlfield">n</TD><TD class="sqlfield">637</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">345</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">-1799.1</TD><TD class="sqlfield">money</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">81318</TD><TD class="sqlfield">n</TD><TD class="sqlfield">629</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.89</TD><TD class="sqlfield">1047</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">1843.7</TD><TD class="sqlfield">man</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">145783</TD><TD class="sqlfield">n</TD><TD class="sqlfield">601</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">659</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">48.8</TD><TD class="sqlfield">work</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">87206</TD><TD class="sqlfield">n</TD><TD class="sqlfield">570</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.66</TD><TD class="sqlfield">685</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.83</TD><TD class="sqlfield">190.2</TD><TD class="sqlfield">mr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">104721</TD><TD class="sqlfield">n</TD><TD class="sqlfield">568</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.83</TD><TD class="sqlfield">564</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">-0.2</TD><TD class="sqlfield">problem</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">65540</TD><TD class="sqlfield">n</TD><TD class="sqlfield">557</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">602</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">33.1</TD><TD class="sqlfield">house</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">132464</TD><TD class="sqlfield">n</TD><TD class="sqlfield">553</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.83</TD><TD class="sqlfield">113</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.9</TD><TD class="sqlfield">-7468</TD><TD class="sqlfield">thousand</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">115711</TD><TD class="sqlfield">n</TD><TD class="sqlfield">549</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.87</TD><TD class="sqlfield">527</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.93</TD><TD class="sqlfield">-8.7</TD><TD class="sqlfield">school</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<DIV class="sqlcomment">most common nouns in writing</DIV>
+<DIV class="sqlquery">
+<DIV class="sqlstatement">SELECT * FROM  bncspwrs INNER JOIN words USING (wordid) WHERE pos = 'n' ORDER BY freq2 DESC LIMIT 20</DIV>
+<TABLE class="sqlresultset" border="1">
+<TBODY>
+<TR class="sqlheader">
+<TH>wordid</TH><TH>pos</TH><TH>freq1</TH><TH>range1</TH><TH>disp1</TH><TH>freq2</TH><TH>range2</TH><TH>disp2</TH><TH>ll</TH><TH>lemma</TH>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">133078</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2103</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">1802</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.98</TD><TD class="sqlfield">-439.7</TD><TD class="sqlfield">time</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">146521</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1507</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.9</TD><TD class="sqlfield">1655</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">126.9</TD><TD class="sqlfield">year</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">98216</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2071</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.87</TD><TD class="sqlfield">1162</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">-5231.4</TD><TD class="sqlfield">people</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">143325</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1358</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">1079</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">-614.7</TD><TD class="sqlfield">way</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">81318</TD><TD class="sqlfield">n</TD><TD class="sqlfield">629</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.89</TD><TD class="sqlfield">1047</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">1843.7</TD><TD class="sqlfield">man</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">33852</TD><TD class="sqlfield">n</TD><TD class="sqlfield">1064</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">926</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">-181.8</TD><TD class="sqlfield">day</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">24010</TD><TD class="sqlfield">n</TD><TD class="sqlfield">497</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.82</TD><TD class="sqlfield">734</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">814.5</TD><TD class="sqlfield">child</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">59100</TD><TD class="sqlfield">n</TD><TD class="sqlfield">312</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.7</TD><TD class="sqlfield">711</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.87</TD><TD class="sqlfield">2707.2</TD><TD class="sqlfield">government</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">87206</TD><TD class="sqlfield">n</TD><TD class="sqlfield">570</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.66</TD><TD class="sqlfield">685</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.83</TD><TD class="sqlfield">190.2</TD><TD class="sqlfield">mr</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">77376</TD><TD class="sqlfield">n</TD><TD class="sqlfield">333</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.87</TD><TD class="sqlfield">681</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">2081</TD><TD class="sqlfield">life</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">129414</TD><TD class="sqlfield">n</TD><TD class="sqlfield">232</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.76</TD><TD class="sqlfield">664</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.89</TD><TD class="sqlfield">3582.9</TD><TD class="sqlfield">system</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">145482</TD><TD class="sqlfield">n</TD><TD class="sqlfield">371</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.81</TD><TD class="sqlfield">661</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">1434.8</TD><TD class="sqlfield">woman</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">145783</TD><TD class="sqlfield">n</TD><TD class="sqlfield">601</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">659</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">48.8</TD><TD class="sqlfield">work</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">21507</TD><TD class="sqlfield">n</TD><TD class="sqlfield">314</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.8</TD><TD class="sqlfield">648</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.92</TD><TD class="sqlfield">2028.3</TD><TD class="sqlfield">case</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">145880</TD><TD class="sqlfield">n</TD><TD class="sqlfield">250</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.81</TD><TD class="sqlfield">640</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">2954.6</TD><TD class="sqlfield">world</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">60327</TD><TD class="sqlfield">n</TD><TD class="sqlfield">334</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.79</TD><TD class="sqlfield">639</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">1670.1</TD><TD class="sqlfield">group</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">96883</TD><TD class="sqlfield">n</TD><TD class="sqlfield">418</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.85</TD><TD class="sqlfield">635</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.97</TD><TD class="sqlfield">791.6</TD><TD class="sqlfield">part</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">28106</TD><TD class="sqlfield">n</TD><TD class="sqlfield">232</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.78</TD><TD class="sqlfield">620</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.91</TD><TD class="sqlfield">3051.4</TD><TD class="sqlfield">company</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">132185</TD><TD class="sqlfield">n</TD><TD class="sqlfield">2240</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.96</TD><TD class="sqlfield">607</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.94</TD><TD class="sqlfield">-22464.9</TD><TD class="sqlfield">thing</TD>
+</TR>
+<TR class="sqlrow">
+<TD class="sqlfield">91583</TD><TD class="sqlfield">n</TD><TD class="sqlfield">638</TD><TD class="sqlfield">10</TD><TD class="sqlfield">0.87</TD><TD class="sqlfield">602</TD><TD class="sqlfield">90</TD><TD class="sqlfield">0.95</TD><TD class="sqlfield">-20.1</TD><TD class="sqlfield">number</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>
